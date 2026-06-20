@@ -14,6 +14,7 @@ const content = {
     hero: {
       eyebrow: "Academic Profile",
       name: "櫻本 晃弘",
+      nameReading: "Akihiro Sakuramoto",
       affiliation: "北陸先端科学技術大学院大学 AI知性領域 博士前期課程",
       tagline: "ヒューマンロボットインタラクション / マルチモーダル対話分析 / 実環境HRI",
       summary: "実世界の人とロボットの関わりを、行動・感情・対話の手がかりから理解することを目指しています。研究者、共同研究者、採用担当者が必要な情報へすぐアクセスできるようにまとめています。"
@@ -97,6 +98,7 @@ const content = {
     hero: {
       eyebrow: "Academic Profile",
       name: "Akihiro Sakuramoto",
+      nameReading: "",
       affiliation: "Master's Student in Human-AI Interaction, Japan Advanced Institute of Science and Technology (JAIST)",
       tagline: "Human-Robot Interaction / Multimodal Interaction Analysis / Real-world HRI",
       summary: "I study how people and robots interact in real-world settings through behavioral, affective, and conversational signals. This website collects profile information for researchers, collaborators, conference participants, and recruiters."

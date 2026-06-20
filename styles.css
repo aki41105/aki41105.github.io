@@ -164,6 +164,17 @@ h1 {
   font-size: clamp(2.6rem, 7vw, 5.8rem);
 }
 
+.name-reading {
+  margin: 0.45rem 0 0;
+  color: var(--color-muted);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-weight: 700;
+}
+
+.name-reading:empty {
+  display: none;
+}
+
 h2 {
   font-size: clamp(1.7rem, 3vw, 2.6rem);
 }
