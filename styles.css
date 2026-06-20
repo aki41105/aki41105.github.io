@@ -130,11 +130,15 @@ a {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
   gap: clamp(2rem, 5vw, 5rem);
   align-items: center;
   min-height: calc(100vh - 5.5rem);
   padding-top: 2.5rem;
+}
+
+.hero-copy {
+  order: 2;
 }
 
 .eyebrow,
@@ -230,6 +234,7 @@ h2 {
 
 .profile-card {
   position: relative;
+  order: 1;
   display: grid;
   justify-items: center;
   gap: 1.25rem;
