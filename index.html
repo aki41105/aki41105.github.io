@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal academic website for Akihiro Sakuramoto.">
+  <title>Akihiro Sakuramoto | Academic Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Home">
+      <span class="brand-mark">AS</span>
+      <span data-i18n="siteTitle">櫻本 晃弘</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#about" data-nav="about">About</a>
+      <a href="#research" data-nav="research">Research</a>
+      <a href="#education" data-nav="education">Education</a>
+      <a href="#publications" data-nav="publications">Publications</a>
+      <a href="#projects" data-nav="projects">Projects</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </nav>
+
+    <button class="language-toggle" type="button" id="languageToggle" aria-label="Switch language">
+      日本語 / English
+    </button>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Academic Profile</p>
+        <h1 data-i18n="hero.name">櫻本 晃弘</h1>
+        <p class="affiliation" data-i18n="hero.affiliation"></p>
+        <p class="tagline" data-i18n="hero.tagline"></p>
+        <p class="summary" data-i18n="hero.summary"></p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#contact" data-i18n="buttons.contact">Contact</a>
+          <!-- TODO: Put your CV PDF at assets/cv.pdf later. -->
+          <a class="button button-secondary" href="assets/cv.pdf" data-i18n="buttons.cv">CV</a>
+        </div>
+      </div>
+
+      <aside class="profile-card" aria-label="Profile card">
+        <div class="photo-frame">
+          <!-- TODO: Put your profile photo at assets/profile.jpg. If missing, the initials placeholder is shown. -->
+          <img src="assets/profile.jpg" alt="Akihiro Sakuramoto profile photo" id="profilePhoto">
+          <div class="photo-placeholder" id="photoPlaceholder" aria-hidden="true">AS</div>
+        </div>
+        <div class="profile-card-text">
+          <p class="mini-label" data-i18n="profileCard.label">Research Focus</p>
+          <p data-i18n="profileCard.focus"></p>
+        </div>
+        <div class="cat-pin" aria-hidden="true">
+          <span class="cat-ear left"></span>
+          <span class="cat-ear right"></span>
+          <span class="cat-face"></span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section two-column" id="about">
+      <div>
+        <p class="section-kicker" data-i18n="sections.about.kicker">About</p>
+        <h2 data-i18n="sections.about.title">About</h2>
+      </div>
+      <div class="soft-panel">
+        <!-- TODO: Edit the about text in script.js. -->
+        <p data-i18n="about.text"></p>
+      </div>
+    </section>
+
+    <section class="section" id="research">
+      <div class="section-heading">
+        <p class="section-kicker" data-i18n="sections.research.kicker">Research</p>
+        <h2 data-i18n="sections.research.title">Research Interests</h2>
+      </div>
+      <!-- TODO: Edit research keywords in script.js. -->
+      <div class="keyword-grid" id="researchKeywords"></div>
+    </section>
+
+    <section class="section two-column" id="education">
+      <div>
+        <p class="section-kicker" data-i18n="sections.education.kicker">CV</p>
+        <h2 data-i18n="sections.education.title">Education / Experience</h2>
+      </div>
+      <!-- TODO: Edit timeline entries in script.js. -->
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section class="section" id="publications">
+      <div class="section-heading">
+        <p class="section-kicker" data-i18n="sections.publications.kicker">Publications</p>
+        <h2 data-i18n="sections.publications.title">Publications</h2>
+      </div>
+      <div class="empty-state">
+        <p data-i18n="publications.empty"></p>
+      </div>
+      <!-- TODO: Add publication entries in script.js. Cards will appear here automatically. -->
+      <div class="publication-list" id="publicationList"></div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-heading">
+        <p class="section-kicker" data-i18n="sections.projects.kicker">Projects</p>
+        <h2 data-i18n="sections.projects.title">Projects</h2>
+      </div>
+      <div class="project-card">
+        <span class="status-dot"></span>
+        <p data-i18n="projects.empty"></p>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="section-heading">
+        <p class="section-kicker" data-i18n="sections.contact.kicker">Contact</p>
+        <h2 data-i18n="sections.contact.title">Contact / Links</h2>
+      </div>
+      <!-- TODO: Edit contact and profile links in script.js. -->
+      <div class="link-grid" id="contactLinks"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <p>© 2026 Akihiro Sakuramoto</p>
+      <p data-i18n="footer.built">Built with GitHub Pages.</p>
+    </div>
+    <div class="footer-cat" aria-hidden="true">
+      <span></span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
