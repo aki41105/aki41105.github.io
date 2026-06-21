@@ -53,7 +53,7 @@ const content = {
     ],
     educationTimeline: [
       {
-        year: "2024-現在",
+        year: "2025年4月-現在",
         title: "北陸先端科学技術大学院大学 AI知性領域 博士前期課程"
       },
       {
@@ -145,7 +145,7 @@ const content = {
     ],
     educationTimeline: [
       {
-        year: "2024-Present",
+        year: "Apr. 2025-Present",
         title: "Master's Student, AI Science Area, Japan Advanced Institute of Science and Technology (JAIST)"
       },
       {
