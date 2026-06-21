@@ -6,7 +6,8 @@ const content = {
       home: "ホーム",
       about: "自己紹介",
       research: "研究",
-      education: "経歴",
+      education: "学歴",
+      experience: "職歴",
       publications: "業績",
       projects: "プロジェクト",
       contact: "連絡先"
@@ -30,7 +31,8 @@ const content = {
     sections: {
       about: { kicker: "About", title: "自己紹介" },
       research: { kicker: "Research", title: "研究関心" },
-      education: { kicker: "CV", title: "学歴・経験" },
+      education: { kicker: "Education", title: "学歴" },
+      experience: { kicker: "Experience", title: "職歴" },
       publications: { kicker: "Publications", title: "研究業績" },
       projects: { kicker: "Projects", title: "プロジェクト" },
       contact: { kicker: "Contact", title: "連絡先・リンク" }
@@ -49,7 +51,7 @@ const content = {
       "プライバシーを考慮したデータ収集",
       "行動予測"
     ],
-    timeline: [
+    educationTimeline: [
       {
         year: "2024-現在",
         title: "北陸先端科学技術大学院大学 AI知性領域 博士前期課程"
@@ -57,7 +59,9 @@ const content = {
       {
         year: "TODO",
         title: "学部・高専などの学歴を追加"
-      },
+      }
+    ],
+    experienceTimeline: [
       {
         year: "TODO",
         title: "研究補助、インターン、その他の経験を追加"
@@ -91,6 +95,7 @@ const content = {
       about: "About",
       research: "Research",
       education: "Education",
+      experience: "Experience",
       publications: "Publications",
       projects: "Projects",
       contact: "Contact"
@@ -114,7 +119,8 @@ const content = {
     sections: {
       about: { kicker: "About", title: "About" },
       research: { kicker: "Research", title: "Research Interests" },
-      education: { kicker: "CV", title: "Education / Experience" },
+      education: { kicker: "Education", title: "Education" },
+      experience: { kicker: "Experience", title: "Experience" },
       publications: { kicker: "Publications", title: "Publications" },
       projects: { kicker: "Projects", title: "Projects" },
       contact: { kicker: "Contact", title: "Contact / Links" }
@@ -133,7 +139,7 @@ const content = {
       "Privacy-aware Data Collection",
       "Behavior Prediction"
     ],
-    timeline: [
+    educationTimeline: [
       {
         year: "2024-Present",
         title: "Master's Student, AI Science Area, Japan Advanced Institute of Science and Technology (JAIST)"
@@ -141,7 +147,9 @@ const content = {
       {
         year: "TODO",
         title: "Add bachelor's degree"
-      },
+      }
+    ],
+    experienceTimeline: [
       {
         year: "TODO",
         title: "Add research assistant, internship, or other experience"
@@ -232,11 +240,11 @@ function renderKeywords(language) {
   });
 }
 
-function renderTimeline(language) {
-  const container = document.querySelector("#timeline");
+function renderTimeline(containerId, entries) {
+  const container = document.querySelector(containerId);
   container.innerHTML = "";
 
-  content[language].timeline.forEach((item) => {
+  entries.forEach((item) => {
     const entry = document.createElement("article");
     entry.className = "timeline-item";
     entry.innerHTML = `
@@ -296,7 +304,8 @@ function applyLanguage(language) {
   currentLanguage = language;
   renderText(language);
   renderKeywords(language);
-  renderTimeline(language);
+  renderTimeline("#educationTimeline", content[language].educationTimeline);
+  renderTimeline("#experienceTimeline", content[language].experienceTimeline);
   renderPublications(language);
   renderContacts(language);
 }
