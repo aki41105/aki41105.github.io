@@ -57,6 +57,10 @@ const content = {
         title: "北陸先端科学技術大学院大学 AI知性領域 博士前期課程"
       },
       {
+        year: "2021年4月-2025年3月",
+        title: "富山大学 工学部 工学科 電気電子工学コース"
+      },
+      {
         year: "TODO",
         title: "学部・高専などの学歴を追加"
       }
@@ -143,6 +147,10 @@ const content = {
       {
         year: "2024-Present",
         title: "Master's Student, AI Science Area, Japan Advanced Institute of Science and Technology (JAIST)"
+      },
+      {
+        year: "Apr. 2021-Mar. 2025",
+        title: "Electrical and Electronic Engineering Course, Department of Engineering, Faculty of Engineering, University of Toyama"
       },
       {
         year: "TODO",
