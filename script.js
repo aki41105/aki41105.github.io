@@ -24,10 +24,6 @@ const content = {
       contact: "Contact",
       cv: "CV"
     },
-    profileCard: {
-      label: "研究テーマ",
-      focus: "Human-AI Interaction、対話品質評価、実環境マルチモーダルデータ。"
-    },
     sections: {
       about: { kicker: "About", title: "自己紹介" },
       research: { kicker: "Research", title: "研究関心" },
@@ -115,10 +111,6 @@ const content = {
     buttons: {
       contact: "Contact",
       cv: "CV"
-    },
-    profileCard: {
-      label: "Research Focus",
-      focus: "Human-AI Interaction, interaction quality, and real-world multimodal data."
     },
     sections: {
       about: { kicker: "About", title: "About" },
