@@ -72,12 +72,12 @@ const content = {
     },
     contacts: [
       // TODO: Replace TODO values with your real contact information.
-      { label: "大学メール", value: "s2510069 [at] jaist.ac.jp", href: "" },
-      { label: "個人メール", value: "TODO", href: "" },
+      { label: "大学メール", value: "s2510069 [at] jaist.ac.jp", href: "", icon: "mail" },
+      { label: "個人メール", value: "TODO", href: "", icon: "mail" },
       { label: "GitHub", value: "Profile", href: "https://github.com/aki41105", icon: "github" },
-      { label: "Google Scholar", value: "TODO", href: "" },
-      { label: "ORCID", value: "TODO", href: "" },
-      { label: "LinkedIn", value: "TODO", href: "" }
+      { label: "Google Scholar", value: "TODO", href: "", icon: "scholar" },
+      { label: "ORCID", value: "TODO", href: "", icon: "orcid" },
+      { label: "LinkedIn", value: "TODO", href: "", icon: "linkedin" }
     ],
     footer: {
       built: "Built with GitHub Pages."
@@ -156,12 +156,12 @@ const content = {
     },
     contacts: [
       // TODO: Use anti-spam email format such as name [at] domain.
-      { label: "University Email", value: "s2510069 [at] jaist.ac.jp", href: "" },
-      { label: "Personal Email", value: "TODO", href: "" },
+      { label: "University Email", value: "s2510069 [at] jaist.ac.jp", href: "", icon: "mail" },
+      { label: "Personal Email", value: "TODO", href: "", icon: "mail" },
       { label: "GitHub", value: "Profile", href: "https://github.com/aki41105", icon: "github" },
-      { label: "Google Scholar", value: "TODO", href: "" },
-      { label: "ORCID", value: "TODO", href: "" },
-      { label: "LinkedIn", value: "TODO", href: "" }
+      { label: "Google Scholar", value: "TODO", href: "", icon: "scholar" },
+      { label: "ORCID", value: "TODO", href: "", icon: "orcid" },
+      { label: "LinkedIn", value: "TODO", href: "", icon: "linkedin" }
     ],
     footer: {
       built: "Built with GitHub Pages."
@@ -172,9 +172,29 @@ const content = {
 let currentLanguage = "ja";
 
 const icons = {
+  mail: `
+    <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M4.8 5.6h14.4c1.1 0 2 .9 2 2v8.8c0 1.1-.9 2-2 2H4.8c-1.1 0-2-.9-2-2V7.6c0-1.1.9-2 2-2Zm7.2 7.2 7.2-5.2H4.8l7.2 5.2Zm0 2.1L4.4 9.4v7c0 .22.18.4.4.4h14.4c.22 0 .4-.18.4-.4v-7L12 14.9Z"></path>
+    </svg>
+  `,
   github: `
     <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
       <path d="M12 2C6.48 2 2 6.58 2 12.22c0 4.52 2.86 8.34 6.84 9.69.5.09.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.22-3.37-1.22-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.56 2.35 1.11 2.92.85.09-.67.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.71 0 0 .84-.28 2.75 1.05A9.34 9.34 0 0 1 12 6.93c.85 0 1.7.12 2.5.34 1.9-1.33 2.74-1.05 2.74-1.05.55 1.4.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.59.69.49A10.08 10.08 0 0 0 22 12.22C22 6.58 17.52 2 12 2Z"></path>
+    </svg>
+  `,
+  scholar: `
+    <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M12 3 1.9 8.6 12 14.2l8.1-4.5V15h2V8.6L12 3Zm-5.7 9.6v3.2c0 1.8 2.55 3.2 5.7 3.2s5.7-1.4 5.7-3.2v-3.2L12 15.8l-5.7-3.2Z"></path>
+    </svg>
+  `,
+  orcid: `
+    <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20ZM8.7 7.2a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1Zm.9 3.4v6.2H7.8v-6.2h1.8Zm3.2 0h2.4c1.9 0 3.2 1.2 3.2 3.1s-1.3 3.1-3.2 3.1h-2.4v-6.2Zm1.8 1.5v3.2h.5c.9 0 1.5-.55 1.5-1.6s-.6-1.6-1.5-1.6h-.5Z"></path>
+    </svg>
+  `,
+  linkedin: `
+    <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M5.2 3.2h13.6c1.1 0 2 .9 2 2v13.6c0 1.1-.9 2-2 2H5.2c-1.1 0-2-.9-2-2V5.2c0-1.1.9-2 2-2Zm3.2 15v-7.7H6.1v7.7h2.3ZM7.25 9.45c.75 0 1.35-.6 1.35-1.34 0-.75-.6-1.35-1.35-1.35-.74 0-1.34.6-1.34 1.35 0 .74.6 1.34 1.34 1.34Zm10.65 8.75v-4.15c0-2.22-1.18-3.25-2.75-3.25-1.27 0-1.84.7-2.16 1.19v-1.49h-2.3v7.7h2.3v-4.3c0-1.13.21-2.22 1.61-2.22 1.38 0 1.4 1.29 1.4 2.29v4.23h1.9Z"></path>
     </svg>
   `
 };
