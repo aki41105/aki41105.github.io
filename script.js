@@ -119,7 +119,8 @@ const content = {
       { label: "GitHub", value: "Profile", href: "https://github.com/aki41105", icon: "github" },
       { label: "Google Scholar", value: "TODO", href: "", icon: "scholar" },
       { label: "ORCID", value: "0009-0006-7932-0219", href: "https://orcid.org/0009-0006-7932-0219", icon: "orcid" },
-      { label: "LinkedIn", value: "Profile", href: "https://www.linkedin.com/in/%E6%99%83%E5%BC%98-%E6%AB%BB%E6%9C%AC-37024b328/", icon: "linkedin" }
+      { label: "LinkedIn", value: "Profile", href: "https://www.linkedin.com/in/%E6%99%83%E5%BC%98-%E6%AB%BB%E6%9C%AC-37024b328/", icon: "linkedin" },
+      { label: "岡田研究室", value: "Lab Website", href: "https://www.jaist.ac.jp/~okada-s/index.html", icon: "link" }
     ],
     footer: {
       built: "Built with GitHub Pages."
@@ -245,7 +246,8 @@ const content = {
       { label: "GitHub", value: "Profile", href: "https://github.com/aki41105", icon: "github" },
       { label: "Google Scholar", value: "TODO", href: "", icon: "scholar" },
       { label: "ORCID", value: "0009-0006-7932-0219", href: "https://orcid.org/0009-0006-7932-0219", icon: "orcid" },
-      { label: "LinkedIn", value: "Profile", href: "https://www.linkedin.com/in/%E6%99%83%E5%BC%98-%E6%AB%BB%E6%9C%AC-37024b328/", icon: "linkedin" }
+      { label: "LinkedIn", value: "Profile", href: "https://www.linkedin.com/in/%E6%99%83%E5%BC%98-%E6%AB%BB%E6%9C%AC-37024b328/", icon: "linkedin" },
+      { label: "Okada Laboratory", value: "Lab Website", href: "https://www.jaist.ac.jp/~okada-s/index.html", icon: "link" }
     ],
     footer: {
       built: "Built with GitHub Pages."
