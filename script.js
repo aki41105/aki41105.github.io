@@ -10,6 +10,7 @@ const content = {
       experience: "職歴",
       publications: "業績",
       projects: "プロジェクト",
+      resources: "資料",
       contact: "連絡先"
     },
     hero: {
@@ -31,6 +32,7 @@ const content = {
       experience: { kicker: "Experience", title: "職歴" },
       publications: { kicker: "Publications", title: "研究業績" },
       projects: { kicker: "Projects", title: "プロジェクト" },
+      resources: { kicker: "Resources", title: "資料リンク" },
       contact: { kicker: "Contact", title: "連絡先・リンク" }
     },
     about: {
@@ -74,13 +76,20 @@ const content = {
     projects: {
       empty: "プロジェクトは今後追加予定です。"
     },
+    resources: {
+      empty: "論文執筆や研究に役立つ資料リンクをここに追加予定です。",
+      entries: [
+        // Example:
+        // { label: "論文イントロの書き方", value: "Writing Guide", href: "https://example.com", icon: "link" }
+      ]
+    },
     contacts: [
       // TODO: Replace TODO values with your real contact information.
       { label: "大学メール", value: "s2510069 [at] jaist.ac.jp", href: "", icon: "mail" },
       { label: "個人メール", value: "TODO", href: "", icon: "mail" },
       { label: "GitHub", value: "Profile", href: "https://github.com/aki41105", icon: "github" },
       { label: "Google Scholar", value: "TODO", href: "", icon: "scholar" },
-      { label: "ORCID", value: "TODO", href: "", icon: "orcid" },
+      { label: "ORCID", value: "0009-0006-7932-0219", href: "https://orcid.org/0009-0006-7932-0219", icon: "orcid" },
       { label: "LinkedIn", value: "TODO", href: "", icon: "linkedin" }
     ],
     footer: {
@@ -98,6 +107,7 @@ const content = {
       experience: "Experience",
       publications: "Publications",
       projects: "Projects",
+      resources: "Resources",
       contact: "Contact"
     },
     hero: {
@@ -119,6 +129,7 @@ const content = {
       experience: { kicker: "Experience", title: "Experience" },
       publications: { kicker: "Publications", title: "Publications" },
       projects: { kicker: "Projects", title: "Projects" },
+      resources: { kicker: "Resources", title: "Resources" },
       contact: { kicker: "Contact", title: "Contact / Links" }
     },
     about: {
@@ -162,13 +173,20 @@ const content = {
     projects: {
       empty: "Projects will be added here."
     },
+    resources: {
+      empty: "Writing and research resource links will be added here.",
+      entries: [
+        // Example:
+        // { label: "How to write a paper introduction", value: "Writing Guide", href: "https://example.com", icon: "link" }
+      ]
+    },
     contacts: [
       // TODO: Use anti-spam email format such as name [at] domain.
       { label: "University Email", value: "s2510069 [at] jaist.ac.jp", href: "", icon: "mail" },
       { label: "Personal Email", value: "TODO", href: "", icon: "mail" },
       { label: "GitHub", value: "Profile", href: "https://github.com/aki41105", icon: "github" },
       { label: "Google Scholar", value: "TODO", href: "", icon: "scholar" },
-      { label: "ORCID", value: "TODO", href: "", icon: "orcid" },
+      { label: "ORCID", value: "0009-0006-7932-0219", href: "https://orcid.org/0009-0006-7932-0219", icon: "orcid" },
       { label: "LinkedIn", value: "TODO", href: "", icon: "linkedin" }
     ],
     footer: {
@@ -203,6 +221,11 @@ const icons = {
   linkedin: `
     <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
       <path d="M5.2 3.2h13.6c1.1 0 2 .9 2 2v13.6c0 1.1-.9 2-2 2H5.2c-1.1 0-2-.9-2-2V5.2c0-1.1.9-2 2-2Zm3.2 15v-7.7H6.1v7.7h2.3ZM7.25 9.45c.75 0 1.35-.6 1.35-1.34 0-.75-.6-1.35-1.35-1.35-.74 0-1.34.6-1.34 1.35 0 .74.6 1.34 1.34 1.34Zm10.65 8.75v-4.15c0-2.22-1.18-3.25-2.75-3.25-1.27 0-1.84.7-2.16 1.19v-1.49h-2.3v7.7h2.3v-4.3c0-1.13.21-2.22 1.61-2.22 1.38 0 1.4 1.29 1.4 2.29v4.23h1.9Z"></path>
+    </svg>
+  `,
+  link: `
+    <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M10.2 13.8a1 1 0 0 1 0-1.42l3.5-3.5a2.8 2.8 0 1 1 3.96 3.96l-1.25 1.25a1 1 0 1 1-1.42-1.41l1.25-1.25a.8.8 0 1 0-1.13-1.14l-3.5 3.5a1 1 0 0 1-1.41 0Zm3.6-3.6a1 1 0 0 1 0 1.42l-3.5 3.5a2.8 2.8 0 0 1-3.96-3.96L7.59 9.9A1 1 0 0 1 9 11.32l-1.25 1.25a.8.8 0 0 0 1.13 1.14l3.5-3.5a1 1 0 0 1 1.41 0Z"></path>
     </svg>
   `
 };
@@ -300,6 +323,35 @@ function renderContacts(language) {
   });
 }
 
+function renderResources(language) {
+  const container = document.querySelector("#resourceLinks");
+  const emptyState = document.querySelector("#resourcesEmpty");
+  container.innerHTML = "";
+
+  const entries = content[language].resources.entries;
+  emptyState.hidden = entries.length > 0;
+
+  entries.forEach((link) => {
+    const element = document.createElement(link.href ? "a" : "div");
+    element.className = "link-card";
+
+    if (link.href) {
+      element.href = link.href;
+      element.target = "_blank";
+      element.rel = "noopener noreferrer";
+    }
+
+    const icon = link.icon ? icons[link.icon] : "";
+    const valueClass = link.href ? "link-value link-value-action" : "link-value";
+
+    element.innerHTML = `
+      <span class="link-label">${icon}${link.label}</span>
+      <span class="${valueClass}">${link.value}</span>
+    `;
+    container.appendChild(element);
+  });
+}
+
 function applyLanguage(language) {
   currentLanguage = language;
   renderText(language);
@@ -307,6 +359,7 @@ function applyLanguage(language) {
   renderTimeline("#educationTimeline", content[language].educationTimeline);
   renderTimeline("#experienceTimeline", content[language].experienceTimeline);
   renderPublications(language);
+  renderResources(language);
   renderContacts(language);
 }
 
