@@ -1,6 +1,6 @@
 const content = {
   ja: {
-    metaTitle: "櫻本 晃弘 | Academic Profile",
+    metaTitle: "櫻本晃弘 / Sakuramoto Akihiro | Academic Profile",
     siteTitle: "櫻本 晃弘",
     nav: {
       home: "ホーム",
@@ -102,7 +102,7 @@ const content = {
     }
   },
   en: {
-    metaTitle: "Akihiro Sakuramoto | Academic Profile",
+    metaTitle: "Sakuramoto Akihiro / Akihiro Sakuramoto | Academic Profile",
     siteTitle: "Akihiro Sakuramoto",
     nav: {
       home: "Home",

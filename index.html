@@ -5,7 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Academic website and publications of 櫻本晃弘 / Sakuramoto Akihiro / Akihiro Sakuramoto.">
   <meta name="keywords" content="櫻本晃弘, 櫻本 晃弘, Sakuramoto Akihiro, Akihiro Sakuramoto, HRI, human-robot interaction, rapport estimation">
-  <title>Akihiro Sakuramoto | Academic Profile</title>
+  <meta name="author" content="櫻本晃弘 / Sakuramoto Akihiro">
+  <meta property="og:title" content="櫻本晃弘 / Sakuramoto Akihiro | Academic Profile">
+  <meta property="og:description" content="Academic website and publications of 櫻本晃弘 / Sakuramoto Akihiro / Akihiro Sakuramoto.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://aki41105.github.io/">
+  <link rel="canonical" href="https://aki41105.github.io/">
+  <title>櫻本晃弘 / Sakuramoto Akihiro | Academic Profile</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Akihiro Sakuramoto",
+    "alternateName": ["櫻本晃弘", "櫻本 晃弘", "Sakuramoto Akihiro"],
+    "url": "https://aki41105.github.io/",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Japan Advanced Institute of Science and Technology"
+    },
+    "sameAs": [
+      "https://github.com/aki41105",
+      "https://orcid.org/0009-0006-7932-0219"
+    ],
+    "knowsAbout": [
+      "Human-Robot Interaction",
+      "Real-world HRI",
+      "Multimodal Interaction Analysis",
+      "Rapport Estimation"
+    ],
+    "subjectOf": [
+      {
+        "@type": "ScholarlyArticle",
+        "name": "実環境 HRI における対話の質評価に向けたマルチモーダル ラポール推定モデルの検討",
+        "alternateName": "A Multimodal Rapport Estimation Model for Evaluating Interaction Quality in Real-World HRI",
+        "author": [
+          { "@type": "Person", "name": "Akihiro Sakuramoto", "alternateName": ["櫻本晃弘", "Sakuramoto Akihiro"] },
+          { "@type": "Person", "name": "Takato Hayashi", "alternateName": "林貴斗" },
+          { "@type": "Person", "name": "Ryo Miyoshi", "alternateName": "三好遼" },
+          { "@type": "Person", "name": "Yuki Okafuji", "alternateName": "岡藤勇希" },
+          { "@type": "Person", "name": "Shogo Okada", "alternateName": "岡田将吾" }
+        ],
+        "datePublished": "2026-08",
+        "isPartOf": {
+          "@type": "Event",
+          "name": "画像の認識・理解シンポジウム（MIRU）"
+        }
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -111,8 +159,14 @@
       <div class="empty-state">
         <p data-i18n="publications.empty"></p>
       </div>
-      <!-- TODO: Add publication entries in script.js. Cards will appear here automatically. -->
-      <div class="publication-list" id="publicationList"></div>
+      <!-- Initial static content helps crawlers; script.js replaces it with localized cards. -->
+      <div class="publication-list" id="publicationList">
+        <article class="publication-card">
+          <p class="publication-title">[Poster] 実環境 HRI における対話の質評価に向けたマルチモーダル ラポール推定モデルの検討</p>
+          <p class="publication-meta">櫻本晃弘 (Sakuramoto Akihiro), 林貴斗, 三好遼, 岡藤勇希, 岡田将吾</p>
+          <p class="publication-meta">画像の認識・理解シンポジウム（MIRU）, 2026年8月</p>
+        </article>
+      </div>
     </section>
 
     <section class="section" id="projects">

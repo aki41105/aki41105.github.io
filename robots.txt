@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aki41105.github.io/sitemap.xml
