@@ -115,7 +115,7 @@ const content = {
     contacts: [
       // TODO: Replace TODO values with your real contact information.
       { label: "大学メール", value: "s2510069 [at] jaist.ac.jp", href: "", icon: "mail" },
-      { label: "個人メール", value: "TODO", href: "", icon: "mail" },
+      { label: "個人メール", value: "sakuramoto.may [at] gmail.com", href: "", icon: "mail" },
       { label: "GitHub", value: "Profile", href: "https://github.com/aki41105", icon: "github" },
       { label: "Google Scholar", value: "TODO", href: "", icon: "scholar" },
       { label: "ORCID", value: "0009-0006-7932-0219", href: "https://orcid.org/0009-0006-7932-0219", icon: "orcid" },
@@ -242,7 +242,7 @@ const content = {
     contacts: [
       // TODO: Use anti-spam email format such as name [at] domain.
       { label: "University Email", value: "s2510069 [at] jaist.ac.jp", href: "", icon: "mail" },
-      { label: "Personal Email", value: "TODO", href: "", icon: "mail" },
+      { label: "Personal Email", value: "sakuramoto.may [at] gmail.com", href: "", icon: "mail" },
       { label: "GitHub", value: "Profile", href: "https://github.com/aki41105", icon: "github" },
       { label: "Google Scholar", value: "TODO", href: "", icon: "scholar" },
       { label: "ORCID", value: "0009-0006-7932-0219", href: "https://orcid.org/0009-0006-7932-0219", icon: "orcid" },
