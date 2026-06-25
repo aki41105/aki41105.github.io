@@ -71,7 +71,13 @@ const content = {
     ],
     publications: {
       empty: "研究業績は今後追加予定です。",
-      entries: []
+      entries: [
+        {
+          title: "[Poster] 実環境 HRI における対話の質評価に向けたマルチモーダル ラポール推定モデルの検討",
+          authors: "櫻本晃弘 (Sakuramoto Akihiro), 林貴斗, 三好遼, 岡藤勇希, 岡田将吾",
+          venue: "画像の認識・理解シンポジウム（MIRU）, 2026年8月"
+        }
+      ]
     },
     projects: {
       empty: "プロジェクトは今後追加予定です。"
@@ -167,7 +173,13 @@ const content = {
     ],
     publications: {
       empty: "Publications will be added here.",
-      entries: []
+      entries: [
+        {
+          title: "[Poster] A Multimodal Rapport Estimation Model for Evaluating Interaction Quality in Real-World HRI",
+          authors: "Akihiro Sakuramoto (Sakuramoto Akihiro), Takato Hayashi, Ryo Miyoshi, Yuki Okafuji, Shogo Okada",
+          venue: "Meeting on Image Recognition and Understanding (MIRU), Aug. 2026"
+        }
+      ]
     },
     projects: {
       empty: "Projects will be added here."
