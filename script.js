@@ -79,8 +79,7 @@ const content = {
     resources: {
       empty: "論文執筆や研究に役立つ資料リンクをここに追加予定です。",
       entries: [
-        // Example:
-        // { label: "論文イントロの書き方", value: "Writing Guide", href: "https://example.com", icon: "link" }
+        { label: "石原尚 note", value: "研究・執筆・発表の基礎", href: "https://note.com/hisashi_is", icon: "link" }
       ]
     },
     contacts: [
@@ -176,8 +175,7 @@ const content = {
     resources: {
       empty: "Writing and research resource links will be added here.",
       entries: [
-        // Example:
-        // { label: "How to write a paper introduction", value: "Writing Guide", href: "https://example.com", icon: "link" }
+        { label: "Hisashi Ishihara on note", value: "Research, writing, and presentation basics", href: "https://note.com/hisashi_is", icon: "link" }
       ]
     },
     contacts: [
