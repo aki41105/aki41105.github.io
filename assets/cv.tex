@@ -1,0 +1,75 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=16mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlist[itemize]{leftmargin=*, topsep=2pt, itemsep=1pt, parsep=0pt}
+\pagenumbering{gobble}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{6pt}
+  {\large\bfseries #1}\\[-2pt]
+  \rule{\textwidth}{0.4pt}
+  \vspace{2pt}
+}
+
+\newcommand{\entry}[3]{%
+  \textbf{#1} \hfill #2\\
+  #3
+  \vspace{2pt}
+}
+
+\begin{document}
+
+{\LARGE \textbf{Akihiro Sakuramoto}}\\
+Master's Student, AI Science Area, Japan Advanced Institute of Science and Technology (JAIST)\\
+\href{mailto:s2510069@jaist.ac.jp}{s2510069@jaist.ac.jp} \quad
+sakuramoto.may [at] gmail.com \quad
+\href{https://github.com/aki41105}{github.com/aki41105} \quad
+\href{https://orcid.org/0009-0006-7932-0219}{ORCID: 0009-0006-7932-0219}\\
+\href{https://www.linkedin.com/in/%E6%99%83%E5%BC%98-%E6%AB%BB%E6%9C%AC-37024b328/}{LinkedIn} \quad
+\href{https://www.jaist.ac.jp/~okada-s/index.html}{Okada Laboratory}
+
+\cvsection{Research Overview}
+I study real-world human-robot interaction through social signal processing and multimodal interaction, focusing on how people and robots relate to one another in everyday settings.
+
+\cvsection{Education}
+\entry{Japan Advanced Institute of Science and Technology (JAIST)}{Apr. 2025--Present}
+{M.S. student, AI Science Area}
+
+\entry{University of Toyama}{Apr. 2021--Mar. 2025}
+{B.E., Electrical and Electronic Engineering Course, Faculty of Engineering}
+
+\cvsection{Experience and Activities}
+\entry{Joint Research with CyberAgent AI Lab}{2025--Present}
+{Research on real-world HRI and interaction quality evaluation using in-store customer-service robot interaction data.}
+
+\entry{Internship, FUJI Corporation}{Aug. 2025--Sep. 2025}
+{Worked on AI-based image inspection for defects occurring inside solder paste printers, including data collection and algorithm development.}
+
+\entry{Internship, Robot Learning Laboratory, NAIST}{Feb. 2024--Mar. 2024}
+{Worked on robot manipulation tasks using reinforcement learning.}
+
+\entry{NHK Student Robocon 2023 Finalist}{2023}
+{Worked on robot control in the University of Toyama Robocon Project using ROS, C, and Python.}
+
+\cvsection{Publications and Presentations}
+\begin{itemize}
+  \item Sakuramoto A., Hayashi T., Miyoshi R., Okafuji Y., Okada S. \textit{Multimodal Rapport Estimation in Real-World HRI}. ACM International Conference on Multimodal Interaction (ICMI), Long Paper, 2026. Under review.
+  \item Sakuramoto A., Hayashi T., Miyoshi R., Okafuji Y., Okada S. \textit{A Multimodal Rapport Estimation Model for Evaluating Interaction Quality in Real-World HRI}. Meeting on Image Recognition and Understanding (MIRU), Poster presentation, Aug. 2026.
+\end{itemize}
+
+\cvsection{Awards}
+\begin{itemize}
+  \item JAIST Student Grant Scholarship, awarded for academic excellence, 2025--2026.
+\end{itemize}
+
+\cvsection{Skills}
+\begin{itemize}
+  \item Research areas: human-robot interaction, social signal processing, multimodal interaction, interaction quality evaluation.
+  \item Technical experience: Python, C, ROS, data collection, annotation, machine learning, reinforcement learning.
+\end{itemize}
+
+\end{document}
