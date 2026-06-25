@@ -79,21 +79,36 @@ const content = {
     ],
     publications: {
       empty: "研究業績は今後追加予定です。",
-      entries: [
+      groups: [
         {
-          title: "[Poster] 実環境 HRI における対話の質評価に向けたマルチモーダル ラポール推定モデルの検討",
-          authors: "櫻本晃弘 (Sakuramoto Akihiro), 林貴斗, 三好遼, 岡藤勇希, 岡田将吾",
-          venue: "画像の認識・理解シンポジウム（MIRU）, 2026年8月"
+          title: "国際学会",
+          entries: [
+            {
+              title: "Multimodal Rapport Estimation in Real-World HRI",
+              authors: "Sakuramoto A., Hayashi T., Miyoshi R., Okafuji Y., Okada S.",
+              venue: "ACM International Conference on Multimodal Interaction (ICMI), Long Paper, 2026（査読中）"
+            }
+          ]
         },
         {
-          title: "Multimodal Rapport Estimation in Real-World HRI",
-          authors: "Sakuramoto A., Hayashi T., Miyoshi R., Okafuji Y., Okada S.",
-          venue: "ACM International Conference on Multimodal Interaction (ICMI), Long Paper, 2026（査読中）"
+          title: "国内学会",
+          entries: [
+            {
+              title: "[Poster] 実環境 HRI における対話の質評価に向けたマルチモーダル ラポール推定モデルの検討",
+              authors: "櫻本晃弘 (Sakuramoto Akihiro), 林貴斗, 三好遼, 岡藤勇希, 岡田将吾",
+              venue: "画像の認識・理解シンポジウム（MIRU）, 2026年8月"
+            }
+          ]
         },
         {
-          title: "北陸先端科学技術大学院大学学生給付奨学金 一般採用",
-          authors: "櫻本晃弘",
-          venue: "成績優秀のため採用, 2025-2026"
+          title: "その他",
+          entries: [
+            {
+              title: "北陸先端科学技術大学院大学学生給付奨学金 一般採用",
+              authors: "櫻本晃弘",
+              venue: "成績優秀のため採用, 2025-2026"
+            }
+          ]
         }
       ]
     },
@@ -199,21 +214,36 @@ const content = {
     ],
     publications: {
       empty: "Publications will be added here.",
-      entries: [
+      groups: [
         {
-          title: "[Poster] A Multimodal Rapport Estimation Model for Evaluating Interaction Quality in Real-World HRI",
-          authors: "Akihiro Sakuramoto (Sakuramoto Akihiro), Takato Hayashi, Ryo Miyoshi, Yuki Okafuji, Shogo Okada",
-          venue: "Meeting on Image Recognition and Understanding (MIRU), Aug. 2026"
+          title: "International Conferences",
+          entries: [
+            {
+              title: "Multimodal Rapport Estimation in Real-World HRI",
+              authors: "Sakuramoto A., Hayashi T., Miyoshi R., Okafuji Y., Okada S.",
+              venue: "ACM International Conference on Multimodal Interaction (ICMI), Long Paper, 2026 (under review)"
+            }
+          ]
         },
         {
-          title: "Multimodal Rapport Estimation in Real-World HRI",
-          authors: "Sakuramoto A., Hayashi T., Miyoshi R., Okafuji Y., Okada S.",
-          venue: "ACM International Conference on Multimodal Interaction (ICMI), Long Paper, 2026 (under review)"
+          title: "Domestic Conferences",
+          entries: [
+            {
+              title: "[Poster] A Multimodal Rapport Estimation Model for Evaluating Interaction Quality in Real-World HRI",
+              authors: "Akihiro Sakuramoto (Sakuramoto Akihiro), Takato Hayashi, Ryo Miyoshi, Yuki Okafuji, Shogo Okada",
+              venue: "Meeting on Image Recognition and Understanding (MIRU), Aug. 2026"
+            }
+          ]
         },
         {
-          title: "JAIST Student Grant Scholarship",
-          authors: "Akihiro Sakuramoto",
-          venue: "Awarded for academic excellence, 2025-2026"
+          title: "Other",
+          entries: [
+            {
+              title: "JAIST Student Grant Scholarship",
+              authors: "Akihiro Sakuramoto",
+              venue: "Awarded for academic excellence, 2025-2026"
+            }
+          ]
         }
       ]
     },
@@ -329,18 +359,31 @@ function renderPublications(language) {
   const emptyState = document.querySelector("#publications .empty-state");
   container.innerHTML = "";
 
-  const entries = content[language].publications.entries;
-  emptyState.hidden = entries.length > 0;
+  const groups = content[language].publications.groups;
+  const hasEntries = groups.some((group) => group.entries.length > 0);
+  emptyState.hidden = hasEntries;
 
-  entries.forEach((paper) => {
-    const card = document.createElement("article");
-    card.className = "publication-card";
-    card.innerHTML = `
-      <p class="publication-title">${paper.title}</p>
-      <p class="publication-meta">${paper.authors}</p>
-      <p class="publication-meta">${paper.venue}</p>
-    `;
-    container.appendChild(card);
+  groups.forEach((group) => {
+    if (group.entries.length === 0) {
+      return;
+    }
+
+    const groupElement = document.createElement("section");
+    groupElement.className = "publication-group";
+    groupElement.innerHTML = `<h3 class="publication-group-title">${group.title}</h3>`;
+
+    group.entries.forEach((paper) => {
+      const card = document.createElement("article");
+      card.className = "publication-card";
+      card.innerHTML = `
+        <p class="publication-title">${paper.title}</p>
+        <p class="publication-meta">${paper.authors}</p>
+        <p class="publication-meta">${paper.venue}</p>
+      `;
+      groupElement.appendChild(card);
+    });
+
+    container.appendChild(groupElement);
   });
 }
 
