@@ -27,7 +27,7 @@ const content = {
     },
     sections: {
       about: { kicker: "About", title: "自己紹介" },
-      research: { kicker: "Research", title: "研究関心" },
+      research: { kicker: "Research", title: "研究紹介" },
       education: { kicker: "Education", title: "学歴" },
       experience: { kicker: "Experience", title: "経験・活動" },
       publications: { kicker: "Publications", title: "研究業績" },
@@ -39,16 +39,7 @@ const content = {
       // TODO: Edit this introduction when your profile changes.
       text: "北陸先端科学技術大学院大学の博士前期課程に所属しています。実環境におけるヒューマンロボットインタラクション、マルチモーダル対話分析、対話品質の評価に関心があります。"
     },
-    researchKeywords: [
-      "ヒューマンロボットインタラクション",
-      "実環境HRI",
-      "マルチモーダル対話分析",
-      "ラポール推定",
-      "感情・対話状態の計算的理解",
-      "大規模言語モデル",
-      "プライバシーを考慮したデータ収集",
-      "行動予測"
-    ],
+    researchOverview: "実環境 HRI を対象に，社会的信号処理とマルチモーダルインタラクションの観点から，人とロボットの相互行為を分析しています。研究内容の詳細は順次整理します。",
     educationTimeline: [
       {
         year: "2025年4月-現在",
@@ -162,7 +153,7 @@ const content = {
     },
     sections: {
       about: { kicker: "About", title: "About" },
-      research: { kicker: "Research", title: "Research Interests" },
+      research: { kicker: "Research", title: "Research Overview" },
       education: { kicker: "Education", title: "Education" },
       experience: { kicker: "Experience", title: "Experience & Activities" },
       publications: { kicker: "Publications", title: "Publications" },
@@ -174,16 +165,7 @@ const content = {
       // TODO: Edit this introduction when your profile changes.
       text: "I am a master's student at JAIST. My research interests include real-world human-robot interaction, multimodal interaction analysis, and computational approaches to understanding interaction quality."
     },
-    researchKeywords: [
-      "Human-Robot Interaction",
-      "Real-world HRI",
-      "Multimodal Interaction Analysis",
-      "Rapport Prediction",
-      "Affective Computing",
-      "Large Language Models",
-      "Privacy-aware Data Collection",
-      "Behavior Prediction"
-    ],
+    researchOverview: "I study real-world HRI through social signal processing and multimodal interaction, focusing on how people and robots relate to one another in everyday settings. More detailed project descriptions will be added as they are organized.",
     educationTimeline: [
       {
         year: "Apr. 2025-Present",
@@ -327,16 +309,9 @@ function renderText(language) {
   });
 }
 
-function renderKeywords(language) {
-  const container = document.querySelector("#researchKeywords");
-  container.innerHTML = "";
-
-  content[language].researchKeywords.forEach((keyword) => {
-    const card = document.createElement("div");
-    card.className = "keyword-card";
-    card.textContent = keyword;
-    container.appendChild(card);
-  });
+function renderResearchOverview(language) {
+  const container = document.querySelector("#researchOverview");
+  container.textContent = content[language].researchOverview;
 }
 
 function renderTimeline(containerId, entries) {
@@ -444,7 +419,7 @@ function renderResources(language) {
 function applyLanguage(language) {
   currentLanguage = language;
   renderText(language);
-  renderKeywords(language);
+  renderResearchOverview(language);
   renderTimeline("#educationTimeline", content[language].educationTimeline);
   renderTimeline("#experienceTimeline", content[language].experienceTimeline);
   renderPublications(language);
