@@ -57,20 +57,16 @@ const content = {
       {
         year: "2021年4月-2025年3月",
         title: "富山大学 工学部 工学科 電気電子工学コース"
-      },
-      {
-        year: "TODO",
-        title: "学部・高専などの学歴を追加"
       }
     ],
     experienceTimeline: [
       {
-        year: "2025年8月-2025年9月",
-        title: "株式会社FUJI 2025年度インターンシップ。クリームはんだ印刷機内で発生する不良のAI画像判定に取り組み，データ収集とアルゴリズム開発を経験。"
-      },
-      {
         year: "2025年-現在",
         title: "サイバーエージェント AI Lab との共同研究。実店舗で収集された接客ロボット対話データを対象に，実環境HRIにおける対話品質評価の研究を推進。"
+      },
+      {
+        year: "2025年8月-2025年9月",
+        title: "株式会社FUJI 2025年度インターンシップ。クリームはんだ印刷機内で発生する不良のAI画像判定に取り組み，データ収集とアルゴリズム開発を経験。"
       },
       {
         year: "2024年2月-2024年3月",
@@ -181,20 +177,16 @@ const content = {
       {
         year: "Apr. 2021-Mar. 2025",
         title: "Electrical and Electronic Engineering Course, Department of Engineering, Faculty of Engineering, University of Toyama"
-      },
-      {
-        year: "TODO",
-        title: "Add bachelor's degree"
       }
     ],
     experienceTimeline: [
       {
-        year: "Aug. 2025-Sep. 2025",
-        title: "Internship, FUJI Corporation. Worked on AI-based image inspection for defects occurring inside solder paste printers, including data collection and algorithm development."
-      },
-      {
         year: "2025-Present",
         title: "Joint research with CyberAgent AI Lab on real-world HRI and interaction quality evaluation using in-store customer-service robot interaction data."
+      },
+      {
+        year: "Aug. 2025-Sep. 2025",
+        title: "Internship, FUJI Corporation. Worked on AI-based image inspection for defects occurring inside solder paste printers, including data collection and algorithm development."
       },
       {
         year: "Feb. 2024-Mar. 2024",
