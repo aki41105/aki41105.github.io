@@ -7,7 +7,7 @@ const content = {
       about: "自己紹介",
       research: "研究",
       education: "学歴",
-      experience: "職歴",
+      experience: "経験",
       publications: "業績",
       projects: "プロジェクト",
       resources: "資料",
@@ -29,7 +29,7 @@ const content = {
       about: { kicker: "About", title: "自己紹介" },
       research: { kicker: "Research", title: "研究関心" },
       education: { kicker: "Education", title: "学歴" },
-      experience: { kicker: "Experience", title: "職歴" },
+      experience: { kicker: "Experience", title: "経験・活動" },
       publications: { kicker: "Publications", title: "研究業績" },
       projects: { kicker: "Projects", title: "プロジェクト" },
       resources: { kicker: "Resources", title: "資料リンク" },
@@ -65,8 +65,20 @@ const content = {
     ],
     experienceTimeline: [
       {
-        year: "TODO",
-        title: "研究補助、インターン、その他の経験を追加"
+        year: "2025年8月-2025年9月",
+        title: "株式会社FUJI 2025年度インターンシップ。クリームはんだ印刷機内で発生する不良のAI画像判定に取り組み，データ収集とアルゴリズム開発を経験。"
+      },
+      {
+        year: "2025年-現在",
+        title: "サイバーエージェント AI Lab との共同研究。実店舗で収集された接客ロボット対話データを対象に，実環境HRIにおける対話品質評価の研究を推進。"
+      },
+      {
+        year: "2024年2月-2024年3月",
+        title: "奈良先端科学技術大学院大学（NAIST）ロボットラーニング研究室 インターンシップ。強化学習を用いたロボット操作課題に取り組む。"
+      },
+      {
+        year: "2023年",
+        title: "NHK学生ロボコン2023 本選出場。富山大学ロボコンプロジェクトに所属し，ROS，C言語，Pythonを用いたロボット制御を担当。"
       }
     ],
     publications: {
@@ -76,6 +88,16 @@ const content = {
           title: "[Poster] 実環境 HRI における対話の質評価に向けたマルチモーダル ラポール推定モデルの検討",
           authors: "櫻本晃弘 (Sakuramoto Akihiro), 林貴斗, 三好遼, 岡藤勇希, 岡田将吾",
           venue: "画像の認識・理解シンポジウム（MIRU）, 2026年8月"
+        },
+        {
+          title: "Multimodal Rapport Estimation in Real-World HRI",
+          authors: "Sakuramoto A., Hayashi T., Miyoshi R., Okafuji Y., Okada S.",
+          venue: "ACM International Conference on Multimodal Interaction (ICMI), Long Paper, 2026（査読中）"
+        },
+        {
+          title: "北陸先端科学技術大学院大学学生給付奨学金 一般採用",
+          authors: "櫻本晃弘",
+          venue: "成績優秀のため採用, 2025-2026"
         }
       ]
     },
@@ -131,7 +153,7 @@ const content = {
       about: { kicker: "About", title: "About" },
       research: { kicker: "Research", title: "Research Interests" },
       education: { kicker: "Education", title: "Education" },
-      experience: { kicker: "Experience", title: "Experience" },
+      experience: { kicker: "Experience", title: "Experience & Activities" },
       publications: { kicker: "Publications", title: "Publications" },
       projects: { kicker: "Projects", title: "Projects" },
       resources: { kicker: "Resources", title: "Resources" },
@@ -167,8 +189,20 @@ const content = {
     ],
     experienceTimeline: [
       {
-        year: "TODO",
-        title: "Add research assistant, internship, or other experience"
+        year: "Aug. 2025-Sep. 2025",
+        title: "Internship, FUJI Corporation. Worked on AI-based image inspection for defects occurring inside solder paste printers, including data collection and algorithm development."
+      },
+      {
+        year: "2025-Present",
+        title: "Joint research with CyberAgent AI Lab on real-world HRI and interaction quality evaluation using in-store customer-service robot interaction data."
+      },
+      {
+        year: "Feb. 2024-Mar. 2024",
+        title: "Internship, Robot Learning Laboratory, Nara Institute of Science and Technology (NAIST). Worked on robot manipulation tasks using reinforcement learning."
+      },
+      {
+        year: "2023",
+        title: "NHK Student Robocon 2023 finalist. Worked on robot control in the University of Toyama Robocon Project using ROS, C, and Python."
       }
     ],
     publications: {
@@ -178,6 +212,16 @@ const content = {
           title: "[Poster] A Multimodal Rapport Estimation Model for Evaluating Interaction Quality in Real-World HRI",
           authors: "Akihiro Sakuramoto (Sakuramoto Akihiro), Takato Hayashi, Ryo Miyoshi, Yuki Okafuji, Shogo Okada",
           venue: "Meeting on Image Recognition and Understanding (MIRU), Aug. 2026"
+        },
+        {
+          title: "Multimodal Rapport Estimation in Real-World HRI",
+          authors: "Sakuramoto A., Hayashi T., Miyoshi R., Okafuji Y., Okada S.",
+          venue: "ACM International Conference on Multimodal Interaction (ICMI), Long Paper, 2026 (under review)"
+        },
+        {
+          title: "JAIST Student Grant Scholarship",
+          authors: "Akihiro Sakuramoto",
+          venue: "Awarded for academic excellence, 2025-2026"
         }
       ]
     },
