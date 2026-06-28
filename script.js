@@ -54,6 +54,10 @@ const content = {
         title: "株式会社FUJI 2025年度インターンシップ。クリームはんだ印刷機内で発生する不良のAI画像判定に取り組み，データ収集とアルゴリズム開発を経験。"
       },
       {
+        year: "2025年9月",
+        title: "日産自動車株式会社 技術系インターンシップ。車両性能領域「自動運転/先進運転支援性能実験（AD/ADAS）」に参加し，車両性能・実験技術に関する業務理解を深めた。"
+      },
+      {
         year: "2024年2月-2024年3月",
         title: "奈良先端科学技術大学院大学（NAIST）ロボットラーニング研究室 インターンシップ。強化学習を用いたロボット操作課題に取り組む。"
       },
@@ -173,6 +177,10 @@ const content = {
       {
         year: "Aug. 2025-Sep. 2025",
         title: "Internship, FUJI Corporation. Worked on AI-based image inspection for defects occurring inside solder paste printers, including data collection and algorithm development."
+      },
+      {
+        year: "Sep. 2025",
+        title: "Technical internship, Nissan Motor Corporation. Participated in an AD/ADAS and vehicle dynamics performance experimentation program in the vehicle performance area."
       },
       {
         year: "Feb. 2024-Mar. 2024",
