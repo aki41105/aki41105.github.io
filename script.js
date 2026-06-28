@@ -85,26 +85,16 @@ const content = {
       empty: "研究業績は今後追加予定です。",
       groups: [
         {
-          title: "採択済み論文",
+          title: "国際会議",
           entries: []
         },
         {
-          title: "発表",
+          title: "国内学会",
           entries: [
             {
               title: "実環境 HRI における対話の質評価に向けたマルチモーダル ラポール推定モデルの検討",
               authors: "櫻本晃弘 (Sakuramoto Akihiro), 林貴斗, 三好遼, 岡藤勇希, 岡田将吾",
               venue: "画像の認識・理解シンポジウム（MIRU）, ポスター発表（査読なし）, 2026年8月"
-            }
-          ]
-        },
-        {
-          title: "査読中原稿",
-          entries: [
-            {
-              title: "Multimodal Rapport Estimation in Real-World HRI",
-              authors: "Sakuramoto A., Hayashi T., Miyoshi R., Okafuji Y., Okada S.",
-              venue: "ACM International Conference on Multimodal Interaction (ICMI), Long Paper, 2026（査読中）"
             }
           ]
         },
@@ -264,26 +254,16 @@ const content = {
       empty: "Publications will be added here.",
       groups: [
         {
-          title: "Accepted Papers",
+          title: "International Conferences",
           entries: []
         },
         {
-          title: "Presentations",
+          title: "Domestic Conferences",
           entries: [
             {
               title: "A Multimodal Rapport Estimation Model for Evaluating Interaction Quality in Real-World HRI",
               authors: "Akihiro Sakuramoto (Sakuramoto Akihiro), Takato Hayashi, Ryo Miyoshi, Yuki Okafuji, Shogo Okada",
               venue: "Meeting on Image Recognition and Understanding (MIRU), Poster presentation (non-peer-reviewed), Aug. 2026"
-            }
-          ]
-        },
-        {
-          title: "Manuscripts Under Review",
-          entries: [
-            {
-              title: "Multimodal Rapport Estimation in Real-World HRI",
-              authors: "Sakuramoto A., Hayashi T., Miyoshi R., Okafuji Y., Okada S.",
-              venue: "ACM International Conference on Multimodal Interaction (ICMI), Long Paper, 2026 (under review)"
             }
           ]
         },
