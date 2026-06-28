@@ -492,6 +492,16 @@ h2 {
   font-weight: 600;
 }
 
+.timeline-link {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 0.55rem;
+  color: var(--color-primary-dark);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 .publication-list {
   display: grid;
   gap: 0.9rem;
@@ -553,6 +563,7 @@ h2 {
 }
 
 .gallery-card {
+  scroll-margin-top: 8rem;
   overflow: hidden;
   border: 1px solid var(--color-line);
   border-radius: var(--radius-sm);
