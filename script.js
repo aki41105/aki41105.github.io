@@ -38,7 +38,8 @@ const content = {
     researchActivitiesTimeline: [
       {
         year: "2025年-現在",
-        title: "サイバーエージェント AI Lab との共同研究。実店舗で収集された接客ロボット対話データを対象に，実環境HRIにおける対話品質評価の研究を推進。"
+        title: "サイバーエージェント AI Lab との共同研究",
+        detail: "実店舗で収集された接客ロボット対話データを対象に，実環境HRIにおける対話品質評価の研究を推進。"
       }
     ],
     educationTimeline: [
@@ -54,19 +55,23 @@ const content = {
     experienceTimeline: [
       {
         year: "2025年8月-2025年9月",
-        title: "株式会社FUJI 2025年度インターンシップ。クリームはんだ印刷機内で発生する不良のAI画像判定に取り組み，データ収集とアルゴリズム開発を経験。（3週間）"
+        title: "株式会社FUJI 2025年度インターンシップ",
+        detail: "クリームはんだ印刷機内で発生する不良のAI画像判定に取り組み，データ収集とアルゴリズム開発を経験。（3週間）"
       },
       {
         year: "2025年9月",
-        title: "日産自動車株式会社 技術系インターンシップ。車両性能領域「自動運転/先進運転支援性能実験（AD/ADAS）」に参加。（5日間）"
+        title: "日産自動車株式会社 技術系インターンシップ",
+        detail: "車両性能領域「自動運転/先進運転支援性能実験（AD/ADAS）」に参加。（5日間）"
       },
       {
         year: "2024年2月-2024年3月",
-        title: "奈良先端科学技術大学院大学（NAIST）ロボットラーニング研究室 インターンシップ。強化学習を用いたロボット操作課題に取り組む。（約4週間）"
+        title: "奈良先端科学技術大学院大学（NAIST）ロボットラーニング研究室 インターンシップ",
+        detail: "強化学習を用いたロボット操作課題に取り組む。（約4週間）"
       },
       {
         year: "2023年",
-        title: "NHK学生ロボコン2023 本選出場。富山大学ロボコンプロジェクトに所属し，ROS，C言語，Pythonを用いたロボット制御を担当。"
+        title: "NHK学生ロボコン2023 本選出場",
+        detail: "富山大学ロボコンプロジェクトに所属し，ROS，C言語，Pythonを用いたロボット制御を担当。"
       }
     ],
     publications: {
@@ -166,7 +171,8 @@ const content = {
     researchActivitiesTimeline: [
       {
         year: "2025-Present",
-        title: "Joint research with CyberAgent AI Lab on real-world HRI and interaction quality evaluation using in-store customer-service robot interaction data."
+        title: "Joint Research with CyberAgent AI Lab",
+        detail: "Studying real-world HRI and interaction quality evaluation using in-store customer-service robot interaction data."
       }
     ],
     educationTimeline: [
@@ -182,19 +188,23 @@ const content = {
     experienceTimeline: [
       {
         year: "Aug. 2025-Sep. 2025",
-        title: "Internship, FUJI Corporation. Worked on AI-based image inspection for defects occurring inside solder paste printers, including data collection and algorithm development. (3 weeks)"
+        title: "Internship, FUJI Corporation",
+        detail: "Worked on AI-based image inspection for defects occurring inside solder paste printers, including data collection and algorithm development. (3 weeks)"
       },
       {
         year: "Sep. 2025",
-        title: "Technical internship, Nissan Motor Corporation. Participated in an AD/ADAS and vehicle dynamics performance experimentation program in the vehicle performance area. (5 days)"
+        title: "Technical Internship, Nissan Motor Corporation",
+        detail: "Participated in an AD/ADAS and vehicle dynamics performance experimentation program in the vehicle performance area. (5 days)"
       },
       {
         year: "Feb. 2024-Mar. 2024",
-        title: "Internship, Robot Learning Laboratory, Nara Institute of Science and Technology (NAIST). Worked on robot manipulation tasks using reinforcement learning. (about 4 weeks)"
+        title: "Internship, Robot Learning Laboratory, Nara Institute of Science and Technology (NAIST)",
+        detail: "Worked on robot manipulation tasks using reinforcement learning. (about 4 weeks)"
       },
       {
         year: "2023",
-        title: "NHK Student Robocon 2023 finalist. Worked on robot control in the University of Toyama Robocon Project using ROS, C, and Python."
+        title: "NHK Student Robocon 2023 Finalist",
+        detail: "Worked on robot control in the University of Toyama Robocon Project using ROS, C, and Python."
       }
     ],
     publications: {
@@ -329,9 +339,13 @@ function renderTimeline(containerId, entries) {
   entries.forEach((item) => {
     const entry = document.createElement("article");
     entry.className = "timeline-item";
+    const detail = item.detail ? `<p class="timeline-detail">${item.detail}</p>` : "";
     entry.innerHTML = `
       <div class="timeline-year">${item.year}</div>
-      <p class="timeline-title">${item.title}</p>
+      <div class="timeline-content">
+        <p class="timeline-title">${item.title}</p>
+        ${detail}
+      </div>
     `;
     container.appendChild(entry);
   });

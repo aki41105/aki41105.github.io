@@ -483,7 +483,13 @@ h2 {
 .timeline-title {
   margin: 0;
   color: var(--color-text);
-  font-weight: 700;
+  font-weight: 800;
+}
+
+.timeline-detail {
+  margin: 0.32rem 0 0;
+  color: var(--color-muted);
+  font-weight: 600;
 }
 
 .publication-list {
