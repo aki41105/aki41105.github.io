@@ -47,8 +47,8 @@ const content = {
       },
       {
         year: "2025年8月-2026年1月",
-        title: "七尾市一本杉商店街における地域課題調査とデジタルツイン活用",
-        detail: "石川県七尾市の一本杉商店街でインタビュー調査を行い，地域の課題を整理。現地で得られた知見をもとに，デジタルツインを用いた課題解決の可能性を検討し，最終レポートを作成。"
+        title: "デジタルツイン技術による能登半島地震の教訓と伝承",
+        detail: "石川県七尾市の一本杉商店街でインタビュー調査を行い，地域の課題や能登半島地震から得られた教訓を整理。現地で得られた知見をもとに，デジタルツインを用いた記録・伝承の可能性を検討し，最終レポートを作成。"
       }
     ],
     educationTimeline: [
@@ -220,8 +220,8 @@ const content = {
       },
       {
         year: "Aug. 2025-Jan. 2026",
-        title: "Local Issue Research and Digital Twin Applications in Ipponsugi Shopping Street, Nanao",
-        detail: "Conducted interviews in Ipponsugi Shopping Street in Nanao, Ishikawa, to identify local challenges. Based on the field insights, explored how digital twin technologies could support problem solving and prepared the final report."
+        title: "Preserving Lessons from the Noto Peninsula Earthquake through Digital Twin Technology",
+        detail: "Conducted interviews in Ipponsugi Shopping Street in Nanao, Ishikawa, to identify local challenges and lessons from the Noto Peninsula earthquake. Based on the field insights, explored how digital twin technologies could support recording and preservation, and prepared the final report."
       }
     ],
     educationTimeline: [
