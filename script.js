@@ -8,6 +8,7 @@ const content = {
       career: "経歴",
       publications: "業績",
       projects: "プロジェクト",
+      gallery: "ギャラリー",
       resources: "資料",
       contact: "連絡先"
     },
@@ -31,6 +32,7 @@ const content = {
       experience: { kicker: "Experience", title: "経験・活動" },
       publications: { kicker: "Publications", title: "研究業績" },
       projects: { kicker: "Projects", title: "プロジェクト" },
+      gallery: { kicker: "Gallery", title: "ギャラリー・近況メモ" },
       resources: { kicker: "Resources", title: "資料リンク" },
       contact: { kicker: "Contact", title: "連絡先・リンク" }
     },
@@ -112,6 +114,19 @@ const content = {
     projects: {
       empty: "プロジェクトは今後追加予定です。"
     },
+    gallery: {
+      empty: "写真や近況メモは今後追加予定です。",
+      entries: [
+        {
+          date: "2026",
+          title: "図書館の風景",
+          text: "研究プロフィールの雰囲気に合わせて選んだ，知的で温かい空間の写真。",
+          image: "assets/header-library.jpg?v=20260628-1",
+          alt: "曲線状の本棚が広がる温かい雰囲気の図書館",
+          tags: ["Photo", "Research Life"]
+        }
+      ]
+    },
     resources: {
       empty: "論文執筆や研究に役立つ資料リンクをここに追加予定です。",
       entries: [
@@ -142,6 +157,7 @@ const content = {
       career: "Career",
       publications: "Publications",
       projects: "Projects",
+      gallery: "Gallery",
       resources: "Resources",
       contact: "Contact"
     },
@@ -165,6 +181,7 @@ const content = {
       experience: { kicker: "Experience", title: "Experience & Activities" },
       publications: { kicker: "Publications", title: "Publications" },
       projects: { kicker: "Projects", title: "Projects" },
+      gallery: { kicker: "Gallery", title: "Gallery / Notes" },
       resources: { kicker: "Resources", title: "Resources" },
       contact: { kicker: "Contact", title: "Contact / Links" }
     },
@@ -245,6 +262,19 @@ const content = {
     },
     projects: {
       empty: "Projects will be added here."
+    },
+    gallery: {
+      empty: "Photos and short notes will be added here.",
+      entries: [
+        {
+          date: "2026",
+          title: "Library Scene",
+          text: "A warm, knowledge-rich space selected to match the atmosphere of this research profile.",
+          image: "assets/header-library.jpg?v=20260628-1",
+          alt: "Curved bookshelves inside a warm library atrium",
+          tags: ["Photo", "Research Life"]
+        }
+      ]
     },
     resources: {
       empty: "Writing and research resource links will be added here.",
@@ -440,6 +470,32 @@ function renderResources(language) {
   });
 }
 
+function renderGallery(language) {
+  const container = document.querySelector("#galleryList");
+  const emptyState = document.querySelector("#galleryEmpty");
+  container.innerHTML = "";
+
+  const entries = content[language].gallery.entries;
+  emptyState.hidden = entries.length > 0;
+
+  entries.forEach((item) => {
+    const card = document.createElement("article");
+    card.className = "gallery-card";
+    const tags = item.tags.map((tag) => `<span>${tag}</span>`).join("");
+
+    card.innerHTML = `
+      <img src="${item.image}" alt="${item.alt}">
+      <div class="gallery-card-body">
+        <p class="gallery-date">${item.date}</p>
+        <h3 class="gallery-title">${item.title}</h3>
+        <p class="gallery-text">${item.text}</p>
+        <div class="gallery-tags">${tags}</div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
+
 function applyLanguage(language) {
   currentLanguage = language;
   renderText(language);
@@ -448,6 +504,7 @@ function applyLanguage(language) {
   renderTimeline("#educationTimeline", content[language].educationTimeline);
   renderTimeline("#experienceTimeline", content[language].experienceTimeline);
   renderPublications(language);
+  renderGallery(language);
   renderResources(language);
   renderContacts(language);
 }
@@ -531,7 +588,7 @@ function setupScrollSpy() {
 
   const getCurrentSectionId = () => {
     const headerHeight = header?.getBoundingClientRect().height ?? 0;
-    const threshold = headerHeight + 72;
+    const threshold = headerHeight + Math.min(240, window.innerHeight * 0.35);
     const isAtPageEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
 
     if (isAtPageEnd) {

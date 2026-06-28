@@ -138,7 +138,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260628-7">
+  <link rel="stylesheet" href="styles.css?v=20260628-8">
 </head>
 <body>
   <header class="site-header">
@@ -153,6 +153,7 @@
       <a href="#career" data-nav="career">Career</a>
       <a href="#publications" data-nav="publications">Publications</a>
       <a href="#projects" data-nav="projects">Projects</a>
+      <a href="#gallery" data-nav="gallery">Gallery</a>
       <a href="#resources" data-nav="resources">Resources</a>
       <a href="#contact" data-nav="contact">Contact</a>
     </nav>
@@ -325,6 +326,31 @@
       </div>
     </section>
 
+    <section class="section" id="gallery">
+      <div class="section-heading">
+        <p class="section-kicker" data-i18n="sections.gallery.kicker">Gallery</p>
+        <h2 data-i18n="sections.gallery.title">Gallery / Notes</h2>
+      </div>
+      <div class="empty-state" id="galleryEmpty" hidden>
+        <p data-i18n="gallery.empty"></p>
+      </div>
+      <!-- TODO: Add gallery and blog-style notes in script.js. -->
+      <div class="gallery-grid" id="galleryList">
+        <article class="gallery-card">
+          <img src="assets/header-library.jpg?v=20260628-1" alt="Curved bookshelves inside a warm library atrium">
+          <div class="gallery-card-body">
+            <p class="gallery-date">2026</p>
+            <h3 class="gallery-title">図書館の風景</h3>
+            <p class="gallery-text">研究プロフィールの雰囲気に合わせて選んだ，知的で温かい空間の写真。</p>
+            <div class="gallery-tags">
+              <span>Photo</span>
+              <span>Research Life</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="section" id="resources">
       <div class="section-heading">
         <p class="section-kicker" data-i18n="sections.resources.kicker">Resources</p>
@@ -387,6 +413,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20260628-12"></script>
+  <script src="script.js?v=20260628-13"></script>
 </body>
 </html>
