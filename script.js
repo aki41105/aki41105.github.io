@@ -64,12 +64,13 @@ const content = {
         year: "2025年9月",
         title: "日産自動車株式会社 技術系インターンシップ",
         detail: "車両性能領域「自動運転/先進運転支援性能実験（AD/ADAS）」に参加。（5日間）",
-        titleHref: "gallery-nissan-atsugiya.html"
+        titleHref: "gallery-nissan.html"
       },
       {
         year: "2024年2月-2024年3月",
         title: "奈良先端科学技術大学院大学（NAIST）ロボットラーニング研究室 インターンシップ",
-        detail: "強化学習を用いたロボット操作課題に取り組む。（約4週間）"
+        detail: "強化学習を用いたロボット操作課題に取り組む。（約4週間）",
+        titleHref: "gallery-naist.html"
       },
       {
         year: "2023年",
@@ -128,44 +129,24 @@ const content = {
           tags: ["Photo", "Research Life"]
         },
         {
-          id: "gallery-nissan-atsugiya",
+          id: "gallery-nissan",
           date: "2025.09",
-          title: "日産インターン期間中の厚木家",
-          text: "技術系インターンシップで厚木を訪れたときに立ち寄った厚木家の一杯。",
+          title: "日産インターンシップ",
+          text: "技術系インターンシップ期間中の厚木での記録。厚木家，さわやか，新時代，麺や食堂 厚木本店。",
           image: "assets/nissan-atsugiya.jpg?v=20260628-1",
-          href: "gallery-nissan-atsugiya.html",
-          alt: "厚木家で食べたラーメン",
+          href: "gallery-nissan.html",
+          alt: "日産インターン期間中に食べた厚木家のラーメン",
           tags: ["Internship", "Atsugi", "Food"]
         },
         {
-          id: "gallery-nissan-sawayaka",
-          date: "2025.09",
-          title: "さわやか",
-          text: "日産インターン期間中に立ち寄った，さわやかのハンバーグ。",
-          image: "assets/nissan-sawayaka.jpg?v=20260628-1",
-          href: "gallery-nissan-sawayaka.html",
-          alt: "さわやかのハンバーグ",
-          tags: ["Internship", "Food"]
-        },
-        {
-          id: "gallery-nissan-shinjidai",
-          date: "2025.09",
-          title: "新時代",
-          text: "日産インターン期間中の食事記録。新時代での一枚。",
-          image: "assets/nissan-shinjidai.jpg?v=20260628-1",
-          href: "gallery-nissan-shinjidai.html",
-          alt: "新時代で食べた串揚げと唐揚げ",
-          tags: ["Internship", "Food"]
-        },
-        {
-          id: "gallery-nissan-menya-shokudo",
-          date: "2025.09",
-          title: "麺や食堂 厚木本店",
-          text: "日産インターン期間中に訪れた麺や食堂 厚木本店の一杯。",
-          image: "assets/nissan-menya-shokudo.jpg?v=20260628-1",
-          href: "gallery-nissan-menya-shokudo.html",
-          alt: "麺や食堂 厚木本店のラーメンと丼",
-          tags: ["Internship", "Atsugi", "Food"]
+          id: "gallery-naist",
+          date: "2024.02-03",
+          title: "NAISTインターンシップ",
+          text: "ロボットラーニング研究室でのインターン期間中に撮影した，NAISTキャンパスと滞在中の記録。",
+          image: "assets/naist-sign-gate.jpg?v=20260628-1",
+          href: "gallery-naist.html",
+          alt: "NAISTキャンパス入口の風景",
+          tags: ["Internship", "NAIST", "Research Life"]
         }
       ]
     },
@@ -255,12 +236,13 @@ const content = {
         year: "Sep. 2025",
         title: "Technical Internship, Nissan Motor Corporation",
         detail: "Participated in an AD/ADAS and vehicle dynamics performance experimentation program in the vehicle performance area. (5 days)",
-        titleHref: "gallery-nissan-atsugiya.html"
+        titleHref: "gallery-nissan.html"
       },
       {
         year: "Feb. 2024-Mar. 2024",
         title: "Internship, Robot Learning Laboratory, Nara Institute of Science and Technology (NAIST)",
-        detail: "Worked on robot manipulation tasks using reinforcement learning. (about 4 weeks)"
+        detail: "Worked on robot manipulation tasks using reinforcement learning. (about 4 weeks)",
+        titleHref: "gallery-naist.html"
       },
       {
         year: "2023",
@@ -319,44 +301,24 @@ const content = {
           tags: ["Photo", "Research Life"]
         },
         {
-          id: "gallery-nissan-atsugiya",
+          id: "gallery-nissan",
           date: "Sep. 2025",
-          title: "Atsugiya During the Nissan Internship",
-          text: "A bowl of ramen from Atsugiya, visited while staying in Atsugi for the technical internship.",
+          title: "Nissan Internship",
+          text: "Photos from the technical internship period in Atsugi, including Atsugiya, Sawayaka, Shinjidai, and Menya Shokudo Atsugi Main Shop.",
           image: "assets/nissan-atsugiya.jpg?v=20260628-1",
-          href: "gallery-nissan-atsugiya.html",
-          alt: "A bowl of ramen at Atsugiya",
+          href: "gallery-nissan.html",
+          alt: "A bowl of ramen at Atsugiya during the Nissan internship",
           tags: ["Internship", "Atsugi", "Food"]
         },
         {
-          id: "gallery-nissan-sawayaka",
-          date: "Sep. 2025",
-          title: "Sawayaka",
-          text: "A hamburg steak meal from Sawayaka during the Nissan internship.",
-          image: "assets/nissan-sawayaka.jpg?v=20260628-1",
-          href: "gallery-nissan-sawayaka.html",
-          alt: "A hamburg steak meal at Sawayaka",
-          tags: ["Internship", "Food"]
-        },
-        {
-          id: "gallery-nissan-shinjidai",
-          date: "Sep. 2025",
-          title: "Shinjidai",
-          text: "A food memory from Shinjidai during the Nissan internship.",
-          image: "assets/nissan-shinjidai.jpg?v=20260628-1",
-          href: "gallery-nissan-shinjidai.html",
-          alt: "Skewers and fried chicken at Shinjidai",
-          tags: ["Internship", "Food"]
-        },
-        {
-          id: "gallery-nissan-menya-shokudo",
-          date: "Sep. 2025",
-          title: "Menya Shokudo Atsugi Main Shop",
-          text: "A bowl from Menya Shokudo Atsugi Main Shop during the Nissan internship.",
-          image: "assets/nissan-menya-shokudo.jpg?v=20260628-1",
-          href: "gallery-nissan-menya-shokudo.html",
-          alt: "Ramen and a rice bowl at Menya Shokudo Atsugi Main Shop",
-          tags: ["Internship", "Atsugi", "Food"]
+          id: "gallery-naist",
+          date: "Feb.-Mar. 2024",
+          title: "NAIST Internship",
+          text: "Campus and daily-life photos from the internship at the Robot Learning Laboratory, NAIST.",
+          image: "assets/naist-sign-gate.jpg?v=20260628-1",
+          href: "gallery-naist.html",
+          alt: "Entrance area of the NAIST campus",
+          tags: ["Internship", "NAIST", "Research Life"]
         }
       ]
     },
