@@ -1,6 +1,6 @@
 const content = {
   ja: {
-    metaTitle: "櫻本晃弘 / Sakuramoto Akihiro | HRI Research Profile",
+    metaTitle: "櫻本晃弘 / Sakuramoto Akihiro",
     siteTitle: "櫻本 晃弘",
     nav: {
       home: "ホーム",
@@ -129,7 +129,7 @@ const content = {
     }
   },
   en: {
-    metaTitle: "Akihiro Sakuramoto / Sakuramoto Akihiro | HRI Research Profile",
+    metaTitle: "Akihiro Sakuramoto / Sakuramoto Akihiro",
     siteTitle: "Akihiro Sakuramoto",
     nav: {
       home: "Home",
