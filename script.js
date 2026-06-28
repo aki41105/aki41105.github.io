@@ -5,6 +5,7 @@ const content = {
     nav: {
       home: "ホーム",
       research: "研究",
+      "research-activities": "研究活動",
       education: "学歴",
       experience: "経験",
       publications: "業績",
@@ -26,6 +27,7 @@ const content = {
     },
     sections: {
       research: { kicker: "Research", title: "研究紹介" },
+      researchActivities: { kicker: "Research Activities", title: "研究活動" },
       education: { kicker: "Education", title: "学歴" },
       experience: { kicker: "Experience", title: "経験・活動" },
       publications: { kicker: "Publications", title: "研究業績" },
@@ -34,6 +36,12 @@ const content = {
       contact: { kicker: "Contact", title: "連絡先・リンク" }
     },
     researchOverview: "実環境 HRI を対象に，社会的信号処理とマルチモーダルインタラクションの観点から，人とロボットの相互行為を分析しています。研究内容の詳細は順次整理します。",
+    researchActivitiesTimeline: [
+      {
+        year: "2025年-現在",
+        title: "サイバーエージェント AI Lab との共同研究。実店舗で収集された接客ロボット対話データを対象に，実環境HRIにおける対話品質評価の研究を推進。"
+      }
+    ],
     educationTimeline: [
       {
         year: "2025年4月-現在",
@@ -45,10 +53,6 @@ const content = {
       }
     ],
     experienceTimeline: [
-      {
-        year: "2025年-現在",
-        title: "サイバーエージェント AI Lab との共同研究。実店舗で収集された接客ロボット対話データを対象に，実環境HRIにおける対話品質評価の研究を推進。"
-      },
       {
         year: "2025年8月-2025年9月",
         title: "株式会社FUJI 2025年度インターンシップ。クリームはんだ印刷機内で発生する不良のAI画像判定に取り組み，データ収集とアルゴリズム開発を経験。（3週間）"
@@ -130,6 +134,7 @@ const content = {
     nav: {
       home: "Home",
       research: "Research",
+      "research-activities": "Research Activities",
       education: "Education",
       experience: "Experience",
       publications: "Publications",
@@ -151,6 +156,7 @@ const content = {
     },
     sections: {
       research: { kicker: "Research", title: "Research Overview" },
+      researchActivities: { kicker: "Research Activities", title: "Research Activities" },
       education: { kicker: "Education", title: "Education" },
       experience: { kicker: "Experience", title: "Experience & Activities" },
       publications: { kicker: "Publications", title: "Publications" },
@@ -159,6 +165,12 @@ const content = {
       contact: { kicker: "Contact", title: "Contact / Links" }
     },
     researchOverview: "I study real-world HRI through social signal processing and multimodal interaction, focusing on how people and robots relate to one another in everyday settings. More detailed project descriptions will be added as they are organized.",
+    researchActivitiesTimeline: [
+      {
+        year: "2025-Present",
+        title: "Joint research with CyberAgent AI Lab on real-world HRI and interaction quality evaluation using in-store customer-service robot interaction data."
+      }
+    ],
     educationTimeline: [
       {
         year: "Apr. 2025-Present",
@@ -170,10 +182,6 @@ const content = {
       }
     ],
     experienceTimeline: [
-      {
-        year: "2025-Present",
-        title: "Joint research with CyberAgent AI Lab on real-world HRI and interaction quality evaluation using in-store customer-service robot interaction data."
-      },
       {
         year: "Aug. 2025-Sep. 2025",
         title: "Internship, FUJI Corporation. Worked on AI-based image inspection for defects occurring inside solder paste printers, including data collection and algorithm development. (3 weeks)"
@@ -418,6 +426,7 @@ function applyLanguage(language) {
   currentLanguage = language;
   renderText(language);
   renderResearchOverview(language);
+  renderTimeline("#researchActivityTimeline", content[language].researchActivitiesTimeline);
   renderTimeline("#educationTimeline", content[language].educationTimeline);
   renderTimeline("#experienceTimeline", content[language].experienceTimeline);
   renderPublications(language);
