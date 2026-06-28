@@ -429,7 +429,7 @@ function applyLanguage(language) {
   renderText(language);
   renderResearchOverview(language);
   renderTimeline("#researchActivityTimeline", content[language].researchActivitiesTimeline);
-  renderTimeline("#homeEducationTimeline", content[language].educationTimeline);
+  renderTimeline("#educationTimeline", content[language].educationTimeline);
   renderTimeline("#experienceTimeline", content[language].experienceTimeline);
   renderPublications(language);
   renderResources(language);
