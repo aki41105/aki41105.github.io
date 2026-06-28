@@ -41,7 +41,7 @@ const content = {
     researchOverview: "実環境 HRI を対象に，社会的信号処理とマルチモーダルインタラクションの観点から，人とロボットの相互行為を分析しています。研究内容の詳細は順次整理します。",
     researchActivitiesTimeline: [
       {
-        year: "2025年-現在",
+        year: "2025年10月-現在",
         title: "サイバーエージェント AI Lab との共同研究",
         detail: "実店舗で収集された接客ロボット対話データを対象に，実環境HRIにおける対話品質評価の研究を推進。"
       },
@@ -225,7 +225,7 @@ const content = {
     researchOverview: "I study real-world HRI through social signal processing and multimodal interaction, focusing on how people and robots relate to one another in everyday settings. More detailed project descriptions will be added as they are organized.",
     researchActivitiesTimeline: [
       {
-        year: "2025-Present",
+        year: "Oct. 2025-Present",
         title: "Joint Research with CyberAgent AI Lab",
         detail: "Studying real-world HRI and interaction quality evaluation using in-store customer-service robot interaction data."
       },
