@@ -64,8 +64,7 @@ const content = {
         year: "2025年9月",
         title: "日産自動車株式会社 技術系インターンシップ",
         detail: "車両性能領域「自動運転/先進運転支援性能実験（AD/ADAS）」に参加。（5日間）",
-        linkLabel: "写真を見る",
-        linkHref: "#gallery-nissan-atsugiya"
+        titleHref: "gallery-nissan-atsugiya.html"
       },
       {
         year: "2024年2月-2024年3月",
@@ -124,6 +123,7 @@ const content = {
           title: "図書館の風景",
           text: "研究プロフィールの雰囲気に合わせて選んだ，知的で温かい空間の写真。",
           image: "assets/header-library.jpg?v=20260628-1",
+          href: "assets/header-library.jpg",
           alt: "曲線状の本棚が広がる温かい雰囲気の図書館",
           tags: ["Photo", "Research Life"]
         },
@@ -133,6 +133,7 @@ const content = {
           title: "日産インターン期間中の厚木家",
           text: "技術系インターンシップで厚木を訪れたときに立ち寄った厚木家の一杯。",
           image: "assets/nissan-atsugiya.jpg?v=20260628-1",
+          href: "gallery-nissan-atsugiya.html",
           alt: "厚木家で食べたラーメン",
           tags: ["Internship", "Atsugi", "Food"]
         }
@@ -224,8 +225,7 @@ const content = {
         year: "Sep. 2025",
         title: "Technical Internship, Nissan Motor Corporation",
         detail: "Participated in an AD/ADAS and vehicle dynamics performance experimentation program in the vehicle performance area. (5 days)",
-        linkLabel: "View photo",
-        linkHref: "#gallery-nissan-atsugiya"
+        titleHref: "gallery-nissan-atsugiya.html"
       },
       {
         year: "Feb. 2024-Mar. 2024",
@@ -284,6 +284,7 @@ const content = {
           title: "Library Scene",
           text: "A warm, knowledge-rich space selected to match the atmosphere of this research profile.",
           image: "assets/header-library.jpg?v=20260628-1",
+          href: "assets/header-library.jpg",
           alt: "Curved bookshelves inside a warm library atrium",
           tags: ["Photo", "Research Life"]
         },
@@ -293,6 +294,7 @@ const content = {
           title: "Atsugiya During the Nissan Internship",
           text: "A bowl of ramen from Atsugiya, visited while staying in Atsugi for the technical internship.",
           image: "assets/nissan-atsugiya.jpg?v=20260628-1",
+          href: "gallery-nissan-atsugiya.html",
           alt: "A bowl of ramen at Atsugiya",
           tags: ["Internship", "Atsugi", "Food"]
         }
@@ -394,13 +396,14 @@ function renderTimeline(containerId, entries) {
     const entry = document.createElement("article");
     entry.className = "timeline-item";
     const detail = item.detail ? `<p class="timeline-detail">${item.detail}</p>` : "";
-    const link = item.linkHref ? `<a class="timeline-link" href="${item.linkHref}">${item.linkLabel}</a>` : "";
+    const title = item.titleHref
+      ? `<a class="timeline-title timeline-title-link" href="${item.titleHref}">${item.title}</a>`
+      : `<p class="timeline-title">${item.title}</p>`;
     entry.innerHTML = `
       <div class="timeline-year">${item.year}</div>
       <div class="timeline-content">
-        <p class="timeline-title">${item.title}</p>
+        ${title}
         ${detail}
-        ${link}
       </div>
     `;
     container.appendChild(entry);
@@ -503,10 +506,13 @@ function renderGallery(language) {
   emptyState.hidden = entries.length > 0;
 
   entries.forEach((item) => {
-    const card = document.createElement("article");
+    const card = document.createElement(item.href ? "a" : "article");
     card.className = "gallery-card";
     if (item.id) {
       card.id = item.id;
+    }
+    if (item.href) {
+      card.href = item.href;
     }
     const tags = item.tags.map((tag) => `<span>${tag}</span>`).join("");
 

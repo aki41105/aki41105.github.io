@@ -492,12 +492,9 @@ h2 {
   font-weight: 600;
 }
 
-.timeline-link {
-  display: inline-flex;
-  width: fit-content;
-  margin-top: 0.55rem;
+.timeline-title-link {
+  display: inline-block;
   color: var(--color-primary-dark);
-  font-weight: 800;
   text-decoration: underline;
   text-underline-offset: 0.18em;
 }
@@ -564,11 +561,20 @@ h2 {
 
 .gallery-card {
   scroll-margin-top: 8rem;
+  display: block;
   overflow: hidden;
   border: 1px solid var(--color-line);
   border-radius: var(--radius-sm);
   background: var(--color-surface);
   box-shadow: 0 8px 20px rgba(74, 94, 75, 0.07);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.gallery-card:hover,
+.gallery-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--color-primary-soft);
+  box-shadow: 0 12px 26px rgba(74, 94, 75, 0.11);
 }
 
 .gallery-card img {
@@ -615,6 +621,53 @@ h2 {
   color: var(--color-primary-dark);
   font-size: 0.78rem;
   font-weight: 800;
+}
+
+.photo-detail {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.42fr) minmax(0, 0.58fr);
+  gap: clamp(1.6rem, 5vw, 4rem);
+  align-items: start;
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.photo-detail h1 {
+  font-size: clamp(2.1rem, 5vw, 4rem);
+}
+
+.photo-detail-meta {
+  margin: 1rem 0 0;
+  color: var(--color-primary-dark);
+  font-weight: 800;
+}
+
+.photo-detail-figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.photo-detail-figure img {
+  display: block;
+  width: 100%;
+  max-height: min(76vh, 54rem);
+  object-fit: contain;
+  background: #1e1b18;
+}
+
+.photo-detail-figure figcaption {
+  padding: 0.85rem 1rem;
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+.detail-home-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 .link-grid {
@@ -743,6 +796,7 @@ h2 {
   }
 
   .hero,
+  .photo-detail,
   .two-column {
     grid-template-columns: 1fr;
   }
@@ -761,6 +815,14 @@ h2 {
     order: 2;
     justify-self: center;
     width: min(100%, 24rem);
+  }
+
+  .photo-detail-copy {
+    order: 1;
+  }
+
+  .photo-detail-figure {
+    order: 2;
   }
 
   .keyword-grid,
