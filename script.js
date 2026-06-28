@@ -320,6 +320,10 @@ function renderResearchOverview(language) {
 
 function renderTimeline(containerId, entries) {
   const container = document.querySelector(containerId);
+  if (!container) {
+    return;
+  }
+
   container.innerHTML = "";
 
   entries.forEach((item) => {
@@ -425,7 +429,7 @@ function applyLanguage(language) {
   renderText(language);
   renderResearchOverview(language);
   renderTimeline("#researchActivityTimeline", content[language].researchActivitiesTimeline);
-  renderTimeline("#educationTimeline", content[language].educationTimeline);
+  renderTimeline("#homeEducationTimeline", content[language].educationTimeline);
   renderTimeline("#experienceTimeline", content[language].experienceTimeline);
   renderPublications(language);
   renderResources(language);
