@@ -13,7 +13,6 @@ const content = {
       contact: "連絡先"
     },
     hero: {
-      eyebrow: "Academic Profile",
       name: "櫻本 晃弘",
       nameReading: "Sakuramoto Akihiro / Akihiro Sakuramoto",
       affiliation: "北陸先端科学技術大学院大学 AI知性領域 博士前期課程",
@@ -187,7 +186,6 @@ const content = {
       contact: "Contact"
     },
     hero: {
-      eyebrow: "Academic Profile",
       name: "Akihiro Sakuramoto",
       nameReading: "櫻本晃弘 / Sakuramoto Akihiro",
       affiliation: "Master's Student in Human-AI Interaction, Japan Advanced Institute of Science and Technology (JAIST)",
