@@ -375,6 +375,10 @@ h2 {
   gap: 0.9rem;
 }
 
+.soft-panel + .keyword-grid {
+  margin-top: 1rem;
+}
+
 .keyword-card {
   min-height: 5.6rem;
   padding: 1rem;

@@ -1,6 +1,6 @@
 const content = {
   ja: {
-    metaTitle: "櫻本晃弘 / Sakuramoto Akihiro | Academic Profile",
+    metaTitle: "櫻本晃弘 / Sakuramoto Akihiro | HRI Research Profile",
     siteTitle: "櫻本 晃弘",
     nav: {
       home: "ホーム",
@@ -16,10 +16,10 @@ const content = {
     hero: {
       eyebrow: "Academic Profile",
       name: "櫻本 晃弘",
-      nameReading: "Sakuramoto Akihiro",
+      nameReading: "Sakuramoto Akihiro / Akihiro Sakuramoto",
       affiliation: "北陸先端科学技術大学院大学 AI知性領域 博士前期課程",
       tagline: "ヒューマンロボットインタラクション / 社会的信号処理 / マルチモーダルインタラクション",
-      summary: "実世界の人とロボットの関わりを、行動・感情・対話の手がかりから理解することを目指しています。研究者、共同研究者、採用担当者が必要な情報へすぐアクセスできるようにまとめています。"
+      summary: "櫻本晃弘（Sakuramoto Akihiro / Akihiro Sakuramoto）は、実世界の人とロボットの関わりを、行動・感情・対話の手がかりから理解することを目指しています。研究者、共同研究者、採用担当者が必要な情報へすぐアクセスできるようにまとめています。"
     },
     buttons: {
       contact: "Contact",
@@ -37,7 +37,7 @@ const content = {
     },
     about: {
       // TODO: Edit this introduction when your profile changes.
-      text: "北陸先端科学技術大学院大学の博士前期課程に所属しています。実環境におけるヒューマンロボットインタラクション、マルチモーダル対話分析、対話品質の評価に関心があります。"
+      text: "櫻本晃弘（Sakuramoto Akihiro）は、北陸先端科学技術大学院大学の博士前期課程に所属しています。実環境におけるヒューマンロボットインタラクション、マルチモーダル対話分析、対話品質の評価に関心があります。"
     },
     researchOverview: "実環境 HRI を対象に，社会的信号処理とマルチモーダルインタラクションの観点から，人とロボットの相互行為を分析しています。研究内容の詳細は順次整理します。",
     educationTimeline: [
@@ -116,10 +116,10 @@ const content = {
       // TODO: Replace TODO values with your real contact information.
       { label: "大学メール", value: "s2510069 [at] jaist.ac.jp", href: "", icon: "mail" },
       { label: "個人メール", value: "sakuramoto.may [at] gmail.com", href: "", icon: "mail" },
-      { label: "GitHub", value: "Profile", href: "https://github.com/aki41105", icon: "github" },
+      { label: "GitHub", value: "aki41105", href: "https://github.com/aki41105", icon: "github", rel: "me" },
       { label: "Google Scholar", value: "TODO", href: "", icon: "scholar" },
-      { label: "ORCID", value: "0009-0006-7932-0219", href: "https://orcid.org/0009-0006-7932-0219", icon: "orcid" },
-      { label: "LinkedIn", value: "Profile", href: "https://www.linkedin.com/in/%E6%99%83%E5%BC%98-%E6%AB%BB%E6%9C%AC-37024b328/", icon: "linkedin" },
+      { label: "ORCID", value: "0009-0006-7932-0219", href: "https://orcid.org/0009-0006-7932-0219", icon: "orcid", rel: "me" },
+      { label: "LinkedIn", value: "Profile", href: "https://www.linkedin.com/in/%E6%99%83%E5%BC%98-%E6%AB%BB%E6%9C%AC-37024b328/", icon: "linkedin", rel: "me" },
       { label: "岡田研究室", value: "Lab Website", href: "https://www.jaist.ac.jp/~okada-s/index.html", icon: "link" }
     ],
     footer: {
@@ -127,7 +127,7 @@ const content = {
     }
   },
   en: {
-    metaTitle: "Sakuramoto Akihiro / Akihiro Sakuramoto | Academic Profile",
+    metaTitle: "Akihiro Sakuramoto / Sakuramoto Akihiro | HRI Research Profile",
     siteTitle: "Akihiro Sakuramoto",
     nav: {
       home: "Home",
@@ -143,10 +143,10 @@ const content = {
     hero: {
       eyebrow: "Academic Profile",
       name: "Akihiro Sakuramoto",
-      nameReading: "",
+      nameReading: "櫻本晃弘 / Sakuramoto Akihiro",
       affiliation: "Master's Student in Human-AI Interaction, Japan Advanced Institute of Science and Technology (JAIST)",
       tagline: "Human-Robot Interaction / Social Signal Processing / Multimodal Interaction",
-      summary: "I study how people and robots interact in real-world settings through behavioral, affective, and conversational signals. This website collects profile information for researchers, collaborators, conference participants, and recruiters."
+      summary: "Akihiro Sakuramoto (Sakuramoto Akihiro / 櫻本晃弘) studies how people and robots interact in real-world settings through behavioral, affective, and conversational signals. This website collects profile information for researchers, collaborators, conference participants, and recruiters."
     },
     buttons: {
       contact: "Contact",
@@ -164,7 +164,7 @@ const content = {
     },
     about: {
       // TODO: Edit this introduction when your profile changes.
-      text: "I am a master's student at JAIST. My research interests include real-world human-robot interaction, multimodal interaction analysis, and computational approaches to understanding interaction quality."
+      text: "Akihiro Sakuramoto is a master's student at JAIST. My research interests include real-world human-robot interaction, multimodal interaction analysis, and computational approaches to understanding interaction quality."
     },
     researchOverview: "I study real-world HRI through social signal processing and multimodal interaction, focusing on how people and robots relate to one another in everyday settings. More detailed project descriptions will be added as they are organized.",
     educationTimeline: [
@@ -243,10 +243,10 @@ const content = {
       // TODO: Use anti-spam email format such as name [at] domain.
       { label: "University Email", value: "s2510069 [at] jaist.ac.jp", href: "", icon: "mail" },
       { label: "Personal Email", value: "sakuramoto.may [at] gmail.com", href: "", icon: "mail" },
-      { label: "GitHub", value: "Profile", href: "https://github.com/aki41105", icon: "github" },
+      { label: "GitHub", value: "aki41105", href: "https://github.com/aki41105", icon: "github", rel: "me" },
       { label: "Google Scholar", value: "TODO", href: "", icon: "scholar" },
-      { label: "ORCID", value: "0009-0006-7932-0219", href: "https://orcid.org/0009-0006-7932-0219", icon: "orcid" },
-      { label: "LinkedIn", value: "Profile", href: "https://www.linkedin.com/in/%E6%99%83%E5%BC%98-%E6%AB%BB%E6%9C%AC-37024b328/", icon: "linkedin" },
+      { label: "ORCID", value: "0009-0006-7932-0219", href: "https://orcid.org/0009-0006-7932-0219", icon: "orcid", rel: "me" },
+      { label: "LinkedIn", value: "Profile", href: "https://www.linkedin.com/in/%E6%99%83%E5%BC%98-%E6%AB%BB%E6%9C%AC-37024b328/", icon: "linkedin", rel: "me" },
       { label: "Okada Laboratory", value: "Lab Website", href: "https://www.jaist.ac.jp/~okada-s/index.html", icon: "link" }
     ],
     footer: {
@@ -375,7 +375,7 @@ function renderContacts(language) {
     if (link.href) {
       element.href = link.href;
       element.target = "_blank";
-      element.rel = "noopener noreferrer";
+      element.rel = link.rel ? `${link.rel} noopener noreferrer` : "noopener noreferrer";
     }
 
     const icon = link.icon ? icons[link.icon] : "";
@@ -404,7 +404,7 @@ function renderResources(language) {
     if (link.href) {
       element.href = link.href;
       element.target = "_blank";
-      element.rel = "noopener noreferrer";
+      element.rel = link.rel ? `${link.rel} noopener noreferrer` : "noopener noreferrer";
     }
 
     const icon = link.icon ? icons[link.icon] : "";
