@@ -136,6 +136,36 @@ const content = {
           href: "gallery-nissan-atsugiya.html",
           alt: "厚木家で食べたラーメン",
           tags: ["Internship", "Atsugi", "Food"]
+        },
+        {
+          id: "gallery-nissan-sawayaka",
+          date: "2025.09",
+          title: "さわやか",
+          text: "日産インターン期間中に立ち寄った，さわやかのハンバーグ。",
+          image: "assets/nissan-sawayaka.jpg?v=20260628-1",
+          href: "gallery-nissan-sawayaka.html",
+          alt: "さわやかのハンバーグ",
+          tags: ["Internship", "Food"]
+        },
+        {
+          id: "gallery-nissan-shinjidai",
+          date: "2025.09",
+          title: "新時代",
+          text: "日産インターン期間中の食事記録。新時代での一枚。",
+          image: "assets/nissan-shinjidai.jpg?v=20260628-1",
+          href: "gallery-nissan-shinjidai.html",
+          alt: "新時代で食べた串揚げと唐揚げ",
+          tags: ["Internship", "Food"]
+        },
+        {
+          id: "gallery-nissan-menya-shokudo",
+          date: "2025.09",
+          title: "麺や食堂 厚木本店",
+          text: "日産インターン期間中に訪れた麺や食堂 厚木本店の一杯。",
+          image: "assets/nissan-menya-shokudo.jpg?v=20260628-1",
+          href: "gallery-nissan-menya-shokudo.html",
+          alt: "麺や食堂 厚木本店のラーメンと丼",
+          tags: ["Internship", "Atsugi", "Food"]
         }
       ]
     },
@@ -296,6 +326,36 @@ const content = {
           image: "assets/nissan-atsugiya.jpg?v=20260628-1",
           href: "gallery-nissan-atsugiya.html",
           alt: "A bowl of ramen at Atsugiya",
+          tags: ["Internship", "Atsugi", "Food"]
+        },
+        {
+          id: "gallery-nissan-sawayaka",
+          date: "Sep. 2025",
+          title: "Sawayaka",
+          text: "A hamburg steak meal from Sawayaka during the Nissan internship.",
+          image: "assets/nissan-sawayaka.jpg?v=20260628-1",
+          href: "gallery-nissan-sawayaka.html",
+          alt: "A hamburg steak meal at Sawayaka",
+          tags: ["Internship", "Food"]
+        },
+        {
+          id: "gallery-nissan-shinjidai",
+          date: "Sep. 2025",
+          title: "Shinjidai",
+          text: "A food memory from Shinjidai during the Nissan internship.",
+          image: "assets/nissan-shinjidai.jpg?v=20260628-1",
+          href: "gallery-nissan-shinjidai.html",
+          alt: "Skewers and fried chicken at Shinjidai",
+          tags: ["Internship", "Food"]
+        },
+        {
+          id: "gallery-nissan-menya-shokudo",
+          date: "Sep. 2025",
+          title: "Menya Shokudo Atsugi Main Shop",
+          text: "A bowl from Menya Shokudo Atsugi Main Shop during the Nissan internship.",
+          image: "assets/nissan-menya-shokudo.jpg?v=20260628-1",
+          href: "gallery-nissan-menya-shokudo.html",
+          alt: "Ramen and a rice bowl at Menya Shokudo Atsugi Main Shop",
           tags: ["Internship", "Atsugi", "Food"]
         }
       ]
