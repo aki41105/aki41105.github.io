@@ -51,15 +51,15 @@ const content = {
       },
       {
         year: "2025年8月-2025年9月",
-        title: "株式会社FUJI 2025年度インターンシップ。クリームはんだ印刷機内で発生する不良のAI画像判定に取り組み，データ収集とアルゴリズム開発を経験。期間：3週間。"
+        title: "株式会社FUJI 2025年度インターンシップ。クリームはんだ印刷機内で発生する不良のAI画像判定に取り組み，データ収集とアルゴリズム開発を経験。（3週間）"
       },
       {
         year: "2025年9月",
-        title: "日産自動車株式会社 技術系インターンシップ。車両性能領域「自動運転/先進運転支援性能実験（AD/ADAS）」に参加。期間：5日間。"
+        title: "日産自動車株式会社 技術系インターンシップ。車両性能領域「自動運転/先進運転支援性能実験（AD/ADAS）」に参加。（5日間）"
       },
       {
         year: "2024年2月-2024年3月",
-        title: "奈良先端科学技術大学院大学（NAIST）ロボットラーニング研究室 インターンシップ。強化学習を用いたロボット操作課題に取り組む。期間：約4週間。"
+        title: "奈良先端科学技術大学院大学（NAIST）ロボットラーニング研究室 インターンシップ。強化学習を用いたロボット操作課題に取り組む。（約4週間）"
       },
       {
         year: "2023年",
@@ -176,15 +176,15 @@ const content = {
       },
       {
         year: "Aug. 2025-Sep. 2025",
-        title: "Internship, FUJI Corporation. Worked on AI-based image inspection for defects occurring inside solder paste printers, including data collection and algorithm development. Duration: 3 weeks."
+        title: "Internship, FUJI Corporation. Worked on AI-based image inspection for defects occurring inside solder paste printers, including data collection and algorithm development. (3 weeks)"
       },
       {
         year: "Sep. 2025",
-        title: "Technical internship, Nissan Motor Corporation. Participated in an AD/ADAS and vehicle dynamics performance experimentation program in the vehicle performance area. Duration: 5 days."
+        title: "Technical internship, Nissan Motor Corporation. Participated in an AD/ADAS and vehicle dynamics performance experimentation program in the vehicle performance area. (5 days)"
       },
       {
         year: "Feb. 2024-Mar. 2024",
-        title: "Internship, Robot Learning Laboratory, Nara Institute of Science and Technology (NAIST). Worked on robot manipulation tasks using reinforcement learning. Duration: about 4 weeks."
+        title: "Internship, Robot Learning Laboratory, Nara Institute of Science and Technology (NAIST). Worked on robot manipulation tasks using reinforcement learning. (about 4 weeks)"
       },
       {
         year: "2023",
