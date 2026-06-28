@@ -393,6 +393,28 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
+.career-groups {
+  display: grid;
+  gap: clamp(1.8rem, 4vw, 3rem);
+}
+
+.career-group {
+  scroll-margin-top: 7rem;
+}
+
+.career-group + .career-group {
+  padding-top: clamp(1.6rem, 3vw, 2.2rem);
+  border-top: 1px solid var(--color-line);
+}
+
+.career-group-title {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
 .keyword-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

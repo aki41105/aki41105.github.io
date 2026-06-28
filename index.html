@@ -138,7 +138,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260628-4">
+  <link rel="stylesheet" href="styles.css?v=20260628-5">
 </head>
 <body>
   <header class="site-header">
@@ -150,9 +150,7 @@
     <nav class="site-nav" aria-label="Primary navigation">
       <a href="#home" data-nav="home">Home</a>
       <a href="#research" data-nav="research">Research</a>
-      <a href="#research-activities" data-nav="research-activities">Research Activities</a>
-      <a href="#education" data-nav="education">Education</a>
-      <a href="#experience" data-nav="experience">Experience</a>
+      <a href="#career" data-nav="career">Career</a>
       <a href="#publications" data-nav="publications">Publications</a>
       <a href="#projects" data-nav="projects">Projects</a>
       <a href="#resources" data-nav="resources">Resources</a>
@@ -211,60 +209,69 @@
       </div>
     </section>
 
-    <section class="section two-column" id="research-activities">
-      <div>
-        <p class="section-kicker" data-i18n="sections.researchActivities.kicker">Research Activities</p>
-        <h2 data-i18n="sections.researchActivities.title">Research Activities</h2>
+    <section class="section" id="career">
+      <div class="section-heading">
+        <p class="section-kicker" data-i18n="sections.career.kicker">Career</p>
+        <h2 data-i18n="sections.career.title">Career</h2>
       </div>
-      <div class="timeline" id="researchActivityTimeline">
-        <article class="timeline-item">
-          <div class="timeline-year">2025年-現在</div>
-          <p class="timeline-title">サイバーエージェント AI Lab との共同研究。実店舗で収集された接客ロボット対話データを対象に，実環境HRIにおける対話品質評価の研究を推進。</p>
-        </article>
-      </div>
-    </section>
 
-    <section class="section two-column" id="education">
-      <div>
-        <p class="section-kicker" data-i18n="sections.education.kicker">CV</p>
-        <h2 data-i18n="sections.education.title">Education</h2>
-      </div>
-      <!-- TODO: Edit education entries in script.js. -->
-      <div class="timeline" id="educationTimeline">
-        <article class="timeline-item">
-          <div class="timeline-year">2025年4月-現在</div>
-          <p class="timeline-title">北陸先端科学技術大学院大学 AI知性領域 博士前期課程</p>
-        </article>
-        <article class="timeline-item">
-          <div class="timeline-year">2021年4月-2025年3月</div>
-          <p class="timeline-title">富山大学 工学部 工学科 電気電子工学コース</p>
-        </article>
-      </div>
-    </section>
+      <div class="career-groups">
+        <section class="career-group two-column" id="research-activities" aria-labelledby="research-activities-heading">
+          <div>
+            <p class="mini-label" data-i18n="sections.researchActivities.kicker">Research Activities</p>
+            <h3 class="career-group-title" id="research-activities-heading" data-i18n="sections.researchActivities.title">Research Activities</h3>
+          </div>
+          <div class="timeline" id="researchActivityTimeline">
+            <article class="timeline-item">
+              <div class="timeline-year">2025年-現在</div>
+              <p class="timeline-title">サイバーエージェント AI Lab との共同研究。実店舗で収集された接客ロボット対話データを対象に，実環境HRIにおける対話品質評価の研究を推進。</p>
+            </article>
+          </div>
+        </section>
 
-    <section class="section two-column" id="experience">
-      <div>
-        <p class="section-kicker" data-i18n="sections.experience.kicker">Experience</p>
-        <h2 data-i18n="sections.experience.title">Experience</h2>
-      </div>
-      <!-- TODO: Edit experience entries in script.js. -->
-      <div class="timeline" id="experienceTimeline">
-        <article class="timeline-item">
-          <div class="timeline-year">2025年8月-2025年9月</div>
-          <p class="timeline-title">株式会社FUJI 2025年度インターンシップ。クリームはんだ印刷機内で発生する不良のAI画像判定に取り組み，データ収集とアルゴリズム開発を経験。（3週間）</p>
-        </article>
-        <article class="timeline-item">
-          <div class="timeline-year">2025年9月</div>
-          <p class="timeline-title">日産自動車株式会社 技術系インターンシップ。車両性能領域「自動運転/先進運転支援性能実験（AD/ADAS）」に参加。（5日間）</p>
-        </article>
-        <article class="timeline-item">
-          <div class="timeline-year">2024年2月-2024年3月</div>
-          <p class="timeline-title">奈良先端科学技術大学院大学（NAIST）ロボットラーニング研究室 インターンシップ。強化学習を用いたロボット操作課題に取り組む。（約4週間）</p>
-        </article>
-        <article class="timeline-item">
-          <div class="timeline-year">2023年</div>
-          <p class="timeline-title">NHK学生ロボコン2023 本選出場。富山大学ロボコンプロジェクトに所属し，ROS，C言語，Pythonを用いたロボット制御を担当。</p>
-        </article>
+        <section class="career-group two-column" id="education" aria-labelledby="education-heading">
+          <div>
+            <p class="mini-label" data-i18n="sections.education.kicker">Education</p>
+            <h3 class="career-group-title" id="education-heading" data-i18n="sections.education.title">Education</h3>
+          </div>
+          <!-- TODO: Edit education entries in script.js. -->
+          <div class="timeline" id="educationTimeline">
+            <article class="timeline-item">
+              <div class="timeline-year">2025年4月-現在</div>
+              <p class="timeline-title">北陸先端科学技術大学院大学 AI知性領域 博士前期課程</p>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-year">2021年4月-2025年3月</div>
+              <p class="timeline-title">富山大学 工学部 工学科 電気電子工学コース</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="career-group two-column" id="experience" aria-labelledby="experience-heading">
+          <div>
+            <p class="mini-label" data-i18n="sections.experience.kicker">Experience</p>
+            <h3 class="career-group-title" id="experience-heading" data-i18n="sections.experience.title">Experience</h3>
+          </div>
+          <!-- TODO: Edit experience entries in script.js. -->
+          <div class="timeline" id="experienceTimeline">
+            <article class="timeline-item">
+              <div class="timeline-year">2025年8月-2025年9月</div>
+              <p class="timeline-title">株式会社FUJI 2025年度インターンシップ。クリームはんだ印刷機内で発生する不良のAI画像判定に取り組み，データ収集とアルゴリズム開発を経験。（3週間）</p>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-year">2025年9月</div>
+              <p class="timeline-title">日産自動車株式会社 技術系インターンシップ。車両性能領域「自動運転/先進運転支援性能実験（AD/ADAS）」に参加。（5日間）</p>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-year">2024年2月-2024年3月</div>
+              <p class="timeline-title">奈良先端科学技術大学院大学（NAIST）ロボットラーニング研究室 インターンシップ。強化学習を用いたロボット操作課題に取り組む。（約4週間）</p>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-year">2023年</div>
+              <p class="timeline-title">NHK学生ロボコン2023 本選出場。富山大学ロボコンプロジェクトに所属し，ROS，C言語，Pythonを用いたロボット制御を担当。</p>
+            </article>
+          </div>
+        </section>
       </div>
     </section>
 

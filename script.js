@@ -5,9 +5,7 @@ const content = {
     nav: {
       home: "ホーム",
       research: "研究",
-      "research-activities": "研究活動",
-      education: "学歴",
-      experience: "経験",
+      career: "経歴",
       publications: "業績",
       projects: "プロジェクト",
       resources: "資料",
@@ -27,6 +25,7 @@ const content = {
     },
     sections: {
       research: { kicker: "Research", title: "研究紹介" },
+      career: { kicker: "Career", title: "経歴" },
       researchActivities: { kicker: "Research Activities", title: "研究活動" },
       education: { kicker: "Education", title: "学歴" },
       experience: { kicker: "Experience", title: "経験・活動" },
@@ -134,9 +133,7 @@ const content = {
     nav: {
       home: "Home",
       research: "Research",
-      "research-activities": "Research Activities",
-      education: "Education",
-      experience: "Experience",
+      career: "Career",
       publications: "Publications",
       projects: "Projects",
       resources: "Resources",
@@ -156,6 +153,7 @@ const content = {
     },
     sections: {
       research: { kicker: "Research", title: "Research Overview" },
+      career: { kicker: "Career", title: "Career" },
       researchActivities: { kicker: "Research Activities", title: "Research Activities" },
       education: { kicker: "Education", title: "Education" },
       experience: { kicker: "Experience", title: "Experience & Activities" },
