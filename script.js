@@ -56,15 +56,15 @@ const content = {
     ],
     experienceTimeline: [
       {
-        year: "2025年8月-2025年9月",
-        title: "株式会社FUJI 2025年度インターンシップ",
-        detail: "クリームはんだ印刷機内で発生する不良のAI画像判定に取り組み，データ収集とアルゴリズム開発を経験。（3週間）"
-      },
-      {
         year: "2025年9月",
         title: "日産自動車株式会社 技術系インターンシップ",
         detail: "車両性能領域「自動運転/先進運転支援性能実験（AD/ADAS）」に参加。（5日間）",
         titleHref: "gallery-nissan.html"
+      },
+      {
+        year: "2025年8月-2025年9月",
+        title: "株式会社FUJI 2025年度インターンシップ",
+        detail: "クリームはんだ印刷機内で発生する不良のAI画像判定に取り組み，データ収集とアルゴリズム開発を経験。（3週間）"
       },
       {
         year: "2024年2月-2024年3月",
@@ -228,15 +228,15 @@ const content = {
     ],
     experienceTimeline: [
       {
-        year: "Aug. 2025-Sep. 2025",
-        title: "Internship, FUJI Corporation",
-        detail: "Worked on AI-based image inspection for defects occurring inside solder paste printers, including data collection and algorithm development. (3 weeks)"
-      },
-      {
         year: "Sep. 2025",
         title: "Technical Internship, Nissan Motor Corporation",
         detail: "Participated in an AD/ADAS and vehicle dynamics performance experimentation program in the vehicle performance area. (5 days)",
         titleHref: "gallery-nissan.html"
+      },
+      {
+        year: "Aug. 2025-Sep. 2025",
+        title: "Internship, FUJI Corporation",
+        detail: "Worked on AI-based image inspection for defects occurring inside solder paste printers, including data collection and algorithm development. (3 weeks)"
       },
       {
         year: "Feb. 2024-Mar. 2024",
