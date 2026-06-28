@@ -124,6 +124,7 @@ const content = {
       { label: "個人メール", value: "sakuramoto.may [at] gmail.com", href: "", icon: "mail" },
       { label: "GitHub", value: "aki41105", href: "https://github.com/aki41105", icon: "github", rel: "me" },
       { label: "Google Scholar", value: "TODO", href: "", icon: "scholar" },
+      { label: "researchmap", value: "プロフィール検索", href: "https://researchmap.jp/search?q=%E6%AB%BB%E6%9C%AC%E6%99%83%E5%BC%98", icon: "link" },
       { label: "ORCID", value: "0009-0006-7932-0219", href: "https://orcid.org/0009-0006-7932-0219", icon: "orcid", rel: "me" },
       { label: "LinkedIn", value: "Profile", href: "https://www.linkedin.com/in/akihiro-sakuramoto-37024b328/", icon: "linkedin", rel: "me" },
       { label: "岡田研究室", value: "Lab Website", href: "https://www.jaist.ac.jp/~okada-s/index.html", icon: "link" }
@@ -257,6 +258,7 @@ const content = {
       { label: "Personal Email", value: "sakuramoto.may [at] gmail.com", href: "", icon: "mail" },
       { label: "GitHub", value: "aki41105", href: "https://github.com/aki41105", icon: "github", rel: "me" },
       { label: "Google Scholar", value: "TODO", href: "", icon: "scholar" },
+      { label: "researchmap", value: "Profile Search", href: "https://researchmap.jp/search?q=Sakuramoto%20Akihiro", icon: "link" },
       { label: "ORCID", value: "0009-0006-7932-0219", href: "https://orcid.org/0009-0006-7932-0219", icon: "orcid", rel: "me" },
       { label: "LinkedIn", value: "Profile", href: "https://www.linkedin.com/in/akihiro-sakuramoto-37024b328/", icon: "linkedin", rel: "me" },
       { label: "Okada Laboratory", value: "Lab Website", href: "https://www.jaist.ac.jp/~okada-s/index.html", icon: "link" }
