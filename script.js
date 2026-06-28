@@ -82,7 +82,21 @@ const content = {
       empty: "研究業績は今後追加予定です。",
       groups: [
         {
-          title: "国際学会",
+          title: "採択済み論文",
+          entries: []
+        },
+        {
+          title: "発表",
+          entries: [
+            {
+              title: "実環境 HRI における対話の質評価に向けたマルチモーダル ラポール推定モデルの検討",
+              authors: "櫻本晃弘 (Sakuramoto Akihiro), 林貴斗, 三好遼, 岡藤勇希, 岡田将吾",
+              venue: "画像の認識・理解シンポジウム（MIRU）, ポスター発表（査読なし）, 2026年8月"
+            }
+          ]
+        },
+        {
+          title: "査読中原稿",
           entries: [
             {
               title: "Multimodal Rapport Estimation in Real-World HRI",
@@ -92,17 +106,7 @@ const content = {
           ]
         },
         {
-          title: "国内学会",
-          entries: [
-            {
-              title: "実環境 HRI における対話の質評価に向けたマルチモーダル ラポール推定モデルの検討",
-              authors: "櫻本晃弘 (Sakuramoto Akihiro), 林貴斗, 三好遼, 岡藤勇希, 岡田将吾",
-              venue: "画像の認識・理解シンポジウム（MIRU）, ポスター発表, 2026年8月"
-            }
-          ]
-        },
-        {
-          title: "その他",
+          title: "受賞・採択",
           entries: [
             {
               title: "北陸先端科学技術大学院大学学生給付奨学金 一般採用",
@@ -254,7 +258,21 @@ const content = {
       empty: "Publications will be added here.",
       groups: [
         {
-          title: "International Conferences",
+          title: "Accepted Papers",
+          entries: []
+        },
+        {
+          title: "Presentations",
+          entries: [
+            {
+              title: "A Multimodal Rapport Estimation Model for Evaluating Interaction Quality in Real-World HRI",
+              authors: "Akihiro Sakuramoto (Sakuramoto Akihiro), Takato Hayashi, Ryo Miyoshi, Yuki Okafuji, Shogo Okada",
+              venue: "Meeting on Image Recognition and Understanding (MIRU), Poster presentation (non-peer-reviewed), Aug. 2026"
+            }
+          ]
+        },
+        {
+          title: "Manuscripts Under Review",
           entries: [
             {
               title: "Multimodal Rapport Estimation in Real-World HRI",
@@ -264,17 +282,7 @@ const content = {
           ]
         },
         {
-          title: "Domestic Conferences",
-          entries: [
-            {
-              title: "A Multimodal Rapport Estimation Model for Evaluating Interaction Quality in Real-World HRI",
-              authors: "Akihiro Sakuramoto (Sakuramoto Akihiro), Takato Hayashi, Ryo Miyoshi, Yuki Okafuji, Shogo Okada",
-              venue: "Meeting on Image Recognition and Understanding (MIRU), Poster presentation, Aug. 2026"
-            }
-          ]
-        },
-        {
-          title: "Other",
+          title: "Awards",
           entries: [
             {
               title: "JAIST Student Grant Scholarship",
