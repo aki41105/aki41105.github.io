@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cat icon">
-  <rect width="64" height="64" fill="#ffffff"/>
-  <path d="M19.2 28.5 9.5 18.4 23.4 7.3l8.1 11.5 8.1-11.5 14 11.1-9.7 10.1" fill="none" stroke="#7fa48e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M32 23.1c-13 0-21.4 7-21.4 17 0 10.3 8.9 16.3 21.4 16.3s21.4-6 21.4-16.3c0-10-8.4-17-21.4-17Z" fill="none" stroke="#7fa48e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="24.7" cy="41" r="2.1" fill="#7fa48e"/>
-  <circle cx="39.3" cy="41" r="2.1" fill="#7fa48e"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AS profile icon">
+  <rect width="64" height="64" rx="14" fill="#1f5133"/>
+  <path d="M19.2 28.5 9.5 18.4 23.4 7.3l8.1 11.5 8.1-11.5 14 11.1-9.7 10.1" fill="none" stroke="#b7e36b" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 23.1c-13 0-21.4 7-21.4 17 0 10.3 8.9 16.3 21.4 16.3s21.4-6 21.4-16.3c0-10-8.4-17-21.4-17Z" fill="none" stroke="#b7e36b" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="24.7" cy="41" r="2.5" fill="#d8ff8f"/>
+  <circle cx="39.3" cy="41" r="2.5" fill="#d8ff8f"/>
 </svg>
