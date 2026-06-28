@@ -110,9 +110,16 @@ a {
 }
 
 .site-nav a:hover,
-.site-nav a:focus-visible {
+.site-nav a:focus-visible,
+.site-nav a.is-active {
   background: var(--color-primary-soft);
   color: var(--color-primary-dark);
+}
+
+.site-nav a.is-active {
+  background: var(--color-primary);
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(95, 141, 115, 0.22);
 }
 
 .language-toggle {
@@ -130,6 +137,7 @@ a {
   width: min(100% - 2rem, var(--content-width));
   margin: 0 auto;
   padding: var(--space-xl) 0;
+  scroll-margin-top: 7rem;
 }
 
 .hero {
@@ -655,6 +663,7 @@ h2 {
   .section {
     width: min(100% - 1.2rem, var(--content-width));
     padding: 2.75rem 0;
+    scroll-margin-top: 9rem;
   }
 
   .site-header {

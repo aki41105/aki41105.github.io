@@ -463,6 +463,92 @@ function setupProfilePhotoFallback() {
   }
 }
 
+function setupScrollSpy() {
+  const header = document.querySelector(".site-header");
+  const nav = document.querySelector(".site-nav");
+  const navLinks = Array.from(document.querySelectorAll(".site-nav a[data-nav]"));
+  const sectionEntries = navLinks
+    .map((link) => ({
+      id: link.dataset.nav,
+      link,
+      section: document.querySelector(`#${link.dataset.nav}`)
+    }))
+    .filter((entry) => entry.section);
+
+  if (sectionEntries.length === 0) {
+    return;
+  }
+
+  let activeId = "";
+  let ticking = false;
+
+  const setActiveSection = (sectionId) => {
+    if (!sectionId || sectionId === activeId) {
+      return;
+    }
+
+    activeId = sectionId;
+
+    sectionEntries.forEach(({ id, link }) => {
+      const isActive = id === sectionId;
+      link.classList.toggle("is-active", isActive);
+
+      if (isActive) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+
+    const activeLink = sectionEntries.find((entry) => entry.id === sectionId)?.link;
+    if (activeLink && nav && nav.scrollWidth > nav.clientWidth) {
+      activeLink.scrollIntoView({ block: "nearest", inline: "center" });
+    }
+  };
+
+  const getCurrentSectionId = () => {
+    const headerHeight = header?.getBoundingClientRect().height ?? 0;
+    const threshold = headerHeight + 72;
+    const isAtPageEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+
+    if (isAtPageEnd) {
+      return sectionEntries[sectionEntries.length - 1].id;
+    }
+
+    return sectionEntries.reduce((currentId, entry) => {
+      const top = entry.section.getBoundingClientRect().top;
+      return top <= threshold ? entry.id : currentId;
+    }, sectionEntries[0].id);
+  };
+
+  const updateActiveSection = () => {
+    ticking = false;
+    setActiveSection(getCurrentSectionId());
+  };
+
+  const requestUpdate = () => {
+    if (ticking) {
+      return;
+    }
+
+    ticking = true;
+    window.requestAnimationFrame(updateActiveSection);
+  };
+
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", requestUpdate);
+  window.addEventListener("hashchange", requestUpdate);
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      window.setTimeout(requestUpdate, 120);
+    });
+  });
+
+  requestUpdate();
+}
+
 setupLanguageToggle();
 setupProfilePhotoFallback();
 applyLanguage(currentLanguage);
+setupScrollSpy();
