@@ -133,7 +133,7 @@ const content = {
           date: "2025.09",
           title: "日産インターンシップ",
           text: "技術系インターンシップ期間中の厚木での記録。厚木家，さわやか，新時代，麺や食堂 厚木本店。",
-          image: "assets/nissan-atsugiya.jpg?v=20260628-1",
+          image: "assets/nissan-atsugiya.jpg?v=20260628-2",
           href: "gallery-nissan.html",
           alt: "日産インターン期間中に食べた厚木家のラーメン",
           tags: ["Internship", "Atsugi", "Food"]
@@ -143,7 +143,7 @@ const content = {
           date: "2024.02-03",
           title: "NAISTインターンシップ",
           text: "ロボットラーニング研究室でのインターン期間中に撮影した，NAISTキャンパスと滞在中の記録。",
-          image: "assets/naist-sign-gate.jpg?v=20260628-1",
+          image: "assets/naist-sign-gate.jpg?v=20260628-2",
           href: "gallery-naist.html",
           alt: "NAISTキャンパス入口の風景",
           tags: ["Internship", "NAIST", "Research Life"]
@@ -305,7 +305,7 @@ const content = {
           date: "Sep. 2025",
           title: "Nissan Internship",
           text: "Photos from the technical internship period in Atsugi, including Atsugiya, Sawayaka, Shinjidai, and Menya Shokudo Atsugi Main Shop.",
-          image: "assets/nissan-atsugiya.jpg?v=20260628-1",
+          image: "assets/nissan-atsugiya.jpg?v=20260628-2",
           href: "gallery-nissan.html",
           alt: "A bowl of ramen at Atsugiya during the Nissan internship",
           tags: ["Internship", "Atsugi", "Food"]
@@ -315,7 +315,7 @@ const content = {
           date: "Feb.-Mar. 2024",
           title: "NAIST Internship",
           text: "Campus and daily-life photos from the internship at the Robot Learning Laboratory, NAIST.",
-          image: "assets/naist-sign-gate.jpg?v=20260628-1",
+          image: "assets/naist-sign-gate.jpg?v=20260628-2",
           href: "gallery-naist.html",
           alt: "Entrance area of the NAIST campus",
           tags: ["Internship", "NAIST", "Research Life"]
