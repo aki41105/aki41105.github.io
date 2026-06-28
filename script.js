@@ -45,6 +45,11 @@ const content = {
         year: "2025年-現在",
         title: "サイバーエージェント AI Lab との共同研究",
         detail: "実店舗で収集された接客ロボット対話データを対象に，実環境HRIにおける対話品質評価の研究を推進。"
+      },
+      {
+        year: "2025年8月-2026年1月",
+        title: "グループ副テーマ研究",
+        detail: "グループ副テーマとして実施した研究活動に取り組み，最終レポートを作成。"
       }
     ],
     educationTimeline: [
@@ -214,6 +219,11 @@ const content = {
         year: "2025-Present",
         title: "Joint Research with CyberAgent AI Lab",
         detail: "Studying real-world HRI and interaction quality evaluation using in-store customer-service robot interaction data."
+      },
+      {
+        year: "Aug. 2025-Jan. 2026",
+        title: "Group Sub-theme Research Project",
+        detail: "Worked on a group sub-theme research activity and prepared the final report."
       }
     ],
     educationTimeline: [
