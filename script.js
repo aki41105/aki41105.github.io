@@ -48,7 +48,8 @@ const content = {
       {
         year: "2025年8月-2026年1月",
         title: "デジタルツイン技術による能登半島地震の教訓と伝承",
-        detail: "石川県七尾市の一本杉商店街でインタビュー調査を行い，地域の課題や能登半島地震から得られた教訓を整理。現地で得られた知見をもとに，デジタルツインを用いた記録・伝承の可能性を検討し，最終レポートを作成。"
+        detail: "石川県七尾市の一本杉商店街でインタビュー調査を行い，地域の課題や能登半島地震から得られた教訓を整理。現地で得られた知見をもとに，デジタルツインを用いた記録・伝承の可能性を検討し，最終レポートを作成。",
+        titleHref: "gallery-nanao.html"
       }
     ],
     educationTimeline: [
@@ -148,6 +149,16 @@ const content = {
           href: "gallery-naist.html",
           alt: "NAISTキャンパス入口の風景",
           tags: ["Internship", "NAIST", "Research Life"]
+        },
+        {
+          id: "gallery-nanao",
+          date: "2025年9月",
+          title: "七尾フィールドワーク",
+          text: "能登半島地震の教訓と伝承をテーマに，七尾市で行ったフィールドワークの記録。",
+          image: "assets/nanao-station.jpg?v=20260629-1",
+          href: "gallery-nanao.html",
+          alt: "七尾駅の歓迎看板とのれん",
+          tags: ["Fieldwork", "Nanao", "Digital Twin"]
         }
       ]
     },
@@ -221,7 +232,8 @@ const content = {
       {
         year: "Aug. 2025-Jan. 2026",
         title: "Preserving Lessons from the Noto Peninsula Earthquake through Digital Twin Technology",
-        detail: "Conducted interviews in Ipponsugi Shopping Street in Nanao, Ishikawa, to identify local challenges and lessons from the Noto Peninsula earthquake. Based on the field insights, explored how digital twin technologies could support recording and preservation, and prepared the final report."
+        detail: "Conducted interviews in Ipponsugi Shopping Street in Nanao, Ishikawa, to identify local challenges and lessons from the Noto Peninsula earthquake. Based on the field insights, explored how digital twin technologies could support recording and preservation, and prepared the final report.",
+        titleHref: "gallery-nanao.html"
       }
     ],
     educationTimeline: [
@@ -321,6 +333,16 @@ const content = {
           href: "gallery-naist.html",
           alt: "Entrance area of the NAIST campus",
           tags: ["Internship", "NAIST", "Research Life"]
+        },
+        {
+          id: "gallery-nanao",
+          date: "Sep. 2025",
+          title: "Nanao Fieldwork",
+          text: "Fieldwork photos from Nanao, connected to the project on preserving lessons from the Noto Peninsula earthquake through digital twin technology.",
+          image: "assets/nanao-station.jpg?v=20260629-1",
+          href: "gallery-nanao.html",
+          alt: "Welcome sign and curtain at Nanao Station",
+          tags: ["Fieldwork", "Nanao", "Digital Twin"]
         }
       ]
     },
