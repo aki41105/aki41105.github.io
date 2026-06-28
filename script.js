@@ -47,8 +47,8 @@ const content = {
       },
       {
         year: "2025年8月-2026年1月",
-        title: "グループ副テーマ研究",
-        detail: "グループ副テーマとして実施した研究活動に取り組み，最終レポートを作成。"
+        title: "七尾市一本杉商店街における地域課題調査とデジタルツイン活用",
+        detail: "石川県七尾市の一本杉商店街でインタビュー調査を行い，地域の課題を整理。現地で得られた知見をもとに，デジタルツインを用いた課題解決の可能性を検討し，最終レポートを作成。"
       }
     ],
     educationTimeline: [
@@ -220,8 +220,8 @@ const content = {
       },
       {
         year: "Aug. 2025-Jan. 2026",
-        title: "Group Sub-theme Research Project",
-        detail: "Worked on a group sub-theme research activity and prepared the final report."
+        title: "Local Issue Research and Digital Twin Applications in Ipponsugi Shopping Street, Nanao",
+        detail: "Conducted interviews in Ipponsugi Shopping Street in Nanao, Ishikawa, to identify local challenges. Based on the field insights, explored how digital twin technologies could support problem solving and prepared the final report."
       }
     ],
     educationTimeline: [
