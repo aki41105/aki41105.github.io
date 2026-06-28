@@ -4,7 +4,6 @@ const content = {
     siteTitle: "櫻本 晃弘",
     nav: {
       home: "ホーム",
-      about: "自己紹介",
       research: "研究",
       education: "学歴",
       experience: "経験",
@@ -19,14 +18,13 @@ const content = {
       nameReading: "Sakuramoto Akihiro / Akihiro Sakuramoto",
       affiliation: "北陸先端科学技術大学院大学 AI知性領域 博士前期課程",
       tagline: "ヒューマンロボットインタラクション / 社会的信号処理 / マルチモーダルインタラクション",
-      summary: "櫻本晃弘（Sakuramoto Akihiro / Akihiro Sakuramoto）は、実世界の人とロボットの関わりを、行動・感情・対話の手がかりから理解することを目指しています。研究者、共同研究者、採用担当者が必要な情報へすぐアクセスできるようにまとめています。"
+      summary: "櫻本晃弘（Sakuramoto Akihiro / Akihiro Sakuramoto）は、北陸先端科学技術大学院大学の博士前期課程に所属し、実環境HRI、マルチモーダル対話分析、対話品質評価に取り組んでいます。研究者、共同研究者、採用担当者が必要な情報へすぐアクセスできるようにまとめています。"
     },
     buttons: {
       contact: "Contact",
       cv: "CV"
     },
     sections: {
-      about: { kicker: "About", title: "自己紹介" },
       research: { kicker: "Research", title: "研究紹介" },
       education: { kicker: "Education", title: "学歴" },
       experience: { kicker: "Experience", title: "経験・活動" },
@@ -34,10 +32,6 @@ const content = {
       projects: { kicker: "Projects", title: "プロジェクト" },
       resources: { kicker: "Resources", title: "資料リンク" },
       contact: { kicker: "Contact", title: "連絡先・リンク" }
-    },
-    about: {
-      // TODO: Edit this introduction when your profile changes.
-      text: "櫻本晃弘（Sakuramoto Akihiro）は、北陸先端科学技術大学院大学の博士前期課程に所属しています。実環境におけるヒューマンロボットインタラクション、マルチモーダル対話分析、対話品質の評価に関心があります。"
     },
     researchOverview: "実環境 HRI を対象に，社会的信号処理とマルチモーダルインタラクションの観点から，人とロボットの相互行為を分析しています。研究内容の詳細は順次整理します。",
     educationTimeline: [
@@ -131,7 +125,6 @@ const content = {
     siteTitle: "Akihiro Sakuramoto",
     nav: {
       home: "Home",
-      about: "About",
       research: "Research",
       education: "Education",
       experience: "Experience",
@@ -146,14 +139,13 @@ const content = {
       nameReading: "櫻本晃弘 / Sakuramoto Akihiro",
       affiliation: "Master's Student in Human-AI Interaction, Japan Advanced Institute of Science and Technology (JAIST)",
       tagline: "Human-Robot Interaction / Social Signal Processing / Multimodal Interaction",
-      summary: "Akihiro Sakuramoto (Sakuramoto Akihiro / 櫻本晃弘) studies how people and robots interact in real-world settings through behavioral, affective, and conversational signals. This website collects profile information for researchers, collaborators, conference participants, and recruiters."
+      summary: "Akihiro Sakuramoto (Sakuramoto Akihiro / 櫻本晃弘) is a master's student at JAIST studying real-world Human-Robot Interaction, multimodal interaction analysis, and computational approaches to interaction quality. This website collects profile information for researchers, collaborators, conference participants, and recruiters."
     },
     buttons: {
       contact: "Contact",
       cv: "CV"
     },
     sections: {
-      about: { kicker: "About", title: "About" },
       research: { kicker: "Research", title: "Research Overview" },
       education: { kicker: "Education", title: "Education" },
       experience: { kicker: "Experience", title: "Experience & Activities" },
@@ -161,10 +153,6 @@ const content = {
       projects: { kicker: "Projects", title: "Projects" },
       resources: { kicker: "Resources", title: "Resources" },
       contact: { kicker: "Contact", title: "Contact / Links" }
-    },
-    about: {
-      // TODO: Edit this introduction when your profile changes.
-      text: "Akihiro Sakuramoto is a master's student at JAIST. My research interests include real-world human-robot interaction, multimodal interaction analysis, and computational approaches to understanding interaction quality."
     },
     researchOverview: "I study real-world HRI through social signal processing and multimodal interaction, focusing on how people and robots relate to one another in everyday settings. More detailed project descriptions will be added as they are organized.",
     educationTimeline: [
