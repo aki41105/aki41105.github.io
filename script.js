@@ -130,7 +130,7 @@ const content = {
         },
         {
           id: "gallery-nissan",
-          date: "2025.09",
+          date: "2025年9月",
           title: "日産インターンシップ",
           text: "技術系インターンシップ期間中の厚木での記録。厚木家，さわやか，新時代，麺や食堂 厚木本店。",
           image: "assets/nissan-atsugiya.jpg?v=20260628-2",
@@ -140,7 +140,7 @@ const content = {
         },
         {
           id: "gallery-naist",
-          date: "2024.02-03",
+          date: "2024年2月-3月",
           title: "NAISTインターンシップ",
           text: "ロボットラーニング研究室でのインターン期間中に撮影した，NAISTキャンパスと滞在中の記録。",
           image: "assets/naist-sign-gate.jpg?v=20260628-2",
