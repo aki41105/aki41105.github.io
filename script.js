@@ -119,7 +119,7 @@ const content = {
       { label: "GitHub", value: "aki41105", href: "https://github.com/aki41105", icon: "github", rel: "me" },
       { label: "Google Scholar", value: "TODO", href: "", icon: "scholar" },
       { label: "ORCID", value: "0009-0006-7932-0219", href: "https://orcid.org/0009-0006-7932-0219", icon: "orcid", rel: "me" },
-      { label: "LinkedIn", value: "Profile", href: "https://www.linkedin.com/in/%E6%99%83%E5%BC%98-%E6%AB%BB%E6%9C%AC-37024b328/", icon: "linkedin", rel: "me" },
+      { label: "LinkedIn", value: "Profile", href: "https://www.linkedin.com/in/akihiro-sakuramoto-37024b328/", icon: "linkedin", rel: "me" },
       { label: "岡田研究室", value: "Lab Website", href: "https://www.jaist.ac.jp/~okada-s/index.html", icon: "link" }
     ],
     footer: {
@@ -246,7 +246,7 @@ const content = {
       { label: "GitHub", value: "aki41105", href: "https://github.com/aki41105", icon: "github", rel: "me" },
       { label: "Google Scholar", value: "TODO", href: "", icon: "scholar" },
       { label: "ORCID", value: "0009-0006-7932-0219", href: "https://orcid.org/0009-0006-7932-0219", icon: "orcid", rel: "me" },
-      { label: "LinkedIn", value: "Profile", href: "https://www.linkedin.com/in/%E6%99%83%E5%BC%98-%E6%AB%BB%E6%9C%AC-37024b328/", icon: "linkedin", rel: "me" },
+      { label: "LinkedIn", value: "Profile", href: "https://www.linkedin.com/in/akihiro-sakuramoto-37024b328/", icon: "linkedin", rel: "me" },
       { label: "Okada Laboratory", value: "Lab Website", href: "https://www.jaist.ac.jp/~okada-s/index.html", icon: "link" }
     ],
     footer: {
