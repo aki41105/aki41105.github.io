@@ -441,14 +441,26 @@ function setupProfilePhotoFallback() {
   const image = document.querySelector("#profilePhoto");
   const placeholder = document.querySelector("#photoPlaceholder");
 
-  image.addEventListener("load", () => {
+  const showPhoto = () => {
+    image.classList.remove("is-hidden");
     placeholder.hidden = true;
-  });
+  };
 
-  image.addEventListener("error", () => {
+  const showPlaceholder = () => {
     image.classList.add("is-hidden");
     placeholder.hidden = false;
-  });
+  };
+
+  image.addEventListener("load", showPhoto);
+  image.addEventListener("error", showPlaceholder);
+
+  if (image.complete) {
+    if (image.naturalWidth > 0) {
+      showPhoto();
+    } else {
+      showPlaceholder();
+    }
+  }
 }
 
 setupLanguageToggle();
