@@ -171,6 +171,16 @@ const content = {
           tags: ["Internship", "FUJI", "AI"]
         },
         {
+          id: "gallery-owara-kazenobon-2024",
+          date: "2024年9月",
+          title: "おわら風の盆",
+          text: "越中八尾の街並み，ぼんぼりの灯り，踊りと舞台の記録。",
+          image: "assets/owara-kazenobon-2024-51.jpg?v=20260629-1",
+          href: "gallery-owara-kazenobon-2024.html",
+          alt: "おわら風の盆の舞台で踊りと演奏が行われている夜の風景",
+          tags: ["Owara Kaze no Bon", "Toyama", "Photo"]
+        },
+        {
           id: "gallery-naist",
           date: "2024年2月-3月",
           title: "NAISTインターンシップ",
@@ -413,6 +423,16 @@ const content = {
           href: "gallery-fuji.html",
           alt: "FUJI Corporation building",
           tags: ["Internship", "FUJI", "AI"]
+        },
+        {
+          id: "gallery-owara-kazenobon-2024",
+          date: "Sep. 2024",
+          title: "Owara Kaze no Bon",
+          text: "Photos of Etchu Yatsuo streets, lantern light, dancing, and stage performances.",
+          image: "assets/owara-kazenobon-2024-51.jpg?v=20260629-1",
+          href: "gallery-owara-kazenobon-2024.html",
+          alt: "Night stage scene with dancing and music at Owara Kaze no Bon",
+          tags: ["Owara Kaze no Bon", "Toyama", "Photo"]
         },
         {
           id: "gallery-naist",
