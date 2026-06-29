@@ -133,6 +133,16 @@ const content = {
           tags: ["Photo", "Library", "Ishikawa"]
         },
         {
+          id: "gallery-expo-osaka",
+          date: "2025年9月27日",
+          title: "大阪万博",
+          text: "大阪・関西万博を訪れた日の会場風景と食事の記録。",
+          image: "assets/expo-2025-osaka-02.jpg?v=20260629-1",
+          href: "gallery-expo-osaka.html",
+          alt: "大阪・関西万博の会場へ向かう人々と青空",
+          tags: ["Expo", "Osaka", "Photo"]
+        },
+        {
           id: "gallery-nissan",
           date: "2025年9月",
           title: "日産インターンシップ",
@@ -327,6 +337,16 @@ const content = {
           href: "gallery-library.html",
           alt: "Atrium of a library with circular bookshelves",
           tags: ["Photo", "Library", "Ishikawa"]
+        },
+        {
+          id: "gallery-expo-osaka",
+          date: "Sep. 27, 2025",
+          title: "Osaka Expo",
+          text: "Photos from a visit to Expo 2025 Osaka, including venue scenes and meals.",
+          image: "assets/expo-2025-osaka-02.jpg?v=20260629-1",
+          href: "gallery-expo-osaka.html",
+          alt: "People walking toward the Expo 2025 Osaka venue under a blue sky",
+          tags: ["Expo", "Osaka", "Photo"]
         },
         {
           id: "gallery-nissan",
