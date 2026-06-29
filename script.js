@@ -9,6 +9,7 @@ const content = {
       publications: "業績",
       projects: "プロジェクト",
       gallery: "ギャラリー",
+      blog: "ブログ",
       resources: "資料",
       contact: "連絡先"
     },
@@ -35,6 +36,7 @@ const content = {
       publications: { kicker: "Publications", title: "研究業績" },
       projects: { kicker: "Projects", title: "プロジェクト" },
       gallery: { kicker: "Gallery", title: "ギャラリー・近況メモ" },
+      blog: { kicker: "Blog", title: "ブログ" },
       resources: { kicker: "Resources", title: "資料リンク" },
       contact: { kicker: "Contact", title: "連絡先・リンク" }
     },
@@ -232,6 +234,19 @@ const content = {
         }
       ]
     },
+    blog: {
+      empty: "ブログ記事は今後追加予定です。",
+      entries: [
+        {
+          id: "blog-start",
+          date: "2026年6月29日",
+          title: "ブログを始めます",
+          excerpt: "研究，制作，日々の気づきを短く残していくための場所を追加しました。",
+          href: "blog-start.html",
+          tags: ["Site Update", "Blog"]
+        }
+      ]
+    },
     resources: {
       empty: "論文執筆や研究に役立つ資料リンクをここに追加予定です。",
       entries: [
@@ -263,6 +278,7 @@ const content = {
       publications: "Publications",
       projects: "Projects",
       gallery: "Gallery",
+      blog: "Blog",
       resources: "Resources",
       contact: "Contact"
     },
@@ -289,6 +305,7 @@ const content = {
       publications: { kicker: "Publications", title: "Publications" },
       projects: { kicker: "Projects", title: "Projects" },
       gallery: { kicker: "Gallery", title: "Gallery / Notes" },
+      blog: { kicker: "Blog", title: "Blog" },
       resources: { kicker: "Resources", title: "Resources" },
       contact: { kicker: "Contact", title: "Contact / Links" }
     },
@@ -483,6 +500,19 @@ const content = {
           href: "gallery-wsj-2019.html",
           alt: "Entrance gate at the 24th World Scout Jamboree",
           tags: ["24WSJ", "Scout", "USA"]
+        }
+      ]
+    },
+    blog: {
+      empty: "Blog posts will be added here.",
+      entries: [
+        {
+          id: "blog-start",
+          date: "Jun. 29, 2026",
+          title: "Starting a Blog",
+          excerpt: "I added a place to keep short notes on research, making things, and everyday observations.",
+          href: "blog-start.html",
+          tags: ["Site Update", "Blog"]
         }
       ]
     },
@@ -715,6 +745,33 @@ function renderGallery(language) {
   });
 }
 
+function renderBlog(language) {
+  const container = document.querySelector("#blogList");
+  const emptyState = document.querySelector("#blogEmpty");
+  container.innerHTML = "";
+
+  const entries = content[language].blog.entries;
+  emptyState.hidden = entries.length > 0;
+
+  entries.forEach((item) => {
+    const card = document.createElement("a");
+    card.className = "blog-card";
+    card.href = item.href;
+    if (item.id) {
+      card.id = item.id;
+    }
+    const tags = item.tags.map((tag) => `<span>${tag}</span>`).join("");
+
+    card.innerHTML = `
+      <p class="blog-date">${item.date}</p>
+      <h3 class="blog-title">${item.title}</h3>
+      <p class="blog-excerpt">${item.excerpt}</p>
+      <div class="gallery-tags">${tags}</div>
+    `;
+    container.appendChild(card);
+  });
+}
+
 function applyLanguage(language) {
   currentLanguage = language;
   renderText(language);
@@ -724,6 +781,7 @@ function applyLanguage(language) {
   renderTimeline("#experienceTimeline", content[language].experienceTimeline);
   renderPublications(language);
   renderGallery(language);
+  renderBlog(language);
   renderResources(language);
   renderContacts(language);
 }
