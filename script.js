@@ -85,6 +85,12 @@ const content = {
         title: "NHK学生ロボコン2023 本選出場",
         detail: "富山大学ロボコンプロジェクトに所属し，ROS，C言語，Pythonを用いたロボット制御を担当。",
         titleHref: "gallery-robocon.html"
+      },
+      {
+        year: "2019年8月",
+        title: "第24回世界スカウトジャンボリー（24WSJ）参加",
+        detail: "米国で開催された世界スカウトジャンボリーに参加し，多国籍の参加者との共同生活・国際交流を経験。",
+        titleHref: "gallery-wsj-2019.html"
       }
     ],
     publications: {
@@ -181,6 +187,16 @@ const content = {
           href: "gallery-robocon.html",
           alt: "NHK学生ロボコン2023の競技フィールドとロボット",
           tags: ["Robocon", "University of Toyama", "Robot Control"]
+        },
+        {
+          id: "gallery-wsj-2019",
+          date: "2019年8月",
+          title: "第24回世界スカウトジャンボリー（24WSJ）",
+          text: "米国で開催された24WSJに参加した際の会場風景と食事の記録。",
+          image: "assets/wsj-2019-05.jpg?v=20260629-1",
+          href: "gallery-wsj-2019.html",
+          alt: "第24回世界スカウトジャンボリーの入口ゲート",
+          tags: ["24WSJ", "Scout", "USA"]
         }
       ]
     },
@@ -291,6 +307,12 @@ const content = {
         title: "NHK Student Robocon 2023 Finalist",
         detail: "Worked on robot control in the University of Toyama Robocon Project using ROS, C, and Python.",
         titleHref: "gallery-robocon.html"
+      },
+      {
+        year: "Aug. 2019",
+        title: "Participant, 24th World Scout Jamboree (24WSJ)",
+        detail: "Participated in the World Scout Jamboree held in the United States and experienced international exchange through camp life with participants from many countries.",
+        titleHref: "gallery-wsj-2019.html"
       }
     ],
     publications: {
@@ -387,6 +409,16 @@ const content = {
           href: "gallery-robocon.html",
           alt: "Competition field and robots at NHK Student Robocon 2023",
           tags: ["Robocon", "University of Toyama", "Robot Control"]
+        },
+        {
+          id: "gallery-wsj-2019",
+          date: "Aug. 2019",
+          title: "24th World Scout Jamboree (24WSJ)",
+          text: "Photos from participating in 24WSJ in the United States, including venue scenes and meals.",
+          image: "assets/wsj-2019-05.jpg?v=20260629-1",
+          href: "gallery-wsj-2019.html",
+          alt: "Entrance gate at the 24th World Scout Jamboree",
+          tags: ["24WSJ", "Scout", "USA"]
         }
       ]
     },
