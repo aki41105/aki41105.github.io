@@ -135,11 +135,11 @@ const content = {
           id: "gallery-nissan",
           date: "2025年9月",
           title: "日産インターンシップ",
-          text: "技術系インターンシップ期間中の厚木での記録。厚木家，さわやか，新時代，麺や食堂 厚木本店。",
+          text: "技術系インターンシップ期間中の記録。厚木での食事と，NISSANロゴの見える夜景。",
           image: "assets/nissan-atsugiya.jpg?v=20260628-2",
           href: "gallery-nissan.html",
           alt: "日産インターン期間中に食べた厚木家のラーメン",
-          tags: ["Internship", "Atsugi", "Food"]
+          tags: ["Internship", "Atsugi", "Photo"]
         },
         {
           id: "gallery-naist",
@@ -330,11 +330,11 @@ const content = {
           id: "gallery-nissan",
           date: "Sep. 2025",
           title: "Nissan Internship",
-          text: "Photos from the technical internship period in Atsugi, including Atsugiya, Sawayaka, Shinjidai, and Menya Shokudo Atsugi Main Shop.",
+          text: "Photos from the technical internship period, including meals in Atsugi and a night view with the NISSAN logo.",
           image: "assets/nissan-atsugiya.jpg?v=20260628-2",
           href: "gallery-nissan.html",
           alt: "A bowl of ramen at Atsugiya during the Nissan internship",
-          tags: ["Internship", "Atsugi", "Food"]
+          tags: ["Internship", "Atsugi", "Photo"]
         },
         {
           id: "gallery-naist",
