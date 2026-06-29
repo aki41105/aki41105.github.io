@@ -59,7 +59,8 @@ const content = {
       },
       {
         year: "2021年4月-2025年3月",
-        title: "富山大学 工学部 工学科 電気電子工学コース"
+        title: "富山大学 工学部 工学科 電気電子工学コース",
+        titleHref: "gallery-toyama-university.html"
       }
     ],
     experienceTimeline: [
@@ -179,6 +180,16 @@ const content = {
           tags: ["Fieldwork", "Nanao", "Digital Twin"]
         },
         {
+          id: "gallery-toyama-university",
+          date: "2021年-2025年",
+          title: "富山大学",
+          text: "富山大学在学中に撮影したキャンパス周辺，富山市内，食事の記録。",
+          image: "assets/toyama-university-04.jpg?v=20260629-1",
+          href: "gallery-toyama-university.html",
+          alt: "富山の川沿いに咲く桜並木",
+          tags: ["University of Toyama", "Toyama", "Student Life"]
+        },
+        {
           id: "gallery-robocon",
           date: "2023",
           title: "NHK学生ロボコン2023 本選出場",
@@ -281,7 +292,8 @@ const content = {
       },
       {
         year: "Apr. 2021-Mar. 2025",
-        title: "Electrical and Electronic Engineering Course, Department of Engineering, Faculty of Engineering, University of Toyama"
+        title: "Electrical and Electronic Engineering Course, Department of Engineering, Faculty of Engineering, University of Toyama",
+        titleHref: "gallery-toyama-university.html"
       }
     ],
     experienceTimeline: [
@@ -399,6 +411,16 @@ const content = {
           href: "gallery-nanao.html",
           alt: "Welcome sign and curtain at Nanao Station",
           tags: ["Fieldwork", "Nanao", "Digital Twin"]
+        },
+        {
+          id: "gallery-toyama-university",
+          date: "2021-2025",
+          title: "University of Toyama",
+          text: "Photos from student life at the University of Toyama, including campus surroundings, Toyama city scenes, and meals.",
+          image: "assets/toyama-university-04.jpg?v=20260629-1",
+          href: "gallery-toyama-university.html",
+          alt: "Cherry blossom trees along a river in Toyama",
+          tags: ["University of Toyama", "Toyama", "Student Life"]
         },
         {
           id: "gallery-robocon",
