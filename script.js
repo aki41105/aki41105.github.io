@@ -17,7 +17,7 @@ const content = {
       nameReading: "Sakuramoto Akihiro / Akihiro Sakuramoto",
       affiliation: "北陸先端科学技術大学院大学 AI知性領域 博士前期課程",
       tagline: "ヒューマンロボットインタラクション / 社会的信号処理 / マルチモーダルインタラクション",
-      summary: "櫻本晃弘（Sakuramoto Akihiro / Akihiro Sakuramoto）は、北陸先端科学技術大学院大学の博士前期課程に所属し、実環境HRI、マルチモーダル対話分析、対話品質評価に取り組んでいます。研究者、共同研究者、採用担当者が必要な情報へすぐアクセスできるようにまとめています。",
+      summary: "櫻本晃弘は北陸先端科学技術大学院大学（JAIST）の博士前期課程に所属し，ヒューマンロボットインタラクションの研究をしています。",
       updatedLabel: "最終更新",
       updatedDate: "2026年6月28日",
       updatedText: "経歴・業績ステータス・ギャラリー情報を整理しました。"
@@ -201,7 +201,7 @@ const content = {
       nameReading: "櫻本晃弘 / Sakuramoto Akihiro",
       affiliation: "Master's Student in Human-AI Interaction, Japan Advanced Institute of Science and Technology (JAIST)",
       tagline: "Human-Robot Interaction / Social Signal Processing / Multimodal Interaction",
-      summary: "Akihiro Sakuramoto (Sakuramoto Akihiro / 櫻本晃弘) is a master's student at JAIST studying real-world Human-Robot Interaction, multimodal interaction analysis, and computational approaches to interaction quality. This website collects profile information for researchers, collaborators, conference participants, and recruiters.",
+      summary: "Akihiro Sakuramoto is a master's student at JAIST studying Human-Robot Interaction.",
       updatedLabel: "Last updated",
       updatedDate: "June 28, 2026",
       updatedText: "Career, publication status, and gallery information were organized."
