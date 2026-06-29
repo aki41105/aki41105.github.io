@@ -729,6 +729,11 @@ h2 {
   height: 22rem;
 }
 
+.photo-collection-grid .photo-detail-figure.is-contain img {
+  object-fit: contain;
+  background: #1e1b18;
+}
+
 .detail-home-link {
   display: inline-flex;
   align-items: center;

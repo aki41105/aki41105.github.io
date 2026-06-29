@@ -83,7 +83,8 @@ const content = {
       {
         year: "2023年",
         title: "NHK学生ロボコン2023 本選出場",
-        detail: "富山大学ロボコンプロジェクトに所属し，ROS，C言語，Pythonを用いたロボット制御を担当。"
+        detail: "富山大学ロボコンプロジェクトに所属し，ROS，C言語，Pythonを用いたロボット制御を担当。",
+        titleHref: "gallery-robocon.html"
       }
     ],
     publications: {
@@ -159,6 +160,16 @@ const content = {
           href: "gallery-nanao.html",
           alt: "七尾駅の歓迎看板とのれん",
           tags: ["Fieldwork", "Nanao", "Digital Twin"]
+        },
+        {
+          id: "gallery-robocon",
+          date: "2023",
+          title: "NHK学生ロボコン2023 本選出場",
+          text: "富山大学ロボコンプロジェクトで参加したNHK学生ロボコン2023本選の記録。",
+          image: "assets/robocon-2023-field.jpg?v=20260629-1",
+          href: "gallery-robocon.html",
+          alt: "NHK学生ロボコン2023の競技フィールドとロボット",
+          tags: ["Robocon", "University of Toyama", "Robot Control"]
         }
       ]
     },
@@ -267,7 +278,8 @@ const content = {
       {
         year: "2023",
         title: "NHK Student Robocon 2023 Finalist",
-        detail: "Worked on robot control in the University of Toyama Robocon Project using ROS, C, and Python."
+        detail: "Worked on robot control in the University of Toyama Robocon Project using ROS, C, and Python.",
+        titleHref: "gallery-robocon.html"
       }
     ],
     publications: {
@@ -343,6 +355,16 @@ const content = {
           href: "gallery-nanao.html",
           alt: "Welcome sign and curtain at Nanao Station",
           tags: ["Fieldwork", "Nanao", "Digital Twin"]
+        },
+        {
+          id: "gallery-robocon",
+          date: "2023",
+          title: "NHK Student Robocon 2023 Finalist",
+          text: "Photos from the NHK Student Robocon 2023 final tournament with the University of Toyama Robocon Project.",
+          image: "assets/robocon-2023-field.jpg?v=20260629-1",
+          href: "gallery-robocon.html",
+          alt: "Competition field and robots at NHK Student Robocon 2023",
+          tags: ["Robocon", "University of Toyama", "Robot Control"]
         }
       ]
     },
