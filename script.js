@@ -123,13 +123,14 @@ const content = {
       empty: "写真や近況メモは今後追加予定です。",
       entries: [
         {
+          id: "gallery-library",
           date: "2026",
           title: "図書館の風景",
-          text: "研究プロフィールの雰囲気に合わせて選んだ，知的で温かい空間の写真。",
-          image: "assets/header-library.jpg?v=20260628-1",
-          href: "assets/header-library.jpg",
-          alt: "曲線状の本棚が広がる温かい雰囲気の図書館",
-          tags: ["Photo", "Research Life"]
+          text: "円形の書架が印象的な図書館と，滞在中の食事の記録。",
+          image: "assets/library-2026-atrium-1.jpg?v=20260629-1",
+          href: "gallery-library.html",
+          alt: "円形の書架が広がる図書館の吹き抜け空間",
+          tags: ["Photo", "Library", "Ishikawa"]
         },
         {
           id: "gallery-nissan",
@@ -318,13 +319,14 @@ const content = {
       empty: "Photos and short notes will be added here.",
       entries: [
         {
+          id: "gallery-library",
           date: "2026",
           title: "Library Scene",
-          text: "A warm, knowledge-rich space selected to match the atmosphere of this research profile.",
-          image: "assets/header-library.jpg?v=20260628-1",
-          href: "assets/header-library.jpg",
-          alt: "Curved bookshelves inside a warm library atrium",
-          tags: ["Photo", "Research Life"]
+          text: "Photos from a circular library space and meals during the visit.",
+          image: "assets/library-2026-atrium-1.jpg?v=20260629-1",
+          href: "gallery-library.html",
+          alt: "Atrium of a library with circular bookshelves",
+          tags: ["Photo", "Library", "Ishikawa"]
         },
         {
           id: "gallery-nissan",
