@@ -73,7 +73,8 @@ const content = {
       {
         year: "2025年8月-2025年9月",
         title: "株式会社FUJI 2025年度インターンシップ",
-        detail: "クリームはんだ印刷機内で発生する不良のAI画像判定に取り組み，データ収集とアルゴリズム開発を経験。（3週間）"
+        detail: "クリームはんだ印刷機内で発生する不良のAI画像判定に取り組み，データ収集とアルゴリズム開発を経験。（3週間）",
+        titleHref: "gallery-fuji.html"
       },
       {
         year: "2024年2月-2024年3月",
@@ -158,6 +159,16 @@ const content = {
           href: "gallery-nissan.html",
           alt: "日産インターン期間中に食べた厚木家のラーメン",
           tags: ["Internship", "Atsugi", "Photo"]
+        },
+        {
+          id: "gallery-fuji",
+          date: "2025年8月-9月",
+          title: "株式会社FUJI",
+          text: "2025年度インターンシップ期間中の記録。AI画像判定に関するデータ収集とアルゴリズム開発に取り組みました。",
+          image: "assets/fuji-internship-building.jpg?v=20260629-1",
+          href: "gallery-fuji.html",
+          alt: "株式会社FUJIの建物",
+          tags: ["Internship", "FUJI", "AI"]
         },
         {
           id: "gallery-naist",
@@ -306,7 +317,8 @@ const content = {
       {
         year: "Aug. 2025-Sep. 2025",
         title: "Internship, FUJI Corporation",
-        detail: "Worked on AI-based image inspection for defects occurring inside solder paste printers, including data collection and algorithm development. (3 weeks)"
+        detail: "Worked on AI-based image inspection for defects occurring inside solder paste printers, including data collection and algorithm development. (3 weeks)",
+        titleHref: "gallery-fuji.html"
       },
       {
         year: "Feb. 2024-Mar. 2024",
@@ -391,6 +403,16 @@ const content = {
           href: "gallery-nissan.html",
           alt: "A bowl of ramen at Atsugiya during the Nissan internship",
           tags: ["Internship", "Atsugi", "Photo"]
+        },
+        {
+          id: "gallery-fuji",
+          date: "Aug.-Sep. 2025",
+          title: "FUJI Corporation",
+          text: "Photos from the 2025 internship period, working on AI-based image inspection for defects in solder paste printers.",
+          image: "assets/fuji-internship-building.jpg?v=20260629-1",
+          href: "gallery-fuji.html",
+          alt: "FUJI Corporation building",
+          tags: ["Internship", "FUJI", "AI"]
         },
         {
           id: "gallery-naist",
