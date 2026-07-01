@@ -136,9 +136,9 @@ const content = {
           date: "2026年7月1日",
           title: "HRI 2026の論文127本を眺める",
           text: "Full Research Papers 127件のタイトルと概要から，HRI 2026の研究トピックの広がりを整理しました。",
-          image: "assets/hri2026-topic-map.png?v=20260701-1",
+          image: "assets/hri2026-blog-summary.png?v=20260702-1",
           href: "blog-hri2026-analysis.html",
-          alt: "HRI 2026 Full Research Papers 127件のトピックマップ",
+          alt: "HRI 2026 Full Research Papers 127件のクラスタ分布と横断テーマ出現数の要約図",
           tags: ["Blog", "HRI", "Paper Analysis"]
         },
         {
@@ -410,9 +410,9 @@ const content = {
           date: "Jul. 1, 2026",
           title: "Reading 127 HRI 2026 Papers",
           text: "A title-and-abstract based overview of topic clusters across HRI 2026 Full Research Papers.",
-          image: "assets/hri2026-topic-map.png?v=20260701-1",
+          image: "assets/hri2026-blog-summary.png?v=20260702-1",
           href: "blog-hri2026-analysis.html",
-          alt: "Topic map of 127 HRI 2026 Full Research Papers",
+          alt: "Summary graphic of topic clusters and cross-cutting themes across 127 HRI 2026 Full Research Papers",
           tags: ["Blog", "HRI", "Paper Analysis"]
         },
         {
