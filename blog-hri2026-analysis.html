@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="HRI 2026 Full Research Papers 127件のタイトルと概要をもとに，研究トピックの分布と自分の研究との接点を整理した分析メモ。">
+  <meta name="description" content="HRI 2026 Full Research Papers 127件のタイトルと概要をもとに，ヒューマンロボットインタラクション研究のトピック分布を整理した分析メモ。">
   <meta property="og:title" content="HRI 2026の論文127本を眺める | 櫻本晃弘">
   <meta property="og:description" content="HRI 2026 Full Research Papers 127件を，タイトル・概要ベースでクラスタリングし，研究トピックの傾向を整理しました。">
   <meta property="og:type" content="article">
@@ -49,9 +49,13 @@
       <p class="blog-article-meta">2026年7月1日 / HRI / Paper Analysis</p>
 
       <div class="blog-body">
-        <p class="blog-lede">HRI 2026のFull Research Papersを，タイトルと概要からざっと分析した。採択論文から「いま研究が集まっている場所」を読むことが目的である。</p>
+        <p class="blog-lede">ヒューマンロボットインタラクション分野の主要国際会議「HRI 2026（ACM/IEEE International Conference on Human-Robot Interaction）」が2026年3月16～19日，英国スコットランドのエディンバラで開催された。</p>
 
-        <p>対象は，Conference PublishingのHRI 2026 abstractsページから取得できたFull Research Papers 127件である。予稿集PDFの前書きでは537本投稿，128本採択と書かれている一方，公式TOCからメタデータと概要を取得できたFull Research Paperは127件だった。そのため，この記事では取得できた127件を基準にした。</p>
+        <p>HRIは，人とロボットの相互作用を扱う国際会議である。ロボットの認識・制御・学習といった技術だけでなく，人間の行動，信頼，ユーザー体験，デザイン，社会実装，倫理などを含めて議論する点に特徴がある。ロボティクス，人工知能，ヒューマンコンピュータインタラクション，ヒューマンファクター，心理学，社会・行動科学など，複数の分野の研究者が集まる学際的な会議である。</p>
+
+        <p>Google Scholar Metricsでは，HRIは「Human Computer Interaction」分野でh5-index 52を記録し，同分野の上位20件中13位に入っている。さらに「Robotics」分野でもh5-index 52で19位に入り，人とロボットの相互作用を扱う代表的な発表の場となっている。</p>
+
+        <p>今回のHRI 2026では，Full Paperに537件の投稿があり，128件が採択された。採択率は約24％だった。本記事では，Conference PublishingのHRI 2026 abstractsページから取得したFull Research Papers 127件のタイトルと概要をもとに，採択論文から見える研究トピックの分布を眺める。</p>
 
         <figure class="analysis-figure">
           <img src="assets/hri2026-topic-map.png?v=20260701-1" alt="HRI 2026 Full Research Papers 127件のタイトルと概要をもとにしたトピックマップ">
@@ -59,7 +63,7 @@
         </figure>
 
         <h2>単一の流行語より，実環境への広がりが目立つ</h2>
-        <p>CVPRであれば「VLA」のような技術名が前面に出ることがある。HRI 2026では，それに相当する単一の支配的キーワードは見えにくい。むしろ，ケア，教育，公共空間，アクセシビリティ，遠隔操作，信頼，倫理，LLM，ロボット学習が互いに混ざりながら広がっている。</p>
+        <p>HRI 2026では，単一の支配的キーワードだけで全体像を説明するのは難しい。ケア，教育，公共空間，アクセシビリティ，遠隔操作，信頼，倫理，LLM，ロボット学習が互いに混ざりながら広がっている。</p>
 
         <p>LLMや自然言語処理は確かに目立つ。ただし，HRI 2026では「LLMそのもの」が主役というより，会話設計，発話方略，チューターロボット，指示理解，意図推定，公共HRIの中に入り込む道具として現れている。技術単体というより，ロボットが人間の生活空間に入ったとき，どう振る舞うべきかを問う論文が多い。</p>
 
@@ -98,21 +102,6 @@
 
         <p>この数え方はキーワードベースなので厳密な分類ではない。それでも，HRI 2026が「ロボットをどう動かすか」だけでなく，「人間の判断，信頼，権力関係，ケア，教育，公共空間の中でロボットをどう成立させるか」に広がっていることは見えてくる。</p>
 
-        <h2>自分の研究との接点</h2>
-        <p>遠隔操作者の判断ログから，ロボットの高レベル対話戦略を学ぶ，という関心で見ると，直撃する大きなクラスタは見つからなかった。ただし，周辺にはかなり近い論文が散らばっている。</p>
-
-        <ul class="article-list">
-          <li><a href="https://doi.org/10.1145/3757279.3785614">Immersive Social Teleoperation Interface with Semi-automatic Ingroup Navigation for Intuitive Communication</a>: 遠隔操作，社会的ナビゲーション，直感的コミュニケーションに近い。</li>
-          <li><a href="https://doi.org/10.1145/3757279.3785589">What You Reward Is What You Learn: Comparing Rewards for Online Speech Policy Optimization in Public HRI</a>: 公共HRIでの発話ポリシー最適化。対話方略学習にかなり近い。</li>
-          <li><a href="https://doi.org/10.1145/3757279.3785573">Input Matters: How Telepresence Control Devices Affect Performance, Sense of Control, and User Experience</a>: テレプレゼンス操作の入力設計。遠隔操作者データの性質を考える上で重要。</li>
-          <li><a href="https://doi.org/10.1145/3757279.3785646">Don't Say That! Proactive Support for Appropriate Power Use with Avatar Robot</a>: アバターロボットと適切な権力使用の支援。遠隔存在の振る舞い設計に接続する。</li>
-          <li><a href="https://doi.org/10.1145/3757279.3785549">InterPReT: Interactive Policy Restructuring and Training Enable Effective Imitation Learning from Laypersons</a>: 非専門家からの模倣学習。操作者判断を教師データ化する議論に接続しやすい。</li>
-          <li><a href="https://doi.org/10.1145/3757279.3785640">Reframing Conversational Design in HRI: Deliberate Design with AI Scaffolds</a>: AIを使った会話設計支援。対話方略設計の周辺研究として重要。</li>
-          <li><a href="https://doi.org/10.1145/3757279.3785540">Open-Ended Goal Inference through Actions and Language for Human-Robot Collaboration</a>: 行動と言語から人間の目標を推定する研究。対話開始・継続判断の理論的隣接領域。</li>
-        </ul>
-
-        <p>この見方からは，現在の研究の位置づけも少し見えてくる。HRI 2026には，公共空間での発話ポリシー，テレプレゼンス，対話設計支援，模倣学習，意図推定に関係する研究がある。しかし，遠隔操作者が現場で行っている「誰に話しかけるか」「いつ話すか」「いつ終えるか」といった高レベルな対話判断を，ロボットの対話戦略学習に使う問題設定は，まだ明確な主流トピックにはなっていないように見える。</p>
-
         <div class="blog-note">
           <p>この分析は，タイトルと概要だけを使った軽量な探索である。本文精読や引用関係の分析まではしていないので，結論は「研究動向の初期地図」として読むのがよい。</p>
         </div>
@@ -120,9 +109,9 @@
         <h2>まとめ</h2>
         <p>HRI 2026は，LLMやロボット学習のような技術トピックを含みつつも，中心にあるのは実環境で人とロボットがどう関わるかという問いだった。ケア，教育，公共空間，アクセシビリティ，倫理，信頼が同じ地図上に現れるのが，HRIらしい。</p>
 
-        <p>個人的には，遠隔操作者の判断を対話戦略として学習する研究は，この地図の中でまだ空いている場所に見える。近い研究は複数ある。しかし，それらをつないで「現場の人間の判断を，ロボットの高レベルな対話方略へ変換する」と言い切れる余地は残っている。</p>
+        <p>採択論文を俯瞰すると，HRI 2026は特定の技術名だけで語るよりも，人とロボットが出会う場面の広がりとして読む方が自然に見える。技術，評価，デザイン，社会実装が同じ地図上に並んでいること自体が，HRIという会議の性格をよく表している。</p>
 
-        <p class="source-note">Source: <a href="https://www.conference-publishing.com/toc/HRI26/abs">Conference Publishing HRI 2026 abstracts</a>. The analysis used a local reproducible script with title and abstract text as input.</p>
+        <p class="source-note">Sources: <a href="https://humanrobotinteraction.org/2026/">HRI 2026 official site</a>, <a href="https://humanrobotinteraction.org/2026/full-papers/">HRI 2026 Full Papers</a>, <a href="https://www.conference-publishing.com/toc/HRI26/abs">Conference Publishing HRI 2026 abstracts</a>, <a href="https://scholar.google.com/citations?hl=en&amp;view_op=top_venues&amp;vq=eng_humancomputerinteraction">Google Scholar Metrics: Human Computer Interaction</a>, <a href="https://scholar.google.com/citations?hl=en&amp;view_op=top_venues&amp;vq=eng_robotics">Google Scholar Metrics: Robotics</a>.</p>
       </div>
 
       <a class="button button-secondary" href="index.html#gallery">ギャラリーへ戻る</a>
