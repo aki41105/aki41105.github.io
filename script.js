@@ -9,7 +9,6 @@ const content = {
       publications: "業績",
       projects: "プロジェクト",
       gallery: "ギャラリー",
-      blog: "ブログ",
       resources: "資料",
       contact: "連絡先"
     },
@@ -35,8 +34,7 @@ const content = {
       experience: { kicker: "Experience", title: "経験・活動" },
       publications: { kicker: "Publications", title: "研究業績" },
       projects: { kicker: "Projects", title: "プロジェクト" },
-      gallery: { kicker: "Gallery", title: "ギャラリー・近況メモ" },
-      blog: { kicker: "Blog", title: "ブログ" },
+      gallery: { kicker: "Gallery / Blog", title: "ギャラリー / ブログ" },
       resources: { kicker: "Resources", title: "資料リンク" },
       contact: { kicker: "Contact", title: "連絡先・リンク" }
     },
@@ -132,6 +130,26 @@ const content = {
     gallery: {
       empty: "写真や近況メモは今後追加予定です。",
       entries: [
+        {
+          id: "blog-hri2026-analysis",
+          type: "blog",
+          date: "2026年7月1日",
+          title: "HRI 2026の論文127本を眺める",
+          text: "Full Research Papers 127件のタイトルと概要から，HRI 2026の研究トピックの広がりを整理しました。",
+          image: "assets/hri2026-topic-map.png?v=20260701-1",
+          href: "blog-hri2026-analysis.html",
+          alt: "HRI 2026 Full Research Papers 127件のトピックマップ",
+          tags: ["Blog", "HRI", "Paper Analysis"]
+        },
+        {
+          id: "blog-start",
+          type: "blog",
+          date: "2026年6月29日",
+          title: "ブログを始めます",
+          text: "研究，制作，日々の気づきを短く残していくための場所を追加しました。",
+          href: "blog-start.html",
+          tags: ["Blog", "Site Update"]
+        },
         {
           id: "gallery-library",
           date: "2026",
@@ -234,19 +252,6 @@ const content = {
         }
       ]
     },
-    blog: {
-      empty: "ブログ記事は今後追加予定です。",
-      entries: [
-        {
-          id: "blog-start",
-          date: "2026年6月29日",
-          title: "ブログを始めます",
-          excerpt: "研究，制作，日々の気づきを短く残していくための場所を追加しました。",
-          href: "blog-start.html",
-          tags: ["Site Update", "Blog"]
-        }
-      ]
-    },
     resources: {
       empty: "論文執筆や研究に役立つ資料リンクをここに追加予定です。",
       entries: [
@@ -278,7 +283,6 @@ const content = {
       publications: "Publications",
       projects: "Projects",
       gallery: "Gallery",
-      blog: "Blog",
       resources: "Resources",
       contact: "Contact"
     },
@@ -304,8 +308,7 @@ const content = {
       experience: { kicker: "Experience", title: "Experience & Activities" },
       publications: { kicker: "Publications", title: "Publications" },
       projects: { kicker: "Projects", title: "Projects" },
-      gallery: { kicker: "Gallery", title: "Gallery / Notes" },
-      blog: { kicker: "Blog", title: "Blog" },
+      gallery: { kicker: "Gallery / Blog", title: "Gallery / Blog" },
       resources: { kicker: "Resources", title: "Resources" },
       contact: { kicker: "Contact", title: "Contact / Links" }
     },
@@ -401,6 +404,26 @@ const content = {
     gallery: {
       empty: "Photos and short notes will be added here.",
       entries: [
+        {
+          id: "blog-hri2026-analysis",
+          type: "blog",
+          date: "Jul. 1, 2026",
+          title: "Reading 127 HRI 2026 Papers",
+          text: "A title-and-abstract based overview of topic clusters across HRI 2026 Full Research Papers.",
+          image: "assets/hri2026-topic-map.png?v=20260701-1",
+          href: "blog-hri2026-analysis.html",
+          alt: "Topic map of 127 HRI 2026 Full Research Papers",
+          tags: ["Blog", "HRI", "Paper Analysis"]
+        },
+        {
+          id: "blog-start",
+          type: "blog",
+          date: "Jun. 29, 2026",
+          title: "Starting a Blog",
+          text: "I added a place to keep short notes on research, making things, and everyday observations.",
+          href: "blog-start.html",
+          tags: ["Blog", "Site Update"]
+        },
         {
           id: "gallery-library",
           date: "2026",
@@ -500,19 +523,6 @@ const content = {
           href: "gallery-wsj-2019.html",
           alt: "Entrance gate at the 24th World Scout Jamboree",
           tags: ["24WSJ", "Scout", "USA"]
-        }
-      ]
-    },
-    blog: {
-      empty: "Blog posts will be added here.",
-      entries: [
-        {
-          id: "blog-start",
-          date: "Jun. 29, 2026",
-          title: "Starting a Blog",
-          excerpt: "I added a place to keep short notes on research, making things, and everyday observations.",
-          href: "blog-start.html",
-          tags: ["Site Update", "Blog"]
         }
       ]
     },
@@ -723,7 +733,7 @@ function renderGallery(language) {
 
   entries.forEach((item) => {
     const card = document.createElement(item.href ? "a" : "article");
-    card.className = "gallery-card";
+    card.className = item.type === "blog" ? "gallery-card gallery-card-note" : "gallery-card";
     if (item.id) {
       card.id = item.id;
     }
@@ -732,41 +742,15 @@ function renderGallery(language) {
     }
     const tags = item.tags.map((tag) => `<span>${tag}</span>`).join("");
 
+    const image = item.image ? `<img src="${item.image}" alt="${item.alt}">` : "";
     card.innerHTML = `
-      <img src="${item.image}" alt="${item.alt}">
+      ${image}
       <div class="gallery-card-body">
         <p class="gallery-date">${item.date}</p>
         <h3 class="gallery-title">${item.title}</h3>
         <p class="gallery-text">${item.text}</p>
         <div class="gallery-tags">${tags}</div>
       </div>
-    `;
-    container.appendChild(card);
-  });
-}
-
-function renderBlog(language) {
-  const container = document.querySelector("#blogList");
-  const emptyState = document.querySelector("#blogEmpty");
-  container.innerHTML = "";
-
-  const entries = content[language].blog.entries;
-  emptyState.hidden = entries.length > 0;
-
-  entries.forEach((item) => {
-    const card = document.createElement("a");
-    card.className = "blog-card";
-    card.href = item.href;
-    if (item.id) {
-      card.id = item.id;
-    }
-    const tags = item.tags.map((tag) => `<span>${tag}</span>`).join("");
-
-    card.innerHTML = `
-      <p class="blog-date">${item.date}</p>
-      <h3 class="blog-title">${item.title}</h3>
-      <p class="blog-excerpt">${item.excerpt}</p>
-      <div class="gallery-tags">${tags}</div>
     `;
     container.appendChild(card);
   });
@@ -781,7 +765,6 @@ function applyLanguage(language) {
   renderTimeline("#experienceTimeline", content[language].experienceTimeline);
   renderPublications(language);
   renderGallery(language);
-  renderBlog(language);
   renderResources(language);
   renderContacts(language);
 }

@@ -38,9 +38,15 @@
   </url>
   <url>
     <loc>https://aki41105.github.io/blog-start.html</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aki41105.github.io/blog-hri2026-analysis.html</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://aki41105.github.io/gallery-wsj-2019.html</loc>

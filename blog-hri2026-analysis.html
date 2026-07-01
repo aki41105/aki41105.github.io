@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HRI 2026 Full Research Papers 127件のタイトルと概要をもとに，研究トピックの分布と自分の研究との接点を整理した分析メモ。">
+  <meta property="og:title" content="HRI 2026の論文127本を眺める | 櫻本晃弘">
+  <meta property="og:description" content="HRI 2026 Full Research Papers 127件を，タイトル・概要ベースでクラスタリングし，研究トピックの傾向を整理しました。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aki41105.github.io/blog-hri2026-analysis.html">
+  <meta property="og:image" content="https://aki41105.github.io/assets/hri2026-topic-map.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HRI 2026の論文127本を眺める | 櫻本晃弘">
+  <meta name="twitter:description" content="HRI 2026 Full Research Papers 127件を，タイトル・概要ベースでクラスタリングし，研究トピックの傾向を整理しました。">
+  <meta name="twitter:image" content="https://aki41105.github.io/assets/hri2026-topic-map.png">
+  <meta name="theme-color" content="#1f5133">
+  <link rel="canonical" href="https://aki41105.github.io/blog-hri2026-analysis.html">
+  <link rel="icon" href="assets/favicon.svg?v=20260628-green" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32x32.png?v=20260628-green" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=20260628-green">
+  <title>HRI 2026の論文127本を眺める | 櫻本晃弘</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260701-hri">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="Home">
+      <span class="brand-mark">AS</span>
+      <span>櫻本 晃弘</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Blog navigation">
+      <a href="index.html#research">研究</a>
+      <a href="index.html#gallery" class="is-active" aria-current="page">ギャラリー / ブログ</a>
+      <a href="index.html#contact">連絡先</a>
+    </nav>
+
+    <a class="language-toggle detail-home-link" href="index.html#gallery">ギャラリーへ戻る</a>
+  </header>
+
+  <main>
+    <article class="section blog-article blog-article-wide">
+      <div>
+        <p class="section-kicker">Blog / Research Note</p>
+        <h1>HRI 2026の論文127本を眺める</h1>
+      </div>
+      <p class="blog-article-meta">2026年7月1日 / HRI / Paper Analysis</p>
+
+      <div class="blog-body">
+        <p class="blog-lede">HRI 2026のFull Research Papersを，タイトルと概要からざっと分析した。日経クロステックのCVPR分析記事のように，採択論文から「いま研究が集まっている場所」を読むことが目的である。</p>
+
+        <p>対象は，Conference PublishingのHRI 2026 abstractsページから取得できたFull Research Papers 127件である。予稿集PDFの前書きでは537本投稿，128本採択と書かれている一方，公式TOCからメタデータと概要を取得できたFull Research Paperは127件だった。そのため，この記事では取得できた127件を基準にした。</p>
+
+        <figure class="analysis-figure">
+          <img src="assets/hri2026-topic-map.png?v=20260701-1" alt="HRI 2026 Full Research Papers 127件のタイトルと概要をもとにしたトピックマップ">
+          <figcaption>TF-IDF n-gram，TruncatedSVD，KMeans，t-SNEによる軽量なトピックマップ。各点がFull Research Paperを表す。</figcaption>
+        </figure>
+
+        <h2>単一の流行語より，実環境への広がりが目立つ</h2>
+        <p>CVPRであれば「VLA」のような技術名が前面に出ることがある。HRI 2026では，それに相当する単一の支配的キーワードは見えにくい。むしろ，ケア，教育，公共空間，アクセシビリティ，遠隔操作，信頼，倫理，LLM，ロボット学習が互いに混ざりながら広がっている。</p>
+
+        <p>LLMや自然言語処理は確かに目立つ。ただし，HRI 2026では「LLMそのもの」が主役というより，会話設計，発話方略，チューターロボット，指示理解，意図推定，公共HRIの中に入り込む道具として現れている。技術単体というより，ロボットが人間の生活空間に入ったとき，どう振る舞うべきかを問う論文が多い。</p>
+
+        <h2>主要なクラスタ</h2>
+        <p>クラスタリング結果は，大きく次の8群として読める。</p>
+
+        <ul class="article-list">
+          <li><strong>language agents / safety / technical systems</strong>: VLM/LLM，言語，ベンチマーク，安全，ハンドオーバーなどが混ざる技術寄りの群。</li>
+          <li><strong>robot learning / demonstrations / feedback</strong>: デモンストレーション，制約，フィードバック，ポリシー学習が中心。</li>
+          <li><strong>trust / social judgment / teaming</strong>: 信頼，協働，社会的評価，チーム行動に関する研究。</li>
+          <li><strong>care / service / health deployments</strong>: ケア現場，サービス現場，医療・高齢者施設での導入に関する研究。</li>
+          <li><strong>navigation / accessibility / user preferences</strong>: 移動支援，視覚障害者支援，ユーザ嗜好，環境内行動に関する研究。</li>
+          <li><strong>robot form / design artifacts / public space</strong>: ロボットの形態，デザイン素材，公共空間での存在感に関する研究。</li>
+          <li><strong>children / education / emotion learning</strong>: 子ども，教育，感情学習，チューター/ピアとしてのロボット。</li>
+          <li><strong>methods / reporting / ethics / in-the-wild practice</strong>: 研究方法，報告標準，バイアス，実環境での設計実践。</li>
+        </ul>
+
+        <figure class="analysis-figure">
+          <img src="assets/hri2026-density-kde-map.png?v=20260701-1" alt="HRI 2026 Full Research Papers 127件の密度マップ">
+          <figcaption>密度で見ると，技術・社会評価・実環境応用が分離しきらず，なだらかにつながっている。</figcaption>
+        </figure>
+
+        <h2>横断テーマで見る</h2>
+        <p>キーワードベースで粗く数えると，次のテーマが目立った。</p>
+
+        <div class="metric-list" aria-label="HRI 2026 cross-cutting topic counts">
+          <p><strong>49件</strong><span>collaboration / intent / task</span></p>
+          <p><strong>43件</strong><span>ethics / safety / policy</span></p>
+          <p><strong>40件</strong><span>trust / social perception</span></p>
+          <p><strong>35件</strong><span>LLM / language / conversation</span></p>
+          <p><strong>35件</strong><span>public / navigation / in-the-wild</span></p>
+          <p><strong>25件</strong><span>children / education</span></p>
+          <p><strong>24件</strong><span>assistive / care / health</span></p>
+          <p><strong>16件</strong><span>teleoperation / operator</span></p>
+        </div>
+
+        <p>この数え方はキーワードベースなので厳密な分類ではない。それでも，HRI 2026が「ロボットをどう動かすか」だけでなく，「人間の判断，信頼，権力関係，ケア，教育，公共空間の中でロボットをどう成立させるか」に広がっていることは見えてくる。</p>
+
+        <h2>自分の研究との接点</h2>
+        <p>遠隔操作者の判断ログから，ロボットの高レベル対話戦略を学ぶ，という関心で見ると，直撃する大きなクラスタは見つからなかった。ただし，周辺にはかなり近い論文が散らばっている。</p>
+
+        <ul class="article-list">
+          <li><a href="https://doi.org/10.1145/3757279.3785614">Immersive Social Teleoperation Interface with Semi-automatic Ingroup Navigation for Intuitive Communication</a>: 遠隔操作，社会的ナビゲーション，直感的コミュニケーションに近い。</li>
+          <li><a href="https://doi.org/10.1145/3757279.3785589">What You Reward Is What You Learn: Comparing Rewards for Online Speech Policy Optimization in Public HRI</a>: 公共HRIでの発話ポリシー最適化。対話方略学習にかなり近い。</li>
+          <li><a href="https://doi.org/10.1145/3757279.3785573">Input Matters: How Telepresence Control Devices Affect Performance, Sense of Control, and User Experience</a>: テレプレゼンス操作の入力設計。遠隔操作者データの性質を考える上で重要。</li>
+          <li><a href="https://doi.org/10.1145/3757279.3785646">Don't Say That! Proactive Support for Appropriate Power Use with Avatar Robot</a>: アバターロボットと適切な権力使用の支援。遠隔存在の振る舞い設計に接続する。</li>
+          <li><a href="https://doi.org/10.1145/3757279.3785549">InterPReT: Interactive Policy Restructuring and Training Enable Effective Imitation Learning from Laypersons</a>: 非専門家からの模倣学習。操作者判断を教師データ化する議論に接続しやすい。</li>
+          <li><a href="https://doi.org/10.1145/3757279.3785640">Reframing Conversational Design in HRI: Deliberate Design with AI Scaffolds</a>: AIを使った会話設計支援。対話方略設計の周辺研究として重要。</li>
+          <li><a href="https://doi.org/10.1145/3757279.3785540">Open-Ended Goal Inference through Actions and Language for Human-Robot Collaboration</a>: 行動と言語から人間の目標を推定する研究。対話開始・継続判断の理論的隣接領域。</li>
+        </ul>
+
+        <p>この見方からは，現在の研究の位置づけも少し見えてくる。HRI 2026には，公共空間での発話ポリシー，テレプレゼンス，対話設計支援，模倣学習，意図推定に関係する研究がある。しかし，遠隔操作者が現場で行っている「誰に話しかけるか」「いつ話すか」「いつ終えるか」といった高レベルな対話判断を，ロボットの対話戦略学習に使う問題設定は，まだ明確な主流トピックにはなっていないように見える。</p>
+
+        <div class="blog-note">
+          <p>この分析は，タイトルと概要だけを使った軽量な探索である。本文精読や引用関係の分析まではしていないので，結論は「研究動向の初期地図」として読むのがよい。</p>
+        </div>
+
+        <h2>まとめ</h2>
+        <p>HRI 2026は，LLMやロボット学習のような技術トピックを含みつつも，中心にあるのは実環境で人とロボットがどう関わるかという問いだった。ケア，教育，公共空間，アクセシビリティ，倫理，信頼が同じ地図上に現れるのが，HRIらしい。</p>
+
+        <p>個人的には，遠隔操作者の判断を対話戦略として学習する研究は，この地図の中でまだ空いている場所に見える。近い研究は複数ある。しかし，それらをつないで「現場の人間の判断を，ロボットの高レベルな対話方略へ変換する」と言い切れる余地は残っている。</p>
+
+        <p class="source-note">Source: <a href="https://www.conference-publishing.com/toc/HRI26/abs">Conference Publishing HRI 2026 abstracts</a>. The analysis used a local reproducible script with title and abstract text as input.</p>
+      </div>
+
+      <a class="button button-secondary" href="index.html#gallery">ギャラリーへ戻る</a>
+    </article>
+  </main>
+</body>
+</html>
