@@ -27,16 +27,16 @@ const content = {
       cv: "CV"
     },
     sections: {
-      research: { kicker: "Research", title: "研究紹介" },
-      career: { kicker: "Career", title: "経歴" },
+      research: { kicker: "01", title: "研究紹介", alt: "Research" },
+      career: { kicker: "02", title: "経歴", alt: "Career" },
       researchActivities: { kicker: "Research Activities", title: "研究活動" },
       education: { kicker: "Education", title: "学歴" },
       experience: { kicker: "Experience", title: "経験・活動" },
-      publications: { kicker: "Publications", title: "研究業績" },
-      projects: { kicker: "Projects", title: "プロジェクト" },
-      gallery: { kicker: "Gallery / Blog", title: "ギャラリー / ブログ" },
-      resources: { kicker: "Resources", title: "資料リンク" },
-      contact: { kicker: "Contact", title: "連絡先・リンク" }
+      publications: { kicker: "03", title: "研究業績", alt: "Publications" },
+      projects: { kicker: "04", title: "プロジェクト", alt: "Projects" },
+      gallery: { kicker: "05", title: "ギャラリー / ブログ", alt: "Gallery & Blog" },
+      resources: { kicker: "06", title: "資料リンク", alt: "Resources" },
+      contact: { kicker: "07", title: "連絡先・リンク", alt: "Contact" }
     },
     researchOverview: "実環境 HRI を対象に，社会的信号処理とマルチモーダルインタラクションの観点から，人とロボットの相互行為を分析しています。",
     researchActivitiesTimeline: [
@@ -304,16 +304,16 @@ const content = {
       cv: "CV"
     },
     sections: {
-      research: { kicker: "Research", title: "Research Overview" },
-      career: { kicker: "Career", title: "Career" },
+      research: { kicker: "01", title: "Research Overview", alt: "研究紹介" },
+      career: { kicker: "02", title: "Career", alt: "経歴" },
       researchActivities: { kicker: "Research Activities", title: "Research Activities" },
       education: { kicker: "Education", title: "Education" },
       experience: { kicker: "Experience", title: "Experience & Activities" },
-      publications: { kicker: "Publications", title: "Publications" },
-      projects: { kicker: "Projects", title: "Projects" },
-      gallery: { kicker: "Gallery / Blog", title: "Gallery / Blog" },
-      resources: { kicker: "Resources", title: "Resources" },
-      contact: { kicker: "Contact", title: "Contact / Links" }
+      publications: { kicker: "03", title: "Publications", alt: "研究業績" },
+      projects: { kicker: "04", title: "Projects", alt: "プロジェクト" },
+      gallery: { kicker: "05", title: "Gallery / Blog", alt: "ギャラリー・ブログ" },
+      resources: { kicker: "06", title: "Resources", alt: "資料リンク" },
+      contact: { kicker: "07", title: "Contact / Links", alt: "連絡先" }
     },
     researchOverview: "I study real-world HRI through social signal processing and multimodal interaction, focusing on how people and robots relate to one another in everyday settings.",
     researchActivitiesTimeline: [
