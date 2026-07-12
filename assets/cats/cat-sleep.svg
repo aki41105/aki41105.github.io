@@ -5,6 +5,7 @@
     .zzz2 { animation: zfloat 3.2s ease-in-out 1.6s infinite; }
     @keyframes breathe { 0%, 100% { transform: scale(1, 1); } 50% { transform: scale(1.015, 1.045); } }
     @keyframes zfloat { 0% { opacity: 0; transform: translateY(4px); } 35% { opacity: 1; } 70%, 100% { opacity: 0; transform: translateY(-6px); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
   </style>
   <g>
     <g class="body">

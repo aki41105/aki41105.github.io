@@ -6,6 +6,7 @@
     @keyframes breathe { 0%, 100% { transform: scale(1, 1); } 50% { transform: scale(1.012, 1.035); } }
     @keyframes twitch { 0%, 86%, 94%, 100% { transform: rotate(0deg); } 90% { transform: rotate(-12deg); } }
     @keyframes tap { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(14deg); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
   </style>
   <g>
     <g class="body">

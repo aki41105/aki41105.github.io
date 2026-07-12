@@ -925,8 +925,86 @@ function setupReveal() {
   });
 }
 
+function setupTabNap() {
+  const faviconLink = document.querySelector('link[rel="icon"][type="image/svg+xml"]');
+  if (!faviconLink) {
+    return;
+  }
+
+  const originalFaviconHref = faviconLink.getAttribute("href");
+  const sleepSuffix = " ᶻᶻᶻ";
+
+  const sleep = () => {
+    if (!document.title.endsWith(sleepSuffix)) {
+      document.title = document.title + sleepSuffix;
+    }
+    faviconLink.setAttribute("href", "assets/favicon-sleep.svg?v=1");
+  };
+
+  const wake = () => {
+    if (document.title.endsWith(sleepSuffix)) {
+      document.title = document.title.slice(0, -sleepSuffix.length);
+    }
+    faviconLink.setAttribute("href", originalFaviconHref);
+  };
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      sleep();
+    } else {
+      wake();
+    }
+  });
+
+  window.addEventListener("pageshow", wake);
+}
+
+function setupFooterCatWakeup() {
+  const wrap = document.querySelector(".footer-cat-wrap");
+  if (!wrap) {
+    return;
+  }
+
+  const img = wrap.querySelector(".footer-cat-img");
+  const sitCatPreload = new Image();
+  sitCatPreload.src = "assets/cats/cat-sit.svg";
+
+  let sleepTimer = null;
+  let tapCount = 0;
+
+  wrap.addEventListener("click", () => {
+    tapCount += 1;
+
+    if (img) {
+      img.src = "assets/cats/cat-sit.svg";
+    }
+    wrap.classList.add("is-awake");
+
+    if (sleepTimer) {
+      clearTimeout(sleepTimer);
+    }
+
+    sleepTimer = window.setTimeout(() => {
+      if (img) {
+        img.src = "assets/cats/cat-sleep.svg";
+      }
+      wrap.classList.remove("is-awake");
+      sleepTimer = null;
+    }, 4000);
+  });
+}
+
 setupLanguageToggle();
 setupProfilePhotoFallback();
 applyLanguage(currentLanguage);
 setupScrollSpy();
 setupReveal();
+setupTabNap();
+setupFooterCatWakeup();
+
+try {
+  console.log(
+    "%c /\\_/\\ \n( o.o )\n > ^ < \n\nこのサイトには三毛猫が9匹すんでいます。\nぜんぶ見つけられますか？ — Codex Felis",
+    "color:#5f8d73; font-family:monospace; line-height:1.5"
+  );
+} catch (error) {}

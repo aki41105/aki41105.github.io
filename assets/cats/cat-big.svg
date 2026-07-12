@@ -4,12 +4,13 @@
   <style>
     .bigtail { transform-box: fill-box; transform-origin: right bottom; animation: bigsway 7s ease-in-out infinite alternate; }
     @keyframes bigsway { from { transform: rotate(0deg); } to { transform: rotate(4deg); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
   </style>
   <g stroke="#3f6e54" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
     <!-- tail: 体の後ろから前へ回り込む(先に描いて体で隠す) -->
     <path class="bigtail" d="M420 200 Q480 190 480 150 Q480 128 458 124" fill="none"/>
     <!-- body: 大きな丸い塊(背景色で塗ってしっぽの根本をマスク) -->
-    <path d="M110 250 Q80 170 170 138 Q280 104 380 140 Q450 168 438 220 Q428 258 340 262 L150 262 Q116 262 110 250 Z" fill="#fbf8f1"/>
+    <path d="M110 250 Q80 170 170 138 Q280 104 380 140 Q450 168 438 220 Q428 258 340 262 L150 262 Q116 262 110 250 Z" fill="#f8f3e7"/>
     <!-- patches on body -->
     <path d="M250 120 Q310 112 360 136 Q340 170 280 166 Q255 146 250 120 Z" fill="#e8933a" fill-opacity="0.5" stroke="none"/>
     <path d="M370 150 Q420 168 424 210 Q390 226 360 200 Q356 168 370 150 Z" fill="#4a4440" fill-opacity="0.42" stroke="none"/>
@@ -21,7 +22,7 @@
     <path d="M118 118 L128 70 Q130 61 138 68 L164 92" fill="#e8933a" fill-opacity="0.55"/>
     <path d="M234 116 L228 70 Q227 61 219 67 L192 90" fill="#4a4440" fill-opacity="0.5"/>
     <!-- head: 背景色で塗って体の線をマスク -->
-    <ellipse cx="176" cy="152" rx="74" ry="62" fill="#fbf8f1"/>
+    <ellipse cx="176" cy="152" rx="74" ry="62" fill="#f8f3e7"/>
     <!-- head patches -->
     <path d="M112 132 Q136 106 172 108 Q158 142 120 150 Q110 142 112 132 Z" fill="#e8933a" fill-opacity="0.5" stroke="none"/>
     <path d="M240 132 Q218 106 184 108 Q196 142 232 150 Q242 142 240 132 Z" fill="#4a4440" fill-opacity="0.42" stroke="none"/>

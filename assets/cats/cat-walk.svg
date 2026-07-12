@@ -7,6 +7,7 @@
     @keyframes trot { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-1.6px); } }
     @keyframes sway { from { transform: rotate(-5deg); } to { transform: rotate(6deg); } }
     @keyframes step { 0%, 100% { transform: rotate(6deg); } 50% { transform: rotate(-6deg); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
   </style>
   <g class="trot">
     <path class="tail" d="M112 58 Q126 48 122 30 Q121 24 116 24 Q120 34 112 44 Q106 50 104 56 Z" fill="#3a3532"/>

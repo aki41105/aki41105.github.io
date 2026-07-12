@@ -4,6 +4,7 @@
     .eye { transform-box: fill-box; transform-origin: center; animation: blink 4.6s infinite; }
     @keyframes sway { from { transform: rotate(-4deg); } to { transform: rotate(7deg); } }
     @keyframes blink { 0%, 90%, 100% { transform: scaleY(1); } 93%, 96% { transform: scaleY(0.12); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
   </style>
   <g>
     <path class="tail" d="M92 88 Q114 82 110 62 Q108 52 100 50 Q106 60 100 68 Q94 76 84 80 Z" fill="#3a3532"/>

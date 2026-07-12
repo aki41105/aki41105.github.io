@@ -4,6 +4,7 @@
     .tail { transform-box: fill-box; transform-origin: left bottom; animation: whip 1.6s ease-in-out infinite; }
     @keyframes wiggle { 0%, 100% { transform: rotate(0deg); } 30% { transform: rotate(1.6deg); } 70% { transform: rotate(-1.2deg); } }
     @keyframes whip { 0%, 100% { transform: rotate(-8deg); } 50% { transform: rotate(10deg); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
   </style>
   <g class="wiggle">
     <path class="tail" d="M104 46 Q118 36 114 20 Q113 14 108 15 Q112 26 104 34 Q99 40 97 46 Z" fill="#e8933a"/>
