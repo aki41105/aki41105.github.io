@@ -255,8 +255,7 @@ const content = {
     resources: {
       empty: "論文執筆や研究に役立つ資料リンクをここに追加予定です。",
       entries: [
-        { label: "🔒 内部資料サイト（本人専用）", value: "ローカルで開く — このMac限定", href: "http://localhost:8100/", icon: "link" },
-        { label: "🔒 内部資料（GitHub）", value: "外出先はこちら — 要ログイン", href: "https://github.com/aki41105/my-docs", icon: "github" },
+        { label: "🔒 内部資料（本人専用）", value: "my-docs — 要ログイン", href: "https://github.com/aki41105/my-docs", icon: "github" },
         { label: "らぼらとらい", value: "JAIST公認サークル 公式サイト", href: "https://www.jaist.ac.jp/misc/circles/raboratorai/", icon: "link" },
         { label: "石原尚 note", value: "研究・執筆・発表の基礎", href: "https://note.com/hisashi_is", icon: "link" }
       ]
@@ -532,8 +531,7 @@ const content = {
     resources: {
       empty: "Writing and research resource links will be added here.",
       entries: [
-        { label: "🔒 Private Notes Site (owner only)", value: "Local — this Mac only", href: "http://localhost:8100/", icon: "link" },
-        { label: "🔒 Private Notes (GitHub)", value: "On the go — sign-in required", href: "https://github.com/aki41105/my-docs", icon: "github" },
+        { label: "🔒 Private Notes (owner only)", value: "my-docs — sign-in required", href: "https://github.com/aki41105/my-docs", icon: "github" },
         { label: "Raboratorai", value: "JAIST official circle website", href: "https://www.jaist.ac.jp/misc/circles/raboratorai/", icon: "link" },
         { label: "Hisashi Ishihara on note", value: "Research, writing, and presentation basics", href: "https://note.com/hisashi_is", icon: "link" }
       ]
