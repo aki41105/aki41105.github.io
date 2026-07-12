@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 100" role="img" aria-label="">
-  <!-- 三毛猫・伸びポーズ(おしり上げ) -->
-  <g>
-    <!-- tail -->
-    <path d="M104 46 Q118 36 114 20 Q113 14 108 15 Q112 26 104 34 Q99 40 97 46 Z" fill="#e8933a"/>
-    <!-- body: front down, rear up -->
+  <style>
+    .wiggle { transform-box: fill-box; transform-origin: 30% 90%; animation: wiggle 1.6s ease-in-out infinite; }
+    .tail { transform-box: fill-box; transform-origin: left bottom; animation: whip 1.6s ease-in-out infinite; }
+    @keyframes wiggle { 0%, 100% { transform: rotate(0deg); } 30% { transform: rotate(1.6deg); } 70% { transform: rotate(-1.2deg); } }
+    @keyframes whip { 0%, 100% { transform: rotate(-8deg); } 50% { transform: rotate(10deg); } }
+  </style>
+  <g class="wiggle">
+    <path class="tail" d="M104 46 Q118 36 114 20 Q113 14 108 15 Q112 26 104 34 Q99 40 97 46 Z" fill="#e8933a"/>
     <path d="M30 78 Q34 64 50 62 Q72 40 96 46 Q108 50 104 64 Q100 76 84 78 Q60 82 44 82 Q32 82 30 78 Z" fill="#fffdf8" stroke="#3a3532" stroke-width="2.5"/>
-    <!-- patches -->
     <path d="M74 46 Q90 44 98 50 Q96 62 82 62 Q74 56 74 46 Z" fill="#3a3532"/>
     <path d="M54 62 Q64 56 72 58 Q70 70 58 72 Q54 68 54 62 Z" fill="#e8933a"/>
-    <!-- legs -->
     <path d="M42 82 L40 92 M56 82 L56 92 M88 78 L90 92 M98 72 L102 90" fill="none" stroke="#3a3532" stroke-width="3" stroke-linecap="round"/>
-    <!-- head low -->
     <g>
       <path d="M14 52 L16 38 Q16.5 35 19.5 37 L27 44 Z" fill="#3a3532" stroke="#3a3532" stroke-width="2.2" stroke-linejoin="round"/>
       <path d="M44 50 L46 37 Q46.5 34 43 35 L34 42 Z" fill="#e8933a" stroke="#3a3532" stroke-width="2.2" stroke-linejoin="round"/>

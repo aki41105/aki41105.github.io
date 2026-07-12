@@ -894,7 +894,39 @@ function setupScrollSpy() {
   requestUpdate();
 }
 
+function setupReveal() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+  if (!("IntersectionObserver" in window) || window.innerHeight === 0) {
+    return;
+  }
+
+  const targets = document.querySelectorAll(
+    ".section-heading, .section .link-grid, .section .timeline, .publication-list, .gallery-grid, .career-group, #researchOverview"
+  );
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0, rootMargin: "0px 0px -60px 0px" }
+  );
+
+  targets.forEach((el, index) => {
+    el.classList.add("reveal");
+    el.style.setProperty("--reveal-delay", `${(index % 3) * 70}ms`);
+    observer.observe(el);
+  });
+}
+
 setupLanguageToggle();
 setupProfilePhotoFallback();
 applyLanguage(currentLanguage);
 setupScrollSpy();
+setupReveal();
