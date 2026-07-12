@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 60" role="img" aria-label="">
+  <!-- 三毛猫・ひょっこり(縁から顔だけ) -->
+  <g>
+    <!-- paws on the edge -->
+    <path d="M26 52 Q26 46 32 46 Q38 46 38 52 M70 52 Q70 46 76 46 Q82 46 82 52" fill="#fffdf8" stroke="#3a3532" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- ears -->
+    <path d="M28 24 L32 6 Q33 3 36 6 L44 16 Z" fill="#e8933a" stroke="#3a3532" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M80 24 L76 6 Q75 3 72 6 L64 16 Z" fill="#3a3532" stroke="#3a3532" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- head over the edge -->
+    <path d="M28 52 Q26 22 54 20 Q82 22 80 52 Z" fill="#fffdf8" stroke="#3a3532" stroke-width="2.5"/>
+    <path d="M30 28 Q40 20 50 22 Q44 34 32 36 Q29 32 30 28 Z" fill="#e8933a"/>
+    <path d="M78 28 Q68 20 59 22 Q64 34 76 36 Q79 32 78 28 Z" fill="#3a3532"/>
+    <!-- face -->
+    <circle cx="44" cy="40" r="2.6" fill="#3a3532"/>
+    <circle cx="64" cy="40" r="2.6" fill="#3a3532"/>
+    <path d="M52 46 L56 46 L54 49 Z" fill="#e0787f"/>
+    <path d="M22 42 L32 43 M23 49 L33 47 M86 42 L76 43 M85 49 L75 47" stroke="#3a3532" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+</svg>

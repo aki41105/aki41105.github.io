@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 85" role="img" aria-label="">
+  <!-- 三毛猫・香箱座り -->
+  <g>
+    <path d="M22 76 Q16 52 42 46 L84 46 Q106 50 100 76 Q99 80 92 80 L30 80 Q23 80 22 76 Z" fill="#fffdf8" stroke="#3a3532" stroke-width="2.5"/>
+    <!-- patches -->
+    <path d="M48 46 Q68 44 76 48 Q74 62 60 64 Q50 58 48 46 Z" fill="#3a3532"/>
+    <path d="M84 48 Q98 52 98 68 Q88 72 82 64 Q80 54 84 48 Z" fill="#e8933a"/>
+    <!-- tail tucked -->
+    <path d="M96 76 Q106 72 104 62" fill="none" stroke="#e8933a" stroke-width="6" stroke-linecap="round"/>
+    <!-- head -->
+    <g>
+      <path d="M26 20 L30 6 Q31 3 34 6 L41 14 Z" fill="#3a3532" stroke="#3a3532" stroke-width="2.2" stroke-linejoin="round"/>
+      <path d="M62 20 L58 6 Q57 3 54 6 L47 14 Z" fill="#e8933a" stroke="#3a3532" stroke-width="2.2" stroke-linejoin="round"/>
+      <ellipse cx="44" cy="28" rx="22" ry="18" fill="#fffdf8" stroke="#3a3532" stroke-width="2.5"/>
+      <path d="M28 16 Q36 12 44 14 Q38 24 30 24 Q26 20 28 16 Z" fill="#3a3532"/>
+      <path d="M60 16 Q52 12 46 14 Q50 24 58 24 Q62 20 60 16 Z" fill="#e8933a"/>
+      <!-- content eyes (curved) -->
+      <path d="M34 30 Q37 32 40 30 M48 30 Q51 32 54 30" fill="none" stroke="#3a3532" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M42 35 L46 35 L44 38 Z" fill="#e0787f"/>
+      <path d="M18 30 L27 32 M19 37 L28 36 M70 30 L61 32 M69 37 L60 36" stroke="#3a3532" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>
