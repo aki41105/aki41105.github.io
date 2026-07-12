@@ -19,8 +19,8 @@ const content = {
       tagline: "ヒューマンロボットインタラクション / 社会的信号処理 / マルチモーダルインタラクション",
       summary: "櫻本晃弘は北陸先端科学技術大学院大学（JAIST）の博士前期課程に所属し，ヒューマンロボットインタラクションの研究をしています。",
       updatedLabel: "最終更新",
-      updatedDate: "2026年6月28日",
-      updatedText: "経歴・業績ステータス・ギャラリー情報を整理しました。"
+      updatedDate: "2026年7月12日",
+      updatedText: "noteとQiitaを始めました。連絡先からどうぞ。"
     },
     buttons: {
       contact: "Contact",
@@ -38,7 +38,7 @@ const content = {
       resources: { kicker: "Resources", title: "資料リンク" },
       contact: { kicker: "Contact", title: "連絡先・リンク" }
     },
-    researchOverview: "実環境 HRI を対象に，社会的信号処理とマルチモーダルインタラクションの観点から，人とロボットの相互行為を分析しています。研究内容の詳細は順次整理します。",
+    researchOverview: "実環境 HRI を対象に，社会的信号処理とマルチモーダルインタラクションの観点から，人とロボットの相互行為を分析しています。",
     researchActivitiesTimeline: [
       {
         year: "2025年10月-現在",
@@ -96,7 +96,7 @@ const content = {
       }
     ],
     publications: {
-      empty: "研究業績は今後追加予定です。",
+      empty: "準備中。",
       groups: [
         {
           title: "国際会議",
@@ -125,10 +125,10 @@ const content = {
       ]
     },
     projects: {
-      empty: "プロジェクトは今後追加予定です。"
+      empty: "準備中。"
     },
     gallery: {
-      empty: "写真や近況メモは今後追加予定です。",
+      empty: "準備中。",
       entries: [
         {
           id: "blog-hri2026-analysis",
@@ -253,26 +253,26 @@ const content = {
       ]
     },
     resources: {
-      empty: "論文執筆や研究に役立つ資料リンクをここに追加予定です。",
+      empty: "準備中。",
       entries: [
-        { label: "🔒 内部資料（本人専用）", value: "my-docs — 要ログイン", href: "https://github.com/aki41105/my-docs", icon: "github" },
+        { label: "内部資料（本人専用）", value: "my-docs — 要ログイン", href: "https://github.com/aki41105/my-docs", icon: "github" },
         { label: "らぼらとらい", value: "JAIST公認サークル 公式サイト", href: "https://www.jaist.ac.jp/misc/circles/raboratorai/", icon: "link" },
         { label: "石原尚 note", value: "研究・執筆・発表の基礎", href: "https://note.com/hisashi_is", icon: "link" }
       ]
     },
     contacts: [
-      // TODO: Replace TODO values with your real contact information.
       { label: "大学メール", value: "s2510069 [at] jaist.ac.jp", href: "", icon: "mail" },
       { label: "個人メール", value: "sakuramoto.may [at] gmail.com", href: "", icon: "mail" },
       { label: "GitHub", value: "aki41105", href: "https://github.com/aki41105", icon: "github", rel: "me" },
-      { label: "Google Scholar", value: "TODO", href: "", icon: "scholar" },
+      { label: "note", value: "akihiro_1", href: "https://note.com/akihiro_1", icon: "link", rel: "me" },
+      { label: "Qiita", value: "sakuramoto-A", href: "https://qiita.com/sakuramoto-A", icon: "link", rel: "me" },
       { label: "researchmap", value: "プロフィール検索", href: "https://researchmap.jp/search?q=%E6%AB%BB%E6%9C%AC%E6%99%83%E5%BC%98", icon: "link" },
       { label: "ORCID", value: "0009-0006-7932-0219", href: "https://orcid.org/0009-0006-7932-0219", icon: "orcid", rel: "me" },
       { label: "LinkedIn", value: "Profile", href: "https://www.linkedin.com/in/akihiro-sakuramoto-37024b328/", icon: "linkedin", rel: "me" },
       { label: "岡田研究室", value: "Lab Website", href: "https://www.jaist.ac.jp/~okada-s/index.html", icon: "link" }
     ],
     footer: {
-      built: "Built with GitHub Pages."
+      built: "© 2026 Akihiro Sakuramoto"
     }
   },
   en: {
@@ -295,8 +295,8 @@ const content = {
       tagline: "Human-Robot Interaction / Social Signal Processing / Multimodal Interaction",
       summary: "Akihiro Sakuramoto is a master's student at JAIST studying Human-Robot Interaction.",
       updatedLabel: "Last updated",
-      updatedDate: "June 28, 2026",
-      updatedText: "Career, publication status, and gallery information were organized."
+      updatedDate: "July 12, 2026",
+      updatedText: "Now writing on note and Qiita — see Contact."
     },
     buttons: {
       contact: "Contact",
@@ -314,7 +314,7 @@ const content = {
       resources: { kicker: "Resources", title: "Resources" },
       contact: { kicker: "Contact", title: "Contact / Links" }
     },
-    researchOverview: "I study real-world HRI through social signal processing and multimodal interaction, focusing on how people and robots relate to one another in everyday settings. More detailed project descriptions will be added as they are organized.",
+    researchOverview: "I study real-world HRI through social signal processing and multimodal interaction, focusing on how people and robots relate to one another in everyday settings.",
     researchActivitiesTimeline: [
       {
         year: "Oct. 2025-Present",
@@ -372,7 +372,7 @@ const content = {
       }
     ],
     publications: {
-      empty: "Publications will be added here.",
+      empty: "Coming soon.",
       groups: [
         {
           title: "International Conferences",
@@ -401,10 +401,10 @@ const content = {
       ]
     },
     projects: {
-      empty: "Projects will be added here."
+      empty: "Coming soon."
     },
     gallery: {
-      empty: "Photos and short notes will be added here.",
+      empty: "Coming soon.",
       entries: [
         {
           id: "blog-hri2026-analysis",
@@ -529,26 +529,26 @@ const content = {
       ]
     },
     resources: {
-      empty: "Writing and research resource links will be added here.",
+      empty: "Coming soon.",
       entries: [
-        { label: "🔒 Private Notes (owner only)", value: "my-docs — sign-in required", href: "https://github.com/aki41105/my-docs", icon: "github" },
+        { label: "Private Notes (owner only)", value: "my-docs — sign-in required", href: "https://github.com/aki41105/my-docs", icon: "github" },
         { label: "Raboratorai", value: "JAIST official circle website", href: "https://www.jaist.ac.jp/misc/circles/raboratorai/", icon: "link" },
         { label: "Hisashi Ishihara on note", value: "Research, writing, and presentation basics", href: "https://note.com/hisashi_is", icon: "link" }
       ]
     },
     contacts: [
-      // TODO: Use anti-spam email format such as name [at] domain.
       { label: "University Email", value: "s2510069 [at] jaist.ac.jp", href: "", icon: "mail" },
       { label: "Personal Email", value: "sakuramoto.may [at] gmail.com", href: "", icon: "mail" },
       { label: "GitHub", value: "aki41105", href: "https://github.com/aki41105", icon: "github", rel: "me" },
-      { label: "Google Scholar", value: "TODO", href: "", icon: "scholar" },
+      { label: "note", value: "akihiro_1", href: "https://note.com/akihiro_1", icon: "link", rel: "me" },
+      { label: "Qiita", value: "sakuramoto-A", href: "https://qiita.com/sakuramoto-A", icon: "link", rel: "me" },
       { label: "researchmap", value: "Profile Search", href: "https://researchmap.jp/search?q=Sakuramoto%20Akihiro", icon: "link" },
       { label: "ORCID", value: "0009-0006-7932-0219", href: "https://orcid.org/0009-0006-7932-0219", icon: "orcid", rel: "me" },
       { label: "LinkedIn", value: "Profile", href: "https://www.linkedin.com/in/akihiro-sakuramoto-37024b328/", icon: "linkedin", rel: "me" },
       { label: "Okada Laboratory", value: "Lab Website", href: "https://www.jaist.ac.jp/~okada-s/index.html", icon: "link" }
     ],
     footer: {
-      built: "Built with GitHub Pages."
+      built: "© 2026 Akihiro Sakuramoto"
     }
   }
 };
