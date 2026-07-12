@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" role="img" aria-label="">
+  <!-- 大きな三毛猫・線画（背景の透かし用）。寝そべってくつろぐポーズ -->
+  <style>
+    .bigtail { transform-box: fill-box; transform-origin: left center; animation: bigsway 6.5s ease-in-out infinite alternate; }
+    @keyframes bigsway { from { transform: rotate(-3deg); } to { transform: rotate(5deg); } }
+  </style>
+  <g fill="none" stroke="#1f5133" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- tail (animated) -->
+    <path class="bigtail" d="M430 230 Q500 220 505 170 Q507 145 488 138"/>
+    <!-- body: lying, long smooth back line -->
+    <path d="M150 250 Q140 190 200 170 Q260 150 340 160 Q430 170 440 225 Q443 248 415 252 Q300 262 170 258 Q150 257 150 250 Z"/>
+    <!-- rear haunch -->
+    <path d="M355 252 Q345 205 385 190"/>
+    <!-- front legs stretched forward -->
+    <path d="M175 252 Q160 250 120 252 M180 236 Q150 232 108 238"/>
+    <!-- head -->
+    <path d="M96 160 L102 118 Q103 111 110 116 L134 138"/>
+    <path d="M208 158 L204 120 Q203 113 196 117 L172 138"/>
+    <path d="M150 240 Q92 236 88 186 Q86 140 152 136 Q216 140 214 186 Q211 234 155 240"/>
+    <!-- patches: soft filled shapes, very light -->
+    <path d="M100 150 Q120 132 148 136 Q136 162 108 168 Q100 160 100 150 Z" fill="#e8933a" fill-opacity="0.55" stroke="none"/>
+    <path d="M205 152 Q188 134 160 137 Q170 162 196 168 Q205 160 205 152 Z" fill="#3a3532" fill-opacity="0.5" stroke="none"/>
+    <path d="M300 165 Q350 158 390 172 Q380 205 330 205 Q305 190 300 165 Z" fill="#e8933a" fill-opacity="0.45" stroke="none"/>
+    <path d="M220 180 Q255 170 280 180 Q272 210 240 212 Q222 200 220 180 Z" fill="#3a3532" fill-opacity="0.4" stroke="none"/>
+    <!-- closed happy eyes -->
+    <path d="M118 190 Q124 196 130 190 M172 190 Q178 196 184 190" stroke-width="4.5"/>
+    <!-- nose & mouth -->
+    <path d="M147 202 L157 202 L152 209 Z" fill="#1f5133" stroke="none"/>
+    <path d="M152 209 Q152 217 142 219 M152 209 Q152 217 162 219" stroke-width="4"/>
+    <!-- whiskers -->
+    <path d="M70 192 L98 196 M72 208 L100 204 M234 192 L206 196 M232 208 L204 204" stroke-width="3.5"/>
+  </g>
+</svg>

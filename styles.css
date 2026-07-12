@@ -1543,12 +1543,13 @@ h2 {
     animation: cat-stroll 56s linear infinite;
   }
 
+  /* 猫は左向きに描かれているので、右へ進む間は反転させる */
   @keyframes cat-stroll {
-    0%      { translate: -70px 0; scale: 1 1; }
-    49.6%   { translate: calc(100vw + 30px) 0; scale: 1 1; }
-    50%     { translate: calc(100vw + 30px) 0; scale: -1 1; }
-    99.6%   { translate: -70px 0; scale: -1 1; }
-    100%    { translate: -70px 0; scale: 1 1; }
+    0%      { translate: -70px 0; scale: -1 1; }
+    49.6%   { translate: calc(100vw + 30px) 0; scale: -1 1; }
+    50%     { translate: calc(100vw + 30px) 0; scale: 1 1; }
+    99.6%   { translate: -70px 0; scale: 1 1; }
+    100%    { translate: -70px 0; scale: -1 1; }
   }
 
   /* スクロールで現れる */
@@ -1601,5 +1602,121 @@ h2 {
   /* リンクカード: ホバーでほんの少し傾く遊び */
   .link-card:hover {
     rotate: -0.6deg;
+  }
+}
+
+/* --- 装飾強化 --- */
+
+/* テキスト選択もブランド色に */
+::selection {
+  background: var(--color-primary-dark, #1f5133);
+  color: #fbf8f1;
+}
+
+/* 背景の大きな猫（ヒーローの右下に透かしで寝そべる） */
+.hero {
+  position: relative;
+}
+
+.hero-bg-cat {
+  position: absolute;
+  right: -1rem;
+  bottom: -1.5rem;
+  width: clamp(280px, 42vw, 500px);
+  height: auto;
+  opacity: 0.1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-copy,
+.profile-card {
+  position: relative;
+  z-index: 1;
+}
+
+/* セクションのラベルに小さなアクセント線 */
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-kicker::before {
+  content: "";
+  width: 1.5rem;
+  height: 2px;
+  border-radius: 1px;
+  background: linear-gradient(90deg, #e8933a, var(--color-primary-dark, #1f5133));
+}
+
+/* 見出しの下線 */
+.section-heading h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.4rem;
+}
+
+.section-heading h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 3.2rem;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--color-primary-dark, #1f5133), #8fae94);
+}
+
+/* ヒーローの名前: 深緑のグラデーション文字 */
+.hero-copy h1 {
+  background: linear-gradient(105deg, #17402a 20%, #1f5133 45%, #55835f 62%, #1f5133 80%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* 名前のグラデーションがゆっくり流れる */
+  .hero-copy h1 {
+    animation: sheen 10s ease-in-out infinite;
+  }
+
+  @keyframes sheen {
+    0%, 100% { background-position: 0% 0; }
+    50% { background-position: 100% 0; }
+  }
+
+  /* 図書館写真がゆっくりズームする(Ken Burns) */
+  .header-photo-strip::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(251, 248, 241, 0.04), rgba(251, 248, 241, 0.18)),
+      url("assets/header-library.jpg?v=20260628-1") center 52% / cover no-repeat;
+    animation: kenburns 38s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+
+  @keyframes kenburns {
+    from { transform: scale(1); }
+    to { transform: scale(1.07); }
+  }
+
+  .stroll-cat {
+    z-index: 1;
+  }
+
+  /* 見出し下線はスクロールで伸びる */
+  .section-heading h2::after {
+    width: 0;
+    transition: width 700ms cubic-bezier(0.22, 0.7, 0.3, 1) 150ms;
+  }
+
+  .section-heading.is-visible h2::after {
+    width: 3.2rem;
   }
 }
