@@ -57,8 +57,71 @@
 
         <p>今回のHRI 2026では，Full Paperに537件の投稿があり，128件が採択された。採択率は約24％だった。本記事では，Conference PublishingのHRI 2026 abstractsページから取得したFull Research Papers 127件のタイトルと概要をもとに，採択論文から見える研究トピックの分布を眺める。</p>
 
-        <figure class="analysis-figure">
-          <img src="assets/hri2026-blog-summary.png?v=20260702-1" alt="HRI 2026 Full Research Papers 127件のクラスタ分布と横断テーマ出現数をまとめた要約図">
+        <figure class="analysis-figure analysis-html-figure">
+          <div class="hri-summary" aria-label="HRI 2026 Full Research Papers 127件のクラスタ分布と横断テーマ出現数のHTML要約">
+            <header class="hri-summary-header">
+              <p class="hri-summary-kicker">HRI 2026 Full Research Papers</p>
+              <h2>127本の採択論文から見る<br>HRI 2026の研究トピック</h2>
+              <p>クラスタは大きく分散し，横断テーマでは「協働」「倫理・安全」「信頼」が強く現れる。HRI 2026は単一技術の集中より，人とロボットが関わる場面の広がりとして読める。</p>
+            </header>
+
+            <div class="hri-summary-stats" aria-label="analysis summary numbers">
+              <div>
+                <strong>127本</strong>
+                <span>分析対象のFull Research Papers</span>
+              </div>
+              <div>
+                <strong>8群</strong>
+                <span>タイトル・概要から得た主要クラスタ</span>
+              </div>
+              <div>
+                <strong>16.5%</strong>
+                <span>最大クラスタの比率。一強ではない</span>
+              </div>
+              <div>
+                <strong>49本</strong>
+                <span>最多の横断テーマ「協働・意図・タスク」</span>
+              </div>
+            </div>
+
+            <div class="hri-summary-panels">
+              <section class="hri-summary-panel" aria-labelledby="cluster-distribution-title">
+                <h3 id="cluster-distribution-title">主要クラスタの分布</h3>
+                <div class="hri-bars">
+                  <div class="hri-bar-row" style="--bar: 100%"><span>言語AI・安全・技術基盤</span><i></i><strong>21本 <em>16.5%</em></strong></div>
+                  <div class="hri-bar-row" style="--bar: 86%"><span>ロボット学習・デモ・フィードバック</span><i></i><strong>18本 <em>14.2%</em></strong></div>
+                  <div class="hri-bar-row" style="--bar: 86%"><span>形態・デザイン・公共空間</span><i></i><strong>18本 <em>14.2%</em></strong></div>
+                  <div class="hri-bar-row" style="--bar: 81%"><span>信頼・社会的判断・チーミング</span><i></i><strong>17本 <em>13.4%</em></strong></div>
+                  <div class="hri-bar-row" style="--bar: 67%"><span>子ども・教育・感情学習</span><i></i><strong>14本 <em>11.0%</em></strong></div>
+                  <div class="hri-bar-row" style="--bar: 67%"><span>ナビゲーション・アクセシビリティ</span><i></i><strong>14本 <em>11.0%</em></strong></div>
+                  <div class="hri-bar-row" style="--bar: 62%"><span>ケア・サービス・医療現場</span><i></i><strong>13本 <em>10.2%</em></strong></div>
+                  <div class="hri-bar-row" style="--bar: 57%"><span>方法論・倫理・実環境実践</span><i></i><strong>12本 <em>9.4%</em></strong></div>
+                </div>
+              </section>
+
+              <section class="hri-summary-panel" aria-labelledby="cross-theme-title">
+                <h3 id="cross-theme-title">横断テーマの出現数</h3>
+                <div class="hri-bars hri-bars-warm">
+                  <div class="hri-bar-row" style="--bar: 100%"><span>協働・意図・タスク</span><i></i><strong>49本 <em>38.6%</em></strong></div>
+                  <div class="hri-bar-row" style="--bar: 88%"><span>倫理・安全・ポリシー</span><i></i><strong>43本 <em>33.9%</em></strong></div>
+                  <div class="hri-bar-row" style="--bar: 82%"><span>信頼・社会的知覚</span><i></i><strong>40本 <em>31.5%</em></strong></div>
+                  <div class="hri-bar-row" style="--bar: 71%"><span>LLM・言語・会話</span><i></i><strong>35本 <em>27.6%</em></strong></div>
+                  <div class="hri-bar-row" style="--bar: 71%"><span>公共空間・ナビゲーション</span><i></i><strong>35本 <em>27.6%</em></strong></div>
+                  <div class="hri-bar-row" style="--bar: 51%"><span>子ども・教育</span><i></i><strong>25本 <em>19.7%</em></strong></div>
+                  <div class="hri-bar-row" style="--bar: 49%"><span>支援・ケア・健康</span><i></i><strong>24本 <em>18.9%</em></strong></div>
+                  <div class="hri-bar-row" style="--bar: 33%"><span>遠隔操作・操作者</span><i></i><strong>16本 <em>12.6%</em></strong></div>
+                </div>
+              </section>
+            </div>
+
+            <div class="hri-summary-notes">
+              <p>一強トピックなし。最大クラスタでも21本で，全体の2割に届かない。</p>
+              <p>横断テーマが重要。協働，倫理，信頼，言語，公共空間が重なり合う。</p>
+              <p>HRIらしい分散。技術・評価・デザイン・社会実装が同じ地図上に現れる。</p>
+            </div>
+
+            <p class="hri-summary-source">Source: HRI 2026 Conference Publishing abstracts. Analysis: title + abstract, TF-IDF / SVD / KMeans.</p>
+          </div>
           <figcaption>HRI 2026 Full Research Papers 127件の概要。最大クラスタでも21本であり，横断テーマでは協働，倫理・安全，信頼が強く出ている。</figcaption>
         </figure>
 
