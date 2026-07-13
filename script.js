@@ -995,6 +995,78 @@ function setupTabNap() {
   window.addEventListener("pageshow", wake);
 }
 
+let paradeCooldownUntil = 0;
+
+function startCatParade() {
+  const now = Date.now();
+  if (now < paradeCooldownUntil) {
+    return;
+  }
+  paradeCooldownUntil = now + 20000;
+
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const overlay = document.createElement("div");
+  overlay.className = reduce ? "cat-parade cat-parade-static" : "cat-parade";
+  overlay.setAttribute("aria-hidden", "true");
+
+  const lineup = ["cat-walk", "cat-walk", "cat-sit", "cat-loaf", "cat-walk", "cat-peek", "cat-walk"];
+  lineup.forEach((name, i) => {
+    const img = document.createElement("img");
+    img.src = `assets/cats/${name}.svg`;
+    img.alt = "";
+    img.style.height = `${44 + ((i * 7) % 21)}px`;
+    if (!reduce) {
+      img.style.animationDuration = `${8 + (i % 4)}s`;
+      img.style.animationDelay = `${i * 0.4}s`;
+    }
+    overlay.appendChild(img);
+  });
+
+  // 殿: 座布団ごと搬送される眠り猫
+  const finale = document.createElement("div");
+  finale.className = "cat-parade-finale";
+  finale.innerHTML =
+    '<img src="assets/cats/cat-sleep.svg" alt="" style="height:52px"><span class="cat-parade-zabuton"></span>';
+  if (!reduce) {
+    finale.style.animationDuration = "10s";
+    finale.style.animationDelay = "3.2s";
+  }
+  overlay.appendChild(finale);
+
+  document.body.appendChild(overlay);
+
+  if (reduce) {
+    window.setTimeout(() => overlay.remove(), 3000);
+  } else {
+    finale.addEventListener("animationend", () => overlay.remove());
+    window.setTimeout(() => overlay.remove(), 16000);
+  }
+}
+
+function setupNekoCommand() {
+  let buffer = "";
+  document.addEventListener("keydown", (e) => {
+    if (e.isComposing || e.key === "Process" || e.ctrlKey || e.metaKey || e.altKey) {
+      return;
+    }
+    const el = document.activeElement;
+    if (
+      el &&
+      (el.tagName === "INPUT" || el.tagName === "TEXTAREA" || el.tagName === "SELECT" || el.isContentEditable)
+    ) {
+      return;
+    }
+    if (e.key.length !== 1) {
+      return;
+    }
+    buffer = (buffer + e.key.toLowerCase()).slice(-6);
+    if (buffer.includes("neko") || buffer.includes("nyan")) {
+      buffer = "";
+      startCatParade();
+    }
+  });
+}
+
 function setupFooterCatWakeup() {
   const wrap = document.querySelector(".footer-cat-wrap");
   if (!wrap) {
@@ -1010,6 +1082,12 @@ function setupFooterCatWakeup() {
 
   wrap.addEventListener("click", () => {
     tapCount += 1;
+
+    // 5連打でパレードに昇格
+    if (tapCount >= 5) {
+      tapCount = 0;
+      startCatParade();
+    }
 
     if (img) {
       img.src = "assets/cats/cat-sit.svg";
@@ -1037,10 +1115,11 @@ setupScrollSpy();
 setupReveal();
 setupTabNap();
 setupFooterCatWakeup();
+setupNekoCommand();
 
 try {
   console.log(
-    "%c /\\_/\\ \n( o.o )\n > ^ < \n\nこのサイトには三毛猫が9匹すんでいます。\nぜんぶ見つけられますか？ — Codex Felis",
+    "%c /\\_/\\ \n( o.o )\n > ^ < \n\nこのサイトには三毛猫が9匹すんでいます。\nぜんぶ見つけられますか？\nヒント: neko と打ってみてください。 — Codex Felis",
     "color:#5f8d73; font-family:monospace; line-height:1.5"
   );
 } catch (error) {}

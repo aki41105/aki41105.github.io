@@ -1937,3 +1937,89 @@ html[lang="ja"] .gallery-grid .is-photo .gallery-date::before {
 .heading-alt:empty {
   display: none;
 }
+
+/* --- ギャラリー図版番号 --- */
+.gallery-grid {
+  counter-reset: plate;
+}
+
+.gallery-grid .is-photo {
+  counter-increment: plate;
+}
+
+html[lang="ja"] .is-photo .gallery-date::before {
+  content: "図版 " counter(plate) " · ";
+  font-family: var(--font-display);
+  color: var(--color-gold);
+}
+
+html[lang="en"] .is-photo .gallery-date::before {
+  content: "Plate " counter(plate, upper-roman) " · ";
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-gold);
+}
+
+/* --- 隠しコマンド: 猫パレード --- */
+.cat-parade {
+  position: fixed;
+  inset: auto 0 0 0;
+  height: 120px;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.cat-parade img,
+.cat-parade-finale {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  translate: -20vw 0;
+}
+
+.cat-parade img {
+  scale: -1 1;
+}
+
+.cat-parade-finale {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cat-parade-zabuton {
+  width: 80px;
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(179, 85, 42, 0.5);
+  margin-top: -6px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cat-parade img,
+  .cat-parade-finale {
+    animation-name: cat-march;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes cat-march {
+    from { translate: -20vw 0; }
+    to { translate: 120vw 0; }
+  }
+}
+
+/* reduced-motion時: 下端に静的整列して表示 */
+.cat-parade-static {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 14px;
+  padding-bottom: 8px;
+}
+
+.cat-parade-static img,
+.cat-parade-static .cat-parade-finale {
+  position: static;
+  translate: none;
+}
