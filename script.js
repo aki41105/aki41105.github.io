@@ -125,7 +125,8 @@ const content = {
       ]
     },
     projects: {
-      empty: "準備中。"
+      empty: "公開準備中（2026年秋予定）。",
+      excuse: "……資料は猫が持って行きました。"
     },
     gallery: {
       empty: "準備中。",
@@ -273,6 +274,9 @@ const content = {
       { label: "岡田研究室", value: "Lab Website", href: "https://www.jaist.ac.jp/~okada-s/index.html", icon: "link" }
     ],
     footer: {
+      colophonLatin: "Scriptum in Ishikawa, MMXXVI",
+      colophonNote: "誤植の検品は三毛猫一匹が担当しました。",
+      colophonFootnote: "* 猫が写本の上を歩くのは、1445年ドゥブロヴニクの写本に残る足跡以来の伝統です。",
       built: "© 2026 Akihiro Sakuramoto"
     }
   },
@@ -402,7 +406,8 @@ const content = {
       ]
     },
     projects: {
-      empty: "Coming soon."
+      empty: "In preparation — coming autumn 2026.",
+      excuse: "…a cat ran off with the materials."
     },
     gallery: {
       empty: "Coming soon.",
@@ -550,6 +555,9 @@ const content = {
       { label: "Okada Laboratory", value: "Lab Website", href: "https://www.jaist.ac.jp/~okada-s/index.html", icon: "link" }
     ],
     footer: {
+      colophonLatin: "Scriptum in Ishikawa, MMXXVI",
+      colophonNote: "Proofread by one calico cat.",
+      colophonFootnote: "* Cats have walked across manuscripts since a pawprinted codex of Dubrovnik, 1445.",
       built: "© 2026 Akihiro Sakuramoto"
     }
   }
@@ -617,6 +625,7 @@ function renderResearchOverview(language) {
 }
 
 function renderTimeline(containerId, entries) {
+  // この関数が生成するクラス名はstyles.cssの年代記装飾が依存
   const container = document.querySelector(containerId);
   if (!container) {
     return;
@@ -738,8 +747,9 @@ function renderGallery(language) {
   emptyState.hidden = entries.length > 0;
 
   entries.forEach((item) => {
+    const isPhoto = item.type !== "blog";
     const card = document.createElement(item.href ? "a" : "article");
-    card.className = item.type === "blog" ? "gallery-card gallery-card-note" : "gallery-card";
+    card.className = isPhoto ? "gallery-card is-photo" : "gallery-card gallery-card-note";
     if (item.id) {
       card.id = item.id;
     }
@@ -758,6 +768,12 @@ function renderGallery(language) {
         <div class="gallery-tags">${tags}</div>
       </div>
     `;
+    if (isPhoto && item.id) {
+      const img = card.querySelector("img");
+      if (img) {
+        img.style.viewTransitionName = `photo-${item.id}`;
+      }
+    }
     container.appendChild(card);
   });
 }
@@ -775,11 +791,31 @@ function applyLanguage(language) {
   renderContacts(language);
 }
 
+function syncReveal() {
+  document.querySelectorAll(".reveal:not(.is-visible)").forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add("is-visible");
+    }
+  });
+}
+
 function setupLanguageToggle() {
   const button = document.querySelector("#languageToggle");
   button.addEventListener("click", () => {
     const nextLanguage = currentLanguage === "ja" ? "en" : "ja";
-    applyLanguage(nextLanguage);
+    if (
+      !document.startViewTransition ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      applyLanguage(nextLanguage);
+      syncReveal();
+    } else {
+      document.startViewTransition(() => {
+        applyLanguage(nextLanguage);
+        syncReveal();
+      });
+    }
   });
 }
 

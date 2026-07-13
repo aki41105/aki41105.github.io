@@ -30,6 +30,34 @@
   box-sizing: border-box;
 }
 
+@view-transition {
+  navigation: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+}
+
+::view-transition-group(*) {
+  animation-duration: 300ms;
+}
+
+::view-transition-old(*),
+::view-transition-new(*) {
+  height: 100%;
+  object-fit: cover;
+  overflow: clip;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 250ms;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -37,6 +65,7 @@ html {
 body {
   margin: 0;
   background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.45 0 0 0 0 0.38 0 0 0 0 0.26 0 0 0 0.02 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") repeat,
     radial-gradient(circle at top left, rgba(223, 238, 228, 0.85), transparent 34rem),
     linear-gradient(180deg, #f8f3e7 0%, #fdf9ef 52%, #f8f3e7 100%);
   color: var(--color-text);
@@ -589,6 +618,7 @@ h2 {
 
 .project-card {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.8rem;
 }
@@ -601,10 +631,63 @@ h2 {
   box-shadow: 0 0 0 6px var(--color-primary-soft);
 }
 
+.projects-excuse {
+  flex-basis: 100%;
+}
+
+.yarn-scene {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+
+.yarn-scene img {
+  height: 64px;
+}
+
+.yarn-ball {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, var(--color-rubric), color-mix(in srgb, var(--color-rubric) 70%, black));
+  position: relative;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .yarn-ball {
+    animation: yarn-roll 3.2s ease-in-out infinite alternate;
+  }
+
+  @keyframes yarn-roll {
+    from { translate: 0 0; rotate: 0deg; }
+    to { translate: 14px 0; rotate: 40deg; }
+  }
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+  counter-reset: plate;
+}
+
+.gallery-grid .is-photo {
+  counter-increment: plate;
+}
+
+html[lang="en"] .gallery-grid .is-photo .gallery-date::before {
+  content: "Plate " counter(plate, upper-roman) " \00b7 ";
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-gold);
+}
+
+html[lang="ja"] .gallery-grid .is-photo .gallery-date::before {
+  content: "図版 " counter(plate) " \00b7 ";
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-gold);
 }
 
 .gallery-card {
@@ -1179,14 +1262,33 @@ h2 {
 
 .site-footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  text-align: center;
+  gap: 0.15rem;
   width: min(100% - 2rem, var(--content-width));
   margin: 0 auto;
   padding: 2.2rem 0 3rem;
   color: var(--color-muted);
   font-size: 0.92rem;
+}
+
+.colophon-line {
+  font-family: var(--font-display);
+  font-variant-caps: small-caps;
+  letter-spacing: 0.14em;
+  color: var(--color-muted);
+}
+
+.colophon-note {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+.colophon-footnote {
+  color: var(--color-muted);
+  opacity: 0.75;
+  font-size: 0.72rem;
 }
 
 .site-footer p {
@@ -1451,8 +1553,6 @@ h2 {
   }
 
   .site-footer {
-    flex-direction: column;
-    align-items: flex-start;
     padding: 1.7rem 0 2.4rem;
   }
 }
@@ -1686,7 +1786,7 @@ h2 {
   width: 1.5rem;
   height: 2px;
   border-radius: 1px;
-  background: linear-gradient(90deg, #e8933a, var(--color-primary-dark, #1f5133));
+  background: linear-gradient(90deg, var(--color-rubric), var(--color-ink));
 }
 
 /* 見出しの下線 */
@@ -1704,7 +1804,41 @@ h2 {
   height: 3px;
   width: 3.2rem;
   border-radius: 2px;
-  background: linear-gradient(90deg, var(--color-primary-dark, #1f5133), #8fae94);
+  background: linear-gradient(90deg, var(--color-rubric), var(--color-ink));
+}
+
+/* ルブリケーション見出し: 写本の朱書き番号のような装飾 */
+.section-kicker {
+  font-family: var(--font-display);
+  font-feature-settings: "smcp";
+  letter-spacing: 0.12em;
+  color: var(--color-rubric);
+}
+
+/* 羊皮紙のヴィネット */
+.profile-card {
+  box-shadow: var(--shadow-card), inset 0 0 60px rgba(146, 120, 80, 0.05);
+}
+
+/* 年代記タイムライン: 2重罫線と二重円の年号ノード */
+.timeline {
+  border-left: 1px solid var(--color-line);
+}
+
+.timeline::before {
+  width: 1px;
+  background: rgba(183, 137, 60, 0.35);
+}
+
+.timeline-item::before {
+  border-width: 1.5px;
+  border-color: var(--color-gold);
+  background: var(--color-primary-dark);
+}
+
+.timeline-year {
+  font-family: var(--font-display);
+  font-feature-settings: "onum";
 }
 
 /* ヒーローの名前: 深緑のグラデーション文字 */
@@ -1747,6 +1881,45 @@ h2 {
 
   .section-heading.is-visible h2::after {
     width: 3.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* ヒーロー導入部: 段組みで少しずつ立ち上がる */
+  .hero-copy > * {
+    animation: hero-copy-in 640ms cubic-bezier(0.22, 0.7, 0.3, 1) both;
+  }
+
+  .hero-copy > *:nth-child(1) { animation-delay: 0ms; }
+  .hero-copy > *:nth-child(2) { animation-delay: 60ms; }
+  .hero-copy > *:nth-child(3) { animation-delay: 120ms; }
+  .hero-copy > *:nth-child(4) { animation-delay: 180ms; }
+  .hero-copy > *:nth-child(5) { animation-delay: 240ms; }
+  .hero-copy > *:nth-child(6) { animation-delay: 300ms; }
+  .hero-copy > *:nth-child(7) { animation-delay: 360ms; }
+
+  @keyframes hero-copy-in {
+    from {
+      translate: 0 14px;
+      opacity: 0;
+    }
+    to {
+      translate: 0 0;
+      opacity: 1;
+    }
+  }
+
+  /* 背景の猫にスクロール連動の奥行き（対応ブラウザのみ） */
+  @supports (animation-timeline: scroll()) {
+    .hero-bg-cat {
+      animation: hero-cat-parallax auto linear both;
+      animation-timeline: scroll(root block);
+    }
+
+    @keyframes hero-cat-parallax {
+      from { translate: 0 -40px; }
+      to { translate: 0 40px; }
+    }
   }
 }
 

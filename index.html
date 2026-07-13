@@ -141,7 +141,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=EB+Garamond:wght@600;700&family=Shippori+Mincho+B1:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260713-2">
+  <link rel="stylesheet" href="styles.css?v=20260713-3">
 </head>
 <body>
   <header class="site-header">
@@ -347,6 +347,11 @@
       <div class="project-card">
         <span class="status-dot"></span>
         <p data-i18n="projects.empty"></p>
+        <p class="projects-excuse" data-i18n="projects.excuse">……資料は猫が持って行きました。</p>
+        <div class="yarn-scene" aria-hidden="true">
+          <img src="assets/cats/cat-play.svg" alt="">
+          <span class="yarn-ball"></span>
+        </div>
       </div>
     </section>
 
@@ -524,12 +529,13 @@
   </main>
 
   <footer class="site-footer">
-    <div>
-      <p data-i18n="footer.built">© 2026 Akihiro Sakuramoto</p>
-    </div>
     <span class="footer-cat-wrap"><img class="footer-cat-img" src="assets/cats/cat-sleep.svg" alt="" aria-hidden="true"></span>
+    <p class="colophon-line" data-i18n="footer.colophonLatin">Scriptum in Ishikawa, MMXXVI</p>
+    <p class="colophon-note" data-i18n="footer.colophonNote">誤植の検品は三毛猫一匹が担当しました。</p>
+    <p class="colophon-footnote" data-i18n="footer.colophonFootnote">* 猫が写本の上を歩くのは、1445年ドゥブロヴニクの写本に残る足跡以来の伝統です。</p>
+    <p data-i18n="footer.built">© 2026 Akihiro Sakuramoto</p>
   </footer>
 
-  <script src="script.js?v=20260713-2"></script>
+  <script src="script.js?v=20260713-3"></script>
 </body>
 </html>
