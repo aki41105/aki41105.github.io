@@ -2188,3 +2188,44 @@ html[lang="en"] .blog-article .blog-article-meta + p::first-letter {
     bottom: -2px;
   }
 }
+
+/* --- スクロールで増える足跡の道 --- */
+body {
+  position: relative;
+}
+
+.paw-trail {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  width: 48px;
+  pointer-events: none;
+  z-index: 5;
+  display: none;
+}
+
+@media (min-width: 1100px) {
+  .paw-trail {
+    display: block;
+  }
+}
+
+.paw-trail span {
+  position: absolute;
+  width: 16px;
+  height: 14px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 15'%3E%3Cg fill='%235f8d73'%3E%3Cellipse cx='9' cy='10.5' rx='4.2' ry='3.4'/%3E%3Ccircle cx='3.4' cy='6.2' r='1.7'/%3E%3Ccircle cx='7' cy='4' r='1.7'/%3E%3Ccircle cx='11' cy='4' r='1.7'/%3E%3Ccircle cx='14.6' cy='6.2' r='1.7'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
+  opacity: 0;
+  scale: 0.5;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .paw-trail span {
+    transition: opacity 350ms ease, scale 400ms cubic-bezier(0.34, 1.45, 0.5, 1);
+  }
+}
+
+.paw-trail span.is-stamped {
+  opacity: 0.38;
+  scale: 1;
+}

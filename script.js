@@ -1251,10 +1251,78 @@ function setupCatPin() {
   });
 }
 
+function setupPawTrail() {
+  const trail = document.createElement("div");
+  trail.className = "paw-trail";
+  trail.setAttribute("aria-hidden", "true");
+  document.body.appendChild(trail);
+
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let paws = [];
+
+  const build = () => {
+    trail.innerHTML = "";
+    paws = [];
+    const total = document.documentElement.scrollHeight;
+    trail.style.height = `${total}px`;
+    // 90px間隔で左右交互の足あとを配置(下向きに歩いた跡)
+    for (let y = 180, i = 0; y < total - 220; y += 90, i += 1) {
+      const paw = document.createElement("span");
+      const wobble = Math.sin(i / 2.2) * 8;
+      paw.style.top = `${y}px`;
+      paw.style.left = `${14 + (i % 2 ? 14 : 0) + wobble}px`;
+      paw.style.rotate = `${180 + (i % 2 ? 12 : -12)}deg`;
+      paw.dataset.y = String(y);
+      trail.appendChild(paw);
+      paws.push(paw);
+    }
+    if (reduce) {
+      paws.forEach((p) => p.classList.add("is-stamped"));
+    }
+  };
+
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    const reveal = window.scrollY + window.innerHeight * 0.78;
+    paws.forEach((p) => {
+      if (Number(p.dataset.y) < reveal) {
+        p.classList.add("is-stamped");
+      }
+    });
+  };
+
+  build();
+  if (!reduce) {
+    update();
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (!ticking) {
+          ticking = true;
+          window.requestAnimationFrame(update);
+        }
+      },
+      { passive: true }
+    );
+    let resizeTimer = null;
+    window.addEventListener("resize", () => {
+      if (resizeTimer) {
+        clearTimeout(resizeTimer);
+      }
+      resizeTimer = window.setTimeout(() => {
+        build();
+        update();
+      }, 300);
+    });
+  }
+}
+
 setupTabNap();
 setupFooterCatWakeup();
 setupNekoCommand();
 setupStrollPaws();
+setupPawTrail();
 setupPawProgress();
 setupSpotlight();
 setupCatPin();
