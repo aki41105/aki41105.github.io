@@ -2197,7 +2197,7 @@ body {
 .paw-trail {
   position: absolute;
   top: 0;
-  right: 16px;
+  left: 16px;
   width: 48px;
   pointer-events: none;
   z-index: 5;
@@ -2212,8 +2212,8 @@ body {
 
 .paw-trail span {
   position: absolute;
-  width: 16px;
-  height: 14px;
+  width: 26px;
+  height: 22px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 15'%3E%3Cg fill='%235f8d73'%3E%3Cellipse cx='9' cy='10.5' rx='4.2' ry='3.4'/%3E%3Ccircle cx='3.4' cy='6.2' r='1.7'/%3E%3Ccircle cx='7' cy='4' r='1.7'/%3E%3Ccircle cx='11' cy='4' r='1.7'/%3E%3Ccircle cx='14.6' cy='6.2' r='1.7'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
   opacity: 0;
   scale: 0.5;
