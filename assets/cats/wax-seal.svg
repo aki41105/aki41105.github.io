@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="">
+  <!-- インク緑の封蝋+肉球の刻印(フラット線画トーン) -->
+  <path d="M40 6 Q58 4 68 16 Q78 28 74 44 Q78 54 70 62 Q60 76 42 74 Q24 76 14 64 Q4 52 8 38 Q4 24 14 16 Q24 4 40 6 Z" fill="#3f6e54"/>
+  <circle cx="40" cy="40" r="26" fill="none" stroke="rgba(248,243,231,0.35)" stroke-width="1.5"/>
+  <g fill="#f8f3e7" opacity="0.9">
+    <ellipse cx="40" cy="46" rx="8.5" ry="7"/>
+    <circle cx="29" cy="37" r="3.4"/>
+    <circle cx="36" cy="31" r="3.4"/>
+    <circle cx="44" cy="31" r="3.4"/>
+    <circle cx="51" cy="37" r="3.4"/>
+  </g>
+</svg>

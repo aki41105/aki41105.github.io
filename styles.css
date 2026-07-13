@@ -2023,3 +2023,168 @@ html[lang="en"] .is-photo .gallery-date::before {
   position: static;
   translate: none;
 }
+
+/* --- Phase 3: 野心編 --- */
+
+/* 経歴の縦線をスクロールが描く + 猫しおり */
+#career .timeline {
+  position: relative;
+}
+
+#career .timeline::after {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: -12px;
+  width: 26px;
+  height: 24px;
+  background: url("assets/cats/cat-sit.svg") no-repeat center / contain;
+  opacity: 0.85;
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    #career .timeline::before {
+      transform-origin: top;
+      animation: draw-line linear both;
+      animation-timeline: view(block 85% 15%);
+    }
+
+    @keyframes draw-line {
+      from { transform: scaleY(0); }
+      to { transform: scaleY(1); }
+    }
+  }
+}
+
+/* profile-cardの箔押しキーライン */
+.profile-card::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(183, 137, 60, 0.4);
+  border-radius: calc(var(--radius-lg) - 7px);
+  pointer-events: none;
+}
+
+/* 英文ブログのドロップキャップ */
+html[lang="en"] .blog-article .blog-article-meta + p::first-letter {
+  font-family: var(--font-display);
+  float: left;
+  font-size: 3.1em;
+  line-height: 0.9;
+  padding: 0.05em 0.12em 0 0;
+  color: var(--color-rubric);
+  font-weight: 600;
+}
+
+/* リンクカードのセージ・スポットライト */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  #resourceLinks .link-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  #resourceLinks .link-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(180px circle at var(--mx, 50%) var(--my, 50%), rgba(95, 141, 115, 0.13), transparent 70%);
+    opacity: 0;
+    transition: opacity 250ms ease;
+    pointer-events: none;
+  }
+
+  #resourceLinks .link-card:hover::before {
+    opacity: 1;
+  }
+}
+
+/* cat-pinの気配(カーソル方向へ傾き・接近で耳ぴくっ) */
+.cat-pin {
+  transition: transform 300ms ease;
+}
+
+.cat-pin .cat-ear {
+  transition: rotate 150ms ease;
+  transform-origin: bottom center;
+}
+
+.cat-pin.is-alert .cat-ear.left {
+  rotate: -8deg;
+}
+
+.cat-pin.is-alert .cat-ear.right {
+  rotate: 8deg;
+}
+
+/* Contactの蝋封 */
+.wax-seal {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.9rem;
+}
+
+.wax-seal img {
+  height: 54px;
+  opacity: 0.92;
+  transition: translate 140ms ease, scale 140ms ease;
+}
+
+#contactLinks:active + .wax-seal img {
+  translate: 0 2px;
+  scale: 0.94;
+}
+
+/* 欄外のマージナリア(広い画面のみ) */
+.marginalia {
+  position: absolute;
+  right: -9rem;
+  top: 0.3rem;
+  width: 8rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  opacity: 0.65;
+  display: none;
+  pointer-events: none;
+}
+
+@media (min-width: 1440px) {
+  .marginalia {
+    display: block;
+  }
+}
+
+/* 散歩猫の足跡 */
+.stroll-paw {
+  position: absolute;
+  bottom: 6px;
+  width: 14px;
+  height: 12px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 15'%3E%3Cg fill='%23fffdf8'%3E%3Cellipse cx='9' cy='10.5' rx='4.2' ry='3.4'/%3E%3Ccircle cx='3.4' cy='6.2' r='1.7'/%3E%3Ccircle cx='7' cy='4' r='1.7'/%3E%3Ccircle cx='11' cy='4' r='1.7'/%3E%3Ccircle cx='14.6' cy='6.2' r='1.7'/%3E%3C/g%3E%3C/svg%3E") no-repeat center / contain;
+  filter: drop-shadow(0 1px 1px rgba(40, 52, 45, 0.35));
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* 足跡リーディングプログレス */
+.paw-progress {
+  position: absolute;
+  left: 0;
+  bottom: -13px;
+  height: 12px;
+  width: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 15'%3E%3Cg fill='%235f8d73' fill-opacity='0.55'%3E%3Cellipse cx='9' cy='10.5' rx='4.2' ry='3.4'/%3E%3Ccircle cx='3.4' cy='6.2' r='1.7'/%3E%3Ccircle cx='7' cy='4' r='1.7'/%3E%3Ccircle cx='11' cy='4' r='1.7'/%3E%3Ccircle cx='14.6' cy='6.2' r='1.7'/%3E%3C/g%3E%3C/svg%3E") repeat-x left center / 26px 11px;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .paw-progress {
+    background: var(--color-primary);
+    opacity: 0.4;
+    height: 2px;
+    bottom: -2px;
+  }
+}

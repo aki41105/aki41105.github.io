@@ -1113,9 +1113,151 @@ setupProfilePhotoFallback();
 applyLanguage(currentLanguage);
 setupScrollSpy();
 setupReveal();
+function setupStrollPaws() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+  const strip = document.querySelector(".header-photo-strip");
+  const cat = strip && strip.querySelector(".stroll-cat");
+  if (!cat) {
+    return;
+  }
+
+  const pool = [];
+  for (let i = 0; i < 8; i += 1) {
+    const paw = document.createElement("span");
+    paw.className = "stroll-paw";
+    strip.appendChild(paw);
+    pool.push(paw);
+  }
+
+  let idx = 0;
+  let timer = null;
+
+  const step = () => {
+    if (document.hidden) {
+      return;
+    }
+    const r = cat.getBoundingClientRect();
+    const sr = strip.getBoundingClientRect();
+    if (r.right < sr.left || r.left > sr.right) {
+      return;
+    }
+    const paw = pool[idx % pool.length];
+    idx += 1;
+    paw.style.left = `${r.left - sr.left + r.width / 2}px`;
+    paw.style.transition = "none";
+    paw.style.opacity = "0.55";
+    requestAnimationFrame(() => {
+      paw.style.transition = "opacity 4s linear";
+      paw.style.opacity = "0";
+    });
+  };
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !timer) {
+        timer = window.setInterval(step, 700);
+      } else if (!entry.isIntersecting && timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    });
+  });
+  io.observe(strip);
+}
+
+function setupPawProgress() {
+  const header = document.querySelector(".site-header");
+  if (!header) {
+    return;
+  }
+  const bar = document.createElement("div");
+  bar.className = "paw-progress";
+  bar.setAttribute("aria-hidden", "true");
+  header.appendChild(bar);
+
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let ticking = false;
+
+  const update = () => {
+    ticking = false;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const ratio = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+    const w = ratio * window.innerWidth;
+    // 肉球が1個ずつ増えるよう26px単位に量子化(reduce時は連続バー)
+    bar.style.width = reduce ? `${w}px` : `${Math.floor(w / 26) * 26}px`;
+  };
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(update);
+      }
+    },
+    { passive: true }
+  );
+  update();
+}
+
+function setupSpotlight() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+  document.addEventListener("pointermove", (e) => {
+    const card = e.target.closest && e.target.closest("#resourceLinks .link-card");
+    if (!card) {
+      return;
+    }
+    const r = card.getBoundingClientRect();
+    card.style.setProperty("--mx", `${e.clientX - r.left}px`);
+    card.style.setProperty("--my", `${e.clientY - r.top}px`);
+  });
+}
+
+function setupCatPin() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+  if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    return;
+  }
+  const card = document.querySelector(".profile-card");
+  const pin = card && card.querySelector(".cat-pin");
+  if (!pin) {
+    return;
+  }
+
+  let raf = null;
+  card.addEventListener("pointermove", (e) => {
+    if (raf) {
+      return;
+    }
+    raf = window.requestAnimationFrame(() => {
+      raf = null;
+      const r = pin.getBoundingClientRect();
+      const dx = e.clientX - (r.left + r.width / 2);
+      const dy = e.clientY - (r.top + r.height / 2);
+      const angle = Math.max(-3, Math.min(3, dx / 40));
+      pin.style.transform = `rotate(${angle}deg)`;
+      pin.classList.toggle("is-alert", Math.hypot(dx, dy) < 120);
+    });
+  });
+  card.addEventListener("pointerleave", () => {
+    pin.style.transform = "";
+    pin.classList.remove("is-alert");
+  });
+}
+
 setupTabNap();
 setupFooterCatWakeup();
 setupNekoCommand();
+setupStrollPaws();
+setupPawProgress();
+setupSpotlight();
+setupCatPin();
 
 try {
   console.log(
