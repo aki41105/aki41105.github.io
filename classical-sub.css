@@ -1,0 +1,76 @@
+/* Classical — subpage layer (blog & gallery pages). Loads the shared base first. */
+@import url("classical.css");
+
+/* — subpage header link — */
+.detail-home-link { text-decoration: none; }
+.site-nav a.is-active { color: var(--color-accent-700); text-decoration: underline; text-underline-offset: 4px; }
+
+/* — photo detail (gallery pages) — */
+.photo-detail { max-width: 1080px; margin: 0 auto; padding: var(--space-8) 0; }
+.photo-detail-copy { max-width: 46em; margin-bottom: var(--space-6); }
+.photo-detail-copy h1 { font-size: 44px; font-weight: 400; margin: 4px 0 var(--space-2); }
+.photo-detail-meta { font-size: 13.5px; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum'; margin-bottom: var(--space-3); }
+.photo-detail-copy .summary { margin-bottom: var(--space-4); }
+.photo-collection-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
+.photo-detail-figure { margin: 0; background: var(--color-surface); border: 1px solid var(--color-divider); border-radius: var(--radius-sm); padding: 6px; }
+.photo-detail-figure img { width: 100%; height: 340px; object-fit: cover; display: block; filter: sepia(0.22) saturate(0.82) contrast(1.05); }
+.photo-detail-figure.is-contain img { object-fit: contain; background: var(--color-bg); }
+.photo-detail-figure.is-wide { grid-column: 1 / -1; }
+.photo-detail-figure.is-wide img { height: 460px; }
+.photo-detail-figure figcaption { font-size: 13px; padding: var(--space-2) var(--space-1) var(--space-1); color: color-mix(in srgb, var(--color-text) 60%, transparent); }
+.photo-detail .button { margin-top: var(--space-2); }
+
+/* — blog articles — */
+.blog-article { max-width: 720px; margin: 0 auto; padding: var(--space-8) 0; }
+.blog-article-wide { max-width: 860px; }
+.blog-article h1 { font-size: 44px; font-weight: 400; margin: 4px 0 var(--space-2); line-height: 1.15; }
+.blog-article-meta { font-size: 13.5px; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum'; margin-bottom: var(--space-4); }
+.blog-body { font-size: 17px; line-height: 2; }
+.blog-body p { margin: 0 0 var(--space-4); text-align: justify; }
+.blog-lede { font-size: 18.5px; font-family: var(--font-heading); line-height: 1.9; }
+.article-list { margin: 0 0 var(--space-4); padding-left: 1.4em; line-height: 1.95; }
+.article-list li { margin-bottom: var(--space-2); }
+.article-list li::marker { color: var(--color-accent); }
+.blog-note { border: 1px solid var(--color-divider); border-radius: var(--radius-md); padding: var(--space-3) var(--space-4); font-size: 15px; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin-bottom: var(--space-4); }
+.blog-note p { margin: 0; }
+.blog-article .button { margin-top: var(--space-3); }
+
+/* — analysis figures (HRI 2026 note) — */
+.analysis-figure { margin: var(--space-6) 0; background: var(--color-surface); border: 1px solid var(--color-divider); border-radius: var(--radius-sm); padding: 6px; }
+.analysis-figure > img { width: 100%; display: block; }
+.analysis-figure figcaption { font-size: 13px; padding: var(--space-2) var(--space-2) var(--space-1); color: color-mix(in srgb, var(--color-text) 60%, transparent); }
+.analysis-html-figure { padding: 0; background: transparent; border: 0; }
+.analysis-html-figure figcaption { padding-left: 0; }
+
+.hri-summary { border: 1px solid var(--color-divider); border-radius: var(--radius-md); padding: var(--space-6); background: var(--color-bg); }
+.hri-summary-header h2 { font-size: 28px; font-weight: 500; margin: 4px 0 var(--space-2); }
+.hri-summary-header p { font-size: 15px; margin: 0 0 var(--space-2); }
+.hri-summary-kicker { font-size: 12px !important; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-accent-700); }
+.hri-summary-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--space-3); margin: var(--space-4) 0; }
+.hri-summary-stats > div { border-top: 2px solid var(--color-accent); padding-top: var(--space-2); }
+.hri-summary-stats strong { display: block; font-family: var(--font-heading); font-weight: 400; font-size: 30px; line-height: 1.1; font-feature-settings: 'tnum'; }
+.hri-summary-stats span { font-size: 13px; color: color-mix(in srgb, var(--color-text) 62%, transparent); }
+.hri-summary-panels { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); margin: var(--space-4) 0; }
+.hri-summary-panel h3 { font-size: 19px; font-weight: 500; margin-bottom: var(--space-3); }
+.hri-bars { display: flex; flex-direction: column; gap: var(--space-2); }
+.hri-bar-row { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: var(--space-2); font-size: 13.5px; }
+.hri-bar-row span { grid-column: 1 / -1; }
+.hri-bar-row i { display: block; height: 4px; width: var(--bar, 50%); background: color-mix(in srgb, var(--color-accent) 55%, transparent); border-radius: 2px; }
+.hri-bars-warm .hri-bar-row i { background: var(--color-accent); }
+.hri-bar-row strong { font-weight: 400; font-feature-settings: 'tnum'; white-space: nowrap; }
+.hri-bar-row em { font-style: normal; color: color-mix(in srgb, var(--color-text) 55%, transparent); }
+.hri-summary-notes { border-top: 1px solid var(--color-divider); padding-top: var(--space-3); }
+.hri-summary-notes p { font-size: 14.5px; margin: 0 0 var(--space-1); }
+.hri-summary-source { font-size: 12px; color: color-mix(in srgb, var(--color-text) 50%, transparent); margin: var(--space-3) 0 0; }
+.metric-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--space-3); margin: var(--space-4) 0; }
+.metric-list p { border-top: 2px solid var(--color-accent); padding-top: var(--space-2); margin: 0; }
+.metric-list strong { display: block; font-family: var(--font-heading); font-weight: 400; font-size: 26px; font-feature-settings: 'tnum'; }
+.metric-list span { font-size: 13px; color: color-mix(in srgb, var(--color-text) 62%, transparent); }
+
+@media (max-width: 900px) {
+  .photo-detail, .blog-article { padding-left: 0; padding-right: 0; }
+  .photo-collection-grid { grid-template-columns: 1fr; }
+  .photo-detail-figure.is-wide img { height: 320px; }
+  .hri-summary-panels { grid-template-columns: 1fr; }
+  .photo-detail-copy h1, .blog-article h1 { font-size: 34px; }
+}

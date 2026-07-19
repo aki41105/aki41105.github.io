@@ -2,6 +2,77 @@
 (function () {
   'use strict';
 
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var navToggle = document.getElementById('navToggle');
+  if (navToggle) {
+    navToggle.addEventListener('click', function () {
+      var header = document.querySelector('.site-header');
+      var open = header.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('.site-nav a'), function (link) {
+      link.addEventListener('click', function () {
+        document.querySelector('.site-header').classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  var themeToggle = document.getElementById('themeToggle');
+  var savedTheme = null;
+  try { savedTheme = localStorage.getItem('classical-theme'); } catch (error) {}
+  if (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches) savedTheme = 'dark';
+  if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (dark) document.documentElement.removeAttribute('data-theme');
+      else document.documentElement.setAttribute('data-theme', 'dark');
+      try { localStorage.setItem('classical-theme', dark ? 'light' : 'dark'); } catch (error) {}
+    });
+  }
+
+  if (!reduced) {
+    var heroPlate = document.querySelector('.hero-figure .plate');
+    if (heroPlate) {
+      window.addEventListener('scroll', function () {
+        heroPlate.style.transform = 'translateY(' + Math.min(window.scrollY * 0.06, 48) + 'px)';
+      }, { passive: true });
+    }
+    var stroll = document.querySelector('.stroll-wrap');
+    if (stroll) stroll.addEventListener('animationiteration', function () { stroll.classList.toggle('flip'); });
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('.photo-detail-figure img, .analysis-figure > img'), function (image) {
+    image.addEventListener('click', function () {
+      var backdrop = document.createElement('div');
+      backdrop.className = 'lightbox-backdrop';
+      var figure = document.createElement('figure');
+      var largeImage = document.createElement('img');
+      largeImage.src = image.src;
+      largeImage.alt = image.alt || '';
+      figure.appendChild(largeImage);
+      var sourceFigure = image.closest('figure');
+      var sourceCaption = sourceFigure && sourceFigure.querySelector('figcaption');
+      if (sourceCaption) {
+        var caption = document.createElement('p');
+        caption.className = 'lightbox-caption';
+        caption.textContent = sourceCaption.textContent;
+        figure.appendChild(caption);
+      }
+      backdrop.appendChild(figure);
+      function closeLightbox() {
+        backdrop.remove();
+        document.removeEventListener('keydown', onKeydown);
+      }
+      function onKeydown(event) { if (event.key === 'Escape') closeLightbox(); }
+      backdrop.addEventListener('click', closeLightbox);
+      document.addEventListener('keydown', onKeydown);
+      document.body.appendChild(backdrop);
+    });
+  });
+
   var translations = {
     '.brand > span:last-child': 'Akihiro Sakuramoto',
     '.site-nav a[href="#research"]': 'Research',
@@ -112,6 +183,7 @@
 
   var languageToggle = document.getElementById('languageToggle');
   var currentLanguage = 'ja';
+  try { currentLanguage = localStorage.getItem('classical-lang') || 'ja'; } catch (error) {}
 
   Object.keys(translations).forEach(function (selector) {
     var element = document.querySelector(selector);
@@ -134,10 +206,11 @@
   if (languageToggle) {
     languageToggle.addEventListener('click', function () {
       applyLanguage(currentLanguage === 'ja' ? 'en' : 'ja');
+      try { localStorage.setItem('classical-lang', currentLanguage); } catch (error) {}
     });
+    if (currentLanguage === 'en') applyLanguage('en');
   }
 
-  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var els = document.querySelectorAll('.reveal');
   if (reduced || !('IntersectionObserver' in window)) {
     Array.prototype.forEach.call(els, function (el) { el.classList.add('is-visible'); });
