@@ -73,6 +73,9 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 var(--space-6); }
 .name-reading { font-family: var(--font-heading); font-size: 24px; font-style: italic; color: color-mix(in srgb, var(--color-text) 62%, transparent); }
 .hero-rule { height: 1px; width: 88px; background: var(--color-accent); margin: var(--space-1) 0; }
 .affiliation { font-size: 16px; color: color-mix(in srgb, var(--color-text) 75%, transparent); }
+.hero-membership { width: fit-content; border-left: 2px solid var(--color-accent); padding-left: var(--space-2); font-family: var(--font-heading); font-size: 15.5px; letter-spacing: 0.025em; }
+.hero-membership a { color: var(--color-accent-700); text-decoration: none; }
+.hero-membership a:hover { text-decoration: underline; }
 .summary { max-width: 46em; text-align: justify; line-height: 1.9; font-size: 17px; }
 .hero-actions { display: flex; gap: var(--space-3); margin-top: var(--space-2); }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none; cursor: pointer; font-family: var(--font-heading); font-weight: 600; font-size: 15.5px; line-height: 1.2; color: var(--color-text); background: transparent; border: 1px solid transparent; padding: var(--space-2) calc(var(--space-3) * 1.2); border-radius: var(--radius-md); }
