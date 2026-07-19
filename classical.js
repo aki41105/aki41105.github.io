@@ -22,7 +22,7 @@
   var themeToggle = document.getElementById('themeToggle');
   var savedTheme = null;
   try { savedTheme = localStorage.getItem('classical-theme'); } catch (error) {}
-  if (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches) savedTheme = 'dark';
+  if (!savedTheme) savedTheme = 'dark';
   if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
   if (themeToggle) {
     themeToggle.addEventListener('click', function () {
