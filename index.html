@@ -105,9 +105,29 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="classical.css?v=20260719-1">
+  <link rel="stylesheet" href="classical.css?v=20260719-2">
 </head>
 <body>
+  <svg class="icon-defs" aria-hidden="true" focusable="false">
+    <symbol id="icon-mail" viewBox="0 0 24 24">
+      <path d="M4.8 5.6h14.4c1.1 0 2 .9 2 2v8.8c0 1.1-.9 2-2 2H4.8c-1.1 0-2-.9-2-2V7.6c0-1.1.9-2 2-2Zm7.2 7.2 7.2-5.2H4.8l7.2 5.2Zm0 2.1L4.4 9.4v7c0 .22.18.4.4.4h14.4c.22 0 .4-.18.4-.4v-7L12 14.9Z"></path>
+    </symbol>
+    <symbol id="icon-github" viewBox="0 0 24 24">
+      <path d="M12 2C6.48 2 2 6.58 2 12.22c0 4.52 2.86 8.34 6.84 9.69.5.09.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.22-3.37-1.22-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.56 2.35 1.11 2.92.85.09-.67.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.71 0 0 .84-.28 2.75 1.05A9.34 9.34 0 0 1 12 6.93c.85 0 1.7.12 2.5.34 1.9-1.33 2.74-1.05 2.74-1.05.55 1.4.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.59.69.49A10.08 10.08 0 0 0 22 12.22C22 6.58 17.52 2 12 2Z"></path>
+    </symbol>
+    <symbol id="icon-scholar" viewBox="0 0 24 24">
+      <path d="M12 3 1.9 8.6 12 14.2l8.1-4.5V15h2V8.6L12 3Zm-5.7 9.6v3.2c0 1.8 2.55 3.2 5.7 3.2s5.7-1.4 5.7-3.2v-3.2L12 15.8l-5.7-3.2Z"></path>
+    </symbol>
+    <symbol id="icon-orcid" viewBox="0 0 24 24">
+      <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20ZM8.7 7.2a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1Zm.9 3.4v6.2H7.8v-6.2h1.8Zm3.2 0h2.4c1.9 0 3.2 1.2 3.2 3.1s-1.3 3.1-3.2 3.1h-2.4v-6.2Zm1.8 1.5v3.2h.5c.9 0 1.5-.55 1.5-1.6s-.6-1.6-1.5-1.6h-.5Z"></path>
+    </symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24">
+      <path d="M5.2 3.2h13.6c1.1 0 2 .9 2 2v13.6c0 1.1-.9 2-2 2H5.2c-1.1 0-2-.9-2-2V5.2c0-1.1.9-2 2-2Zm3.2 15v-7.7H6.1v7.7h2.3ZM7.25 9.45c.75 0 1.35-.6 1.35-1.34 0-.75-.6-1.35-1.35-1.35-.74 0-1.34.6-1.34 1.35 0 .74.6 1.34 1.34 1.34Zm10.65 8.75v-4.15c0-2.22-1.18-3.25-2.75-3.25-1.27 0-1.84.7-2.16 1.19v-1.49h-2.3v7.7h2.3v-4.3c0-1.13.21-2.22 1.61-2.22 1.38 0 1.4 1.29 1.4 2.29v4.23h1.9Z"></path>
+    </symbol>
+    <symbol id="icon-link" viewBox="0 0 24 24">
+      <path d="M10.2 13.8a1 1 0 0 1 0-1.42l3.5-3.5a2.8 2.8 0 1 1 3.96 3.96l-1.25 1.25a1 1 0 1 1-1.42-1.41l1.25-1.25a.8.8 0 1 0-1.13-1.14l-3.5 3.5a1 1 0 0 1-1.41 0Zm3.6-3.6a1 1 0 0 1 0 1.42l-3.5 3.5a2.8 2.8 0 0 1-3.96-3.96L7.59 9.9A1 1 0 0 1 9 11.32l-1.25 1.25a.8.8 0 0 0 1.13 1.14l3.5-3.5a1 1 0 0 1 1.41 0Z"></path>
+    </symbol>
+  </svg>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Home">
       <span class="brand-mark">AS</span>
@@ -424,33 +444,49 @@
         </div>
       </div>
       <hr class="hairline" style="margin: 13.8px 0 27.6px;">
-      <div class="link-grid">
-        <div class="card reveal">
-          <span class="card-kicker">大学メール</span>
+      <div class="link-grid contact-grid">
+        <div class="card contact-card reveal">
+          <span class="card-kicker"><svg class="contact-icon" aria-hidden="true"><use href="#icon-mail"></use></svg>大学メール</span>
           <span class="link-value">s2510069 [at] jaist.ac.jp</span>
         </div>
-        <div class="card reveal" data-reveal-delay="0.04">
-          <span class="card-kicker">個人メール</span>
+        <div class="card contact-card reveal" data-reveal-delay="0.04">
+          <span class="card-kicker"><svg class="contact-icon" aria-hidden="true"><use href="#icon-mail"></use></svg>個人メール</span>
           <span class="link-value">sakuramoto.may [at] gmail.com</span>
         </div>
-        <a class="card reveal" data-reveal-delay="0.08" href="https://github.com/aki41105" target="_blank" rel="me noopener noreferrer">
-          <span class="card-kicker">GitHub</span>
+        <a class="card contact-card reveal" data-reveal-delay="0.08" href="https://github.com/aki41105" target="_blank" rel="me noopener noreferrer">
+          <span class="card-kicker"><svg class="contact-icon" aria-hidden="true"><use href="#icon-github"></use></svg>GitHub</span>
           <span class="link-value link-value-action">aki41105 ↗</span>
         </a>
-        <a class="card reveal" data-reveal-delay="0.12" href="https://orcid.org/0009-0006-7932-0219" target="_blank" rel="me noopener noreferrer">
-          <span class="card-kicker">ORCID</span>
+        <a class="card contact-card reveal" data-reveal-delay="0.12" href="https://note.com/akihiro_1" target="_blank" rel="me noopener noreferrer">
+          <span class="card-kicker"><svg class="contact-icon" aria-hidden="true"><use href="#icon-link"></use></svg>note</span>
+          <span class="link-value link-value-action">akihiro_1 ↗</span>
+        </a>
+        <a class="card contact-card reveal" data-reveal-delay="0.16" href="https://qiita.com/sakuramoto-A" target="_blank" rel="me noopener noreferrer">
+          <span class="card-kicker"><svg class="contact-icon" aria-hidden="true"><use href="#icon-link"></use></svg>Qiita</span>
+          <span class="link-value link-value-action">sakuramoto-A ↗</span>
+        </a>
+        <a class="card contact-card reveal" data-reveal-delay="0.2" href="https://www.kaggle.com/sakuramotoakihiro" target="_blank" rel="me noopener noreferrer">
+          <span class="card-kicker"><svg class="contact-icon" aria-hidden="true"><use href="#icon-link"></use></svg>Kaggle</span>
+          <span class="link-value link-value-action">sakuramotoakihiro ↗</span>
+        </a>
+        <a class="card contact-card reveal" data-reveal-delay="0.24" href="https://researchmap.jp/search?q=%E6%AB%BB%E6%9C%AC%E6%99%83%E5%BC%98" target="_blank" rel="noopener noreferrer">
+          <span class="card-kicker"><svg class="contact-icon" aria-hidden="true"><use href="#icon-scholar"></use></svg>researchmap</span>
+          <span class="link-value link-value-action">プロフィール検索 ↗</span>
+        </a>
+        <a class="card contact-card reveal" data-reveal-delay="0.28" href="https://orcid.org/0009-0006-7932-0219" target="_blank" rel="me noopener noreferrer">
+          <span class="card-kicker"><svg class="contact-icon" aria-hidden="true"><use href="#icon-orcid"></use></svg>ORCID</span>
           <span class="link-value link-value-action">0009-0006-7932-0219 ↗</span>
         </a>
-        <a class="card reveal" data-reveal-delay="0.16" href="https://www.linkedin.com/in/akihiro-sakuramoto-37024b328/" target="_blank" rel="me noopener noreferrer">
-          <span class="card-kicker">LinkedIn</span>
+        <a class="card contact-card reveal" data-reveal-delay="0.32" href="https://www.linkedin.com/in/akihiro-sakuramoto-37024b328/" target="_blank" rel="me noopener noreferrer">
+          <span class="card-kicker"><svg class="contact-icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg>LinkedIn</span>
           <span class="link-value link-value-action">Profile ↗</span>
         </a>
-        <a class="card reveal" data-reveal-delay="0.2" href="https://www.jaist.ac.jp/~okada-s/index.html" target="_blank" rel="noopener noreferrer">
-          <span class="card-kicker">岡田研究室</span>
+        <a class="card contact-card reveal" data-reveal-delay="0.36" href="https://www.jaist.ac.jp/~okada-s/index.html" target="_blank" rel="noopener noreferrer">
+          <span class="card-kicker"><svg class="contact-icon" aria-hidden="true"><use href="#icon-link"></use></svg>岡田研究室</span>
           <span class="link-value link-value-action">Lab Website ↗</span>
         </a>
       </div>
-      <div class="wax-seal reveal" data-reveal-delay="0.25" aria-hidden="true"><img src="assets/cats/wax-seal.svg" alt=""></div>
+      <div class="wax-seal reveal" data-reveal-delay="0.4" aria-hidden="true"><img src="assets/cats/wax-seal.svg" alt=""></div>
     </section>
   </main>
 

@@ -23,6 +23,7 @@
 
 /* — base — */
 * { box-sizing: border-box; }
+.icon-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
 body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); font-size: 15px; line-height: 1.55; }
 h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 600; line-height: 1.12; letter-spacing: -0.015em; margin: 0; }
 p { margin: 0; }
@@ -145,6 +146,9 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 var(--space-6); }
 /* — contact — */
 .link-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
 a.card { text-decoration: none; color: var(--color-text); }
+.contact-card { min-height: 92px; justify-content: center; }
+.contact-card .card-kicker { display: inline-flex; align-items: center; gap: 9px; color: var(--color-accent-700); }
+.contact-icon { width: 22px; height: 22px; flex: 0 0 auto; fill: currentColor; }
 .link-value { font-size: 14px; font-feature-settings: 'tnum'; }
 .link-value-action { color: var(--color-accent-700); }
 .wax-seal { display: flex; justify-content: flex-end; margin-top: var(--space-6); }
