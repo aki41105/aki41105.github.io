@@ -165,6 +165,13 @@ a.card { text-decoration: none; color: var(--color-text); }
 .contact-card .card-kicker { display: inline-flex; align-items: center; gap: 9px; color: var(--color-accent-700); }
 .contact-icon { width: 22px; height: 22px; flex: 0 0 auto; fill: currentColor; }
 .contact-brand-icon { width: 22px; height: 22px; flex: 0 0 auto; object-fit: contain; }
+.contact-icon.brand-github { color: #181717; }
+.contact-icon.brand-note { color: #41c9b4; }
+.contact-icon.brand-researchmap { color: #5f6368; }
+.contact-icon.brand-orcid { color: #a6ce39; }
+.contact-icon.brand-linkedin { color: #0a66c2; }
+[data-theme="dark"] .contact-icon.brand-github { color: #f5f5f5; }
+[data-theme="dark"] .contact-icon.brand-researchmap { color: #bdc1c6; }
 .link-value { font-size: 16px; font-feature-settings: 'tnum'; }
 .link-value-action { color: var(--color-accent-700); }
 .wax-seal { display: flex; justify-content: flex-end; margin-top: var(--space-6); }
