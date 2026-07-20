@@ -165,6 +165,7 @@ a.card { text-decoration: none; color: var(--color-text); }
 .contact-card .card-kicker { display: inline-flex; align-items: center; gap: 9px; color: var(--color-accent-700); }
 .contact-icon { width: 22px; height: 22px; flex: 0 0 auto; fill: currentColor; }
 .contact-brand-icon { width: 22px; height: 22px; flex: 0 0 auto; object-fit: contain; }
+.contact-brand-icon.brand-jaist { border-radius: 50%; }
 .contact-icon.brand-github { color: #181717; }
 .contact-icon.brand-note { color: #41c9b4; }
 .contact-icon.brand-researchmap { color: #5f6368; }
