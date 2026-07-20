@@ -40,7 +40,8 @@ a:hover { color: var(--color-accent-600); }
 /* — nav — */
 .site-header { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--color-divider); background: color-mix(in srgb, var(--color-bg) 92%, transparent); backdrop-filter: blur(6px); }
 .brand { display: inline-flex; align-items: center; gap: 10px; margin-right: auto; text-decoration: none; color: var(--color-text); font-family: var(--font-heading); font-weight: 600; font-size: 19px; }
-.brand-mark { display: inline-grid; place-items: center; width: 30px; height: 30px; border: 1px solid var(--color-accent); border-radius: var(--radius-sm); font-size: 13px; letter-spacing: 0.05em; color: var(--color-accent-700); }
+.brand-mark { display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 7px; overflow: hidden; flex: 0 0 auto; }
+.brand-mark img { width: 100%; height: 100%; object-fit: cover; }
 .site-nav { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; font-size: 14.5px; }
 .site-nav a { text-decoration: none; color: var(--color-text); letter-spacing: 0.04em; }
 .site-nav a:hover { color: var(--color-accent-600); text-decoration: underline; }
