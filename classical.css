@@ -167,7 +167,6 @@ a.card { text-decoration: none; color: var(--color-text); }
 .contact-brand-icon { width: 22px; height: 22px; flex: 0 0 auto; object-fit: contain; }
 .contact-brand-icon.brand-jaist { border-radius: 50%; }
 .contact-icon.brand-github { color: #181717; }
-.contact-icon.brand-note { color: #41c9b4; }
 .contact-icon.brand-researchmap { color: #5f6368; }
 .contact-icon.brand-orcid { color: #a6ce39; }
 .contact-icon.brand-linkedin { color: #0a66c2; }
