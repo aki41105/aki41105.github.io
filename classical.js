@@ -88,8 +88,8 @@
     '.affiliation': "Master's Student, AI Science Area, Japan Advanced Institute of Science and Technology (JAIST)",
     '.hero .summary': 'I study human-robot interaction, social signal processing, and multimodal interaction, with a focus on understanding the quality of human-robot relationships in real-world HRI.',
     '.update-note-label': 'Last updated',
-    '.update-note-date': 'July 20, 2026',
-    '.update-note-text': 'Added a new Memberships section.',
+    '.update-note-date': 'August 23, 2026',
+    '.update-note-text': 'Added a Google Scholar profile link.',
     '#research h2': 'Research Overview',
     '#research .lede': 'I study real-world HRI through social signal processing and multimodal interaction. In particular, I aim to evaluate interaction quality quantitatively by estimating rapport—the quality of the relationship—in customer-service dialogue.',
     '#career h2': 'Career',
@@ -181,6 +181,7 @@
     '#contact .contact-card:nth-child(1) .contact-label-text': 'University Email',
     '#contact .contact-card:nth-child(2) .contact-label-text': 'Personal Email',
     '#contact a[href^="https://researchmap.jp/"] .link-value': 'Profile Search ↗',
+    '#contact a[href^="https://scholar.google.com/"] .link-value': 'Author Profile ↗',
     '#contact a[href="https://www.jaist.ac.jp/~okada-s/index.html"] .contact-label-text': 'Okada Laboratory',
     '.colophon-note': 'Proofread by one calico cat.',
     '.colophon-footnote': '* Cats have walked across manuscripts since a pawprinted codex of Dubrovnik, 1445.'
