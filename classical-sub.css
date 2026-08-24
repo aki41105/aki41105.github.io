@@ -35,6 +35,16 @@
 .blog-note p { margin: 0; }
 .blog-article .button { margin-top: var(--space-3); }
 
+/* — research planning references — */
+.research-plan-heading { margin-bottom: var(--space-6); }
+.research-plan-heading .summary { margin-top: var(--space-3); }
+.resource-reference-list { display: grid; grid-template-columns: 1fr; gap: var(--space-3); }
+.resource-reference-card { padding: var(--space-4); gap: var(--space-2); }
+.resource-reference-card .card-title { font-size: 22px; line-height: 1.35; }
+.resource-reference-author { display: block; margin-top: 4px; font-family: var(--font-body); font-size: 13.5px; font-weight: 400; letter-spacing: 0.03em; color: color-mix(in srgb, var(--color-text) 58%, transparent); }
+.resource-reference-description { font-size: 15.5px; line-height: 1.8; color: color-mix(in srgb, var(--color-text) 74%, transparent); }
+.resource-reference-link { align-self: flex-start; font-size: 14.5px; }
+
 /* — analysis figures (HRI 2026 note) — */
 .analysis-figure { margin: var(--space-6) 0; background: var(--color-surface); border: 1px solid var(--color-divider); border-radius: var(--radius-sm); padding: 6px; }
 .analysis-figure > img { width: 100%; display: block; }
