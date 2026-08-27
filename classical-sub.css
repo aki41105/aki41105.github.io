@@ -36,8 +36,12 @@
 .blog-article .button { margin-top: var(--space-3); }
 
 /* — blog index — */
+.blog-index-group + .blog-index-group { margin-top: var(--space-8); }
+.blog-index-group-heading { margin-bottom: var(--space-3); }
+.blog-index-group-heading h2 { font-size: 30px; font-weight: 400; margin: 4px 0 0; }
 .blog-index-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 860px; }
-.blog-index-grid .gallery-title { line-height: 1.35; }
+.blog-index-grid .gallery-title,
+.blog-record-grid .gallery-title { line-height: 1.35; }
 
 /* — research planning references — */
 .research-plan-heading { margin-bottom: var(--space-6); }
