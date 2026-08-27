@@ -59,10 +59,16 @@
 .resource-library-updated { margin-top: var(--space-3); font-size: 13px; letter-spacing: 0.04em; color: color-mix(in srgb, var(--color-text) 55%, transparent); font-feature-settings: 'tnum'; }
 .resource-library-nav { display: flex; flex-wrap: wrap; gap: var(--space-2); padding: 0 0 var(--space-6); border-bottom: 1px solid var(--color-divider); }
 .resource-library-nav .button { margin-top: 0; font-family: var(--font-body); font-size: 13.5px; }
+.resource-domain { padding-top: calc(var(--space-8) * 1.35); }
+.resource-domain + .resource-domain { margin-top: calc(var(--space-8) * 1.35); border-top: 1px solid var(--color-divider); }
+.resource-domain-heading { padding-left: var(--space-4); border-left: 2px solid var(--color-accent); }
+.resource-domain-heading h2 { margin: 4px 0 var(--space-2); font-size: 39px; font-weight: 400; }
+.resource-domain-heading > p:last-child { max-width: 54em; font-size: 16px; line-height: 1.8; color: color-mix(in srgb, var(--color-text) 68%, transparent); }
+.resource-anchor-alias { display: block; height: 0; scroll-margin-top: 88px; }
 .resource-category { scroll-margin-top: 88px; padding-top: var(--space-8); }
-.resource-category + .resource-category { margin-top: var(--space-8); border-top: 1px solid var(--color-divider); }
+.resource-category ~ .resource-category { margin-top: var(--space-8); border-top: 1px solid var(--color-divider); }
 .resource-category-heading { margin-bottom: var(--space-4); }
-.resource-category-heading h2 { margin: 4px 0 var(--space-2); font-size: 32px; font-weight: 500; }
+.resource-category-heading h3 { margin: 4px 0 var(--space-2); font-size: 30px; font-weight: 500; }
 .resource-category-heading > p:last-child { max-width: 54em; font-size: 15.5px; line-height: 1.8; color: color-mix(in srgb, var(--color-text) 68%, transparent); }
 .resource-library-page .resource-reference-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .resource-library-page .resource-reference-card { min-width: 0; }
@@ -139,7 +145,8 @@
   .resource-library-page .resource-reference-list { grid-template-columns: 1fr; }
   .resource-library-nav { gap: 7px; }
   .resource-library-nav .button { flex: 1 1 calc(50% - 7px); }
-  .resource-category-heading h2 { font-size: 28px; }
+  .resource-domain-heading h2 { font-size: 33px; }
+  .resource-category-heading h3 { font-size: 27px; }
 }
 
 @media (max-width: 560px) {
