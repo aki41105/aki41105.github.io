@@ -153,9 +153,9 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="classical.css?v=20260827-2">
+  <link rel="stylesheet" href="classical.css?v=20260827-3">
 </head>
-<body>
+<body class="home-page">
   <svg class="icon-defs" aria-hidden="true" focusable="false">
     <symbol id="icon-mail" viewBox="0 0 24 24">
       <path d="M4.8 5.6h14.4c1.1 0 2 .9 2 2v8.8c0 1.1-.9 2-2 2H4.8c-1.1 0-2-.9-2-2V7.6c0-1.1.9-2 2-2Zm7.2 7.2 7.2-5.2H4.8l7.2 5.2Zm0 2.1L4.4 9.4v7c0 .22.18.4.4.4h14.4c.22 0 .4-.18.4-.4v-7L12 14.9Z"></path>
@@ -183,7 +183,7 @@
       <a href="#career">経歴</a>
       <a href="#memberships">所属学会</a>
       <a href="#publications">業績</a>
-      <a href="#resources">リンク集</a>
+      <a href="#resources">読みもの</a>
       <a href="#contact">連絡先</a>
     </nav>
     <button class="theme-toggle" type="button" id="themeToggle" aria-label="ダークモードを切り替え">◐</button>
@@ -193,7 +193,25 @@
 
   <div class="header-photo-strip" aria-hidden="true">
     <div class="plate strip-plate"><img src="assets/header-library.jpg" alt=""></div>
-    <div class="stroll-wrap"><img src="assets/cats/cat-walk.svg" alt="" width="52"></div>
+    <svg class="forest-perch" viewBox="0 0 260 112" focusable="false">
+      <path class="perch-branch" d="M34 88 C86 82 138 88 228 72"/>
+      <path class="perch-twig" d="M157 82 C178 64 194 52 216 47"/>
+      <circle class="perch-bud" cx="217" cy="47" r="4"/>
+      <g class="forest-bird-arrival">
+        <path class="bird-tail" d="M89 67 L60 82 L91 75 Z"/>
+        <ellipse class="bird-body" cx="108" cy="61" rx="28" ry="20" transform="rotate(-8 108 61)"/>
+        <circle class="bird-head" cx="132" cy="49" r="17"/>
+        <path class="bird-belly" d="M93 64 C103 77 123 79 137 63 C126 69 108 70 93 64 Z"/>
+        <g class="bird-wing">
+          <path d="M108 46 C91 50 87 66 103 72 C116 66 122 56 121 49 C117 47 113 46 108 46 Z"/>
+          <path class="bird-wing-line" d="M98 59 C105 57 111 54 117 49 M101 65 C109 62 115 58 120 53"/>
+        </g>
+        <path class="bird-beak" d="M148 48 L162 52 L148 55 Z"/>
+        <circle class="bird-eye-ring" cx="138" cy="44" r="5.2"/>
+        <circle class="bird-eye" cx="139" cy="44" r="2.1"/>
+        <path class="bird-leg" d="M112 77 L110 85 M124 76 L126 83"/>
+      </g>
+    </svg>
   </div>
 
   <main>
@@ -216,7 +234,7 @@
             <p class="update-note-label">最終更新</p>
             <p class="update-note-date">2026年8月27日</p>
           </div>
-          <p class="update-note-text">リンク集を，日本語で読める分析・研究・文化・ポッドキャストだけで再構成しました。</p>
+          <p class="update-note-text">森の研究観測所をテーマに整え，読みものと一次資料の資料庫を分けました。</p>
         </aside>
       </div>
       <figure class="hero-figure reveal" data-reveal-delay="0.3">
@@ -393,8 +411,8 @@
     <section class="section" id="resources">
       <div class="section-heading reveal">
         <div>
-          <p class="section-kicker">V · Link Library</p>
-          <h2>リンク集</h2>
+          <p class="section-kicker">V · Reading Trail</p>
+          <h2>読みものと資料庫</h2>
         </div>
         <img class="heading-cat cat-breathe-slow" src="assets/cats/cat-sleep.svg" alt="" aria-hidden="true">
       </div>
@@ -417,16 +435,16 @@
           <span class="link-value link-value-action">作品とコンテンツ産業を考える →</span>
         </a>
         <a class="card reveal" data-reveal-delay="0.2" href="resources.html#relationships-romance">
-          <span class="card-kicker">人間関係・恋愛</span>
-          <span class="link-value link-value-action">親密性と関係を考える →</span>
+          <span class="card-kicker">社会・人間関係</span>
+          <span class="link-value link-value-action">ケア・親密性と関係を考える →</span>
         </a>
-        <a class="card reveal" data-reveal-delay="0.25" href="resources.html#research-planning">
-          <span class="card-kicker">研究計画・論文執筆</span>
-          <span class="link-value link-value-action">問い・論文・提案を組み立てる →</span>
-        </a>
-        <a class="card reveal" data-reveal-delay="0.3" href="resources.html#podcasts">
+        <a class="card reveal" data-reveal-delay="0.25" href="resources.html#podcasts">
           <span class="card-kicker">ポッドキャスト</span>
           <span class="link-value link-value-action">移動中にも世界と研究を考える →</span>
+        </a>
+        <a class="card reveal" data-reveal-delay="0.3" href="resource-archive.html">
+          <span class="card-kicker">一次資料・研究資料庫</span>
+          <span class="link-value link-value-action">統計・原典・研究計画を調べる →</span>
         </a>
       </div>
     </section>
@@ -499,6 +517,6 @@
     <p class="copyright">© 2026 Akihiro Sakuramoto</p>
   </footer>
 
-  <script src="classical.js?v=20260827-10"></script>
+  <script src="classical.js?v=20260827-11"></script>
 </body>
 </html>

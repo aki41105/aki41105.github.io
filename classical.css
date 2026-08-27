@@ -262,3 +262,75 @@ a.card { text-decoration: none; color: var(--color-text); }
 }
 [data-theme="dark"] .plate { filter: sepia(0.12) saturate(0.85) contrast(1.02) brightness(0.9); }
 [data-theme="dark"] .site-header { background: color-mix(in srgb, var(--color-bg) 92%, transparent); }
+
+/* — forest research observatory (home only) — */
+.home-page {
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(ellipse at 4% 9%, color-mix(in srgb, #4c5a3c 10%, transparent) 0 6%, transparent 6.5%),
+    radial-gradient(ellipse at 11% 4%, color-mix(in srgb, #64744c 8%, transparent) 0 4%, transparent 4.5%),
+    radial-gradient(ellipse at 95% 32%, color-mix(in srgb, #4c5a3c 7%, transparent) 0 7%, transparent 7.5%);
+  background-attachment: fixed;
+}
+.home-page .brand-mark { box-shadow: 0 0 0 1px color-mix(in srgb, #244a36 26%, transparent), var(--shadow-sm); }
+.home-page .header-photo-strip { overflow: hidden; isolation: isolate; }
+.home-page .header-photo-strip::before,
+.home-page .header-photo-strip::after { content: ""; position: absolute; inset: 0; pointer-events: none; }
+.home-page .header-photo-strip::before {
+  z-index: 1;
+  background: linear-gradient(90deg, color-mix(in srgb, #173b29 34%, transparent), transparent 46%, color-mix(in srgb, #173b29 23%, transparent));
+  mix-blend-mode: multiply;
+}
+.home-page .header-photo-strip::after {
+  z-index: 1;
+  background:
+    radial-gradient(ellipse at 2% -20%, color-mix(in srgb, #243f2e 58%, transparent) 0 22%, transparent 23%),
+    radial-gradient(ellipse at 88% -28%, color-mix(in srgb, #4c5a3c 43%, transparent) 0 26%, transparent 27%);
+}
+.forest-perch { position: absolute; z-index: 3; right: clamp(12px, 5vw, 72px); bottom: 2px; width: clamp(190px, 25vw, 286px); height: auto; overflow: visible; filter: drop-shadow(0 3px 4px color-mix(in srgb, #15251b 32%, transparent)); }
+.perch-branch, .perch-twig { fill: none; stroke: #3e3225; stroke-linecap: round; }
+.perch-branch { stroke-width: 7; }
+.perch-twig { stroke-width: 4; }
+.perch-bud { fill: #c79a4e; }
+.forest-bird-arrival { transform-box: fill-box; transform-origin: center; animation: forestBirdArrival 2.35s cubic-bezier(.18,.72,.24,1) .2s both; }
+.bird-body, .bird-head { fill: #667a4d; stroke: #263126; stroke-width: 2.2; }
+.bird-belly { fill: #eee8d9; opacity: 0.95; }
+.bird-tail { fill: #40563c; stroke: #263126; stroke-width: 2; }
+.bird-wing { fill: #4c5a3c; stroke: #263126; stroke-width: 2; transform-box: fill-box; transform-origin: 88% 45%; animation: birdWingBeat .18s ease-in-out .25s 11 alternate; }
+.bird-wing-line { fill: none; stroke: #91a27b; stroke-width: 1.6; stroke-linecap: round; }
+.bird-beak { fill: #c79a4e; stroke: #332d25; stroke-width: 1.4; }
+.bird-eye-ring { fill: #f7f1e4; }
+.bird-eye { fill: #201f1d; }
+.bird-leg { fill: none; stroke: #5a4430; stroke-width: 2; stroke-linecap: round; }
+
+.home-page .section-heading h2 { text-wrap: balance; }
+.home-page .hairline { background: color-mix(in srgb, #4c5a3c 38%, var(--color-divider)); }
+
+[data-theme="dark"] .home-page {
+  background-image:
+    radial-gradient(ellipse at 4% 9%, color-mix(in srgb, #68805e 10%, transparent) 0 6%, transparent 6.5%),
+    radial-gradient(ellipse at 11% 4%, color-mix(in srgb, #7b8e70 7%, transparent) 0 4%, transparent 4.5%),
+    radial-gradient(ellipse at 95% 32%, color-mix(in srgb, #55684f 8%, transparent) 0 7%, transparent 7.5%);
+}
+[data-theme="dark"] .home-page .header-photo-strip::before { background: linear-gradient(90deg, color-mix(in srgb, #07170f 42%, transparent), transparent 45%, color-mix(in srgb, #07170f 32%, transparent)); }
+
+@keyframes forestBirdArrival {
+  0% { opacity: 0; transform: translate(180px, -62px) rotate(-10deg) scale(.88); }
+  28% { opacity: 1; }
+  66% { transform: translate(22px, -12px) rotate(4deg) scale(1); }
+  82% { transform: translate(-4px, 3px) rotate(-2deg) scale(1); }
+  100% { opacity: 1; transform: translate(0, 0) rotate(0) scale(1); }
+}
+@keyframes birdWingBeat { from { transform: rotate(-17deg) scaleY(.72); } to { transform: rotate(15deg) scaleY(1.12); } }
+
+@media (max-width: 900px) {
+  .forest-perch { right: 10px; width: 220px; }
+}
+@media (max-width: 560px) {
+  .home-page { background-attachment: scroll; }
+  .forest-perch { right: -28px; width: 190px; opacity: 0.92; }
+  .forest-bird-arrival, .bird-wing { animation: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .forest-bird-arrival, .bird-wing { animation: none !important; }
+}
