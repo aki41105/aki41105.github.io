@@ -35,6 +35,10 @@
 .blog-note p { margin: 0; }
 .blog-article .button { margin-top: var(--space-3); }
 
+/* — blog index — */
+.blog-index-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 860px; }
+.blog-index-grid .gallery-title { line-height: 1.35; }
+
 /* — research planning references — */
 .research-plan-heading { margin-bottom: var(--space-6); }
 .research-plan-heading .summary { margin-top: var(--space-3); }
