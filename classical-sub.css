@@ -1,5 +1,5 @@
 /* Classical — subpage layer (blog & gallery pages). Loads the shared base first. */
-@import url("classical.css?v=20260827-7");
+@import url("classical.css?v=20260827-8");
 
 /* — subpage header link — */
 .detail-home-link { text-decoration: none; }
@@ -8,7 +8,7 @@
 /* — photo detail (gallery pages) — */
 .photo-detail { max-width: 1080px; margin: 0 auto; padding: var(--space-8) 0; }
 .photo-detail-copy { max-width: 46em; margin-bottom: var(--space-6); }
-.photo-detail-copy h1 { color: var(--color-heading); font-size: 44px; font-weight: 400; margin: 0 0 var(--space-2); }
+.photo-detail-copy h1 { color: var(--color-heading); font-size: 40px; font-weight: 600; margin: 0 0 var(--space-2); }
 .photo-detail-meta { font-size: 13.5px; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum'; margin-bottom: var(--space-3); }
 .photo-detail-copy .summary { margin-bottom: var(--space-4); }
 .photo-collection-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
@@ -24,11 +24,11 @@
 .blog-article { max-width: 720px; margin: 0 auto; padding: var(--space-8) 0; }
 .blog-article-wide { max-width: 860px; }
 .resource-library-page { width: 100%; max-width: none; }
-.blog-article h1 { color: var(--color-heading); font-size: 44px; font-weight: 400; margin: 0 0 var(--space-2); line-height: 1.15; }
+.blog-article h1 { color: var(--color-heading); font-size: 40px; font-weight: 600; margin: 0 0 var(--space-2); line-height: 1.25; }
 .blog-article-meta { font-size: 13.5px; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum'; margin-bottom: var(--space-4); }
 .blog-body { font-size: 17px; line-height: 2; }
 .blog-body p { margin: 0 0 var(--space-4); text-align: justify; }
-.blog-lede { font-size: 18.5px; font-family: var(--font-heading); line-height: 1.9; }
+.blog-lede { font-size: 18.5px; font-family: var(--font-heading); font-weight: 500; line-height: 1.9; }
 .article-list { margin: 0 0 var(--space-4); padding-left: 1.4em; line-height: 1.95; }
 .article-list li { margin-bottom: var(--space-2); }
 .article-list li::marker { color: var(--color-accent); }
@@ -39,7 +39,7 @@
 /* — blog index — */
 .blog-index-group + .blog-index-group { margin-top: var(--space-8); }
 .blog-index-group-heading { margin-bottom: var(--space-3); }
-.blog-index-group-heading h2 { color: var(--color-heading); font-size: 30px; font-weight: 400; margin: 0; }
+.blog-index-group-heading h2 { color: var(--color-heading); font-size: 28px; font-weight: 600; margin: 0; }
 .blog-index-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 860px; }
 .blog-index-grid .gallery-title,
 .blog-record-grid .gallery-title { line-height: 1.35; }
@@ -74,13 +74,13 @@
 .resource-domain { padding-top: calc(var(--space-8) * 1.35); }
 .resource-domain + .resource-domain { margin-top: calc(var(--space-8) * 1.35); border-top: 1px solid var(--color-divider); }
 .resource-domain-heading { padding-left: var(--space-4); border-left: 2px solid var(--color-accent); }
-.resource-domain-heading h2 { color: var(--color-heading); margin: 0 0 var(--space-2); font-size: 39px; font-weight: 400; }
+.resource-domain-heading h2 { color: var(--color-heading); margin: 0 0 var(--space-2); font-size: 34px; font-weight: 600; }
 .resource-domain-heading > p:last-child { max-width: 54em; font-size: 16px; line-height: 1.8; color: color-mix(in srgb, var(--color-text) 68%, transparent); }
 .resource-anchor-alias { display: block; height: 0; scroll-margin-top: 88px; }
 .resource-category { scroll-margin-top: 88px; padding-top: var(--space-8); }
 .resource-category ~ .resource-category { margin-top: var(--space-8); border-top: 1px solid var(--color-divider); }
 .resource-category-heading { margin-bottom: var(--space-4); }
-.resource-category-heading h3 { color: var(--color-heading); margin: 0 0 var(--space-2); font-size: 30px; font-weight: 500; }
+.resource-category-heading h3 { color: var(--color-heading); margin: 0 0 var(--space-2); font-size: 27px; font-weight: 600; }
 .resource-category-heading > p:last-child { max-width: 54em; font-size: 15.5px; line-height: 1.8; color: color-mix(in srgb, var(--color-text) 68%, transparent); }
 .resource-library-page .resource-reference-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .resource-library-page .resource-reference-card { min-width: 0; }
@@ -88,7 +88,7 @@
 .resource-library-footer-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: calc(var(--space-8) * 1.5); padding-top: var(--space-6); border-top: 1px solid var(--color-divider); }
 .resource-library-footer-actions .button { margin-top: 0; }
 .resource-split-note { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: var(--space-6); margin: var(--space-6) 0 0; padding: var(--space-4) var(--space-5); border: 1px solid color-mix(in srgb, #4c5a3c 44%, var(--color-divider)); border-radius: var(--radius-md); background: color-mix(in srgb, #64744c 6%, transparent); scroll-margin-top: 88px; }
-.resource-split-note h2 { color: var(--color-heading); margin: 0 0 6px; font-size: 25px; font-weight: 500; }
+.resource-split-note h2 { color: var(--color-heading); margin: 0 0 6px; font-size: 23px; font-weight: 600; }
 .resource-split-note p:last-child { max-width: 52em; font-size: 14.5px; line-height: 1.75; color: color-mix(in srgb, var(--color-text) 70%, transparent); }
 .resource-split-note .button { margin-top: 0; white-space: nowrap; }
 .reading-library-page .resource-domain-heading { border-left-color: #4c5a3c; }
@@ -158,15 +158,15 @@
   .photo-collection-grid { grid-template-columns: 1fr; }
   .photo-detail-figure.is-wide img { height: 320px; }
   .hri-summary-panels { grid-template-columns: 1fr; }
-  .photo-detail-copy h1, .blog-article h1 { font-size: 34px; }
+  .photo-detail-copy h1, .blog-article h1 { font-size: 33px; }
 }
 
 @media (max-width: 720px) {
   .resource-library-page .resource-reference-list { grid-template-columns: 1fr; }
   .resource-library-nav { gap: 7px; }
   .resource-library-nav .button { flex: 1 1 calc(50% - 7px); }
-  .resource-domain-heading h2 { font-size: 33px; }
-  .resource-category-heading h3 { font-size: 27px; }
+  .resource-domain-heading h2 { font-size: 30px; }
+  .resource-category-heading h3 { font-size: 24px; }
   .resource-split-note { grid-template-columns: 1fr; gap: var(--space-3); padding: var(--space-4); }
   .resource-split-note .button { justify-self: start; }
 }
