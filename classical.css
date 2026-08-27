@@ -264,14 +264,6 @@ a.card { text-decoration: none; color: var(--color-text); }
 [data-theme="dark"] .site-header { background: color-mix(in srgb, var(--color-bg) 92%, transparent); }
 
 /* — forest research observatory (home only) — */
-.home-page {
-  background-color: var(--color-bg);
-  background-image:
-    radial-gradient(ellipse at 4% 9%, color-mix(in srgb, #4c5a3c 10%, transparent) 0 6%, transparent 6.5%),
-    radial-gradient(ellipse at 11% 4%, color-mix(in srgb, #64744c 8%, transparent) 0 4%, transparent 4.5%),
-    radial-gradient(ellipse at 95% 32%, color-mix(in srgb, #4c5a3c 7%, transparent) 0 7%, transparent 7.5%);
-  background-attachment: fixed;
-}
 .home-page .brand-mark { box-shadow: 0 0 0 1px color-mix(in srgb, #244a36 26%, transparent), var(--shadow-sm); }
 .home-page .header-photo-strip { overflow: hidden; isolation: isolate; }
 .home-page .header-photo-strip::before,
@@ -306,12 +298,6 @@ a.card { text-decoration: none; color: var(--color-text); }
 .home-page .section-heading h2 { text-wrap: balance; }
 .home-page .hairline { background: color-mix(in srgb, #4c5a3c 38%, var(--color-divider)); }
 
-[data-theme="dark"] .home-page {
-  background-image:
-    radial-gradient(ellipse at 4% 9%, color-mix(in srgb, #68805e 10%, transparent) 0 6%, transparent 6.5%),
-    radial-gradient(ellipse at 11% 4%, color-mix(in srgb, #7b8e70 7%, transparent) 0 4%, transparent 4.5%),
-    radial-gradient(ellipse at 95% 32%, color-mix(in srgb, #55684f 8%, transparent) 0 7%, transparent 7.5%);
-}
 [data-theme="dark"] .home-page .header-photo-strip::before { background: linear-gradient(90deg, color-mix(in srgb, #07170f 42%, transparent), transparent 45%, color-mix(in srgb, #07170f 32%, transparent)); }
 
 @keyframes forestBirdArrival {
@@ -327,7 +313,6 @@ a.card { text-decoration: none; color: var(--color-text); }
   .forest-perch { right: 10px; width: 220px; }
 }
 @media (max-width: 560px) {
-  .home-page { background-attachment: scroll; }
   .forest-perch { right: -28px; width: 190px; opacity: 0.92; }
   .forest-bird-arrival, .bird-wing { animation: none; }
 }

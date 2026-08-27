@@ -1,5 +1,5 @@
 /* Classical — subpage layer (blog & gallery pages). Loads the shared base first. */
-@import url("classical.css?v=20260827-4");
+@import url("classical.css?v=20260827-5");
 
 /* — subpage header link — */
 .detail-home-link { text-decoration: none; }
@@ -23,7 +23,7 @@
 /* — blog articles — */
 .blog-article { max-width: 720px; margin: 0 auto; padding: var(--space-8) 0; }
 .blog-article-wide { max-width: 860px; }
-.resource-library-page { max-width: 1160px; }
+.resource-library-page { width: 100%; max-width: none; }
 .blog-article h1 { font-size: 44px; font-weight: 400; margin: 4px 0 var(--space-2); line-height: 1.15; }
 .blog-article-meta { font-size: 13.5px; letter-spacing: 0.06em; color: var(--color-accent-700); font-feature-settings: 'tnum'; margin-bottom: var(--space-4); }
 .blog-body { font-size: 17px; line-height: 2; }
