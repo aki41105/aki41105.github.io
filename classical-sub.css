@@ -53,6 +53,23 @@
 .resource-reference-description { font-size: 15.5px; line-height: 1.8; color: color-mix(in srgb, var(--color-text) 74%, transparent); }
 .resource-reference-link { align-self: flex-start; font-size: 14.5px; }
 
+/* — link library — */
+.resource-library-heading { margin-bottom: var(--space-6); }
+.resource-library-heading .summary { margin-top: var(--space-3); }
+.resource-library-updated { margin-top: var(--space-3); font-size: 13px; letter-spacing: 0.04em; color: color-mix(in srgb, var(--color-text) 55%, transparent); font-feature-settings: 'tnum'; }
+.resource-library-nav { display: flex; flex-wrap: wrap; gap: var(--space-2); padding: 0 0 var(--space-6); border-bottom: 1px solid var(--color-divider); }
+.resource-library-nav .button { margin-top: 0; font-family: var(--font-body); font-size: 13.5px; }
+.resource-category { scroll-margin-top: 88px; padding-top: var(--space-8); }
+.resource-category + .resource-category { margin-top: var(--space-8); border-top: 1px solid var(--color-divider); }
+.resource-category-heading { margin-bottom: var(--space-4); }
+.resource-category-heading h2 { margin: 4px 0 var(--space-2); font-size: 32px; font-weight: 500; }
+.resource-category-heading > p:last-child { max-width: 54em; font-size: 15.5px; line-height: 1.8; color: color-mix(in srgb, var(--color-text) 68%, transparent); }
+.resource-library-page .resource-reference-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.resource-library-page .resource-reference-card { min-width: 0; }
+.resource-library-page .resource-reference-link { overflow-wrap: anywhere; }
+.resource-library-footer-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: calc(var(--space-8) * 1.5); padding-top: var(--space-6); border-top: 1px solid var(--color-divider); }
+.resource-library-footer-actions .button { margin-top: 0; }
+
 /* — analysis figures (HRI 2026 note) — */
 .analysis-figure { margin: var(--space-6) 0; background: var(--color-surface); border: 1px solid var(--color-divider); border-radius: var(--radius-sm); padding: 6px; }
 .analysis-figure > img { width: 100%; display: block; }
@@ -118,7 +135,15 @@
   .photo-detail-copy h1, .blog-article h1 { font-size: 34px; }
 }
 
+@media (max-width: 720px) {
+  .resource-library-page .resource-reference-list { grid-template-columns: 1fr; }
+  .resource-library-nav { gap: 7px; }
+  .resource-library-nav .button { flex: 1 1 calc(50% - 7px); }
+  .resource-category-heading h2 { font-size: 28px; }
+}
+
 @media (max-width: 560px) {
+  .resource-library-nav .button { flex-basis: 100%; }
   .automotive-article .blog-body h2 { font-size: 26px; }
   .automotive-article .blog-body h3 { font-size: 21px; }
   .article-table { min-width: 620px; }
