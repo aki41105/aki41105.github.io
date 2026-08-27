@@ -73,6 +73,49 @@
     });
   });
 
+  Array.prototype.forEach.call(document.querySelectorAll('.resource-reference-card'), function (card) {
+    var link = card.querySelector('.resource-reference-link');
+    var title = card.querySelector('.card-title');
+    if (!link || !title) return;
+
+    var resourceUrl;
+    try { resourceUrl = new URL(link.href); } catch (error) { return; }
+    var hostname = resourceUrl.hostname.replace(/^www\./, '');
+    var iconSlug = hostname.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    var titleTextNode = title.firstChild;
+    var fallbackText = titleTextNode && titleTextNode.textContent.trim().charAt(0).toUpperCase();
+
+    var icon = document.createElement('span');
+    icon.className = 'resource-site-icon';
+    icon.setAttribute('aria-hidden', 'true');
+
+    var fallback = document.createElement('span');
+    fallback.className = 'resource-site-icon-fallback';
+    fallback.textContent = fallbackText || hostname.charAt(0).toUpperCase();
+    icon.appendChild(fallback);
+
+    var iconlessHosts = {
+      'ipss.go.jp': true,
+      'roles.rcast.u-tokyo.ac.jp': true,
+      'winet.nwec.go.jp': true
+    };
+    if (!iconlessHosts[hostname]) {
+      var image = document.createElement('img');
+      image.alt = '';
+      image.width = 28;
+      image.height = 28;
+      image.loading = 'lazy';
+      image.decoding = 'async';
+      image.addEventListener('load', function () { icon.classList.add('is-loaded'); });
+      image.addEventListener('error', function () { image.remove(); });
+      image.src = 'assets/resource-icons/' + iconSlug + '.png';
+      icon.appendChild(image);
+    }
+
+    card.classList.add('has-site-icon');
+    card.insertBefore(icon, title);
+  });
+
   var translations = {
     '.brand > span:last-child': 'Akihiro Sakuramoto',
     '.site-nav a[href="#research"]': 'Research',
@@ -88,7 +131,7 @@
     '.hero .summary': 'I study human-robot interaction, social signal processing, and multimodal interaction, with a focus on understanding the quality of human-robot relationships in real-world HRI.',
     '.update-note-label': 'Last updated',
     '.update-note-date': 'August 27, 2026',
-    '.update-note-text': 'Refined the link library around distinctive perspectives, primary data, and practical research resources.',
+    '.update-note-text': 'Rebuilt the link library around Japanese-language analysis, research, culture, and podcasts.',
     '#research h2': 'Research Overview',
     '#research .lede': 'I study real-world HRI through social signal processing and multimodal interaction. In particular, I aim to evaluate interaction quality quantitatively by estimating rapport—the quality of the relationship—in customer-service dialogue.',
     '#career h2': 'Career',
@@ -148,6 +191,8 @@
     '#resources a[href="resources.html#relationships-romance"] .link-value': 'Intimacy, relationships, and society →',
     '#resources a[href="resources.html#research-planning"] .card-kicker': 'Research Planning & Writing',
     '#resources a[href="resources.html#research-planning"] .link-value': 'Questions, papers, and proposals →',
+    '#resources a[href="resources.html#podcasts"] .card-kicker': 'Podcasts',
+    '#resources a[href="resources.html#podcasts"] .link-value': 'Ideas for listening on the move →',
     '#contact h2': 'Contact / Links',
     '#contact .contact-card:nth-child(1) .contact-label-text': 'University Email',
     '#contact .contact-card:nth-child(2) .contact-label-text': 'Personal Email',
