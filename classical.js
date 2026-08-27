@@ -124,6 +124,9 @@
     '.site-nav a[href="#publications"]': 'Publications',
     '.site-nav a[href="#resources"]': 'Reading',
     '.site-nav a[href="#contact"]': 'Contact',
+    '.hero-kicker': 'Human–Robot Interaction · JAIST',
+    '.hero-actions a[href="#contact"]': 'Contact',
+    '.hero-actions a[href="assets/cv.pdf"]': 'Curriculum Vitae',
     '.hero-actions a[href="blog.html"]': 'Blog',
     '.hero h1': 'Akihiro Sakuramoto',
     '.name-reading': '櫻本晃弘 / Sakuramoto Akihiro',
@@ -132,21 +135,27 @@
     '.update-note-label': 'Last updated',
     '.update-note-date': 'August 27, 2026',
     '.update-note-text': 'Reframed the site as a forest research observatory and separated reading from the primary-source archive.',
+    '.hero-figure figcaption span:first-child': 'Portrait — Ishikawa, MMXXVI',
+    '.hero-figure figcaption span:last-child': 'fig. 1',
     '#research h2': 'Research Overview',
     '#research .lede': 'I study real-world HRI through social signal processing and multimodal interaction. In particular, I aim to evaluate interaction quality quantitatively by estimating rapport—the quality of the relationship—in customer-service dialogue.',
+    '#research .keyword-grid .card:nth-child(1) .card-title': 'Human–Robot Interaction',
+    '#research .keyword-grid .card:nth-child(2) .card-title': 'Social Signal Processing',
+    '#research .keyword-grid .card:nth-child(3) .card-title': 'Multimodal Interaction',
+    '#research .keyword-grid .card:nth-child(4) .card-title': 'Rapport Estimation',
     '#career h2': 'Career',
-    '#education .career-group-sub': 'Education',
+    '#education .career-group-title': 'Education',
     '#education .timeline-item:nth-child(1) .timeline-year': 'Apr. 2025 – Present',
     '#education .timeline-item:nth-child(1) .timeline-title': 'Japan Advanced Institute of Science and Technology (JAIST), M.S. Student, AI Science Area',
     '#education .timeline-item:nth-child(2) .timeline-year': 'Apr. 2021 – Mar. 2025',
     '#education .timeline-item:nth-child(2) .timeline-title a': 'University of Toyama, B.E., Electrical and Electronic Engineering Course, Faculty of Engineering',
-    '#research-activities .career-group-sub': 'Research Activities',
+    '#research-activities .career-group-title': 'Research Activities',
     '#research-activities .timeline-item:nth-child(1) .timeline-year': 'Oct. 2025 – Present',
     '#research-activities .timeline-item:nth-child(1) .timeline-title': 'Joint research with CyberAgent AI Lab. Studying real-world HRI and interaction quality evaluation using in-store customer-service robot interaction data.',
     '#research-activities .timeline-item:nth-child(2) .timeline-year': 'Aug. 2025 – Jan. 2026',
     '#research-activities .timeline-item:nth-child(2) .timeline-title a': 'Preserving lessons from the Noto Peninsula Earthquake through digital twin technology',
     '#research-activities .timeline-item:nth-child(2) .timeline-detail': 'Conducted interviews in Ipponsugi Shopping Street, Nanao, organized local challenges and lessons from the earthquake, and examined ways to preserve and share those findings with digital twin technology in a final report.',
-    '#experience .career-group-sub': 'Experience',
+    '#experience .career-group-title': 'Experience',
     '#experience .timeline-item:nth-child(1) .timeline-year': 'Sep. 2025',
     '#experience .timeline-item:nth-child(1) .timeline-title a': 'Engineering Internship, Nissan Motor Co., Ltd.',
     '#experience .timeline-item:nth-child(1) .timeline-detail': 'Participated in a five-day vehicle performance internship focused on autonomous driving and advanced driver-assistance system testing (AD/ADAS).',
@@ -198,9 +207,13 @@
     '#contact .contact-card:nth-child(2) .contact-label-text': 'Personal Email',
     '#contact a[href^="https://researchmap.jp/"] .link-value': 'Profile Search ↗',
     '#contact a[href^="https://scholar.google.com/"] .link-value': 'Author Profile ↗',
+    '#contact a[href^="https://www.linkedin.com/"] .link-value': 'Profile ↗',
     '#contact a[href="https://www.jaist.ac.jp/~okada-s/index.html"] .contact-label-text': 'Okada Laboratory',
+    '#contact a[href="https://www.jaist.ac.jp/~okada-s/index.html"] .link-value': 'Lab Website ↗',
+    '.colophon-line': 'Scriptum in Ishikawa, MMXXVI',
     '.colophon-note': 'Proofread by one calico cat.',
-    '.colophon-footnote': '* Cats have walked across manuscripts since a pawprinted codex of Dubrovnik, 1445.'
+    '.colophon-footnote': '* Cats have walked across manuscripts since a pawprinted codex of Dubrovnik, 1445.',
+    '.copyright': '© 2026 Akihiro Sakuramoto'
   };
 
   var languageToggle = document.getElementById('languageToggle');
@@ -220,9 +233,9 @@
     });
     currentLanguage = language;
     document.documentElement.lang = language;
-    document.title = language === 'en' ? 'Akihiro Sakuramoto / Sakuramoto Akihiro' : '櫻本晃弘 / Sakuramoto Akihiro';
-    languageToggle.textContent = language === 'en' ? '日本語' : 'English';
-    languageToggle.setAttribute('aria-label', language === 'en' ? '日本語に切り替え' : 'Switch to English');
+    document.title = language === 'en' ? 'Akihiro Sakuramoto / Sakuramoto Akihiro' : '櫻本晃弘';
+    languageToggle.textContent = language === 'en' ? '日本語' : '英語';
+    languageToggle.setAttribute('aria-label', language === 'en' ? '日本語表示に切り替え' : '英語表示に切り替え');
   }
 
   if (languageToggle) {
