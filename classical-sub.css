@@ -1,9 +1,10 @@
 /* Classical — subpage layer (blog & gallery pages). Loads the shared base first. */
-@import url("classical.css?v=20260827-10");
+@import url("classical.css?v=20260828-1");
 
 /* — subpage header link — */
 .detail-home-link { text-decoration: none; }
-.site-nav a.is-active { color: var(--color-text); text-decoration: underline; text-underline-offset: 4px; }
+.site-nav a.is-active { color: var(--color-heading); text-decoration: none; }
+.site-nav a.is-active:hover { color: var(--color-accent-700); }
 
 /* — photo detail (gallery pages) — */
 .photo-detail { max-width: 1080px; margin: 0 auto; padding: var(--space-8) 0; }
@@ -145,7 +146,7 @@
 .article-divider { margin: var(--space-8) 0; border: 0; border-top: 1px solid var(--color-divider); }
 .footnote-ref { font-size: 0.72em; line-height: 0; }
 .footnote-ref a,
-.footnote-backref { color: var(--color-text); text-decoration: underline; }
+.footnote-backref { color: var(--color-text); text-decoration: none; }
 .article-sources { margin-top: calc(var(--space-8) * 1.5); padding-top: var(--space-4); border-top: 1px solid var(--color-divider); }
 .article-sources h2 { margin-top: 0 !important; }
 .article-sources ol { padding-left: 1.6em; font-size: 12.5px; line-height: 1.75; overflow-wrap: anywhere; }
