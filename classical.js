@@ -88,7 +88,7 @@
     '.hero .summary': 'I study human-robot interaction, social signal processing, and multimodal interaction, with a focus on understanding the quality of human-robot relationships in real-world HRI.',
     '.update-note-label': 'Last updated',
     '.update-note-date': 'August 27, 2026',
-    '.update-note-text': 'Moved the blog link below the profile introduction.',
+    '.update-note-text': 'Added an automotive industry analysis and Toyota Group outlook.',
     '#research h2': 'Research Overview',
     '#research .lede': 'I study real-world HRI through social signal processing and multimodal interaction. In particular, I aim to evaluate interaction quality quantitatively by estimating rapport—the quality of the relationship—in customer-service dialogue.',
     '#career h2': 'Career',
