@@ -55,7 +55,7 @@ a:hover { color: var(--color-accent-600); }
 .stroll-wrap img { animation: catBob 0.9s ease-in-out infinite; }
 .stroll-wrap.flip img { transform: scaleX(-1); animation: none; }
 
-main { max-width: 1080px; margin: 0 auto; padding: 0 var(--space-6); }
+main { max-width: 1440px; margin: 0 auto; padding: 0 var(--space-6); }
 .section { padding: var(--space-8) 0; }
 
 /* — section headings — */
