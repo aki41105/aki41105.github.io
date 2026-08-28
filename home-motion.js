@@ -103,7 +103,7 @@
 
     const tick = safeHandler("pond ripple frame", (time) => {
       frame = 0;
-      if (reducedMotion.matches || !documentVisible) {
+      if (!documentVisible) {
         lastTime = null;
         draw();
         return;
@@ -123,7 +123,7 @@
     });
 
     const updatePlayback = () => {
-      if (!reducedMotion.matches && documentVisible && ripples.length) {
+      if (documentVisible && ripples.length) {
         if (!frame) frame = requestAnimationFrame(tick);
       } else {
         stop();
@@ -136,21 +136,13 @@
       const ripple = {
         pageX,
         pageY,
-        age: reducedMotion.matches ? duration * 0.38 : 0,
+        age: 0,
         duration,
         strength: clamp(strength, 0.4, 1.4),
       };
       ripples.push(ripple);
       while (ripples.length > maxRipples()) ripples.shift();
       draw();
-      if (reducedMotion.matches) {
-        window.setTimeout(safeHandler("pond ripple reduced cleanup", () => {
-          const index = ripples.indexOf(ripple);
-          if (index !== -1) ripples.splice(index, 1);
-          draw();
-        }), 280);
-        return;
-      }
       updatePlayback();
     };
 
