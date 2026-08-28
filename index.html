@@ -154,6 +154,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="classical.css?v=20260828-1">
+  <link rel="stylesheet" href="home-motion.css?v=20260828-1">
 </head>
 <body class="home-page">
   <svg class="icon-defs" aria-hidden="true" focusable="false">
@@ -218,7 +219,12 @@
     <section class="hero" id="home">
       <div class="hero-copy">
         <p class="hero-kicker reveal">ヒューマン・ロボット・インタラクション · JAIST</p>
-        <h1 class="reveal" data-reveal-delay="0.08">櫻本 晃弘</h1>
+        <div class="hero-title-cluster">
+          <h1 class="reveal" data-reveal-delay="0.08">櫻本 晃弘</h1>
+          <div class="hero-rapport-mini reveal" data-reveal-delay="0.14">
+            <canvas id="heroRapportCanvas" width="332" height="208" role="img" tabindex="0" aria-label="二つの光を動かして関係の変化を確かめる、小さなラポール表示">Canvasに対応したブラウザで表示できます。</canvas>
+          </div>
+        </div>
         <p class="name-reading reveal" data-reveal-delay="0.16">さくらもと あきひろ</p>
         <div class="hero-rule reveal" data-reveal-delay="0.22"></div>
         <p class="affiliation reveal" data-reveal-delay="0.26">北陸先端科学技術大学院大学 AI知性領域 博士前期課程</p>
@@ -512,5 +518,6 @@
   </footer>
 
   <script src="classical.js?v=20260828-3"></script>
+  <script src="home-motion.js?v=20260828-1" defer></script>
 </body>
 </html>
