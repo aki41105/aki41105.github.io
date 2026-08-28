@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CSS、SVG、Canvasで作る、櫻本晃弘の小さなアニメーション実験室。">
+  <meta property="og:title" content="動きの実験室 | 櫻本晃弘">
+  <meta property="og:description" content="森、鳥、幾何学、猫。画面の中の動きを触って試すモーション・スケッチ集。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aki41105.github.io/animation-lab.html">
+  <meta property="og:image" content="https://aki41105.github.io/assets/header-library.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#155c63">
+  <link rel="canonical" href="https://aki41105.github.io/animation-lab.html">
+  <link rel="icon" href="assets/favicon.svg?v=20260827-forest" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32x32.png?v=20260827-forest" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=20260827-forest">
+  <title>動きの実験室 | 櫻本晃弘</title>
+  <link rel="stylesheet" href="classical-sub.css?v=20260828-1">
+  <link rel="stylesheet" href="animation-lab.css?v=20260828-1">
+</head>
+<body class="animation-lab-page motion-paused" id="top">
+  <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="ホーム">
+      <span class="brand-mark" aria-hidden="true"><img src="assets/favicon.svg?v=20260827-forest" alt=""></span>
+      <span>櫻本 晃弘</span>
+    </a>
+    <nav class="site-nav" aria-label="実験室のナビゲーション">
+      <a href="index.html#research">研究</a>
+      <a href="blog.html">ブログ</a>
+      <a href="resources.html">読みもの</a>
+      <a href="animation-lab.html" class="is-active" aria-current="page">実験室</a>
+      <a href="index.html#contact">連絡先</a>
+    </nav>
+    <a class="language-toggle detail-home-link" href="index.html#home">ホームへ戻る</a>
+  </header>
+
+  <main>
+    <article class="section animation-lab">
+      <header class="animation-lab-header">
+        <p class="animation-lab-kicker">モーション・スケッチ 01–05</p>
+        <h1>動きの実験室</h1>
+        <p class="summary">森、鳥、幾何学、猫。CSS・SVG・Canvasで、画面の中の動きを小さく試しています。眺めるだけでなく、押す、選ぶ、動かすことで変化します。</p>
+        <div class="animation-master-controls" aria-label="アニメーション全体の操作">
+          <button class="button button-primary" id="motionToggle" type="button" aria-pressed="false">すべて停止</button>
+          <button class="button button-secondary" id="resetAnimations" type="button">最初から</button>
+        </div>
+        <p class="animation-status" id="motionStatus" aria-live="polite">5つの展示が動いています。</p>
+      </header>
+
+      <div class="animation-grid">
+        <section class="animation-panel animation-panel-wide" data-animation-panel="tile" aria-labelledby="tile-title">
+          <header class="animation-panel-header">
+            <p class="animation-medium">01 · SVG + CSS</p>
+            <h2 id="tile-title">水鏡の八芒星</h2>
+            <p>ペルシャの幾何学模様を、反対方向へ回る二層のロゼットとして描きます。模様を押すと静かにひらきます。</p>
+          </header>
+          <div class="motion-stage tile-stage" id="tileStage" role="img" aria-label="回転しながら開閉する八芒星の幾何学模様">
+            <svg class="tile-mandala" viewBox="0 0 320 320" aria-hidden="true">
+              <circle class="tile-water-ring tile-water-ring-outer" cx="160" cy="160" r="126"></circle>
+              <circle class="tile-water-ring tile-water-ring-inner" cx="160" cy="160" r="82"></circle>
+              <g class="tile-wheel tile-wheel-slow">
+                <polygon class="tile-star-outline" points="160,28 182,107 253,67 213,138 292,160 213,182 253,253 182,213 160,292 138,213 67,253 107,182 28,160 107,138 67,67 138,107"></polygon>
+                <rect class="tile-diamond" x="91" y="91" width="138" height="138" transform="rotate(45 160 160)"></rect>
+              </g>
+              <g class="tile-wheel tile-wheel-reverse">
+                <polygon class="tile-star-fill" points="160,70 175,121 222,98 199,145 250,160 199,175 222,222 175,199 160,250 145,199 98,222 121,175 70,160 121,145 98,98 145,121"></polygon>
+                <circle class="tile-orbit" cx="160" cy="160" r="58"></circle>
+              </g>
+              <circle class="tile-center-halo" cx="160" cy="160" r="19"></circle>
+              <circle class="tile-center" cx="160" cy="160" r="6"></circle>
+            </svg>
+          </div>
+          <div class="animation-panel-controls">
+            <button class="button button-secondary" id="tileToggle" type="button" aria-pressed="false">模様をひらく</button>
+            <label class="range-control" for="tileSpeed">
+              <span>回転速度</span>
+              <input id="tileSpeed" type="range" min="0.5" max="1.8" value="1" step="0.1">
+              <output for="tileSpeed" id="tileSpeedOutput">1.0×</output>
+            </label>
+          </div>
+        </section>
+
+        <section class="animation-panel" data-animation-panel="wind" aria-labelledby="wind-title">
+          <header class="animation-panel-header">
+            <p class="animation-medium">02 · CSS + Pointer</p>
+            <h2 id="wind-title">森を渡る風</h2>
+            <p>枝、葉、光を別々の速さで揺らします。風量を変えたり、舞台をなぞって風向きを変えたりできます。</p>
+          </header>
+          <div class="motion-stage wind-stage" id="windStage" role="img" aria-label="風に揺れる枝と葉">
+            <span class="wind-light wind-light-one" aria-hidden="true"></span>
+            <span class="wind-light wind-light-two" aria-hidden="true"></span>
+            <div class="wind-branch wind-branch-back" aria-hidden="true"></div>
+            <div class="wind-branch wind-branch-front" aria-hidden="true"></div>
+            <div class="wind-leaves" id="windLeaves" aria-hidden="true"></div>
+          </div>
+          <div class="animation-panel-controls animation-panel-controls-stack">
+            <label class="range-control" for="windStrength">
+              <span>風の強さ</span>
+              <input id="windStrength" type="range" min="0" max="100" value="42" step="1">
+              <output for="windStrength" id="windStrengthOutput">42</output>
+            </label>
+            <button class="button button-secondary" id="windGust" type="button">ひと風おこす</button>
+          </div>
+        </section>
+
+        <section class="animation-panel" data-animation-panel="bird" aria-labelledby="bird-title">
+          <header class="animation-panel-header">
+            <p class="animation-medium">03 · SVG Path</p>
+            <h2 id="bird-title">鳥の航路</h2>
+            <p>三本の軌道から一つを選ぶと、鳥が枝を離れて飛びます。曲線上の位置と向きを計算して動かしています。</p>
+          </header>
+          <div class="motion-stage bird-stage">
+            <svg class="bird-flight-svg" id="birdFlightSvg" viewBox="0 0 560 260" role="img" aria-label="選んだ曲線に沿って飛ぶ鳥">
+              <path class="route-path is-selected" data-route="high" d="M52 190 C140 34 286 44 508 72"></path>
+              <path class="route-path" data-route="middle" d="M52 190 C166 242 346 20 508 112"></path>
+              <path class="route-path" data-route="low" d="M52 190 C188 108 344 228 508 166"></path>
+              <path class="bird-perch" d="M18 214 C118 204 190 216 276 202"></path>
+              <circle class="route-node" cx="508" cy="72" r="5"></circle>
+              <circle class="route-node" cx="508" cy="112" r="5"></circle>
+              <circle class="route-node" cx="508" cy="166" r="5"></circle>
+              <g class="motion-bird" id="motionBird" transform="translate(52 190)">
+                <path class="motion-bird-tail" d="M-25 5 L-43 15 L-22 13 Z"></path>
+                <ellipse class="motion-bird-body" cx="0" cy="0" rx="25" ry="16"></ellipse>
+                <circle class="motion-bird-head" cx="21" cy="-9" r="13"></circle>
+                <path class="motion-bird-wing" d="M-7 -8 C-23 -2 -17 14 4 12 C14 5 14 -3 6 -8 Z"></path>
+                <path class="motion-bird-beak" d="M33 -10 L46 -5 L33 -2 Z"></path>
+                <circle class="motion-bird-eye" cx="25" cy="-12" r="2"></circle>
+              </g>
+            </svg>
+          </div>
+          <div class="animation-panel-controls route-controls" aria-label="鳥の航路を選択">
+            <button class="route-button is-selected" type="button" data-bird-route="high" aria-pressed="true">高く</button>
+            <button class="route-button" type="button" data-bird-route="middle" aria-pressed="false">遠く</button>
+            <button class="route-button" type="button" data-bird-route="low" aria-pressed="false">低く</button>
+          </div>
+        </section>
+
+        <section class="animation-panel" data-animation-panel="rapport" aria-labelledby="rapport-title">
+          <header class="animation-panel-header">
+            <p class="animation-medium">04 · Canvas</p>
+            <h2 id="rapport-title">ラポールの蛍</h2>
+            <p>「人」と「ロボット」の光を近づけると、その間に関係の線が増えます。二つの中心をドラッグできます。</p>
+          </header>
+          <div class="motion-stage canvas-stage">
+            <canvas id="rapportCanvas" role="img" aria-label="人とロボットの距離に応じて光のつながりが変化するアニメーション">Canvasに対応したブラウザで表示できます。</canvas>
+            <p class="stage-hint">二つの光をドラッグ</p>
+          </div>
+        </section>
+
+        <section class="animation-panel" data-animation-panel="yarn" aria-labelledby="yarn-title">
+          <header class="animation-panel-header">
+            <p class="animation-medium">05 · DOM + Physics</p>
+            <h2 id="yarn-title">猫と糸玉</h2>
+            <p>糸玉を動かすと、猫が気配を追います。離すと少しだけ勢いを残して転がります。</p>
+          </header>
+          <div class="motion-stage yarn-lab-stage" id="yarnStage" aria-label="糸玉を追う猫のアニメーション">
+            <span class="yarn-thread" aria-hidden="true"></span>
+            <img class="play-cat" id="playCat" src="assets/cats/cat-play.svg" alt="糸玉を見つめる猫" draggable="false">
+            <button class="lab-yarn-ball" id="yarnBall" type="button" aria-label="ドラッグできる糸玉"></button>
+            <p class="stage-hint">糸玉をドラッグ</p>
+          </div>
+        </section>
+      </div>
+
+      <div class="animation-lab-footer-actions">
+        <a class="button button-secondary" href="index.html#home">ホームへ戻る</a>
+        <a class="button button-primary" href="#top">ページ上部へ</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <img class="footer-cat-img cat-breathe-slow" src="assets/cats/cat-sleep.svg" alt="" aria-hidden="true">
+    <p class="colophon-line">小さく作り、触って確かめる。</p>
+    <p class="colophon-note">展示は少しずつ増えていきます。</p>
+    <p class="copyright">© 2026 櫻本晃弘</p>
+  </footer>
+
+  <script src="classical.js?v=20260828-2" defer></script>
+  <script src="animation-lab.js?v=20260828-1" defer></script>
+</body>
+</html>

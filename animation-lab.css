@@ -1,0 +1,548 @@
+/* Motion lab — page-scoped animation studies built on the shared classical theme. */
+.animation-lab-page {
+  --tile-duration: 18s;
+  --tile-duration-reverse: 13s;
+  --wind-duration: 4.8s;
+  --wind-angle: 0deg;
+  --rapport-human: #d39a35;
+  --rapport-robot: #4c9d97;
+  --rapport-connection: #b99858;
+}
+
+.animation-lab {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: calc(var(--space-8) * 1.35) 0 calc(var(--space-8) * 1.6);
+}
+
+.animation-lab-header {
+  max-width: 58em;
+  margin-bottom: calc(var(--space-8) * 1.25);
+}
+
+.animation-lab-kicker,
+.animation-medium {
+  color: var(--color-accent-700);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.animation-lab-header h1 {
+  margin: 6px 0 var(--space-3);
+  color: var(--color-heading);
+  font-size: 48px;
+}
+
+.animation-lab-header .summary {
+  margin-top: var(--space-3);
+}
+
+.animation-master-controls,
+.animation-panel-controls,
+.animation-lab-footer-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.animation-master-controls {
+  margin-top: var(--space-5, 23px);
+}
+
+.animation-master-controls .button,
+.animation-panel-controls .button,
+.animation-lab-footer-actions .button {
+  margin-top: 0;
+}
+
+.animation-status {
+  min-height: 1.6em;
+  margin-top: var(--space-2);
+  color: color-mix(in srgb, var(--color-text) 58%, transparent);
+  font-size: 13.5px;
+}
+
+.animation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+
+.animation-panel {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--color-surface) 56%, transparent);
+  box-shadow: var(--shadow-sm);
+}
+
+.animation-panel-wide {
+  grid-column: 1 / -1;
+}
+
+.animation-panel-header {
+  min-height: 168px;
+  padding: var(--space-5, 23px) var(--space-5, 23px) var(--space-4);
+}
+
+.animation-panel-wide .animation-panel-header {
+  min-height: 0;
+}
+
+.animation-panel-header h2 {
+  margin: 5px 0 var(--space-2);
+  color: var(--color-heading);
+  font-size: 28px;
+}
+
+.animation-panel-header > p:last-child {
+  max-width: 48em;
+  color: color-mix(in srgb, var(--color-text) 70%, transparent);
+  font-size: 15.5px;
+  line-height: 1.8;
+}
+
+.motion-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 310px;
+  overflow: hidden;
+  border-block: 1px solid var(--color-divider);
+  background:
+    radial-gradient(circle at 24% 20%, color-mix(in srgb, var(--color-heading) 12%, transparent), transparent 38%),
+    radial-gradient(circle at 82% 76%, color-mix(in srgb, var(--color-accent) 10%, transparent), transparent 34%),
+    color-mix(in srgb, var(--color-bg) 64%, var(--color-surface));
+  isolation: isolate;
+}
+
+.animation-panel-controls {
+  min-height: 72px;
+  padding: var(--space-3) var(--space-4);
+  justify-content: space-between;
+}
+
+.animation-panel-controls-stack {
+  align-items: stretch;
+}
+
+.range-control {
+  display: grid;
+  grid-template-columns: auto minmax(110px, 1fr) 3.2em;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: min(100%, 290px);
+  color: color-mix(in srgb, var(--color-text) 76%, transparent);
+  font-size: 13.5px;
+}
+
+.range-control input {
+  width: 100%;
+  accent-color: var(--color-accent);
+  cursor: pointer;
+}
+
+.range-control output {
+  color: var(--color-accent-700);
+  text-align: right;
+  font-feature-settings: "tnum";
+}
+
+/* 01 — Persian tile */
+.tile-stage {
+  min-height: 430px;
+  cursor: pointer;
+}
+
+.tile-mandala {
+  width: min(350px, 78vw);
+  height: auto;
+  overflow: visible;
+  transform: scale(0.88);
+  filter: drop-shadow(0 14px 24px color-mix(in srgb, var(--color-heading) 16%, transparent));
+  transition: transform 0.8s cubic-bezier(.2,.76,.25,1), filter 0.8s ease;
+}
+
+.tile-stage.is-bloomed .tile-mandala {
+  transform: scale(1.04);
+  filter: drop-shadow(0 18px 34px color-mix(in srgb, var(--color-accent) 22%, transparent));
+}
+
+.tile-water-ring,
+.tile-star-outline,
+.tile-diamond,
+.tile-orbit {
+  fill: none;
+  vector-effect: non-scaling-stroke;
+}
+
+.tile-water-ring {
+  stroke: color-mix(in srgb, var(--color-heading) 28%, transparent);
+  stroke-width: 1;
+  stroke-dasharray: 3 8;
+}
+
+.tile-water-ring-inner {
+  stroke: color-mix(in srgb, var(--color-accent) 34%, transparent);
+  stroke-dasharray: 1 9;
+}
+
+.tile-star-outline {
+  stroke: var(--color-heading);
+  stroke-width: 2;
+}
+
+.tile-diamond {
+  stroke: color-mix(in srgb, var(--color-accent) 74%, transparent);
+  stroke-width: 1.4;
+}
+
+.tile-star-fill {
+  fill: color-mix(in srgb, var(--color-heading) 15%, transparent);
+  stroke: color-mix(in srgb, var(--color-heading) 76%, transparent);
+  stroke-width: 1.5;
+}
+
+.tile-orbit {
+  stroke: var(--color-accent);
+  stroke-width: 1.2;
+  stroke-dasharray: 5 7;
+}
+
+.tile-center-halo {
+  fill: color-mix(in srgb, var(--color-accent) 16%, transparent);
+  stroke: color-mix(in srgb, var(--color-accent) 58%, transparent);
+  animation: tilePulse 3.4s ease-in-out infinite;
+}
+
+.tile-center {
+  fill: var(--color-accent);
+}
+
+.tile-wheel {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.tile-wheel-slow {
+  animation: tileSpin var(--tile-duration) linear infinite;
+}
+
+.tile-wheel-reverse {
+  animation: tileSpinReverse var(--tile-duration-reverse) linear infinite;
+}
+
+/* 02 — Wind */
+.wind-stage {
+  --wind-shift: 14px;
+  touch-action: none;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-heading) 12%, transparent), transparent 58%),
+    color-mix(in srgb, var(--color-bg) 70%, var(--color-surface));
+}
+
+.wind-light {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+  filter: blur(3px);
+  animation: lightDrift 8s ease-in-out infinite alternate;
+}
+
+.wind-light-one { top: -54px; left: 9%; }
+.wind-light-two { right: 6%; bottom: -74px; animation-delay: -3s; }
+
+.wind-branch {
+  position: absolute;
+  left: 4%;
+  bottom: 60px;
+  width: 88%;
+  height: 118px;
+  border-bottom: 8px solid #5a4430;
+  border-radius: 0 0 62% 46%;
+  transform: rotate(var(--wind-angle));
+  transform-origin: 8% 100%;
+  animation: branchSway var(--wind-duration) ease-in-out infinite alternate;
+}
+
+.wind-branch::before,
+.wind-branch::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  width: 44%;
+  border-bottom: 4px solid #5a4430;
+  transform-origin: left center;
+}
+
+.wind-branch::before { left: 30%; transform: rotate(-28deg); }
+.wind-branch::after { left: 55%; transform: rotate(-42deg); }
+.wind-branch-back { opacity: 0.42; transform: translateY(-38px) scale(.92) rotate(var(--wind-angle)); animation-delay: -1.8s; }
+
+.wind-leaves {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.wind-leaf {
+  position: absolute;
+  left: var(--leaf-x, 50%);
+  top: var(--leaf-y, 50%);
+  width: calc(14px * var(--leaf-scale, 1));
+  height: calc(8px * var(--leaf-scale, 1));
+  border: 1px solid color-mix(in srgb, var(--color-heading) 72%, transparent);
+  border-radius: 100% 0 100% 0;
+  background: color-mix(in srgb, var(--color-heading) 32%, var(--color-surface));
+  transform-origin: left center;
+  opacity: 0.88;
+  animation: leafFloat var(--leaf-duration, var(--wind-duration)) ease-in-out var(--leaf-delay, 0s) infinite alternate;
+  transition: opacity 0.35s ease;
+}
+
+.wind-leaf.is-resting {
+  opacity: 0.16;
+}
+
+.wind-leaf:nth-child(3n) {
+  border-color: color-mix(in srgb, var(--color-accent) 66%, transparent);
+  background: color-mix(in srgb, var(--color-accent) 22%, var(--color-surface));
+}
+
+.wind-stage.is-gusting .wind-leaf,
+.wind-stage.gust .wind-leaf {
+  animation-name: leafGust;
+  animation-duration: 1.1s;
+}
+
+/* 03 — Bird route */
+.bird-stage {
+  min-height: 310px;
+}
+
+.bird-flight-svg {
+  width: min(100%, 620px);
+  height: auto;
+  overflow: visible;
+}
+
+.route-path {
+  fill: none;
+  stroke: color-mix(in srgb, var(--color-text) 20%, transparent);
+  stroke-width: 1.2;
+  stroke-dasharray: 4 8;
+  transition: stroke 0.25s ease, stroke-width 0.25s ease;
+}
+
+.route-path.is-selected {
+  stroke: color-mix(in srgb, var(--color-accent) 80%, transparent);
+  stroke-width: 1.8;
+}
+
+.bird-perch {
+  fill: none;
+  stroke: #5a4430;
+  stroke-width: 7;
+  stroke-linecap: round;
+}
+
+.route-node {
+  fill: var(--color-surface);
+  stroke: var(--color-accent);
+  stroke-width: 2;
+}
+
+.motion-bird-body,
+.motion-bird-head { fill: #667a4d; stroke: #263126; stroke-width: 1.5; }
+.motion-bird-tail { fill: #40563c; stroke: #263126; stroke-width: 1.3; }
+.motion-bird-wing { fill: #4c5a3c; stroke: #263126; stroke-width: 1.3; transform-box: fill-box; transform-origin: 80% 50%; animation: labWingBeat .2s ease-in-out infinite alternate; }
+.motion-bird-beak { fill: var(--color-accent); stroke: #332d25; stroke-width: 1; }
+.motion-bird-eye { fill: #201f1d; }
+.motion-bird.is-resting .motion-bird-wing { animation-play-state: paused; }
+
+.route-controls {
+  justify-content: center;
+}
+
+.route-button {
+  min-width: 72px;
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-md);
+  padding: 8px 16px;
+  color: var(--color-text);
+  background: transparent;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color .2s ease, border-color .2s ease, background .2s ease;
+}
+
+.route-button:hover,
+.route-button.is-selected {
+  color: var(--color-accent-700);
+  border-color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 9%, transparent);
+}
+
+/* 04 — Canvas rapport */
+.canvas-stage {
+  min-height: 382px;
+}
+
+.canvas-stage canvas {
+  display: block;
+  width: 100%;
+  height: 382px;
+  touch-action: none;
+  cursor: grab;
+}
+
+.canvas-stage canvas:active { cursor: grabbing; }
+
+.stage-hint {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  z-index: 3;
+  color: color-mix(in srgb, var(--color-text) 54%, transparent);
+  font-size: 12px;
+  letter-spacing: .04em;
+  pointer-events: none;
+}
+
+/* 05 — Cat and yarn */
+.yarn-lab-stage {
+  min-height: 382px;
+  touch-action: none;
+}
+
+.play-cat {
+  position: absolute;
+  left: 11%;
+  bottom: 28px;
+  width: min(168px, 36%);
+  user-select: none;
+  pointer-events: none;
+  transform: translate(var(--cat-shift-x, 0), var(--cat-shift-y, 0)) rotate(var(--cat-tilt, 0deg));
+  transform-origin: 72% 82%;
+  transition: transform .18s ease-out;
+  filter: drop-shadow(0 8px 10px color-mix(in srgb, var(--color-text) 13%, transparent));
+}
+
+.lab-yarn-ball {
+  position: absolute;
+  left: 72%;
+  top: 48%;
+  width: 46px;
+  height: 46px;
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+  background:
+    repeating-radial-gradient(ellipse at 35% 36%, transparent 0 4px, color-mix(in srgb, var(--color-accent) 52%, transparent) 5px 6px),
+    color-mix(in srgb, var(--color-accent) 18%, var(--color-surface));
+  box-shadow: 0 9px 16px color-mix(in srgb, var(--color-text) 18%, transparent);
+  cursor: grab;
+  touch-action: none;
+  z-index: 4;
+}
+
+.lab-yarn-ball:active { cursor: grabbing; }
+.lab-yarn-ball:focus-visible { outline: 2px solid var(--color-heading); outline-offset: 4px; }
+
+.yarn-thread {
+  position: absolute;
+  left: 30%;
+  bottom: 42px;
+  width: 48%;
+  height: 90px;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 66%, transparent);
+  border-radius: 50%;
+  transform: rotate(-7deg);
+  transform-origin: left bottom;
+  pointer-events: none;
+}
+
+.animation-lab-footer-actions {
+  justify-content: flex-end;
+  margin-top: calc(var(--space-8) * 1.35);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-divider);
+}
+
+.animation-lab-page.motion-paused .tile-wheel,
+.animation-lab-page.motion-paused .tile-center-halo,
+.animation-lab-page.motion-paused .wind-light,
+.animation-lab-page.motion-paused .wind-branch,
+.animation-lab-page.motion-paused .wind-leaf,
+.animation-lab-page.motion-paused .motion-bird-wing,
+.animation-lab-page.motion-ready .animation-panel:not(.is-in-view) .tile-wheel,
+.animation-lab-page.motion-ready .animation-panel:not(.is-in-view) .tile-center-halo,
+.animation-lab-page.motion-ready .animation-panel:not(.is-in-view) .wind-light,
+.animation-lab-page.motion-ready .animation-panel:not(.is-in-view) .wind-branch,
+.animation-lab-page.motion-ready .animation-panel:not(.is-in-view) .wind-leaf,
+.animation-lab-page.motion-ready .animation-panel:not(.is-in-view) .motion-bird-wing {
+  animation-play-state: paused !important;
+}
+
+@keyframes tileSpin { to { transform: rotate(360deg); } }
+@keyframes tileSpinReverse { to { transform: rotate(-360deg); } }
+@keyframes tilePulse { 50% { transform: scale(1.25); opacity: .46; } }
+@keyframes lightDrift { to { transform: translate(42px, 18px) scale(1.12); } }
+@keyframes branchSway { from { rotate: -1.5deg; } to { rotate: 2.2deg; } }
+@keyframes leafFloat {
+  from { transform: translate3d(0, 0, 0) rotate(-8deg); }
+  to { transform: translate3d(calc(var(--leaf-drift, 28px) + var(--wind-shift)), var(--leaf-rise, -8px), 0) rotate(var(--leaf-spin, 22deg)); }
+}
+@keyframes leafGust {
+  0% { transform: translate3d(0, 0, 0) rotate(0); }
+  50% { transform: translate3d(calc(var(--leaf-drift, 28px) + var(--wind-shift) + var(--wind-shift)), calc(var(--leaf-rise, -8px) - 24px), 0) rotate(var(--leaf-spin, 120deg)); }
+  100% { transform: translate3d(calc(var(--leaf-drift, 28px) + var(--wind-shift)), var(--leaf-rise, -8px), 0) rotate(var(--leaf-spin, 22deg)); }
+}
+@keyframes labWingBeat { from { transform: rotate(-18deg) scaleY(.72); } to { transform: rotate(15deg) scaleY(1.12); } }
+
+@media (max-width: 900px) {
+  .animation-grid { grid-template-columns: 1fr; }
+  .animation-panel-wide { grid-column: auto; }
+  .animation-panel-header,
+  .animation-panel-wide .animation-panel-header { min-height: 0; }
+}
+
+@media (max-width: 560px) {
+  .animation-lab { padding-top: var(--space-8); }
+  .animation-lab-header h1 { font-size: 37px; }
+  .animation-panel-header { padding: var(--space-4); }
+  .animation-panel-header h2 { font-size: 25px; }
+  .motion-stage { min-height: 270px; }
+  .tile-stage { min-height: 330px; }
+  .canvas-stage,
+  .yarn-lab-stage { min-height: 310px; }
+  .canvas-stage canvas { height: 310px; }
+  .animation-panel-controls { align-items: stretch; }
+  .range-control { grid-template-columns: 1fr 3.1em; width: 100%; }
+  .range-control > span { grid-column: 1 / -1; }
+  .animation-panel-controls .button { flex: 1 1 100%; }
+  .route-controls .route-button { flex: 1; min-width: 0; }
+  .play-cat { width: 142px; }
+  .animation-lab-footer-actions { justify-content: stretch; }
+  .animation-lab-footer-actions .button { flex: 1 1 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animation-lab-page .tile-mandala,
+  .animation-lab-page .play-cat {
+    transition: none;
+  }
+}
+
+[data-theme="dark"] .animation-lab-page {
+  --rapport-human: #e1b863;
+  --rapport-robot: #8fc8bb;
+  --rapport-connection: #d6c28f;
+}
