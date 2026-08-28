@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CSS、SVG、Canvasで作る、櫻本晃弘の小さなアニメーション実験室。">
+  <meta name="description" content="雨、水紋、鳥、星座、磁場、猫など、CSS・SVG・Canvasで作る12の小さなアニメーション実験。">
   <meta property="og:title" content="動きの実験室 | 櫻本晃弘">
-  <meta property="og:description" content="森、鳥、幾何学、猫。画面の中の動きを触って試すモーション・スケッチ集。">
+  <meta property="og:description" content="雨、水紋、鳥、星座、磁場、猫。画面の中の動きを触って試す12のモーション・スケッチ集。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aki41105.github.io/animation-lab.html">
   <meta property="og:image" content="https://aki41105.github.io/assets/header-library.jpg">
@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=20260827-forest">
   <title>動きの実験室 | 櫻本晃弘</title>
   <link rel="stylesheet" href="classical-sub.css?v=20260828-1">
-  <link rel="stylesheet" href="animation-lab.css?v=20260828-1">
+  <link rel="stylesheet" href="animation-lab.css?v=20260828-2">
 </head>
 <body class="animation-lab-page motion-paused" id="top">
   <header class="site-header">
@@ -38,18 +38,19 @@
   <main>
     <article class="section animation-lab">
       <header class="animation-lab-header">
-        <p class="animation-lab-kicker">モーション・スケッチ 01–05</p>
+        <p class="animation-lab-kicker">モーション・スケッチ 01–12</p>
         <h1>動きの実験室</h1>
-        <p class="summary">森、鳥、幾何学、猫。CSS・SVG・Canvasで、画面の中の動きを小さく試しています。眺めるだけでなく、押す、選ぶ、動かすことで変化します。</p>
+        <p class="summary">雨、水紋、鳥、活字、星座、磁場、猫。CSS・SVG・Canvasで、画面の中の動きを小さく試しています。眺めるだけでなく、押す、選ぶ、動かすことで変化します。</p>
         <div class="animation-master-controls" aria-label="アニメーション全体の操作">
           <button class="button button-primary" id="motionToggle" type="button" aria-pressed="false">すべて停止</button>
           <button class="button button-secondary" id="resetAnimations" type="button">最初から</button>
+          <button class="button button-secondary" id="randomExhibit" type="button">おまかせで一つ</button>
         </div>
-        <p class="animation-status" id="motionStatus" aria-live="polite">5つの展示が動いています。</p>
+        <p class="animation-status" id="motionStatus" aria-live="polite">12の展示が動いています。</p>
       </header>
 
       <div class="animation-grid">
-        <section class="animation-panel animation-panel-wide" data-animation-panel="tile" aria-labelledby="tile-title">
+        <section class="animation-panel animation-panel-wide" id="exhibit-01" data-animation-panel="tile" aria-labelledby="tile-title">
           <header class="animation-panel-header">
             <p class="animation-medium">01 · SVG + CSS</p>
             <h2 id="tile-title">水鏡の八芒星</h2>
@@ -81,7 +82,7 @@
           </div>
         </section>
 
-        <section class="animation-panel" data-animation-panel="wind" aria-labelledby="wind-title">
+        <section class="animation-panel" id="exhibit-02" data-animation-panel="wind" aria-labelledby="wind-title">
           <header class="animation-panel-header">
             <p class="animation-medium">02 · CSS + Pointer</p>
             <h2 id="wind-title">森を渡る風</h2>
@@ -104,7 +105,7 @@
           </div>
         </section>
 
-        <section class="animation-panel" data-animation-panel="bird" aria-labelledby="bird-title">
+        <section class="animation-panel" id="exhibit-03" data-animation-panel="bird" aria-labelledby="bird-title">
           <header class="animation-panel-header">
             <p class="animation-medium">03 · SVG Path</p>
             <h2 id="bird-title">鳥の航路</h2>
@@ -136,7 +137,7 @@
           </div>
         </section>
 
-        <section class="animation-panel" data-animation-panel="rapport" aria-labelledby="rapport-title">
+        <section class="animation-panel" id="exhibit-04" data-animation-panel="rapport" aria-labelledby="rapport-title">
           <header class="animation-panel-header">
             <p class="animation-medium">04 · Canvas</p>
             <h2 id="rapport-title">ラポールの蛍</h2>
@@ -148,7 +149,7 @@
           </div>
         </section>
 
-        <section class="animation-panel" data-animation-panel="yarn" aria-labelledby="yarn-title">
+        <section class="animation-panel" id="exhibit-05" data-animation-panel="yarn" aria-labelledby="yarn-title">
           <header class="animation-panel-header">
             <p class="animation-medium">05 · DOM + Physics</p>
             <h2 id="yarn-title">猫と糸玉</h2>
@@ -159,6 +160,137 @@
             <img class="play-cat" id="playCat" src="assets/cats/cat-play.svg" alt="糸玉を見つめる猫" draggable="false">
             <button class="lab-yarn-ball" id="yarnBall" type="button" aria-label="ドラッグできる糸玉"></button>
             <p class="stage-hint">糸玉をドラッグ</p>
+          </div>
+        </section>
+
+        <section class="animation-panel" id="exhibit-06" data-animation-panel="rain" aria-labelledby="rain-title">
+          <header class="animation-panel-header">
+            <p class="animation-medium">06 · DOM + CSS</p>
+            <h2 id="rain-title">雨音の窓</h2>
+            <p>森の霞を眺める尖頭アーチの窓に、細い雨筋が流れます。雨の密度を変え、ワイパーで一瞬だけ景色を澄ませられます。</p>
+          </header>
+          <div class="motion-stage rain-stage" id="rainStage" role="group" aria-label="雨が流れる森の窓">
+            <span class="rain-haze rain-haze-back" aria-hidden="true"></span>
+            <span class="rain-haze rain-haze-front" aria-hidden="true"></span>
+            <div class="rain-window">
+              <span class="rain-window-glow" aria-hidden="true"></span>
+              <div class="rain-layer" id="rainLayer" aria-hidden="true"></div>
+              <button class="rain-wiper" id="rainWiper" type="button" aria-label="ワイパーを一度動かす"><span aria-hidden="true"></span></button>
+            </div>
+            <p class="stage-hint">ワイパーを押す</p>
+          </div>
+          <div class="animation-panel-controls">
+            <label class="range-control" for="rainDensity">
+              <span>雨の密度</span>
+              <input id="rainDensity" type="range" min="12" max="84" value="46" step="1">
+              <output for="rainDensity" id="rainDensityOutput">46</output>
+            </label>
+          </div>
+        </section>
+
+        <section class="animation-panel" id="exhibit-07" data-animation-panel="ripple" aria-labelledby="ripple-title">
+          <header class="animation-panel-header">
+            <p class="animation-medium">07 · Canvas + Pointer</p>
+            <h2 id="ripple-title">池の水紋</h2>
+            <p>静かなラピス色の池に触れると、指先から同心円がひろがります。重なった波がほどけていく様子を眺めます。</p>
+          </header>
+          <div class="motion-stage ripple-stage">
+            <canvas id="rippleCanvas" role="img" aria-label="触れた位置から水紋が広がる池。矢印キーで位置を選び、Enterキーでも水紋を作れます">Canvasに対応したブラウザで表示できます。</canvas>
+            <p class="stage-hint">水面をタップ</p>
+          </div>
+          <div class="animation-panel-controls">
+            <button class="button button-secondary" id="rippleClear" type="button">水面を静かにする</button>
+          </div>
+        </section>
+
+        <section class="animation-panel" id="exhibit-08" data-animation-panel="type" aria-labelledby="type-title">
+          <header class="animation-panel-header">
+            <p class="animation-medium">08 · Type + CSS</p>
+            <h2 id="type-title">活字の呼吸</h2>
+            <p>短いことばを一文字ずつ、上下、間隔、濃淡の小さな波で揺らします。好きな句を入力して呼吸の深さを変えられます。</p>
+          </header>
+          <div class="motion-stage type-stage" id="typeStage" aria-hidden="true">ことばは、息をする。</div>
+          <p class="visually-hidden" id="typeReadable" aria-live="polite">ことばは、息をする。</p>
+          <div class="animation-panel-controls animation-panel-controls-stack type-controls">
+            <label class="text-control" for="typePhrase">
+              <span>ことば</span>
+              <input id="typePhrase" type="text" value="ことばは、息をする。" maxlength="28" autocomplete="off">
+            </label>
+            <label class="range-control" for="typeAmplitude">
+              <span>呼吸の深さ</span>
+              <input id="typeAmplitude" type="range" min="0.4" max="1.8" value="1" step="0.1">
+              <output for="typeAmplitude" id="typeAmplitudeOutput">1.0×</output>
+            </label>
+          </div>
+        </section>
+
+        <section class="animation-panel" id="exhibit-09" data-animation-panel="constellation" aria-labelledby="constellation-title">
+          <header class="animation-panel-header">
+            <p class="animation-medium">09 · Interactive SVG</p>
+            <h2 id="constellation-title">夜空の星座</h2>
+            <p>夜空に散らした星を青磁色の線で結びます。星に触れるとつながりが浮かび、配置を変えるたびに新しい星座が現れます。</p>
+          </header>
+          <div class="motion-stage constellation-stage">
+            <svg class="constellation-svg" id="constellationSvg" viewBox="0 0 560 382" role="group" aria-label="触れて線を結べる星空"></svg>
+            <p class="stage-hint">星を順にタップ</p>
+          </div>
+          <div class="animation-panel-controls">
+            <button class="button button-secondary" id="constellationRandomize" type="button">星を散らしなおす</button>
+          </div>
+        </section>
+
+        <section class="animation-panel" id="exhibit-10" data-animation-panel="magnet" aria-labelledby="magnet-title">
+          <header class="animation-panel-header">
+            <p class="animation-medium">10 · Canvas Field</p>
+            <h2 id="magnet-title">磁場の砂鉄</h2>
+            <p>細かな砂鉄が、見えない磁力線に沿って向きを変えます。舞台をなぞり、極性を反転して場の変化を確かめます。</p>
+          </header>
+          <div class="motion-stage magnet-stage">
+            <canvas id="magnetCanvas" role="img" aria-label="磁場に沿って砂鉄が向きを変える図。矢印キーでも磁石を動かせます">Canvasに対応したブラウザで表示できます。</canvas>
+            <p class="stage-hint">磁石をドラッグ</p>
+          </div>
+          <div class="animation-panel-controls">
+            <button class="button button-secondary" id="magnetPolarity" type="button" aria-pressed="false" data-positive-label="極性を反転する" data-negative-label="元の極性へ戻す">極性を反転する</button>
+          </div>
+        </section>
+
+        <section class="animation-panel" id="exhibit-11" data-animation-panel="pendulum" aria-labelledby="pendulum-title">
+          <header class="animation-panel-header">
+            <p class="animation-medium">11 · CSS Oscillation</p>
+            <h2 id="pendulum-title">振り子の同期</h2>
+            <p>少しずつ異なる周期で揺れる五つの振り子が、やがて一つのリズムへ近づきます。揃えたり、もう一度ずらしたりできます。</p>
+          </header>
+          <div class="motion-stage pendulum-stage" id="pendulumStage" role="img" aria-label="五つの振り子が異なる周期から同期していく展示"></div>
+          <div class="animation-panel-controls animation-panel-controls-stack">
+            <label class="range-control" for="pendulumTempo">
+              <span>揺れの速さ</span>
+              <input id="pendulumTempo" type="range" min="0.65" max="1.6" value="1" step="0.05">
+              <output for="pendulumTempo" id="pendulumTempoOutput">1.0×</output>
+            </label>
+            <button class="button button-secondary" id="pendulumSync" type="button" aria-pressed="false" data-sync-label="振り子を揃える" data-unsync-label="もう一度ずらす">振り子を揃える</button>
+          </div>
+        </section>
+
+        <section class="animation-panel animation-panel-wide" id="exhibit-12" data-animation-panel="season" aria-labelledby="season-title">
+          <header class="animation-panel-header">
+            <p class="animation-medium">12 · DOM + Seasons</p>
+            <h2 id="season-title">四季の窓</h2>
+            <p>同じ森の窓を、芽吹き、深い緑、金色の葉、雪へと移します。時間を自動で進めず、自分の手で季節を選ぶ展示です。</p>
+          </header>
+          <div class="motion-stage season-stage is-spring" id="seasonStage" role="img" aria-label="春夏秋冬へ変化する森の窓">
+            <div class="season-window" aria-hidden="true">
+              <span class="season-sun"></span>
+              <span class="season-hill season-hill-back"></span>
+              <span class="season-hill season-hill-front"></span>
+              <span class="season-tree"><i></i><i></i><i></i></span>
+            </div>
+          </div>
+          <div class="animation-panel-controls">
+            <label class="range-control season-control" for="seasonSlider">
+              <span>季節</span>
+              <input id="seasonSlider" type="range" min="0" max="3" value="0" step="1">
+              <output for="seasonSlider" id="seasonOutput">春</output>
+            </label>
           </div>
         </section>
       </div>
@@ -177,7 +309,7 @@
     <p class="copyright">© 2026 櫻本晃弘</p>
   </footer>
 
-  <script src="classical.js?v=20260828-2" defer></script>
-  <script src="animation-lab.js?v=20260828-1" defer></script>
+  <script src="classical.js?v=20260828-3" defer></script>
+  <script src="animation-lab.js?v=20260828-2" defer></script>
 </body>
 </html>

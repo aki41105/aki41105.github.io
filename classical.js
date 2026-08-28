@@ -135,7 +135,7 @@
     '.hero .summary': 'I study human-robot interaction, social signal processing, and multimodal interaction, with a focus on understanding the quality of human-robot relationships in real-world HRI.',
     '.update-note-label': 'Last updated',
     '.update-note-date': 'August 28, 2026',
-    '.update-note-text': 'Opened an interactive animation lab with five motion sketches.',
+    '.update-note-text': 'Expanded the interactive animation lab with seven new motion sketches.',
     '.hero-figure figcaption span:first-child': 'Portrait — Ishikawa, MMXXVI',
     '.hero-figure figcaption span:last-child': 'fig. 1',
     '#research h2': 'Research Overview',

@@ -74,10 +74,17 @@
 .animation-panel {
   min-width: 0;
   overflow: hidden;
+  scroll-margin-top: 88px;
   border: 1px solid var(--color-divider);
   border-radius: var(--radius-lg);
   background: color-mix(in srgb, var(--color-surface) 56%, transparent);
   box-shadow: var(--shadow-sm);
+  transition: border-color .3s ease, box-shadow .3s ease;
+}
+
+.animation-panel.is-random-highlight {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 18%, transparent), var(--shadow-md);
 }
 
 .animation-panel-wide {
@@ -151,6 +158,41 @@
   color: var(--color-accent-700);
   text-align: right;
   font-feature-settings: "tnum";
+}
+
+.text-control {
+  display: grid;
+  grid-template-columns: auto minmax(170px, 1fr);
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  color: color-mix(in srgb, var(--color-text) 76%, transparent);
+  font-size: 13.5px;
+}
+
+.text-control input {
+  min-width: 0;
+  width: 100%;
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-md);
+  padding: 8px 11px;
+  color: var(--color-text);
+  background: color-mix(in srgb, var(--color-surface) 72%, transparent);
+  font: inherit;
+}
+
+.text-control input:focus-visible {
+  border-color: var(--color-accent);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
 }
 
 /* 01 — Persian tile */
@@ -469,6 +511,534 @@
   pointer-events: none;
 }
 
+/* 06 — Rain window */
+.rain-stage {
+  min-height: 382px;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-heading) 24%, transparent), transparent 72%),
+    color-mix(in srgb, var(--color-bg) 68%, var(--color-surface));
+}
+
+.rain-haze {
+  position: absolute;
+  left: -8%;
+  right: -8%;
+  bottom: 0;
+  height: 46%;
+  border-radius: 50% 50% 0 0;
+  background: color-mix(in srgb, var(--color-heading) 16%, var(--color-surface));
+  opacity: .64;
+  filter: blur(5px);
+}
+
+.rain-haze-back {
+  bottom: 19%;
+  height: 31%;
+  transform: translateX(-12%) scaleX(.9);
+  opacity: .38;
+}
+
+.rain-haze-front {
+  transform: translateX(18%) scaleX(1.08);
+}
+
+.rain-window {
+  position: relative;
+  z-index: 2;
+  width: min(300px, 72%);
+  height: 270px;
+  overflow: hidden;
+  border: 7px solid color-mix(in srgb, var(--color-heading) 68%, var(--color-text));
+  border-radius: 48% 48% 8px 8px / 34% 34% 4% 4%;
+  background:
+    linear-gradient(90deg, transparent 49.25%, color-mix(in srgb, var(--color-heading) 62%, transparent) 49.5% 50.5%, transparent 50.75%),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-heading) 22%, var(--color-surface)), color-mix(in srgb, var(--color-bg) 72%, var(--color-surface)));
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--color-accent) 38%, transparent),
+    0 18px 38px color-mix(in srgb, var(--color-text) 18%, transparent);
+}
+
+.rain-window::before,
+.rain-window::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.rain-window::before {
+  left: 0;
+  right: 0;
+  top: 47%;
+  height: 2px;
+  background: color-mix(in srgb, var(--color-heading) 64%, transparent);
+}
+
+.rain-window::after {
+  inset: 0;
+  background: linear-gradient(118deg, color-mix(in srgb, var(--color-surface) 16%, transparent), transparent 31% 72%, color-mix(in srgb, var(--color-accent) 7%, transparent));
+}
+
+.rain-window-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 68% 22%, color-mix(in srgb, var(--color-accent) 16%, transparent), transparent 38%);
+  pointer-events: none;
+}
+
+.rain-layer {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.rain-drop {
+  position: absolute;
+  top: -28%;
+  left: var(--rain-x, 50%);
+  width: 1px;
+  height: var(--rain-length, 34px);
+  border-radius: 999px;
+  background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--color-surface) 76%, var(--color-heading)));
+  opacity: var(--rain-opacity, .58);
+  transform: translate3d(0, -30px, 0) rotate(8deg);
+  animation: rainFall var(--rain-duration, 1.4s) linear var(--rain-delay, 0s) infinite;
+}
+
+.rain-wiper {
+  position: absolute;
+  z-index: 5;
+  right: 47%;
+  bottom: 4px;
+  width: 42%;
+  height: 44px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  transform: rotate(-12deg);
+  transform-origin: calc(100% - 7px) 50%;
+  cursor: pointer;
+}
+
+.rain-wiper::before,
+.rain-wiper span {
+  content: "";
+  position: absolute;
+  display: block;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-text) 72%, var(--color-heading));
+}
+
+.rain-wiper span {
+  left: 0;
+  top: 20px;
+  width: calc(100% - 7px);
+  height: 5px;
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--color-accent) 35%, transparent);
+}
+
+.rain-wiper::before {
+  right: 0;
+  top: 17px;
+  width: 12px;
+  height: 12px;
+}
+
+.rain-wiper:hover span,
+.rain-wiper:focus-visible span {
+  background: var(--color-accent-700);
+}
+
+.rain-stage.is-wiping .rain-wiper {
+  animation: rainWiperSweep 1.25s cubic-bezier(.35,.02,.24,1) both;
+}
+
+/* 07 — Pond ripples */
+.ripple-stage {
+  min-height: 382px;
+  background:
+    radial-gradient(circle at 50% 44%, color-mix(in srgb, var(--color-heading) 20%, transparent), transparent 42%),
+    linear-gradient(150deg, color-mix(in srgb, var(--color-heading) 68%, var(--color-surface)), color-mix(in srgb, var(--color-text) 42%, var(--color-bg)));
+}
+
+.ripple-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(107deg, transparent 20%, color-mix(in srgb, var(--color-surface) 7%, transparent) 39%, transparent 58%),
+    repeating-linear-gradient(174deg, transparent 0 24px, color-mix(in srgb, var(--color-heading) 8%, transparent) 25px 26px);
+  pointer-events: none;
+}
+
+.ripple-stage canvas,
+.magnet-stage canvas {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 382px;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+/* 08 — Breathing type */
+.type-stage {
+  min-height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: clamp(32px, 6vw, 52px);
+  color: var(--color-heading);
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 600;
+  letter-spacing: .08em;
+  line-height: 1.7;
+  text-align: center;
+  text-wrap: balance;
+  background:
+    radial-gradient(ellipse at center, color-mix(in srgb, var(--color-accent) 9%, transparent), transparent 58%),
+    color-mix(in srgb, var(--color-surface) 56%, var(--color-bg));
+}
+
+.type-letter {
+  display: inline-block;
+  white-space: pre;
+  transform-origin: 50% 72%;
+  animation: typeBreath 4.8s ease-in-out var(--letter-delay, 0s) infinite;
+  will-change: transform, opacity;
+}
+
+.type-controls {
+  gap: var(--space-3);
+}
+
+/* 09 — Constellation */
+.constellation-stage {
+  min-height: 382px;
+  background:
+    radial-gradient(circle at 18% 24%, color-mix(in srgb, var(--color-heading) 14%, transparent), transparent 34%),
+    radial-gradient(circle at 76% 78%, color-mix(in srgb, var(--color-accent) 8%, transparent), transparent 26%),
+    color-mix(in srgb, var(--color-heading) 42%, var(--color-bg));
+}
+
+.constellation-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, color-mix(in srgb, var(--color-surface) 62%, transparent) 0 1px, transparent 1.5px),
+    radial-gradient(circle, color-mix(in srgb, var(--color-accent) 42%, transparent) 0 1px, transparent 1.5px);
+  background-position: 0 0, 31px 47px;
+  background-size: 71px 83px, 97px 109px;
+  opacity: .42;
+  pointer-events: none;
+}
+
+.constellation-svg {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 382px;
+  overflow: visible;
+  touch-action: manipulation;
+}
+
+.constellation-line {
+  stroke: var(--color-heading);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  opacity: var(--line-opacity, .74);
+  vector-effect: non-scaling-stroke;
+  animation: constellationLineIn .55s ease both;
+}
+
+.constellation-line.is-selected {
+  stroke: var(--color-accent);
+  stroke-width: 2.4;
+  opacity: 1;
+}
+
+.animation-lab-page.motion-paused .constellation-line,
+.constellation-svg.is-motion-paused .constellation-line {
+  animation: none;
+  stroke-dasharray: none;
+  opacity: .74;
+}
+
+.animation-lab-page.motion-paused .constellation-line.is-selected,
+.constellation-svg.is-motion-paused .constellation-line.is-selected {
+  opacity: 1;
+}
+
+.constellation-star {
+  fill: var(--color-surface);
+  stroke: color-mix(in srgb, var(--color-heading) 82%, transparent);
+  stroke-width: 3;
+  vector-effect: non-scaling-stroke;
+  cursor: pointer;
+  transition: fill .2s ease, stroke .2s ease, filter .2s ease, r .2s ease;
+}
+
+.constellation-star:hover,
+.constellation-star:focus,
+.constellation-star.is-selected,
+.constellation-star[aria-pressed="true"] {
+  fill: var(--color-accent);
+  stroke: var(--color-accent-100);
+  filter: drop-shadow(0 0 7px color-mix(in srgb, var(--color-accent) 72%, transparent));
+}
+
+.constellation-star-hit {
+  fill: transparent;
+  stroke: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.constellation-star-hit:focus-visible {
+  stroke: var(--color-accent-100);
+  stroke-width: 2;
+}
+
+/* 10 — Magnetic field */
+.magnet-stage {
+  min-height: 382px;
+  background:
+    radial-gradient(circle at center, color-mix(in srgb, var(--color-accent) 10%, transparent), transparent 34%),
+    repeating-linear-gradient(0deg, transparent 0 31px, color-mix(in srgb, var(--color-divider) 28%, transparent) 32px),
+    repeating-linear-gradient(90deg, transparent 0 31px, color-mix(in srgb, var(--color-divider) 24%, transparent) 32px),
+    color-mix(in srgb, var(--color-bg) 72%, var(--color-surface));
+}
+
+.magnet-stage canvas {
+  cursor: grab;
+}
+
+.magnet-stage canvas:active {
+  cursor: grabbing;
+}
+
+/* 11 — Pendulum synchronization */
+.pendulum-stage {
+  min-height: 382px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: clamp(10px, 4vw, 34px);
+  padding: 60px clamp(14px, 5vw, 42px) 34px;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-heading) 9%, transparent), transparent 54%),
+    color-mix(in srgb, var(--color-surface) 56%, var(--color-bg));
+}
+
+.pendulum-stage::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 44px;
+  left: 12%;
+  right: 12%;
+  height: 7px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-heading) 66%, var(--color-text));
+  box-shadow: 0 3px 0 color-mix(in srgb, var(--color-accent) 34%, transparent);
+}
+
+.pendulum {
+  position: relative;
+  z-index: 3;
+  width: clamp(42px, 12%, 70px);
+  height: 228px;
+  transform-origin: 50% 0;
+  animation: pendulumSwing var(--pendulum-duration, 2.2s) ease-in-out var(--pendulum-delay, 0s) infinite alternate;
+  will-change: transform;
+}
+
+.pendulum-string {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: calc(100% - 30px);
+  background: color-mix(in srgb, var(--color-text) 58%, transparent);
+  transform: translateX(-50%);
+}
+
+.pendulum-bob {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 38px;
+  height: 38px;
+  border: 2px solid color-mix(in srgb, var(--color-accent) 78%, transparent);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--color-heading) 62%, var(--color-surface));
+  box-shadow: 0 8px 16px color-mix(in srgb, var(--color-text) 16%, transparent);
+  transform: translateX(-50%);
+}
+
+.pendulum:nth-child(even) .pendulum-bob {
+  background: color-mix(in srgb, var(--color-accent) 42%, var(--color-surface));
+}
+
+.pendulum-stage.is-synchronized .pendulum {
+  animation-delay: 0s !important;
+  animation-duration: var(--pendulum-sync-duration, 2.2s);
+}
+
+/* 12 — Four seasons window */
+.season-stage {
+  min-height: 430px;
+  --season-sky: color-mix(in srgb, var(--color-heading) 24%, var(--color-surface));
+  --season-hill-back: color-mix(in srgb, var(--color-heading) 52%, var(--color-surface));
+  --season-hill-front: color-mix(in srgb, var(--color-heading) 78%, var(--color-bg));
+  --season-tree: color-mix(in srgb, var(--color-heading) 72%, var(--color-surface));
+  background:
+    radial-gradient(circle at 50% 18%, color-mix(in srgb, var(--season-sky) 52%, transparent), transparent 52%),
+    color-mix(in srgb, var(--color-bg) 70%, var(--color-surface));
+  transition: background-color .7s ease;
+}
+
+.season-stage.is-summer {
+  --season-sky: color-mix(in srgb, var(--color-heading) 48%, var(--color-surface));
+  --season-hill-back: color-mix(in srgb, var(--color-heading) 72%, var(--color-surface));
+  --season-hill-front: color-mix(in srgb, var(--color-heading) 88%, var(--color-bg));
+  --season-tree: color-mix(in srgb, var(--color-heading) 90%, var(--color-surface));
+}
+
+.season-stage.is-autumn {
+  --season-sky: color-mix(in srgb, var(--color-accent) 34%, var(--color-surface));
+  --season-hill-back: color-mix(in srgb, var(--color-accent) 68%, var(--color-surface));
+  --season-hill-front: color-mix(in srgb, var(--color-accent-700) 74%, var(--color-bg));
+  --season-tree: color-mix(in srgb, var(--color-accent) 78%, var(--color-surface));
+}
+
+.season-stage.is-winter {
+  --season-sky: color-mix(in srgb, var(--color-divider) 62%, var(--color-surface));
+  --season-hill-back: color-mix(in srgb, var(--color-divider) 76%, var(--color-surface));
+  --season-hill-front: color-mix(in srgb, var(--color-heading) 34%, var(--color-divider));
+  --season-tree: color-mix(in srgb, var(--color-text) 38%, var(--color-divider));
+}
+
+.season-window {
+  position: relative;
+  width: min(620px, 82%);
+  height: 330px;
+  overflow: hidden;
+  border: 8px solid color-mix(in srgb, var(--color-heading) 66%, var(--color-text));
+  border-radius: 50% 50% 8px 8px / 38% 38% 4% 4%;
+  background: linear-gradient(180deg, var(--season-sky), color-mix(in srgb, var(--season-sky) 56%, var(--color-surface)));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-accent) 40%, transparent), 0 18px 38px color-mix(in srgb, var(--color-text) 17%, transparent);
+  transition: background .7s ease, border-color .7s ease;
+}
+
+.season-sun {
+  position: absolute;
+  top: 54px;
+  right: 18%;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--color-accent) 72%, var(--color-surface));
+  box-shadow: 0 0 28px color-mix(in srgb, var(--color-accent) 35%, transparent);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.season-stage.is-winter .season-sun {
+  opacity: .42;
+  transform: translateY(12px);
+}
+
+.season-hill {
+  position: absolute;
+  left: -12%;
+  right: -12%;
+  bottom: -19%;
+  height: 58%;
+  border-radius: 52% 48% 0 0;
+  background: var(--season-hill-front);
+  transition: background .7s ease;
+}
+
+.season-hill-back {
+  left: 14%;
+  right: -30%;
+  bottom: 11%;
+  height: 34%;
+  background: var(--season-hill-back);
+  opacity: .82;
+}
+
+.season-tree {
+  position: absolute;
+  z-index: 3;
+  left: 25%;
+  bottom: 24px;
+  width: 13px;
+  height: 150px;
+  border-radius: 999px 999px 3px 3px;
+  background: color-mix(in srgb, var(--color-text) 64%, var(--color-accent));
+}
+
+.season-tree i {
+  position: absolute;
+  left: 50%;
+  width: 104px;
+  height: 82px;
+  border-radius: 50%;
+  background: var(--season-tree);
+  transform: translateX(-50%);
+  transition: background .7s ease, opacity .7s ease, transform .7s ease;
+}
+
+.season-tree i:nth-child(1) { top: -24px; }
+.season-tree i:nth-child(2) { top: 17px; left: 2px; width: 88px; height: 74px; }
+.season-tree i:nth-child(3) { top: 14px; left: 13px; width: 82px; height: 68px; }
+.season-stage.is-winter .season-tree i { opacity: .22; transform: translateX(-50%) scale(.7); }
+
+.season-particle {
+  position: absolute;
+  z-index: 4;
+  left: var(--particle-x, 50%);
+  top: var(--particle-y, -12%);
+  width: var(--particle-size, 10px);
+  height: var(--particle-size, 10px);
+  pointer-events: none;
+  opacity: .82;
+  animation: seasonParticleFall var(--particle-duration, 7s) linear var(--particle-delay, 0s) infinite;
+}
+
+.season-petal {
+  border-radius: 70% 12% 70% 22%;
+  background: color-mix(in srgb, var(--color-accent) 44%, var(--color-surface));
+}
+
+.season-leaf {
+  border-radius: 100% 0 100% 0;
+  background: color-mix(in srgb, var(--season-tree) 76%, var(--color-accent));
+}
+
+.season-snow {
+  border-radius: 50%;
+  background: var(--color-surface);
+  box-shadow: 0 0 4px color-mix(in srgb, var(--color-surface) 62%, transparent);
+}
+
+.season-sprout {
+  border-radius: 100% 0 100% 0;
+  background: color-mix(in srgb, var(--color-heading) 64%, var(--color-surface));
+}
+
+.season-control {
+  width: min(100%, 520px);
+}
+
 .animation-lab-footer-actions {
   justify-content: flex-end;
   margin-top: calc(var(--space-8) * 1.35);
@@ -482,12 +1052,24 @@
 .animation-lab-page.motion-paused .wind-branch,
 .animation-lab-page.motion-paused .wind-leaf,
 .animation-lab-page.motion-paused .motion-bird-wing,
+.animation-lab-page.motion-paused .rain-drop,
+.animation-lab-page.motion-paused .type-letter,
+.animation-lab-page.motion-paused .pendulum,
+.animation-lab-page.motion-paused .season-particle,
 .animation-lab-page.motion-ready .animation-panel:not(.is-in-view) .tile-wheel,
 .animation-lab-page.motion-ready .animation-panel:not(.is-in-view) .tile-center-halo,
 .animation-lab-page.motion-ready .animation-panel:not(.is-in-view) .wind-light,
 .animation-lab-page.motion-ready .animation-panel:not(.is-in-view) .wind-branch,
 .animation-lab-page.motion-ready .animation-panel:not(.is-in-view) .wind-leaf,
-.animation-lab-page.motion-ready .animation-panel:not(.is-in-view) .motion-bird-wing {
+.animation-lab-page.motion-ready .animation-panel:not(.is-in-view) .motion-bird-wing,
+.animation-lab-page.motion-ready .animation-panel:not(.is-in-view) .rain-drop,
+.animation-lab-page.motion-ready .animation-panel:not(.is-in-view) .type-letter,
+.animation-lab-page.motion-ready .animation-panel:not(.is-in-view) .pendulum,
+.animation-lab-page.motion-ready .animation-panel:not(.is-in-view) .season-particle,
+.rain-stage.is-motion-paused .rain-drop,
+.type-stage.is-motion-paused .type-letter,
+.pendulum-stage.is-motion-paused .pendulum,
+.season-stage.is-motion-paused .season-particle {
   animation-play-state: paused !important;
 }
 
@@ -506,6 +1088,30 @@
   100% { transform: translate3d(calc(var(--leaf-drift, 28px) + var(--wind-shift)), var(--leaf-rise, -8px), 0) rotate(var(--leaf-spin, 22deg)); }
 }
 @keyframes labWingBeat { from { transform: rotate(-18deg) scaleY(.72); } to { transform: rotate(15deg) scaleY(1.12); } }
+@keyframes rainFall {
+  from { transform: translate3d(0, -34px, 0) rotate(8deg); }
+  to { transform: translate3d(var(--rain-drift, 18px), 390px, 0) rotate(8deg); }
+}
+@keyframes rainWiperSweep {
+  0%, 100% { transform: rotate(-12deg); }
+  46%, 58% { transform: rotate(-112deg); }
+}
+@keyframes typeBreath {
+  0%, 100% { transform: translateY(0) scale(1); opacity: .72; }
+  50% { transform: translateY(var(--wave-distance, -6px)) scale(1.035); opacity: 1; }
+}
+@keyframes constellationLineIn {
+  from { stroke-dasharray: 1 160; opacity: .18; }
+  to { stroke-dasharray: 180 1; opacity: .74; }
+}
+@keyframes pendulumSwing {
+  from { transform: rotate(var(--pendulum-angle-negative, -14deg)); }
+  to { transform: rotate(var(--pendulum-angle, 14deg)); }
+}
+@keyframes seasonParticleFall {
+  from { transform: translate3d(0, -24px, 0) rotate(0deg); }
+  to { transform: translate3d(var(--particle-drift, 42px), 470px, 0) rotate(var(--particle-spin, 300deg)); }
+}
 
 @media (max-width: 900px) {
   .animation-grid { grid-template-columns: 1fr; }
@@ -522,11 +1128,30 @@
   .motion-stage { min-height: 270px; }
   .tile-stage { min-height: 330px; }
   .canvas-stage,
-  .yarn-lab-stage { min-height: 310px; }
-  .canvas-stage canvas { height: 310px; }
+  .yarn-lab-stage,
+  .rain-stage,
+  .ripple-stage,
+  .constellation-stage,
+  .magnet-stage,
+  .pendulum-stage { min-height: 310px; }
+  .canvas-stage canvas,
+  .ripple-stage canvas,
+  .magnet-stage canvas,
+  .constellation-svg { height: 310px; }
+  .rain-window { width: min(270px, 78%); height: 236px; }
+  .type-stage { min-height: 280px; padding: 32px 18px; font-size: 29px; letter-spacing: .05em; }
+  .pendulum-stage { padding: 54px 8px 26px; gap: 4px; }
+  .pendulum-stage::before { top: 40px; left: 7%; right: 7%; }
+  .pendulum { width: 52px; height: 185px; }
+  .pendulum-bob { width: 32px; height: 32px; }
+  .season-stage { min-height: 340px; }
+  .season-window { width: 86%; height: 270px; }
+  .season-tree { left: 28%; height: 120px; }
+  .season-tree i { width: 82px; height: 64px; }
   .animation-panel-controls { align-items: stretch; }
   .range-control { grid-template-columns: 1fr 3.1em; width: 100%; }
   .range-control > span { grid-column: 1 / -1; }
+  .text-control { grid-template-columns: 1fr; }
   .animation-panel-controls .button { flex: 1 1 100%; }
   .route-controls .route-button { flex: 1; min-width: 0; }
   .play-cat { width: 142px; }
@@ -536,9 +1161,15 @@
 
 @media (prefers-reduced-motion: reduce) {
   .animation-lab-page .tile-mandala,
-  .animation-lab-page .play-cat {
+  .animation-lab-page .play-cat,
+  .animation-lab-page .animation-panel,
+  .animation-lab-page .text-control input,
+  .animation-lab-page .season-window,
+  .animation-lab-page .season-sun,
+  .animation-lab-page .season-tree i {
     transition: none;
   }
+
 }
 
 [data-theme="dark"] .animation-lab-page {
