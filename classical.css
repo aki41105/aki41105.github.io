@@ -80,7 +80,6 @@ main { max-width: 1440px; margin: 0 auto; padding: 0 var(--space-6); }
 /* — hero — */
 .hero { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: var(--space-8); align-items: start; padding: calc(var(--space-8) * 1.6) 0 var(--space-8); }
 .hero-copy { display: flex; flex-direction: column; gap: var(--space-3); }
-.hero-kicker { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent-700); }
 .hero h1 { font-size: 60px; font-weight: 600; line-height: 1.12; letter-spacing: 0.01em; }
 .name-reading { font-family: var(--font-heading); font-size: 20px; font-style: normal; letter-spacing: 0.08em; color: color-mix(in srgb, var(--color-text) 62%, transparent); }
 .hero-rule { height: 1px; width: 88px; background: var(--color-accent); margin: var(--space-1) 0; }

@@ -124,7 +124,6 @@
     '.site-nav a[href="#publications"]': 'Publications',
     '.site-nav a[href="#resources"]': 'Reading',
     '.site-nav a[href="#contact"]': 'Contact',
-    '.hero-kicker': 'Human–Robot Interaction · JAIST',
     '.hero-actions a[href="#contact"]': 'Contact',
     '.hero-actions a[href="assets/cv.pdf"]': 'Curriculum Vitae',
     '.hero-actions a[href="blog.html"]': 'Blog',
