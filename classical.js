@@ -220,6 +220,8 @@
     '#contact a[href="https://compass.labbase.jp/"] .link-value': 'Official Career Service Website',
     '#contact a[href="https://acaric.jp/"] .contact-label-text': 'Acaric',
     '#contact a[href="https://acaric.jp/"] .link-value': 'Official Career Service Website',
+    '#contact a[href="https://www.semanticscholar.org/faq"] .link-value': 'FAQ & Author Page Guide',
+    '#contact a[href="https://jrecin.jst.go.jp/html/app/offer/dsc_summary_j.html"] .link-value': 'Research Career Service Guide',
     '#contact a[href="https://www.jaist.ac.jp/~okada-s/index.html"] .contact-label-text': 'Okada Laboratory',
     '#contact a[href="https://www.jaist.ac.jp/~okada-s/index.html"] .link-value': 'Lab Website',
     '.colophon-line': 'Scriptum in Ishikawa, MMXXVI',
