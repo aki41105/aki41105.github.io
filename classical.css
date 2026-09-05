@@ -1,6 +1,4 @@
-/* Classical redesign — tokens + page styles for aki41105.github.io index.
-   Linked by index.html. Does not touch styles.css (blog/gallery pages keep using it). */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap');
+/* Shared tokens and base styles. Pages load fonts and styles directly in <head>. */
 
 :root {
   --color-bg: #f3eadd;
@@ -215,10 +213,11 @@ a.card .card-kicker { color: var(--color-text); }
 @keyframes sway { 0%, 100% { transform: rotate(-1.2deg); } 50% { transform: rotate(0.4deg); } }
 
 /* — scroll reveal (driven by classical.js) — */
-.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.8s cubic-bezier(.22,.61,.36,1), transform 0.8s cubic-bezier(.22,.61,.36,1); }
+.reveal { opacity: 1; transform: none; transition: opacity 0.8s cubic-bezier(.22,.61,.36,1), transform 0.8s cubic-bezier(.22,.61,.36,1); }
+.reveal.is-pending { opacity: 0; transform: translateY(18px); }
 .reveal.is-visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
+  .reveal, .reveal.is-pending { opacity: 1; transform: none; transition: none; }
   .stroll-wrap, .stroll-wrap img, .cat-breathe, .cat-breathe-slow, .cat-tail, .hero-figure, .note-cat-wrap img, .yarn-scene img, .yarn-ball { animation: none !important; }
 }
 

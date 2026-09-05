@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="HRI 2026 Full Research Papers 127件のタイトルと概要をもとに，ヒューマンロボットインタラクション研究のトピック分布を整理した分析メモ。">
+  <meta name="author" content="櫻本晃弘">
   <meta property="og:title" content="HRI 2026の論文127本を眺める | 櫻本晃弘">
   <meta property="og:description" content="HRI 2026 Full Research Papers 127件を，タイトル・概要ベースでクラスタリングし，研究トピックの傾向を整理しました。">
   <meta property="og:type" content="article">
@@ -19,15 +20,37 @@
   <link rel="icon" href="assets/favicon-32x32.png?v=20260827-forest" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=20260827-forest">
   <title>HRI 2026の論文127本を眺める | 櫻本晃弘</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://aki41105.github.io/blog-hri2026-analysis.html#article",
+    "url": "https://aki41105.github.io/blog-hri2026-analysis.html",
+    "mainEntityOfPage": "https://aki41105.github.io/blog-hri2026-analysis.html",
+    "headline": "HRI 2026の論文127本を眺める",
+    "description": "HRI 2026 Full Research Papers 127件のタイトルと概要をもとに，ヒューマンロボットインタラクション研究のトピック分布を整理した分析メモ。",
+    "image": "https://aki41105.github.io/assets/hri2026-blog-summary.png",
+    "datePublished": "2026-07-01",
+    "inLanguage": "ja",
+    "author": {
+      "@type": "Person",
+      "@id": "https://aki41105.github.io/#person",
+      "name": "櫻本晃弘",
+      "url": "https://aki41105.github.io/"
+    },
+    "isPartOf": { "@id": "https://aki41105.github.io/blog.html#blog" }
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Lora:wght@400;600&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="classical-sub.css?v=20260828-1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="classical.css?v=20260905-seo">
+  <link rel="stylesheet" href="classical-sub.css?v=20260905-seo">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="index.html#home" aria-label="Home">
-      <span class="brand-mark" aria-hidden="true"><img src="assets/favicon.svg?v=20260827-forest" alt=""></span>
+      <span class="brand-mark" aria-hidden="true"><img src="assets/favicon.svg?v=20260827-forest" alt="" width="64" height="64"></span>
       <span>櫻本 晃弘</span>
     </a>
 
@@ -45,7 +68,7 @@
       <div>
         <h1>HRI 2026の論文127本を眺める</h1>
       </div>
-      <p class="blog-article-meta">2026年7月1日 / HRI / Paper Analysis</p>
+      <p class="blog-article-meta"><time datetime="2026-07-01">2026年7月1日</time> / HRI / Paper Analysis / 著者：<a href="index.html#home" rel="author">櫻本晃弘</a></p>
 
       <div class="blog-body">
         <p class="blog-lede">ヒューマンロボットインタラクション分野の主要国際会議「HRI 2026（ACM/IEEE International Conference on Human-Robot Interaction）」が2026年3月16～19日，英国スコットランドのエディンバラで開催された。</p>
@@ -125,7 +148,7 @@
         </figure>
 
         <figure class="analysis-figure">
-          <img src="assets/hri2026-topic-map.png?v=20260701-1" alt="HRI 2026 Full Research Papers 127件のタイトルと概要をもとにしたトピックマップ">
+          <img src="assets/hri2026-topic-map.png?v=20260701-1" alt="HRI 2026 Full Research Papers 127件のタイトルと概要をもとにしたトピックマップ" width="1620" height="1260" loading="lazy" decoding="async">
           <figcaption>TF-IDF n-gram，TruncatedSVD，KMeans，t-SNEによる軽量なトピックマップ。各点がFull Research Paperを表す。</figcaption>
         </figure>
 
@@ -149,7 +172,7 @@
         </ul>
 
         <figure class="analysis-figure">
-          <img src="assets/hri2026-topic-region-map.png?v=20260702-1" alt="HRI 2026 Full Research Papers 127件のトピック領域マップ">
+          <img src="assets/hri2026-topic-region-map.png?v=20260702-1" alt="HRI 2026 Full Research Papers 127件のトピック領域マップ" width="2106" height="1560" loading="lazy" decoding="async">
           <figcaption>t-SNE平面上で近い論文同士をもとに，クラスタごとのおおよその領域を色分けしたもの。境界は可視化上の目安であり，厳密な分野境界ではない。</figcaption>
         </figure>
 
@@ -184,6 +207,6 @@
       <a class="button button-secondary" href="blog.html">ブログへ戻る</a>
     </article>
   </main>
-  <script src="classical.js?v=20260828-3" defer></script>
+  <script src="classical.js?v=20260905-seo" defer></script>
 </body>
 </html>

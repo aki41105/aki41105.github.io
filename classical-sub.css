@@ -1,5 +1,4 @@
-/* Classical — subpage layer (blog & gallery pages). Loads the shared base first. */
-@import url("classical.css?v=20260828-1");
+/* Subpage layer. Each page links classical.css before this stylesheet. */
 
 /* — subpage header link — */
 .detail-home-link { text-decoration: none; }
@@ -99,7 +98,7 @@
 
 /* — analysis figures (HRI 2026 note) — */
 .analysis-figure { margin: var(--space-6) 0; background: var(--color-surface); border: 1px solid var(--color-divider); border-radius: var(--radius-sm); padding: 6px; }
-.analysis-figure > img { width: 100%; display: block; }
+.analysis-figure > img { width: 100%; height: auto; display: block; }
 .analysis-figure figcaption { font-size: 13px; padding: var(--space-2) var(--space-2) var(--space-1); color: color-mix(in srgb, var(--color-text) 60%, transparent); }
 .analysis-html-figure { padding: 0; background: transparent; border: 0; }
 .analysis-html-figure figcaption { padding-left: 0; }

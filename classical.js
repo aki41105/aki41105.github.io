@@ -227,6 +227,10 @@
     if (element) element.setAttribute('data-ja-text', element.textContent);
   });
 
+  var japaneseTitle = document.title;
+  var descriptionMeta = document.querySelector('meta[name="description"]');
+  var japaneseDescription = descriptionMeta ? descriptionMeta.content : '';
+
   function applyLanguage(language) {
     Object.keys(translations).forEach(function (selector) {
       var element = document.querySelector(selector);
@@ -235,7 +239,12 @@
     });
     currentLanguage = language;
     document.documentElement.lang = language;
-    document.title = language === 'en' ? 'Akihiro Sakuramoto / Sakuramoto Akihiro' : '櫻本晃弘';
+    document.title = language === 'en' ? 'Akihiro Sakuramoto | Human-Robot Interaction at JAIST' : japaneseTitle;
+    if (descriptionMeta) {
+      descriptionMeta.content = language === 'en'
+        ? 'Akihiro Sakuramoto, a master\'s student at JAIST researching Human-Robot Interaction and multimodal rapport estimation. Research, publications, background, and writing on technology and industry.'
+        : japaneseDescription;
+    }
     languageToggle.textContent = language === 'en' ? '日本語' : '英語';
     languageToggle.setAttribute('aria-label', language === 'en' ? '日本語表示に切り替え' : '英語表示に切り替え');
   }
@@ -258,9 +267,18 @@
         var delay = parseFloat(entry.target.getAttribute('data-reveal-delay') || '0');
         entry.target.style.transitionDelay = delay + 's';
         entry.target.classList.add('is-visible');
+        entry.target.classList.remove('is-pending');
         io.unobserve(entry.target);
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    Array.prototype.forEach.call(els, function (el) { io.observe(el); });
+    Array.prototype.forEach.call(els, function (el) {
+      // Visible without JavaScript; animate only content below the initial viewport.
+      if (el.getBoundingClientRect().top < window.innerHeight) {
+        el.classList.add('is-visible');
+      } else {
+        el.classList.add('is-pending');
+        io.observe(el);
+      }
+    });
   }
 })();
