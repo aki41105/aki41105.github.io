@@ -176,7 +176,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap">
-  <link rel="stylesheet" href="classical.css?v=20260905-work-interests">
+  <link rel="stylesheet" href="classical.css?v=20260906-personal-links">
 </head>
 <body class="home-page">
   <svg class="icon-defs" aria-hidden="true" focusable="false">
@@ -555,6 +555,30 @@
           <span class="link-value link-value-action">研究室サイト</span>
         </a>
       </div>
+      <details class="personal-links" id="personal-links" hidden>
+        <summary><span data-personal-text="heading">自分用リンク</span></summary>
+        <div class="personal-links-body">
+          <p class="personal-links-note" id="personal-links-note" data-personal-text="notice">リンクはこのブラウザ内だけに保存します。別の端末には同期されず、ブラウザのデータを消すと失われます。同じブラウザを使う人は閲覧できます。</p>
+          <p class="personal-links-note" data-personal-text="caution">パスワードや認証用・機密情報を含むURLは保存しないでください。</p>
+          <ul class="personal-links-list" id="personal-links-list" aria-label="保存したリンク"></ul>
+          <p class="personal-links-note" id="personal-links-empty" data-personal-text="empty">まだリンクを保存していません。</p>
+          <form id="personal-links-form" aria-describedby="personal-links-note" autocomplete="off">
+            <fieldset class="personal-links-fields" id="personal-links-fields" disabled>
+              <legend class="personal-links-legend" data-personal-text="addHeading">リンクを追加</legend>
+              <label class="personal-links-field" for="personal-link-title">
+                <span data-personal-text="title">表示名</span>
+                <input id="personal-link-title" type="text" required maxlength="80" autocomplete="off">
+              </label>
+              <label class="personal-links-field" for="personal-link-url">
+                <span data-personal-text="url">URL（https://）</span>
+                <input id="personal-link-url" type="url" required maxlength="2048" placeholder="https://example.com/" autocomplete="off" autocapitalize="none" spellcheck="false">
+              </label>
+              <button class="language-toggle personal-links-save" type="submit" data-personal-text="save">このブラウザに保存</button>
+            </fieldset>
+          </form>
+          <p class="personal-links-note" id="personal-links-status" role="status" aria-live="polite" aria-atomic="true"></p>
+        </div>
+      </details>
       <div class="wax-seal reveal" data-reveal-delay="0.44" aria-hidden="true"><img src="assets/cats/wax-seal.svg" alt=""></div>
     </section>
   </main>
@@ -568,5 +592,6 @@
   </footer>
 
   <script src="classical.js?v=20260905-research-career-links"></script>
+  <script src="personal-links.js?v=20260906-personal-links"></script>
 </body>
 </html>
