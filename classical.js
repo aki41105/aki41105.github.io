@@ -224,6 +224,7 @@
     '#contact a[href="https://jrecin.jst.go.jp/html/app/offer/dsc_summary_j.html"] .link-value': 'Research Career Service Guide',
     '#contact a[href="https://www.jaist.ac.jp/~okada-s/index.html"] .contact-label-text': 'Okada Laboratory',
     '#contact a[href="https://www.jaist.ac.jp/~okada-s/index.html"] .link-value': 'Lab Website',
+    '.footer-links a[href="personal.html"]': 'Personal',
     '.colophon-line': 'Scriptum in Ishikawa, MMXXVI',
     '.colophon-note': 'Proofread by one calico cat.',
     '.colophon-footnote': '* Cats have walked across manuscripts since a pawprinted codex of Dubrovnik, 1445.',
