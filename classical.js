@@ -217,7 +217,6 @@
     '#contact a[href^="https://scholar.google.com/"] .link-value': 'Author Profile',
     '#contact a[href^="https://www.linkedin.com/"] .link-value': 'Profile',
     '#contact a[href="https://www.semanticscholar.org/faq"] .link-value': 'FAQ & Author Page Guide',
-    '#contact a[href="https://jrecin.jst.go.jp/html/app/offer/dsc_summary_j.html"] .link-value': 'Research Career Service Guide',
     '#contact a[href="https://www.jaist.ac.jp/~okada-s/index.html"] .contact-label-text': 'Okada Laboratory',
     '#contact a[href="https://www.jaist.ac.jp/~okada-s/index.html"] .link-value': 'Lab Website',
     '.footer-links a[href="personal.html"]': 'Personal',
