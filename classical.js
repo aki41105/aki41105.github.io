@@ -133,11 +133,12 @@
     '.affiliation': "Master's Student, AI Science Area, Japan Advanced Institute of Science and Technology (JAIST)",
     '.hero .summary': 'I study human-robot interaction, social signal processing, and multimodal interaction, with a focus on understanding the quality of human-robot relationships in real-world HRI.',
     '#work-interests-title': 'Work Interests',
-    '.work-interests-list li:nth-child(1)': 'Developing autonomous driving algorithms',
-    '.work-interests-list li:nth-child(2)': 'Deploying AI and robots in real-world settings',
-    '.work-interests-list li:nth-child(3)': 'Developing companion AI and robots that build lasting relationships with people',
-    '.work-interests-list li:nth-child(4)': 'Analyzing industries and markets in light of technological innovation',
-    '.work-interests-list li:nth-child(5)': 'Analyzing corporate strategies',
+    '.work-interests-list li:nth-child(1)': 'Developing AI in Japan',
+    '.work-interests-list li:nth-child(2)': 'Developing autonomous driving algorithms',
+    '.work-interests-list li:nth-child(3)': 'Deploying AI and robots in real-world settings',
+    '.work-interests-list li:nth-child(4)': 'Developing companion AI and robots that build lasting relationships with people',
+    '.work-interests-list li:nth-child(5)': 'Analyzing industries and markets in light of technological innovation',
+    '.work-interests-list li:nth-child(6)': 'Analyzing corporate strategies',
     '.update-note-label': 'Last updated',
     '.update-note-date': 'September 5, 2026',
     '.update-note-text': 'Added the accepted HAI 2026 poster paper to Publications.',
@@ -162,6 +163,10 @@
     '#research-activities .timeline-item:nth-child(2) .timeline-title a': 'Preserving lessons from the Noto Peninsula Earthquake through digital twin technology',
     '#research-activities .timeline-item:nth-child(2) .timeline-detail': 'Conducted interviews in Ipponsugi Shopping Street, Nanao, organized local challenges and lessons from the earthquake, and examined ways to preserve and share those findings with digital twin technology in a final report.',
     '#experience .career-group-title': 'Experience',
+    '#research-activities .timeline-item:nth-child(3) .timeline-year': 'Oct. 2023 – Mar. 2025',
+    '#research-activities .timeline-item:nth-child(3) .timeline-title': 'University of Toyama: Investigating an LSTM-based deep learning model for earthquake prediction',
+    '#research-activities .timeline-item:nth-child(3) .timeline-detail': 'Under the supervision of 藤井雅文, developed an LSTM model using electromagnetic observations to predict seismic intensity and magnitude. Created datasets, explored hyperparameters, evaluated prediction performance, and identified areas for improvement.',
+
     '#experience .timeline-item:nth-child(1) .timeline-year': 'Sep. 2025',
     '#experience .timeline-item:nth-child(1) .timeline-title a': 'Engineering Internship, Nissan Motor Co., Ltd.',
     '#experience .timeline-item:nth-child(1) .timeline-detail': 'Participated in a five-day vehicle performance internship focused on autonomous driving and advanced driver-assistance system testing (AD/ADAS).',
@@ -254,8 +259,8 @@
         ? 'Akihiro Sakuramoto, a master\'s student at JAIST researching Human-Robot Interaction and multimodal rapport estimation. Research, publications, background, and writing on technology and industry.'
         : japaneseDescription;
     }
-    languageToggle.textContent = language === 'en' ? '日本語' : '英語';
-    languageToggle.setAttribute('aria-label', language === 'en' ? '日本語表示に切り替え' : '英語表示に切り替え');
+    languageToggle.textContent = language === 'en' ? '日本語' : 'English';
+    languageToggle.setAttribute('aria-label', language === 'en' ? '日本語表示に切り替え' : 'Switch to English');
   }
 
   if (languageToggle) {

@@ -1,5 +1,8 @@
-﻿
+
 
 *.aux
 *.log
 *.out
+
+# Local reference materials; never commit or publish.
+/_private/
