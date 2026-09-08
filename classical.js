@@ -214,7 +214,7 @@
     '#resources a[href="resources.html#podcasts"] .card-kicker': 'Podcasts',
     '#resources a[href="resources.html#podcasts"] .link-value': 'Ideas for listening on the move',
     '#resources a[href="resource-archive.html"] .card-kicker': 'Primary Sources & Research Archive',
-    '#resources a[href="resource-archive.html"] .link-value': 'Data, sources, and research planning',
+    '#resources a[href="resource-archive.html"] .link-value': 'Data, sources, research planning, and presentations',
     '#contact h2': 'Contact / Links',
     '#contact .contact-card:nth-child(1) .contact-label-text': 'University Email',
     '#contact .contact-card:nth-child(2) .contact-label-text': 'Personal Email',
