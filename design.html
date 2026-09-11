@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>デザイン — 動く表現とコード | 櫻本晃弘</title>
+  <meta name="description" content="櫻本晃弘のデザイン実験。動くヒーローエリアを試し、HTML・CSS・JavaScriptの実装を読む資料庫。">
+  <link rel="canonical" href="https://aki41105.github.io/design.html">
+  <meta property="og:title" content="デザイン — 動く表現とコード | 櫻本晃弘">
+  <meta property="og:description" content="動くヒーローエリアのデモと、その仕組み・実装コード。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aki41105.github.io/design.html">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="theme-color" content="#155c63">
+  <link rel="icon" href="assets/favicon.svg?v=20260827-forest" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="classical.css?v=20260906-personal-page">
+  <link rel="stylesheet" href="classical-sub.css?v=20260905-seo">
+  <link rel="stylesheet" href="assets/design/library.css">
+</head>
+<body id="top">
+  <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="ホーム">
+      <span class="brand-mark" aria-hidden="true"><img src="assets/favicon.svg?v=20260827-forest" alt=""></span>
+      <span>櫻本 晃弘</span>
+    </a>
+    <nav class="site-nav" aria-label="デザイン資料庫">
+      <a href="resources.html">読みもの</a>
+      <a href="resource-archive.html">資料庫</a>
+      <a href="design.html" class="is-active" aria-current="page">デザイン</a>
+    </nav>
+    <a class="language-toggle detail-home-link" href="index.html#resources">ホームへ戻る</a>
+  </header>
+  <main>
+    <article class="section blog-article blog-article-wide resource-library-page design-library">
+      <header class="resource-library-heading">
+        <h1>デザイン</h1>
+        <p class="summary">Webの動きや見せ方を試しながら、仕組みとコードを残していく場所。</p>
+      </header>
+      <section aria-labelledby="hero-study">
+        <header class="resource-domain-heading">
+          <p class="design-meta"><time datetime="2026-09-12">2026.09.12</time> · 01 / Motion</p>
+          <h2 id="hero-study">流れ、粒子、輪郭。</h2>
+          <p>光の流れが粒子になり、等高線へ変わるヒーローエリア。文字と操作は手前に置いたまま、背景が24秒で一巡します。</p>
+        </header>
+        <div class="design-actions">
+          <a class="button button-primary" href="assets/design/hero/index.html">デモを大きく開く</a>
+          <a class="button button-secondary" href="#source-code">コードを読む</a>
+          <a class="button button-secondary" href="assets/design/hero-source.zip" download>コード一式をダウンロード</a>
+        </div>
+        <iframe class="design-demo" src="assets/design/hero/index.html" title="流れる光・粒子・等高線へ変化するヒーローエリアのデモ" loading="lazy"></iframe>
+        <p class="design-caption">左下の01〜03で質感を選び、右下のボタンで一時停止できます。端末で「視差効果を減らす」を有効にしている場合は、静止状態から始まります。</p>
+      </section>
+      <section class="design-section" aria-labelledby="how-it-works">
+        <h2 id="how-it-works">動きの仕組み</h2>
+        <p>同じ波の形に「光」「粒子」「線」という3種類の描き方を重ね、約2.7秒かけて切り替えています。マウスの位置にも少し反応します。</p>
+        <p>背景はWebGLでリアルタイムに描画します。動画や外部ライブラリの読み込み、APIキー、サーバー側の処理は不要で、GitHub Pages上でも動きます。WebGLが使えない環境では静止画に切り替わります。</p>
+      </section>
+      <section class="design-section" id="source-code" aria-labelledby="source-heading">
+        <h2 id="source-heading">実装コード</h2>
+        <p>デモが実際に読み込んでいるファイルです。ダウンロードしたZIPには、以下の4ファイルと代替表示用の画像、説明を含めています。</p>
+        <div class="design-source-list">
+          <details data-source="assets/design/hero/index.html">
+            <summary>HTML — 文字・背景・操作の構成</summary>
+            <a href="assets/design/hero/index.html" download="index.html">HTMLを保存</a>
+            <pre tabindex="0" aria-label="HTMLソース"><code>開くとコードを読み込みます。</code></pre>
+          </details>
+          <details data-source="assets/design/hero/styles.css">
+            <summary>CSS — ベースの見た目</summary>
+            <a href="assets/design/hero/styles.css" download>CSSを保存</a>
+            <pre tabindex="0" aria-label="ベースCSSソース"><code>開くとコードを読み込みます。</code></pre>
+          </details>
+          <details data-source="assets/design/hero/motion.css">
+            <summary>CSS — 背景レイヤーとスマホ対応</summary>
+            <a href="assets/design/hero/motion.css" download>CSSを保存</a>
+            <pre tabindex="0" aria-label="レイアウトCSSソース"><code>開くとコードを読み込みます。</code></pre>
+          </details>
+          <details data-source="assets/design/hero/motion.js">
+            <summary>JavaScript / GLSL — 描画とアニメーション</summary>
+            <a href="assets/design/hero/motion.js" download>JavaScriptを保存</a>
+            <pre tabindex="0" aria-label="JavaScriptソース"><code>開くとコードを読み込みます。</code></pre>
+          </details>
+        </div>
+        <noscript><p>コードの展開表示にはJavaScriptが必要です。各ファイルの保存リンクまたはZIPをご利用ください。</p></noscript>
+      </section>
+      <section class="design-section" aria-labelledby="references">
+        <h2 id="references">参考にしたもの</h2>
+        <p><a href="https://www.andidea.jp/shop" target="_blank" rel="noopener noreferrer">And Idea — Creative Tools</a>の、変化する背景の手前に文字と操作を固定する構成を参考にしました。このデモの背景、配色、文章、描画コードは独自に制作しています。参考サイトの動画・画像・ロゴ・文章・ソースコードは使用していません。</p>
+        <p>制作補助：OpenAI Codex。代替表示用の静止画にはAI生成画像を使用しています。</p>
+      </section>
+      <a class="button button-secondary" href="index.html#resources">読みものと資料庫へ戻る</a>
+    </article>
+  </main>
+  <script src="classical.js?v=20260912-design" defer></script>
+  <script src="assets/design/library.js" defer></script>
+</body>
+</html>

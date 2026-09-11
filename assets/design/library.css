@@ -1,0 +1,20 @@
+.design-library {max-width:1200px;}
+.design-library p {line-height:1.9;}
+.design-meta,.design-caption {font-size:.875rem;color:#53645b;}
+.design-actions {display:flex;flex-wrap:wrap;gap:12px;margin:22px 0;}
+.design-demo {display:block;width:100%;height:690px;border:0;border-radius:18px;background:#07131f;}
+.design-caption {margin:14px 0 0;}
+.design-section {margin:52px 0;}
+.design-section h2 {font-size:1.5rem;}
+.design-source-list {display:grid;gap:12px;margin-top:24px;}
+.design-source-list details {min-width:0;padding:18px;border:1px solid #b6c7bc;border-radius:12px;background:rgba(255,255,255,.6);}
+.design-source-list summary {font-weight:600;cursor:pointer;line-height:1.8;}
+.design-source-list details>a {display:inline-block;margin:14px 0;text-decoration:underline;}
+.design-source-list pre {max-height:480px;overflow:auto;padding:20px;border-radius:8px;background:#07131f;color:#e4f4ee;font:14px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace;tab-size:2;}
+.design-source-list summary:focus-visible,.design-source-list pre:focus-visible {outline:3px solid #16716c;outline-offset:4px;}
+@media(max-width:700px){
+  .design-demo {height:820px;}
+  .design-section {margin:36px 0;}
+  .design-actions .button {width:100%;text-align:center;}
+  .design-source-list details {padding:14px;}
+}

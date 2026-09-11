@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#07131f" />
+    <meta
+      name="description"
+      content="人とエージェントの相互作用をテーマにした、動くヒーローエリアのデザインスタディ。"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2307131f'/%3E%3Ccircle cx='23' cy='32' r='10' fill='none' stroke='%235cd2dc' stroke-width='4'/%3E%3Ccircle cx='41' cy='32' r='10' fill='none' stroke='%23efb75e' stroke-width='4'/%3E%3C/svg%3E"
+    />
+    <title>動くヒーローエリア — BETWEEN | 櫻本晃弘</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./motion.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="visual" aria-hidden="true">
+          <img
+            class="visual__image"
+            src="./assets/hero-keyframe.jpg"
+            alt=""
+            width="1672"
+            height="941"
+          />
+          <canvas class="visual__signals"></canvas>
+          <div class="visual__veil"></div>
+          <div class="visual__grain"></div>
+        </div>
+
+        <header class="hero-nav">
+          <a class="brand" href="../../../design.html" target="_top" aria-label="デザイン資料庫へ戻る">
+            <span class="brand__mark" aria-hidden="true"><i></i><i></i></span>
+            <span>BETWEEN</span>
+          </a>
+          <nav aria-label="メインナビゲーション">
+            <a href="../../../design.html" target="_top">デザイン</a>
+            <a href="../../../design.html#source-code" target="_top">コード</a>
+            <a href="#scene-controls">Scenes</a>
+          </nav>
+          <a class="contact-link" href="#scene-controls">
+            Explore <span aria-hidden="true">↓</span>
+          </a>
+        </header>
+
+        <div class="hero-copy">
+          <p class="eyebrow">Human–Agent Interaction</p>
+          <h1 id="hero-title">
+            <span>Relation begins</span>
+            <em>in the space</em>
+            <span>between us.</span>
+          </h1>
+          <p class="hero-copy__ja">
+            人とエージェントのあいだに生まれる関係を、<br />観察し、読み解き、形にする。
+          </p>
+        </div>
+
+        <aside class="field-note" id="field-note">
+          <div class="field-note__meta">
+            <span>FIELD NOTE</span>
+            <span class="field-note__number">01 / 03</span>
+          </div>
+          <p class="field-note__label">FLOW</p>
+          <p class="field-note__copy">小さな変化が、関係の流れをつくる。</p>
+        </aside>
+
+        <div class="hero-footer" id="scene-controls">
+          <div class="scene-nav" role="group" aria-label="背景の質感を選択">
+            <button class="scene-nav__item is-active" type="button" aria-pressed="true" data-scene="0" aria-label="01 流れる光">
+              <span>01</span> Flow
+            </button>
+            <button class="scene-nav__item" type="button" aria-pressed="false" data-scene="1" aria-label="02 粒子">
+              <span>02</span> Particles
+            </button>
+            <button class="scene-nav__item" type="button" aria-pressed="false" data-scene="2" aria-label="03 等高線">
+              <span>03</span> Contours
+            </button>
+          </div>
+          <button class="motion-toggle" type="button" aria-pressed="false" aria-label="背景の動きを一時停止">
+            <span class="motion-toggle__icon" aria-hidden="true">Ⅱ</span>
+            <span class="motion-toggle__label">一時停止</span>
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="./motion.js"></script>
+  </body>
+</html>
