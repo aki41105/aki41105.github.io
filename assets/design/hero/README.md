@@ -17,7 +17,11 @@ index.html をブラウザで開くと動きます。GitHub Pagesなどの静的
 
 ## 制作と参考
 
-制作補助: OpenAI Codex。代替画像はAI生成画像です。
+制作日: 2026年9月12日（日本時間）。
+制作環境: OpenAI Codex。
+現行の背景アニメーションとHPへの組み込み: GPT-6 Astra（gpt-6-astra）、推論設定 High。
+初期試作: GPT-5.6 Sol（gpt-5.6-sol）。
+代替画像はAI生成画像です。
 参考: https://www.andidea.jp/shop
 参考にしたのは「動く背景と固定された文字・操作」という構成です。
 参考サイトの映像・画像・ロゴ・文章・コードは含めていません。
