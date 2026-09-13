@@ -224,7 +224,7 @@
     '#contact a[href^="https://scholar.google.com/"] .link-value': 'Author Profile',
     '#contact a[href^="https://www.linkedin.com/"] .link-value': 'Profile',
     '#contact a[href="https://www.semanticscholar.org/faq"] .link-value': 'FAQ & Author Page Guide',
-    '#contact a[href^="https://arxiv.org/search/"] .link-value': 'Papers by Author Name',
+    '#contact a[href^="https://arxiv.org/abs/"] .link-value': 'Read Paper',
     '#contact a[href="https://www.jaist.ac.jp/~okada-s/index.html"] .contact-label-text': 'Okada Laboratory',
     '#contact a[href="https://www.jaist.ac.jp/~okada-s/index.html"] .link-value': 'Lab Website',
     '.footer-links a[href="personal.html"]': 'Personal',
