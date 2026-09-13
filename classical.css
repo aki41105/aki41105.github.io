@@ -390,3 +390,9 @@ a.card .card-kicker { color: var(--color-text); }
 @media (prefers-reduced-motion: reduce) { .scene-heading { transition: none; } }
 
 @media (max-width: 380px) { .scene-controls button { min-width: 36px; } }
+
+.scene-credit { position: absolute; right: 30px; bottom: 8px; padding: 2px 6px; color: #fff3d9; background: #071e32b8; border-radius: 2px; font-size: 10px; line-height: 1.5; letter-spacing: .02em; }
+@media (max-width: 640px) {
+  .scene-credit { right: 12px; bottom: 8px; font-size: 9px; }
+  .scene-scroll { left: 12px; right: auto; bottom: 10px; }
+}
