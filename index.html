@@ -177,7 +177,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap">
   <link rel="preload" as="image" href="assets/hero/hero-01-garden-night.webp">
-  <link rel="stylesheet" href="classical.css?v=20260913-hero-autoplay">
+  <link rel="stylesheet" href="classical.css?v=20260913-hero-seven">
 </head>
 <body class="home-page">
   <svg class="icon-defs" aria-hidden="true" focusable="false">
@@ -215,10 +215,15 @@
     <button class="nav-toggle" type="button" id="navToggle" aria-label="メニュー" aria-expanded="false"><span></span><span></span><span></span></button>
   </header>
 
-  <section class="scene-hero" id="home" aria-label="星空の庭園と書斎">
+  <section class="scene-hero" id="home" aria-label="星空の宮殿の風景">
     <div class="scene-images" id="hero-scenes">
       <img class="scene-image is-active" data-scene="garden" src="assets/hero/hero-01-garden-night.webp" alt="星空の下、宮殿へ続く水路と花々に囲まれた庭園" width="1672" height="941" fetchpriority="high">
       <img class="scene-image" data-scene="study" src="assets/hero/hero-02-study-globe.webp" alt="庭園を望むアーチ窓と、本、天球儀、ランプのある書斎" width="1672" height="941" decoding="async" aria-hidden="true">
+      <img class="scene-image" data-scene="observatory" src="assets/hero/hero-03-observatory.webp" alt="星空と山々を望む宮殿の屋上天文台と真鍮の観測道具" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
+      <img class="scene-image" data-scene="colonnade" src="assets/hero/hero-04-colonnade.webp" alt="月明かりの庭園を望むアーチの回廊と吊りランプ" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
+      <img class="scene-image" data-scene="library" src="assets/hero/hero-05-library.webp" alt="高い本棚と読書用の灯りに囲まれた静かな図書室" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
+      <img class="scene-image" data-scene="courtyard" src="assets/hero/hero-06-courtyard.webp" alt="星空の下で灯りを映す噴水と青いタイルの中庭" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
+      <img class="scene-image" data-scene="desert-terrace" src="assets/hero/hero-07-desert-terrace.webp" alt="月夜の砂丘と遠い街の灯りを望む宮殿のテラス" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
     </div>
     <div class="scene-heading">
       <p class="scene-eyebrow">RESEARCH &amp; EXPLORATION</p>
@@ -227,6 +232,11 @@
     <div class="scene-controls" role="group" aria-label="風景の切り替え" hidden>
       <button type="button" data-scene-choice="garden" aria-pressed="true" aria-controls="hero-scenes" aria-label="庭園を表示"></button>
       <button type="button" data-scene-choice="study" aria-pressed="false" aria-controls="hero-scenes" aria-label="書斎を表示"></button>
+      <button type="button" data-scene-choice="observatory" aria-pressed="false" aria-controls="hero-scenes" aria-label="天文台を表示"></button>
+      <button type="button" data-scene-choice="colonnade" aria-pressed="false" aria-controls="hero-scenes" aria-label="回廊を表示"></button>
+      <button type="button" data-scene-choice="library" aria-pressed="false" aria-controls="hero-scenes" aria-label="図書室を表示"></button>
+      <button type="button" data-scene-choice="courtyard" aria-pressed="false" aria-controls="hero-scenes" aria-label="中庭を表示"></button>
+      <button type="button" data-scene-choice="desert-terrace" aria-pressed="false" aria-controls="hero-scenes" aria-label="テラスを表示"></button>
     </div>
     <a class="scene-scroll" href="#about" aria-label="自己紹介へ">SCROLL <span aria-hidden="true">↓</span></a>
   </section>
@@ -568,6 +578,6 @@
     <p class="copyright">© 2026 櫻本晃弘</p>
   </footer>
 
-  <script src="classical.js?v=20260913-hero-autoplay"></script>
+  <script src="classical.js?v=20260913-hero-seven"></script>
 </body>
 </html>
