@@ -388,3 +388,5 @@ a.card .card-kicker { color: var(--color-text); }
 .scene-heading { transition: color 1.2s ease, text-shadow 1.2s ease; }
 .scene-hero[data-heading-tone="dark"] .scene-heading { color: #302b33; text-shadow: 0 1px 10px #fff0d9, 0 1px 3px #fff0d9; }
 @media (prefers-reduced-motion: reduce) { .scene-heading { transition: none; } }
+
+@media (max-width: 380px) { .scene-controls button { min-width: 36px; } }
