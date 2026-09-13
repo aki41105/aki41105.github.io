@@ -374,3 +374,12 @@ a.card .card-kicker { color: var(--color-text); }
 @media (prefers-reduced-motion: reduce) {
   .scene-image, .scene-controls button { transition: none; }
 }
+
+/* Quiet dot navigation for the automatic scene cycle. */
+.scene-controls { gap: 0; padding: 0; border: 0; background: transparent; }
+.scene-controls button { display: grid; place-items: center; min-width: 44px; min-height: 44px; padding: 0; background: transparent; }
+.scene-controls button::after { content: ''; width: 9px; height: 9px; border: 1px solid #fff3d9; border-radius: 50%; background: #09243980; box-shadow: 0 1px 5px #092439; transition: background .3s; }
+.scene-controls button[aria-pressed="true"] { background: transparent; }
+.scene-controls button[aria-pressed="true"]::after { background: #fff3d9; }
+.scene-controls button:hover { box-shadow: none; }
+.scene-controls button:hover::after { background: #e9d6a9; }

@@ -9,19 +9,36 @@
     sceneControls.hidden = false;
     var sceneButtons = sceneControls.querySelectorAll('button');
     var sceneImages = document.querySelectorAll('.scene-image');
-    Array.prototype.forEach.call(sceneButtons, function (button) {
+    var sceneIndex = 0;
+    var sceneTimer;
+    function selectScene(index) {
+      sceneIndex = index;
+      Array.prototype.forEach.call(sceneButtons, function (choice, i) {
+        choice.setAttribute('aria-pressed', i === index ? 'true' : 'false');
+      });
+      Array.prototype.forEach.call(sceneImages, function (image, i) {
+        image.classList.toggle('is-active', i === index);
+        image.setAttribute('aria-hidden', i === index ? 'false' : 'true');
+      });
+    }
+    function stopScenes() { window.clearInterval(sceneTimer); }
+    function startScenes() {
+      stopScenes();
+      if (reduced || document.hidden || sceneControls.contains(document.activeElement)) return;
+      sceneTimer = window.setInterval(function () {
+        selectScene((sceneIndex + 1) % sceneImages.length);
+      }, 8000);
+    }
+    Array.prototype.forEach.call(sceneButtons, function (button, index) {
       button.addEventListener('click', function () {
-        var selected = button.getAttribute('data-scene-choice');
-        Array.prototype.forEach.call(sceneButtons, function (choice) {
-          choice.setAttribute('aria-pressed', choice === button ? 'true' : 'false');
-        });
-        Array.prototype.forEach.call(sceneImages, function (image) {
-          var active = image.getAttribute('data-scene') === selected;
-          image.classList.toggle('is-active', active);
-          image.setAttribute('aria-hidden', active ? 'false' : 'true');
-        });
+        selectScene(index);
+        startScenes();
       });
     });
+    sceneControls.addEventListener('focusin', stopScenes);
+    sceneControls.addEventListener('focusout', function () { window.setTimeout(startScenes, 0); });
+    document.addEventListener('visibilitychange', startScenes);
+    startScenes();
   }
 
   var navToggle = document.getElementById('navToggle');
@@ -137,8 +154,6 @@
   });
 
   var translations = {
-    '[data-scene-choice="garden"]': 'Garden',
-    '[data-scene-choice="study"]': 'Study',
     '.brand > span:last-child': 'Akihiro Sakuramoto',
     '.site-nav a[href="#research"]': 'Research',
     '.site-nav a[href="#career"]': 'Career',
