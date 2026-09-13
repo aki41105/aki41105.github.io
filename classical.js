@@ -220,7 +220,7 @@
     '#contact h2': 'Contact / Links',
     '#contact .contact-card:nth-child(1) .contact-label-text': 'University Email',
     '#contact .contact-card:nth-child(2) .contact-label-text': 'Personal Email',
-    '#contact a[href^="https://researchmap.jp/"] .link-value': 'Profile Search',
+    '#contact a[href^="https://researchmap.jp/"] .link-value': 'Researcher Profile',
     '#contact a[href^="https://scholar.google.com/"] .link-value': 'Author Profile',
     '#contact a[href^="https://www.linkedin.com/"] .link-value': 'Profile',
     '#contact a[href="https://www.semanticscholar.org/faq"] .link-value': 'FAQ & Author Page Guide',
