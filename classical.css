@@ -383,3 +383,8 @@ a.card .card-kicker { color: var(--color-text); }
 .scene-controls button[aria-pressed="true"]::after { background: #fff3d9; }
 .scene-controls button:hover { box-shadow: none; }
 .scene-controls button:hover::after { background: #e9d6a9; }
+
+/* Keep the dawn sky bright while making its title readable. */
+.scene-heading { transition: color 1.2s ease, text-shadow 1.2s ease; }
+.scene-hero[data-heading-tone="dark"] .scene-heading { color: #302b33; text-shadow: 0 1px 10px #fff0d9, 0 1px 3px #fff0d9; }
+@media (prefers-reduced-motion: reduce) { .scene-heading { transition: none; } }

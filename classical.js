@@ -13,6 +13,7 @@
     var sceneTimer;
     function selectScene(index) {
       sceneIndex = index;
+      document.querySelector('.scene-hero').setAttribute('data-heading-tone', sceneImages[index].getAttribute('data-heading-tone') || 'light');
       Array.prototype.forEach.call(sceneButtons, function (choice, i) {
         choice.setAttribute('aria-pressed', i === index ? 'true' : 'false');
       });
