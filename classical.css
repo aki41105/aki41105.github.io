@@ -397,7 +397,7 @@ a.card .card-kicker { color: var(--color-text); }
   .scene-scroll { left: 12px; right: auto; bottom: 10px; }
 }
 
-/* Eighteen scenes: keep navigation within the viewport. */
-.scene-controls { display: grid; grid-template-columns: repeat(18, 32px); }
-.scene-controls button { min-width: 32px; min-height: 36px; }
-@media (max-width: 800px) { .scene-controls { grid-template-columns: repeat(9, 32px); } }
+/* Twenty-four scenes: two rows on desktop, three on small screens. */
+.scene-controls { display: grid; grid-template-columns: repeat(12, 36px); }
+.scene-controls button { min-width: 36px; min-height: 36px; }
+@media (max-width: 800px) { .scene-controls { grid-template-columns: repeat(8, 36px); } }
