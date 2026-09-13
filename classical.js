@@ -4,6 +4,26 @@
 
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  var sceneControls = document.querySelector('.scene-controls');
+  if (sceneControls) {
+    sceneControls.hidden = false;
+    var sceneButtons = sceneControls.querySelectorAll('button');
+    var sceneImages = document.querySelectorAll('.scene-image');
+    Array.prototype.forEach.call(sceneButtons, function (button) {
+      button.addEventListener('click', function () {
+        var selected = button.getAttribute('data-scene-choice');
+        Array.prototype.forEach.call(sceneButtons, function (choice) {
+          choice.setAttribute('aria-pressed', choice === button ? 'true' : 'false');
+        });
+        Array.prototype.forEach.call(sceneImages, function (image) {
+          var active = image.getAttribute('data-scene') === selected;
+          image.classList.toggle('is-active', active);
+          image.setAttribute('aria-hidden', active ? 'false' : 'true');
+        });
+      });
+    });
+  }
+
   var navToggle = document.getElementById('navToggle');
   if (navToggle) {
     navToggle.addEventListener('click', function () {
@@ -117,6 +137,8 @@
   });
 
   var translations = {
+    '[data-scene-choice="garden"]': 'Garden',
+    '[data-scene-choice="study"]': 'Study',
     '.brand > span:last-child': 'Akihiro Sakuramoto',
     '.site-nav a[href="#research"]': 'Research',
     '.site-nav a[href="#career"]': 'Career',

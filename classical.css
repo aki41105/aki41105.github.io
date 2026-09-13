@@ -344,3 +344,33 @@ a.card .card-kicker { color: var(--color-text); }
 @media (prefers-reduced-motion: reduce) {
   .forest-bird-arrival, .bird-wing { animation: none !important; }
 }
+
+/* Illustrated entrance: two manually selected scenes. */
+.scene-hero { position: relative; isolation: isolate; width: 100%; height: min(820px, calc(100svh - 76px)); min-height: 460px; overflow: hidden; background: #092439; color: #fff3d9; scroll-margin-top: 76px; }
+.scene-images, .scene-image { position: absolute; inset: 0; width: 100%; height: 100%; }
+.scene-image { object-fit: cover; object-position: center; opacity: 0; transition: opacity 1.2s ease; }
+.scene-image.is-active { opacity: 1; }
+.scene-heading { position: absolute; top: 10%; left: 50%; transform: translateX(-50%); width: min(640px, 78%); text-align: center; text-shadow: 0 2px 16px #06182c, 0 1px 4px #06182c; }
+.scene-eyebrow { font-size: 11px; letter-spacing: .28em; margin-bottom: 12px; }
+.scene-title { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(32px, 4.2vw, 65px); line-height: 1.12; font-weight: 400; letter-spacing: .015em; }
+.scene-controls { position: absolute; bottom: 29px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 10px; padding: 5px 14px; border: 1px solid #d9bc7d99; border-radius: 32px; background: #071e32e8; color: #cbb68c; }
+.scene-controls[hidden] { display: none; }
+.scene-controls button { min-width: 65px; min-height: 44px; padding: 8px 12px; border: 0; border-radius: 24px; background: transparent; color: #d5cfbd; font: inherit; font-size: 14px; cursor: pointer; transition: background .2s, color .2s; }
+.scene-controls button[aria-pressed="true"] { background: #e9d6a9; color: #102a3d; }
+.scene-controls button:hover { box-shadow: inset 0 0 0 1px #d9bc7d; }
+.scene-controls button:focus-visible, .scene-scroll:focus-visible { outline: 2px solid #fff3d9; outline-offset: 4px; }
+.scene-scroll { position: absolute; right: 30px; bottom: 35px; font-size: 10px; letter-spacing: .2em; color: #fff3d9; text-shadow: 0 1px 6px #06182c; }
+.scene-scroll:hover { color: #fff; }
+.scene-scroll span { display: inline-block; margin-left: 10px; }
+#about { scroll-margin-top: 90px; }
+@media (max-width: 640px) {
+  .scene-hero { height: 72svh; min-height: 440px; max-height: 700px; }
+  .scene-heading { top: 13%; width: 88%; }
+  .scene-eyebrow { font-size: 9px; letter-spacing: .22em; }
+  .scene-title { font-size: 37px; }
+  .scene-controls { bottom: 28px; }
+  .scene-scroll { right: 12px; bottom: 9px; font-size: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scene-image, .scene-controls button { transition: none; }
+}

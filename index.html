@@ -176,7 +176,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap">
-  <link rel="stylesheet" href="classical.css?v=20260906-personal-page">
+  <link rel="preload" as="image" href="assets/hero/hero-01-garden-night.webp">
+  <link rel="stylesheet" href="classical.css?v=20260913-persian-hero">
 </head>
 <body class="home-page">
   <svg class="icon-defs" aria-hidden="true" focusable="false">
@@ -214,12 +215,25 @@
     <button class="nav-toggle" type="button" id="navToggle" aria-label="メニュー" aria-expanded="false"><span></span><span></span><span></span></button>
   </header>
 
-  <div class="header-photo-strip" aria-hidden="true">
-    <div class="plate strip-plate"><img src="assets/header-library.jpg" alt="" width="2200" height="1237" decoding="async"></div>
-  </div>
+  <section class="scene-hero" id="home" aria-label="星空の庭園と書斎">
+    <div class="scene-images" id="hero-scenes">
+      <img class="scene-image is-active" data-scene="garden" src="assets/hero/hero-01-garden-night.webp" alt="星空の下、宮殿へ続く水路と花々に囲まれた庭園" width="1672" height="941" fetchpriority="high">
+      <img class="scene-image" data-scene="study" src="assets/hero/hero-02-study-globe.webp" alt="庭園を望むアーチ窓と、本、天球儀、ランプのある書斎" width="1672" height="941" decoding="async" aria-hidden="true">
+    </div>
+    <div class="scene-heading">
+      <p class="scene-eyebrow">RESEARCH &amp; EXPLORATION</p>
+      <p class="scene-title">Human–Robot<br>Interaction</p>
+    </div>
+    <div class="scene-controls" role="group" aria-label="風景の切り替え" hidden>
+      <button type="button" data-scene-choice="garden" aria-pressed="true" aria-controls="hero-scenes">庭園</button>
+      <span aria-hidden="true"> / </span>
+      <button type="button" data-scene-choice="study" aria-pressed="false" aria-controls="hero-scenes">書斎</button>
+    </div>
+    <a class="scene-scroll" href="#about" aria-label="自己紹介へ">SCROLL <span aria-hidden="true">↓</span></a>
+  </section>
 
   <main>
-    <section class="hero" id="home">
+    <section class="hero" id="about">
       <div class="hero-copy">
         <h1 class="reveal" data-reveal-delay="0.08">櫻本 晃弘</h1>
         <p class="name-reading reveal" data-reveal-delay="0.16">さくらもと あきひろ</p>
@@ -555,6 +569,6 @@
     <p class="copyright">© 2026 櫻本晃弘</p>
   </footer>
 
-  <script src="classical.js?v=20260912-design"></script>
+  <script src="classical.js?v=20260913-persian-hero"></script>
 </body>
 </html>
