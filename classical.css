@@ -407,10 +407,10 @@ a.card .card-kicker { color: var(--color-text); }
 .hero.hero-text-only { grid-template-columns: minmax(0, 1fr); }
 .hero-text-only .hero-copy { max-width: 800px; }
 
-/* Adopted retro game avatar. */
-.hero.hero-with-avatar { grid-template-columns: minmax(0, 1fr) 160px; }
-.profile-pixel { display: block; width: 160px; height: auto; margin-top: 12px; border-radius: 4px; }
-@media (max-width: 640px) {
-  .hero.hero-with-avatar { grid-template-columns: minmax(0, 1fr); }
-  .profile-pixel { grid-row: 1; width: 100px; margin: 0; }
+/* Match the former profile portrait's column and display size. */
+.hero.hero-with-avatar { grid-template-columns: 1.25fr 0.75fr; }
+.profile-pixel { display: block; width: 100%; aspect-ratio: 4 / 5; height: auto; object-fit: contain; margin: 0; padding: 6px; border: 1px solid var(--color-divider); border-radius: var(--radius-sm); background: #fffdf2; }
+@media (max-width: 900px) {
+  .hero.hero-with-avatar { grid-template-columns: 1fr; }
+  .profile-pixel { max-width: 320px; }
 }
