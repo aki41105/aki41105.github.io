@@ -47,7 +47,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap">
   <link rel="stylesheet" href="classical.css?v=20260914-direct-blog">
   <link rel="stylesheet" href="classical-sub.css?v=20260905-seo">
-  <link rel="stylesheet" href="blog-index.css?v=20260914-readable">
+  <link rel="stylesheet" href="blog-index.css?v=20260914-note-layout">
 </head>
 <body class="journal-page">
   <header class="site-header">
@@ -66,7 +66,14 @@
   </header>
 
   <main class="journal-main">
-  <header class="journal-heading"><p class="journal-eyebrow">AKI NOTES / JOURNAL</p><h1>ブログ</h1><p>読んだこと、学んだこと、考えたこと。<br>研究から数学、技術、社会の動きまで。</p></header>
+  <aside class="journal-heading" aria-label="書き手について">
+    <a class="journal-owner-icon" href="profile.html" aria-label="櫻本晃弘の自己紹介"><img src="assets/site-icon.png" alt="" width="64" height="64"></a>
+    <p class="journal-eyebrow">RESEARCH &amp; IDEAS</p><h1>AKI NOTES</h1>
+    <p class="journal-owner-name">櫻本 晃弘</p>
+    <p class="journal-bio">研究を読み、数学を学び、技術と社会を考える。学びの途中のメモを残しています。</p>
+    <a class="journal-about" href="profile.html">自己紹介 →</a>
+  </aside>
+  <div class="journal-stream">
   <nav class="journal-filters" aria-label="記事のカテゴリ">
     <a href="#all" data-filter="all" aria-current="true">すべて <span>3</span></a>
     <a href="#research" id="research" data-filter="research">研究 <span>1</span></a>
@@ -79,29 +86,29 @@
     <div class="journal-grid"><a class="journal-card" data-category="society" href="blog-toyota-2035.html">
             <div class="plate"><img src="assets/automotive-value-shift.png" alt="自動車産業の価値が五つの層で移動する構造図" width="1200" height="760" decoding="async"></div>
             <div class="gallery-card-body">
-              <p class="journal-category">社会分析</p><p class="gallery-date">2026年8月27日</p>
+              <p class="journal-category">社会分析</p>
               <h3 class="gallery-title">トヨタグループの将来予測</h3>
-              <p class="gallery-text">HEVの利益をBEV・SDVへ移せるか。世界競争，電池，ソフトウェア，グループ再編から2030年・2035年の三つのシナリオを整理しました。</p>
-              <span class="journal-read">記事を読む <span aria-hidden="true">↗</span></span>
-            </div>
+
+
+            <div class="journal-byline"><img src="assets/site-icon.png" alt="" width="22" height="22"><span>櫻本 晃弘</span><span class="gallery-date">2026年8月27日</span></div></div>
           </a>
 <a class="journal-card" data-category="research" href="blog-hri2026-analysis.html">
             <div class="plate"><img src="assets/hri2026-blog-summary.png" alt="HRI 2026 論文分析の要約図" width="1600" height="1180" loading="lazy" decoding="async"></div>
             <div class="gallery-card-body">
-              <p class="journal-category">研究</p><p class="gallery-date">2026年7月1日</p>
+              <p class="journal-category">研究</p>
               <h3 class="gallery-title">HRI 2026の論文127本を眺める</h3>
-              <p class="gallery-text">Full Research Papers 127件のタイトルと概要から，研究トピックの広がりを整理しました。</p>
-              <span class="journal-read">記事を読む <span aria-hidden="true">↗</span></span>
-            </div>
+
+
+            <div class="journal-byline"><img src="assets/site-icon.png" alt="" width="22" height="22"><span>櫻本 晃弘</span><span class="gallery-date">2026年7月1日</span></div></div>
           </a>
 <a class="journal-card" data-category="notes" href="blog-start.html">
             <div class="plate"><img src="assets/header-library.jpg" alt="円形の書架が広がる図書館" width="2200" height="1237" loading="lazy" decoding="async"></div>
             <div class="gallery-card-body">
-              <p class="journal-category">お知らせ</p><p class="gallery-date">2026年6月29日</p>
+              <p class="journal-category">お知らせ</p>
               <h3 class="gallery-title">ブログを始めます</h3>
-              <p class="gallery-text">研究，制作，日々の気づきを短く残していくための場所を追加しました。</p>
-              <span class="journal-read">記事を読む <span aria-hidden="true">↗</span></span>
-            </div>
+
+
+            <div class="journal-byline"><img src="assets/site-icon.png" alt="" width="22" height="22"><span>櫻本 晃弘</span><span class="gallery-date">2026年6月29日</span></div></div>
           </a></div>
     <div class="journal-empty" hidden><p class="journal-empty-title">記事は準備中です</p><p class="journal-empty-description"></p><a href="#all" class="journal-reset">すべての記事を見る →</a></div>
   </section>
@@ -195,9 +202,10 @@
               <div class="gallery-tags"><span>24WSJ</span><span>Scout</span><span>USA</span></div>
             </div>
           </a></div></details>
+  </div>
   <footer class="journal-footer"><span>AKI NOTES</span><a href="profile.html">書いている人について →</a></footer>
 </main>
   <script src="classical.js?v=20260914-direct-blog" defer></script>
-  <script src="blog-index.js?v=20260914-readable" defer></script>
+  <script src="blog-index.js?v=20260914-note-layout" defer></script>
 </body>
 </html>

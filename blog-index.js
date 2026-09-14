@@ -19,7 +19,7 @@
       card.hidden = key !== 'all' && card.dataset.category !== key;
       if (!card.hidden) count++;
       card.querySelector('.journal-category').textContent = labels[card.dataset.category][en ? 1 : 0];
-      card.querySelector('.journal-read').textContent = en ? 'Read article ↗' : '記事を読む ↗';
+
     });
     filters.forEach(function (link) {
       var category = link.dataset.filter;
@@ -34,8 +34,8 @@
     document.querySelector('.journal-empty-title').textContent = en ? 'Articles are on the way' : '記事は準備中です';
     document.querySelector('.journal-empty-description').textContent = key === 'math' ? (en ? 'Notes on mathematics and statistics will appear here.' : '数学や統計の学習ノートを、ここにまとめていきます。') : (en ? 'Notes on AI and other technologies will appear here.' : 'AIやさまざまな技術の仕組み・発展を、ここにまとめていきます。');
     document.querySelector('.journal-reset').textContent = en ? 'View all articles →' : 'すべての記事を見る →';
-    document.querySelector('.journal-heading h1').textContent = en ? 'Blog' : 'ブログ';
-    document.querySelector('.journal-heading > p:last-child').textContent = en ? 'Readings, learning, and reflections on research, mathematics, technology, and society.' : '読んだこと、学んだこと、考えたこと。研究から数学、技術、社会の動きまで。';
+    document.querySelector('.journal-about').textContent = en ? 'About the author →' : '自己紹介 →';
+    document.querySelector('.journal-bio').textContent = en ? 'Reading research, learning mathematics, and thinking about technology and society. Notes from an ongoing learning journey.' : '研究を読み、数学を学び、技術と社会を考える。学びの途中のメモを残しています。';
   }
   document.querySelector('.journal-main').addEventListener('click', function (event) {
     var link = event.target.closest('[data-filter], .journal-reset');
