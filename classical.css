@@ -421,15 +421,6 @@ a.card .card-kicker { color: var(--color-text); }
 .site-header::before { top: 0; }
 .site-header::after { bottom: 0; }
 .site-header .garden-nav { display: flex; gap: clamp(18px,3vw,38px); align-items: center; }
-.blog-menu { position: relative; }
-.blog-menu summary { cursor: pointer; list-style: none; padding: 6px 0; }
-.blog-menu summary::-webkit-details-marker { display: none; }
-.blog-menu summary::after { content: '⌄'; margin-left: 8px; font-size: 12px; }
-.blog-menu[open] summary::after { content: '⌃'; }
-.blog-menu-panel { position: absolute; top: calc(100% + 16px); right: 0; width: 270px; padding: 12px; background: var(--color-surface); border: 1px solid var(--color-divider); border-top: 3px solid #c6a776; border-radius: 4px; box-shadow: var(--shadow-md); }
-.blog-menu-panel a { display: block; padding: 10px 12px; border-radius: 3px; }
-.blog-menu-panel a:hover { background: color-mix(in srgb,var(--color-accent) 10%,transparent); }
-.blog-menu-panel a span { display: block; margin-top: 3px; font-size: 12px; opacity: .7; }
 .garden-nav :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 5px; }
 .garden-intro { padding-block: 70px; }
 .garden-intro h1 { font-size: clamp(36px,5vw,58px); margin-bottom: 24px; }
@@ -449,7 +440,6 @@ a.card .card-kicker { color: var(--color-text); }
 @media(max-width:700px) {
   .site-header { column-gap: 12px; row-gap: 14px; }
   .site-header .garden-nav { order: 5; width: 100%; justify-content: center; gap: 38px; font-size: 15px; }
-  .blog-menu-panel { right: -20px; max-width: calc(100vw - 40px); }
   .garden-entry-grid { grid-template-columns: 1fr; gap: 16px; }
   .garden-intro { padding-block: 40px; }
   .scene-hero, #about, #explore { scroll-margin-top: 135px; }

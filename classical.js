@@ -7,14 +7,6 @@
     location.replace('profile.html' + location.hash);
     return;
   }
-  document.addEventListener('click', function (event) {
-    document.querySelectorAll('.blog-menu[open]').forEach(function (menu) {
-      if (!menu.contains(event.target) || event.target.closest('a')) menu.open = false;
-    });
-  });
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') document.querySelectorAll('.blog-menu[open]').forEach(function (menu) { menu.open = false; menu.querySelector('summary').focus(); });
-  });
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   var sceneControls = document.querySelector('.scene-controls');
@@ -170,7 +162,18 @@
   var translations = {
     '.brand > span:last-child': 'AKI NOTES',
     '.nav-profile': 'About',
-    '.blog-menu summary': 'Blog',
+    '.nav-blog': 'Blog',
+    '.blog-index > .photo-detail-copy h1': 'Blog',
+    '.blog-index > .photo-detail-copy .summary': 'Notes on research, mathematics and statistics, technology and AI, and society.',
+    '.category-index a[href="#research"]': 'Research',
+    '.category-index a[href="#math"]': 'Mathematics / Statistics',
+    '.category-index a[href="#technology"]': 'Technology / AI',
+    '.category-index a[href="#society"]': 'Society',
+    '.blog-category#research h2': 'Research',
+    '.blog-category#math h2': 'Mathematics / Statistics',
+    '.blog-category#technology h2': 'Technology / AI',
+    '.blog-category#society h2': 'Society',
+
     '.garden-intro > .summary': 'Reading research, exploring mathematics, and thinking about technology and society. A place to keep discoveries along the way.',
     '.garden-entry[href="profile.html"] h2': 'About',
     '.garden-entry[href="profile.html"] p': 'Research interests, experience, publications, and activities.',
@@ -205,7 +208,7 @@
     '.update-note-text': 'Added the accepted HAI 2026 poster paper to Publications.',
     '.hero-figure figcaption span:first-child': 'Portrait — Ishikawa, MMXXVI',
     '.hero-figure figcaption span:last-child': 'fig. 1',
-    '#research h2': 'Research Overview',
+    '.hero ~ #research h2': 'Research Overview',
     '#research .lede': 'I study real-world HRI through social signal processing and multimodal interaction. In particular, I aim to evaluate interaction quality quantitatively by estimating rapport—the quality of the relationship—in customer-service dialogue.',
     '#research .keyword-grid .card:nth-child(1) .card-title': 'Human–Robot Interaction',
     '#research .keyword-grid .card:nth-child(2) .card-title': 'Social Signal Processing',
@@ -316,7 +319,7 @@
     });
     currentLanguage = language;
     document.documentElement.lang = language;
-    document.title = language === 'en' ? 'AKI NOTES | Akihiro Sakuramoto' : japaneseTitle;
+    document.title = language === 'en' && (document.querySelector('.hero') || document.querySelector('.scene-hero')) ? 'AKI NOTES | Akihiro Sakuramoto' : japaneseTitle;
     if (descriptionMeta) {
       descriptionMeta.content = language === 'en'
         ? 'Akihiro Sakuramoto, a master\'s student at JAIST researching Human-Robot Interaction and multimodal rapport estimation. Research, publications, background, and writing on technology and industry.'
