@@ -18,7 +18,12 @@
     cards.forEach(function (card) {
       card.hidden = key !== 'all' && card.dataset.category !== key;
       if (!card.hidden) count++;
-      card.querySelector('.journal-category').textContent = labels[card.dataset.category][en ? 1 : 0];
+      var date = card.querySelector('time');
+      var now = new Date();
+      var today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+      var days = Math.floor((today - Date.parse(date.dateTime)) / 86400000);
+      date.title = date.dateTime;
+      date.textContent = days < 0 ? date.dateTime : days === 0 ? (en ? 'Today' : '今日') : en ? days + (days === 1 ? ' day ago' : ' days ago') : days + '日前';
 
     });
     filters.forEach(function (link) {
