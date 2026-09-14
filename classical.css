@@ -406,3 +406,11 @@ a.card .card-kicker { color: var(--color-text); }
 /* Profile without a portrait column. */
 .hero.hero-text-only { grid-template-columns: minmax(0, 1fr); }
 .hero-text-only .hero-copy { max-width: 800px; }
+
+/* Adopted retro game avatar. */
+.hero.hero-with-avatar { grid-template-columns: minmax(0, 1fr) 160px; }
+.profile-pixel { display: block; width: 160px; height: auto; margin-top: 12px; border-radius: 4px; }
+@media (max-width: 640px) {
+  .hero.hero-with-avatar { grid-template-columns: minmax(0, 1fr); }
+  .profile-pixel { grid-row: 1; width: 100px; margin: 0; }
+}
