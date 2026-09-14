@@ -155,7 +155,7 @@
   });
 
   var translations = {
-    '.brand > span:last-child': 'Akihiro Sakuramoto',
+    '.brand > span:last-child': '思索の庭',
     '.site-nav a[href="#research"]': 'Research',
     '.site-nav a[href="#career"]': 'Career',
     '.site-nav a[href="#memberships"]': 'Memberships',
@@ -293,7 +293,7 @@
     });
     currentLanguage = language;
     document.documentElement.lang = language;
-    document.title = language === 'en' ? 'Akihiro Sakuramoto | Human-Robot Interaction at JAIST' : japaneseTitle;
+    document.title = language === 'en' ? '思索の庭 | Akihiro Sakuramoto' : japaneseTitle;
     if (descriptionMeta) {
       descriptionMeta.content = language === 'en'
         ? 'Akihiro Sakuramoto, a master\'s student at JAIST researching Human-Robot Interaction and multimodal rapport estimation. Research, publications, background, and writing on technology and industry.'
