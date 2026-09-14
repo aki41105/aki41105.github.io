@@ -18,7 +18,7 @@
   <link rel="icon" href="assets/site-icon.png?v=20260914-aki-notes" type="image/png">
   <link rel="icon" href="assets/favicon-32x32.png?v=20260914-aki-notes" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=20260914-aki-notes">
-  <title>ブログ | 櫻本晃弘</title>
+  <title>ブログ | AKI NOTES</title>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -47,8 +47,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap">
   <link rel="stylesheet" href="classical.css?v=20260914-direct-blog">
   <link rel="stylesheet" href="classical-sub.css?v=20260905-seo">
+  <link rel="stylesheet" href="blog-index.css?v=20260914-readable">
 </head>
-<body>
+<body class="journal-page">
   <header class="site-header">
     <a class="brand" href="index.html#home" aria-label="Home">
       <span class="brand-mark" aria-hidden="true"><img src="assets/site-icon.png?v=20260914-aki-notes" alt="" width="64" height="64"></span>
@@ -64,43 +65,47 @@
     <button class="language-toggle" type="button" id="languageToggle" aria-label="Switch to English">English</button>
   </header>
 
-  <main>
-    <section class="photo-detail section blog-index">
-      <div class="photo-detail-copy">
-        <h1>ブログ</h1>
-        <p class="summary">研究・数学／統計・技術／AI・社会分析。読んだこと、学んだこと、考えたことをまとめます。</p>
-      </div>
-
-<nav class="category-index" aria-label="ブログのカテゴリ"><a href="#research">研究</a><a href="#math">数学／統計</a><a href="#technology">技術／AI</a><a href="#society">社会分析</a></nav><section class="blog-category" id="research"><h2>研究</h2><p class="category-description">先行研究や論文を読み、問いと手法を整理する。</p><div class="gallery-grid blog-index-grid"><a class="gallery-card reveal" data-reveal-delay="0.06" href="blog-hri2026-analysis.html">
-            <div class="plate"><img src="assets/hri2026-blog-summary.png" alt="HRI 2026 論文分析の要約図" width="1600" height="1180" loading="lazy" decoding="async"></div>
-            <div class="gallery-card-body">
-              <p class="gallery-date">2026年7月1日</p>
-              <h3 class="gallery-title">HRI 2026の論文127本を眺める</h3>
-              <p class="gallery-text">Full Research Papers 127件のタイトルと概要から，研究トピックの広がりを整理しました。</p>
-              <div class="gallery-tags"><span>HRI</span><span>Paper Analysis</span></div>
-            </div>
-          </a></div></section><section class="blog-category" id="math"><h2>数学／統計</h2><p class="category-description">統計や数学の勉強で理解したことをまとめる。</p><p class="category-empty">記事は準備中です。</p></section><section class="blog-category" id="technology"><h2>技術／AI</h2><p class="category-description">AIをはじめ、技術の仕組みと発展を追う。</p><p class="category-empty">記事は準備中です。</p></section><section class="blog-category" id="society"><h2>社会分析</h2><p class="category-description">企業の戦略、産業の変化、国の戦略を考える。</p><div class="gallery-grid blog-index-grid"><a class="gallery-card reveal" href="blog-toyota-2035.html">
+  <main class="journal-main">
+  <header class="journal-heading"><p class="journal-eyebrow">AKI NOTES / JOURNAL</p><h1>ブログ</h1><p>読んだこと、学んだこと、考えたこと。<br>研究から数学、技術、社会の動きまで。</p></header>
+  <nav class="journal-filters" aria-label="記事のカテゴリ">
+    <a href="#all" data-filter="all" aria-current="true">すべて <span>3</span></a>
+    <a href="#research" id="research" data-filter="research">研究 <span>1</span></a>
+    <a href="#math" id="math" data-filter="math">数学／統計 <span>0</span></a>
+    <a href="#technology" id="technology" data-filter="technology">技術／AI <span>0</span></a>
+    <a href="#society" id="society" data-filter="society">社会分析 <span>1</span></a>
+  </nav>
+  <section class="journal-results" aria-labelledby="journal-result-heading">
+    <div class="journal-results-heading"><h2 id="journal-result-heading">すべての記事</h2><p id="journal-count" role="status" aria-live="polite">3件 · 新しい順</p></div>
+    <div class="journal-grid"><a class="journal-card" data-category="society" href="blog-toyota-2035.html">
             <div class="plate"><img src="assets/automotive-value-shift.png" alt="自動車産業の価値が五つの層で移動する構造図" width="1200" height="760" decoding="async"></div>
             <div class="gallery-card-body">
-              <p class="gallery-date">2026年8月27日</p>
+              <p class="journal-category">社会分析</p><p class="gallery-date">2026年8月27日</p>
               <h3 class="gallery-title">トヨタグループの将来予測</h3>
               <p class="gallery-text">HEVの利益をBEV・SDVへ移せるか。世界競争，電池，ソフトウェア，グループ再編から2030年・2035年の三つのシナリオを整理しました。</p>
-              <div class="gallery-tags"><span>Automotive</span><span>Toyota</span><span>Scenario Analysis</span></div>
+              <span class="journal-read">記事を読む <span aria-hidden="true">↗</span></span>
             </div>
-          </a></div></section><section class="blog-category"><h2>お知らせ</h2><div class="gallery-grid"><a class="gallery-card reveal" data-reveal-delay="0.12" href="blog-start.html">
+          </a>
+<a class="journal-card" data-category="research" href="blog-hri2026-analysis.html">
+            <div class="plate"><img src="assets/hri2026-blog-summary.png" alt="HRI 2026 論文分析の要約図" width="1600" height="1180" loading="lazy" decoding="async"></div>
+            <div class="gallery-card-body">
+              <p class="journal-category">研究</p><p class="gallery-date">2026年7月1日</p>
+              <h3 class="gallery-title">HRI 2026の論文127本を眺める</h3>
+              <p class="gallery-text">Full Research Papers 127件のタイトルと概要から，研究トピックの広がりを整理しました。</p>
+              <span class="journal-read">記事を読む <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+<a class="journal-card" data-category="notes" href="blog-start.html">
             <div class="plate"><img src="assets/header-library.jpg" alt="円形の書架が広がる図書館" width="2200" height="1237" loading="lazy" decoding="async"></div>
             <div class="gallery-card-body">
-              <p class="gallery-date">2026年6月29日</p>
+              <p class="journal-category">お知らせ</p><p class="gallery-date">2026年6月29日</p>
               <h3 class="gallery-title">ブログを始めます</h3>
               <p class="gallery-text">研究，制作，日々の気づきを短く残していくための場所を追加しました。</p>
-              <div class="gallery-tags"><span>Site Update</span></div>
+              <span class="journal-read">記事を読む <span aria-hidden="true">↗</span></span>
             </div>
-          </a></div></section>      <div class="blog-index-group">
-        <div class="blog-index-group-heading">
-          <h2>写真の記録</h2>
-        </div>
-        <div class="gallery-grid blog-record-grid" aria-label="写真の記録一覧">
-          <a class="gallery-card reveal" href="gallery-library.html">
+          </a></div>
+    <div class="journal-empty" hidden><p class="journal-empty-title">記事は準備中です</p><p class="journal-empty-description"></p><a href="#all" class="journal-reset">すべての記事を見る →</a></div>
+  </section>
+  <details class="journal-photos"><summary><span>写真の記録<small>訪れた場所と、日々の活動</small></span><span class="photo-count">10件 ＋</span></summary><div class="journal-photo-grid"><a class="journal-photo-card" href="gallery-library.html">
             <div class="plate"><img src="assets/library-2026-atrium-1.jpg" alt="円形の書架が広がる図書館の吹き抜け空間" width="1800" height="1012" loading="lazy" decoding="async"></div>
             <div class="gallery-card-body">
               <p class="gallery-date">2026年3月</p>
@@ -109,7 +114,7 @@
               <div class="gallery-tags"><span>Photo</span><span>Library</span><span>Ishikawa</span></div>
             </div>
           </a>
-          <a class="gallery-card reveal" href="gallery-expo-osaka.html">
+<a class="journal-photo-card" href="gallery-expo-osaka.html">
             <div class="plate"><img src="assets/expo-2025-osaka-02.jpg" alt="大阪・関西万博の会場へ向かう人々と青空" width="1500" height="1126" loading="lazy" decoding="async"></div>
             <div class="gallery-card-body">
               <p class="gallery-date">2025年9月27日</p>
@@ -118,7 +123,7 @@
               <div class="gallery-tags"><span>Expo</span><span>Osaka</span><span>Photo</span></div>
             </div>
           </a>
-          <a class="gallery-card reveal" data-reveal-delay="0.06" href="gallery-nissan.html">
+<a class="journal-photo-card" href="gallery-nissan.html">
             <div class="plate"><img src="assets/nissan-atsugiya.jpg" alt="日産インターン期間中に食べた厚木家のラーメン" width="672" height="895" loading="lazy" decoding="async"></div>
             <div class="gallery-card-body">
               <p class="gallery-date">2025年9月</p>
@@ -127,7 +132,7 @@
               <div class="gallery-tags"><span>Internship</span><span>Atsugi</span><span>Photo</span></div>
             </div>
           </a>
-          <a class="gallery-card reveal" data-reveal-delay="0.06" href="gallery-fuji.html">
+<a class="journal-photo-card" href="gallery-fuji.html">
             <div class="plate"><img src="assets/fuji-internship-building.jpg" alt="株式会社FUJIの建物" width="1600" height="1200" loading="lazy" decoding="async"></div>
             <div class="gallery-card-body">
               <p class="gallery-date">2025年8月–9月</p>
@@ -136,7 +141,7 @@
               <div class="gallery-tags"><span>Internship</span><span>FUJI</span><span>AI</span></div>
             </div>
           </a>
-          <a class="gallery-card reveal" data-reveal-delay="0.12" href="gallery-nanao.html">
+<a class="journal-photo-card" href="gallery-nanao.html">
             <div class="plate"><img src="assets/nanao-station.jpg" alt="七尾駅の歓迎看板とのれん" width="1352" height="1800" loading="lazy" decoding="async"></div>
             <div class="gallery-card-body">
               <p class="gallery-date">2025年9月</p>
@@ -145,7 +150,7 @@
               <div class="gallery-tags"><span>Fieldwork</span><span>Nanao</span><span>Digital Twin</span></div>
             </div>
           </a>
-          <a class="gallery-card reveal" data-reveal-delay="0.12" href="gallery-owara-kazenobon-2024.html">
+<a class="journal-photo-card" href="gallery-owara-kazenobon-2024.html">
             <div class="plate"><img src="assets/owara-kazenobon-2024-51.jpg" alt="おわら風の盆の舞台で踊りと演奏が行われている夜の風景" width="1800" height="1350" loading="lazy" decoding="async"></div>
             <div class="gallery-card-body">
               <p class="gallery-date">2024年9月</p>
@@ -154,7 +159,7 @@
               <div class="gallery-tags"><span>Owara Kaze no Bon</span><span>Toyama</span><span>Photo</span></div>
             </div>
           </a>
-          <a class="gallery-card reveal" href="gallery-naist.html">
+<a class="journal-photo-card" href="gallery-naist.html">
             <div class="plate"><img src="assets/naist-sign-gate.jpg" alt="NAISTキャンパス入口の風景" width="1400" height="1050" loading="lazy" decoding="async"></div>
             <div class="gallery-card-body">
               <p class="gallery-date">2024年2月–3月</p>
@@ -163,7 +168,7 @@
               <div class="gallery-tags"><span>Internship</span><span>NAIST</span><span>Research Life</span></div>
             </div>
           </a>
-          <a class="gallery-card reveal" href="gallery-robocon.html">
+<a class="journal-photo-card" href="gallery-robocon.html">
             <div class="plate"><img src="assets/robocon-2023-field.jpg" alt="NHK学生ロボコン2023の競技フィールドとロボット" width="1600" height="900" loading="lazy" decoding="async"></div>
             <div class="gallery-card-body">
               <p class="gallery-date">2023</p>
@@ -172,7 +177,7 @@
               <div class="gallery-tags"><span>Robocon</span><span>University of Toyama</span><span>Robot Control</span></div>
             </div>
           </a>
-          <a class="gallery-card reveal" data-reveal-delay="0.06" href="gallery-toyama-university.html">
+<a class="journal-photo-card" href="gallery-toyama-university.html">
             <div class="plate"><img src="assets/toyama-university-04.jpg" alt="富山の川沿いに咲く桜並木" width="1477" height="1108" loading="lazy" decoding="async"></div>
             <div class="gallery-card-body">
               <p class="gallery-date">2021年–2025年</p>
@@ -181,7 +186,7 @@
               <div class="gallery-tags"><span>University of Toyama</span><span>Toyama</span><span>Student Life</span></div>
             </div>
           </a>
-          <a class="gallery-card reveal" data-reveal-delay="0.12" href="gallery-wsj-2019.html">
+<a class="journal-photo-card" href="gallery-wsj-2019.html">
             <div class="plate"><img src="assets/wsj-2019-05.jpg" alt="第24回世界スカウトジャンボリーの入口ゲート" width="960" height="720" loading="lazy" decoding="async"></div>
             <div class="gallery-card-body">
               <p class="gallery-date">2019年8月</p>
@@ -189,11 +194,10 @@
               <p class="gallery-text">米国で開催された24WSJに参加した際の会場風景と食事の記録。</p>
               <div class="gallery-tags"><span>24WSJ</span><span>Scout</span><span>USA</span></div>
             </div>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
+          </a></div></details>
+  <footer class="journal-footer"><span>AKI NOTES</span><a href="profile.html">書いている人について →</a></footer>
+</main>
   <script src="classical.js?v=20260914-direct-blog" defer></script>
+  <script src="blog-index.js?v=20260914-readable" defer></script>
 </body>
 </html>
