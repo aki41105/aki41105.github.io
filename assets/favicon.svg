@@ -1,9 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="思索の庭：小さな木と星">
-<rect width="64" height="64" rx="14" fill="#244a36"/>
-<path d="M47 9 L49 15 L55 17 L49 19 L47 25 L45 19 L39 17 L45 15 Z" fill="#e5bd73"/>
-<path d="M14 51 Q30 46 47 51" fill="none" stroke="#cbd7c3" stroke-width="3" stroke-linecap="round"/>
-<path d="M30 49 V29 M30 40 L23 34 M30 36 L36 30" fill="none" stroke="#f7f1e4" stroke-width="3" stroke-linecap="round"/>
-<circle cx="23" cy="28" r="9" fill="#cbd7c3"/>
-<circle cx="32" cy="22" r="10" fill="#f7f1e4"/>
-<circle cx="36" cy="31" r="8" fill="#dce5d6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="思索の庭：星のある庭への門">
+<rect width="64" height="64" rx="14" fill="#18253e"/>
+<path d="M16 49V30C16 21 24 15 32 10C40 15 48 21 48 30V49" fill="none" stroke="#e8c98c" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32 23L34 29L40 31L34 33L32 39L30 33L24 31L30 29Z" fill="#f5dfae"/>
+<path d="M33 44C23 47 24 51 36 55" fill="none" stroke="#87b8ba" stroke-width="3" stroke-linecap="round"/>
 </svg>
