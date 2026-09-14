@@ -45,7 +45,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap">
-  <link rel="stylesheet" href="classical.css?v=20260905-seo">
+  <link rel="stylesheet" href="classical.css?v=20260914-navigation">
   <link rel="stylesheet" href="classical-sub.css?v=20260905-seo">
 </head>
 <body>
@@ -55,38 +55,27 @@
       <span>思索の庭</span>
     </a>
 
-    <nav class="site-nav" aria-label="Blog navigation">
-      <a href="index.html#research">研究</a>
-      <a href="blog.html" class="is-active" aria-current="page">ブログ</a>
-      <a href="index.html#contact">連絡先</a>
+    <nav class="site-nav garden-nav" aria-label="Main navigation">
+      <a class="nav-home" href="index.html#home">Home</a>
+      <a class="nav-profile" href="profile.html">自己紹介</a>
+      <details class="blog-menu"><summary>ブログ</summary><div class="blog-menu-panel">
+        <a href="blog.html">ブログ一覧</a>
+        <a href="blog.html#research">研究<span>先行研究・論文の紹介</span></a>
+        <a href="blog.html#math">数学／統計<span>数式・統計の学習ノート</span></a>
+        <a href="blog.html#technology">技術／AI<span>技術の発展と仕組み</span></a>
+        <a href="blog.html#society">社会分析<span>企業・国の戦略</span></a>
+      </div></details>
     </nav>
-
-    <a class="language-toggle detail-home-link" href="index.html#home">ホームへ戻る</a>
   </header>
 
   <main>
     <section class="photo-detail section blog-index">
       <div class="photo-detail-copy">
         <h1>ブログ</h1>
-        <p class="summary">研究や制作の過程，サイト更新，日々の気づきを，文章と写真で残しています。</p>
+        <p class="summary">研究・数学／統計・技術／AI・社会分析。読んだこと、学んだこと、考えたことをまとめます。</p>
       </div>
 
-      <div class="blog-index-group">
-        <div class="blog-index-group-heading">
-          <h2>記事</h2>
-        </div>
-        <div class="gallery-grid blog-index-grid" aria-label="ブログ記事一覧">
-          <a class="gallery-card reveal" href="blog-toyota-2035.html">
-            <div class="plate"><img src="assets/automotive-value-shift.png" alt="自動車産業の価値が五つの層で移動する構造図" width="1200" height="760" decoding="async"></div>
-            <div class="gallery-card-body">
-              <p class="gallery-date">2026年8月27日</p>
-              <h3 class="gallery-title">トヨタグループの将来予測</h3>
-              <p class="gallery-text">HEVの利益をBEV・SDVへ移せるか。世界競争，電池，ソフトウェア，グループ再編から2030年・2035年の三つのシナリオを整理しました。</p>
-              <div class="gallery-tags"><span>Automotive</span><span>Toyota</span><span>Scenario Analysis</span></div>
-            </div>
-          </a>
-
-          <a class="gallery-card reveal" data-reveal-delay="0.06" href="blog-hri2026-analysis.html">
+<nav class="category-index" aria-label="ブログのカテゴリ"><a href="#research">研究</a><a href="#math">数学／統計</a><a href="#technology">技術／AI</a><a href="#society">社会分析</a></nav><section class="blog-category" id="research"><h2>研究</h2><p class="category-description">先行研究や論文を読み、問いと手法を整理する。</p><div class="gallery-grid blog-index-grid"><a class="gallery-card reveal" data-reveal-delay="0.06" href="blog-hri2026-analysis.html">
             <div class="plate"><img src="assets/hri2026-blog-summary.png" alt="HRI 2026 論文分析の要約図" width="1600" height="1180" loading="lazy" decoding="async"></div>
             <div class="gallery-card-body">
               <p class="gallery-date">2026年7月1日</p>
@@ -94,9 +83,15 @@
               <p class="gallery-text">Full Research Papers 127件のタイトルと概要から，研究トピックの広がりを整理しました。</p>
               <div class="gallery-tags"><span>HRI</span><span>Paper Analysis</span></div>
             </div>
-          </a>
-
-          <a class="gallery-card reveal" data-reveal-delay="0.12" href="blog-start.html">
+          </a></div></section><section class="blog-category" id="math"><h2>数学／統計</h2><p class="category-description">統計や数学の勉強で理解したことをまとめる。</p><p class="category-empty">記事は準備中です。</p></section><section class="blog-category" id="technology"><h2>技術／AI</h2><p class="category-description">AIをはじめ、技術の仕組みと発展を追う。</p><p class="category-empty">記事は準備中です。</p></section><section class="blog-category" id="society"><h2>社会分析</h2><p class="category-description">企業の戦略、産業の変化、国の戦略を考える。</p><div class="gallery-grid blog-index-grid"><a class="gallery-card reveal" href="blog-toyota-2035.html">
+            <div class="plate"><img src="assets/automotive-value-shift.png" alt="自動車産業の価値が五つの層で移動する構造図" width="1200" height="760" decoding="async"></div>
+            <div class="gallery-card-body">
+              <p class="gallery-date">2026年8月27日</p>
+              <h3 class="gallery-title">トヨタグループの将来予測</h3>
+              <p class="gallery-text">HEVの利益をBEV・SDVへ移せるか。世界競争，電池，ソフトウェア，グループ再編から2030年・2035年の三つのシナリオを整理しました。</p>
+              <div class="gallery-tags"><span>Automotive</span><span>Toyota</span><span>Scenario Analysis</span></div>
+            </div>
+          </a></div></section><section class="blog-category"><h2>庭からのお知らせ</h2><div class="gallery-grid"><a class="gallery-card reveal" data-reveal-delay="0.12" href="blog-start.html">
             <div class="plate"><img src="assets/header-library.jpg" alt="円形の書架が広がる図書館" width="2200" height="1237" loading="lazy" decoding="async"></div>
             <div class="gallery-card-body">
               <p class="gallery-date">2026年6月29日</p>
@@ -104,11 +99,7 @@
               <p class="gallery-text">研究，制作，日々の気づきを短く残していくための場所を追加しました。</p>
               <div class="gallery-tags"><span>Site Update</span></div>
             </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="blog-index-group">
+          </a></div></section>      <div class="blog-index-group">
         <div class="blog-index-group-heading">
           <h2>写真の記録</h2>
         </div>
@@ -207,6 +198,6 @@
       </div>
     </section>
   </main>
-  <script src="classical.js?v=20260914-garden" defer></script>
+  <script src="classical.js?v=20260914-navigation" defer></script>
 </body>
 </html>

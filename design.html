@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap">
-  <link rel="stylesheet" href="classical.css?v=20260906-personal-page">
+  <link rel="stylesheet" href="classical.css?v=20260914-navigation">
   <link rel="stylesheet" href="classical-sub.css?v=20260905-seo">
   <link rel="stylesheet" href="assets/design/library.css">
 </head>
@@ -26,12 +26,17 @@
       <span class="brand-mark" aria-hidden="true"><img src="assets/favicon.svg?v=20260914-garden-gate" alt=""></span>
       <span>思索の庭</span>
     </a>
-    <nav class="site-nav" aria-label="デザイン資料庫">
-      <a href="resources.html">読みもの</a>
-      <a href="resource-archive.html">資料庫</a>
-      <a href="design.html" class="is-active" aria-current="page">デザイン</a>
+    <nav class="site-nav garden-nav" aria-label="Main navigation">
+      <a class="nav-home" href="index.html#home">Home</a>
+      <a class="nav-profile" href="profile.html">自己紹介</a>
+      <details class="blog-menu"><summary>ブログ</summary><div class="blog-menu-panel">
+        <a href="blog.html">ブログ一覧</a>
+        <a href="blog.html#research">研究<span>先行研究・論文の紹介</span></a>
+        <a href="blog.html#math">数学／統計<span>数式・統計の学習ノート</span></a>
+        <a href="blog.html#technology">技術／AI<span>技術の発展と仕組み</span></a>
+        <a href="blog.html#society">社会分析<span>企業・国の戦略</span></a>
+      </div></details>
     </nav>
-    <a class="language-toggle detail-home-link" href="index.html#resources">ホームへ戻る</a>
   </header>
   <main>
     <article class="section blog-article blog-article-wide resource-library-page design-library">
@@ -91,10 +96,10 @@
         <p><a href="https://www.andidea.jp/shop" target="_blank" rel="noopener noreferrer">And Idea — Creative Tools</a>の、変化する背景の手前に文字と操作を固定する構成を参考にしました。このデモの背景、配色、文章、描画コードは独自に制作しています。参考サイトの動画・画像・ロゴ・文章・ソースコードは使用していません。</p>
         <p>制作日：2026年9月12日（日本時間）。現行の背景アニメーションとHPへの組み込みは、OpenAI CodexのGPT-6 Astra（<code>gpt-6-astra</code>、推論設定：High）を使用して制作しました。初期試作にはGPT-5.6 Sol（<code>gpt-5.6-sol</code>）も使用しています。代替表示用の静止画はAI生成画像です。</p>
       </section>
-      <a class="button button-secondary" href="index.html#resources">読みものと資料庫へ戻る</a>
+      <a class="button button-secondary" href="profile.html#resources">読みものと資料庫へ戻る</a>
     </article>
   </main>
-  <script src="classical.js?v=20260914-garden" defer></script>
+  <script src="classical.js?v=20260914-navigation" defer></script>
   <script src="assets/design/library.js" defer></script>
 </body>
 </html>

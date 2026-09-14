@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap">
-  <link rel="stylesheet" href="/classical.css?v=20260905-seo">
+  <link rel="stylesheet" href="/classical.css?v=20260914-navigation">
 </head>
 <body>
   <header class="site-header">
@@ -18,6 +18,17 @@
       <span class="brand-mark" aria-hidden="true"><img src="/assets/favicon.svg?v=20260914-garden-gate" alt=""></span>
       <span>思索の庭</span>
     </a>
+  <nav class="site-nav garden-nav" aria-label="Main navigation">
+      <a class="nav-home" href="/index.html#home">Home</a>
+      <a class="nav-profile" href="/profile.html">自己紹介</a>
+      <details class="blog-menu"><summary>ブログ</summary><div class="blog-menu-panel">
+        <a href="/blog.html">ブログ一覧</a>
+        <a href="/blog.html#research">研究<span>先行研究・論文の紹介</span></a>
+        <a href="/blog.html#math">数学／統計<span>数式・統計の学習ノート</span></a>
+        <a href="/blog.html#technology">技術／AI<span>技術の発展と仕組み</span></a>
+        <a href="/blog.html#society">社会分析<span>企業・国の戦略</span></a>
+      </div></details>
+    </nav>
   </header>
   <main style="max-width: 640px; margin: 0 auto; padding: 96px 28px; text-align: center;">
     <img class="cat-breathe-slow" src="/assets/cats/cat-sleep.svg" alt="" aria-hidden="true" style="width: 88px; margin: 0 auto 28px;">
@@ -28,6 +39,6 @@
   <footer class="site-footer" style="border-top: 0;">
     <p class="colophon-line">Scriptum in Ishikawa, MMXXVI</p>
   </footer>
-  <script src="/classical.js?v=20260914-garden" defer></script>
+  <script src="/classical.js?v=20260914-navigation" defer></script>
 </body>
 </html>

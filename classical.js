@@ -2,6 +2,19 @@
 (function () {
   'use strict';
 
+  // Preserve links to the former single-page profile.
+  if ((location.pathname === '/' || location.pathname.endsWith('/index.html')) && /^#(about|research|career|memberships|publications|resources|contact)$/.test(location.hash)) {
+    location.replace('profile.html' + location.hash);
+    return;
+  }
+  document.addEventListener('click', function (event) {
+    document.querySelectorAll('.blog-menu[open]').forEach(function (menu) {
+      if (!menu.contains(event.target) || event.target.closest('a')) menu.open = false;
+    });
+  });
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') document.querySelectorAll('.blog-menu[open]').forEach(function (menu) { menu.open = false; menu.querySelector('summary').focus(); });
+  });
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   var sceneControls = document.querySelector('.scene-controls');
@@ -156,6 +169,16 @@
 
   var translations = {
     '.brand > span:last-child': '思索の庭',
+    '.nav-profile': 'About',
+    '.blog-menu summary': 'Blog',
+    '.garden-intro > .summary': 'Reading research, exploring mathematics, and thinking about technology and society. A place to keep discoveries along the way.',
+    '.garden-entry[href="profile.html"] h2': 'About',
+    '.garden-entry[href="profile.html"] p': 'Research interests, experience, publications, and activities.',
+    '.garden-entry[href="blog.html"] h2': 'Blog',
+    '.garden-entry[href="blog.html"] p': 'Notes on research, mathematics and statistics, technology and AI, and society.',
+    '.garden-entry[href="illustrations.html"] h2': 'Gallery',
+    '.garden-entry[href="illustrations.html"] p': 'Places and moments that bring the garden to life.',
+
     '.site-nav a[href="#research"]': 'Research',
     '.site-nav a[href="#career"]': 'Career',
     '.site-nav a[href="#memberships"]': 'Memberships',
