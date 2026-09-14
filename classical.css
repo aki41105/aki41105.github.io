@@ -402,3 +402,7 @@ a.card .card-kicker { color: var(--color-text); }
 .scene-controls button { min-width: 36px; min-height: 36px; }
 @media (max-width: 800px) { .scene-controls { grid-template-columns: repeat(9, 36px); } }
 @media (max-width: 380px) { .scene-controls { grid-template-columns: repeat(7, 36px); } }
+
+/* Profile without a portrait column. */
+.hero.hero-text-only { grid-template-columns: minmax(0, 1fr); }
+.hero-text-only .hero-copy { max-width: 800px; }
