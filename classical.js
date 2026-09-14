@@ -168,7 +168,7 @@
   });
 
   var translations = {
-    '.brand > span:last-child': '思索の庭',
+    '.brand > span:last-child': 'AKI NOTES',
     '.nav-profile': 'About',
     '.blog-menu summary': 'Blog',
     '.garden-intro > .summary': 'Reading research, exploring mathematics, and thinking about technology and society. A place to keep discoveries along the way.',
@@ -177,7 +177,7 @@
     '.garden-entry[href="blog.html"] h2': 'Blog',
     '.garden-entry[href="blog.html"] p': 'Notes on research, mathematics and statistics, technology and AI, and society.',
     '.garden-entry[href="illustrations.html"] h2': 'Gallery',
-    '.garden-entry[href="illustrations.html"] p': 'Places and moments that bring the garden to life.',
+    '.garden-entry[href="illustrations.html"] p': 'Places and moments that illustrate AKI NOTES.',
 
     '.site-nav a[href="#research"]': 'Research',
     '.site-nav a[href="#career"]': 'Career',
@@ -316,7 +316,7 @@
     });
     currentLanguage = language;
     document.documentElement.lang = language;
-    document.title = language === 'en' ? '思索の庭 | Akihiro Sakuramoto' : japaneseTitle;
+    document.title = language === 'en' ? 'AKI NOTES | Akihiro Sakuramoto' : japaneseTitle;
     if (descriptionMeta) {
       descriptionMeta.content = language === 'en'
         ? 'Akihiro Sakuramoto, a master\'s student at JAIST researching Human-Robot Interaction and multimodal rapport estimation. Research, publications, background, and writing on technology and industry.'
