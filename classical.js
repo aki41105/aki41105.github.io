@@ -163,6 +163,7 @@
     '.brand > span:last-child': 'AKI NOTES',
     '.nav-profile': 'About',
     '.nav-blog': 'Blog',
+    '.nav-materials': 'Materials',
     '.blog-index > .photo-detail-copy h1': 'Blog',
     '.blog-index > .photo-detail-copy .summary': 'Notes on research, mathematics and statistics, technology and AI, and society.',
     '.category-index a[href="#research"]': 'Research',

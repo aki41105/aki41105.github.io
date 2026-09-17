@@ -444,3 +444,9 @@ a.card .card-kicker { color: var(--color-text); }
   .garden-intro { padding-block: 40px; }
   .scene-hero, #about, #explore { scroll-margin-top: 135px; }
 }
+
+/* Four peer navigation links remain readable on narrow screens. */
+.garden-nav a[aria-current="page"] { color: var(--color-heading); text-decoration: underline; text-underline-offset: 6px; }
+@media (max-width: 700px) {
+  .site-header .garden-nav { gap: clamp(16px, 5vw, 28px); }
+}
