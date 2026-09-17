@@ -98,3 +98,6 @@
 .roadmap-back { color: var(--year-color); text-decoration: none; font-size: 13px; }
 .roadmap-detail .resource-library-heading { margin-top: 24px; }
 .roadmap-detail { overflow-wrap: anywhere; }
+
+/* Preparation is visually distinct from participation. */
+.month-event.event-preparation { --year-color: #707477; }
