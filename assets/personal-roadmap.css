@@ -71,3 +71,14 @@
 
 .intern-candidate h5 a { display: flex; align-items: center; gap: 10px; }
 .intern-company-icon { width: 32px; height: 32px; flex: 0 0 32px; object-fit: contain; border-radius: 5px; background: #fff; padding: 3px; box-sizing: border-box; }
+
+.quarter a#study-abroad-continuation {
+  color: var(--year-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.quarter a#study-abroad-continuation:focus-visible {
+  outline: 2px solid var(--year-color);
+  outline-offset: 3px;
+}
