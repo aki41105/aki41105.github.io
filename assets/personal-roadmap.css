@@ -13,16 +13,15 @@
 .timeline-year-heading h3 { font-size: 21px; color: var(--color-heading); scroll-margin-top: 100px; }
 .timeline-columns, .timeline-grid, .year-flexible { display: grid; grid-template-columns: var(--month-width) repeat(3,minmax(0,1fr)); }
 .timeline-columns { padding: 14px 0; text-align: center; font-weight: 600; font-size: 14px; }
-.timeline-columns span:nth-child(2) { color: #655987; }
-.timeline-columns span:nth-child(3) { color: #356e81; }
+.timeline-columns span:nth-child(2) { color: #356eaa; }
+.timeline-columns span:nth-child(3) { color: #b85c18; }
 .timeline-columns span:nth-child(4) { color: #54714b; }
 .timeline-grid { grid-template-rows: repeat(var(--months),var(--row-height)); }
-.timeline-month { grid-column: 1; font-size: 12px; padding-top: 12px; color: #686152; border-top: 1px solid var(--color-divider); }
-.timeline-cell { border-top: 1px solid var(--color-divider); border-left: 1px solid var(--color-divider); background: linear-gradient(#ded7e6,#ded7e6) center / 2px 100% no-repeat; }
-.timeline-cell.lane-3 { background-image: linear-gradient(#cddde2,#cddde2); }
-.timeline-cell.lane-4 { background-image: linear-gradient(#d5dfd1,#d5dfd1); border-right: 1px solid var(--color-divider); }
-.timeline-event { --event-color: #655987; grid-column: var(--lane); grid-row: var(--start) / span var(--span); margin: 5px 12px 14px; padding: 12px; position: relative; background: var(--event-color); color: #fff; font-size: 13px; line-height: 1.65; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 5px; min-width: 0; overflow-wrap: anywhere; z-index: 1; text-decoration: none; }
-.timeline-event[style*="--lane:3"] { --event-color: #356e81; }
+.timeline-month { grid-column: 1; font-size: 12px; padding-top: 12px; color: #686152; border-top: 0; }
+.timeline-cell { border: 0; background: none; }
+.timeline-event { --event-color: #356eaa; grid-column: var(--lane); grid-row: var(--start) / span var(--span); margin: 5px 12px 14px; padding: 12px; position: relative; background: var(--event-color); color: #fff; font-size: 13px; line-height: 1.65; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 5px; min-width: 0; overflow-wrap: anywhere; z-index: 1; text-decoration: none; }
+.timeline-event[style*="--lane:3"] { --event-color: #b85c18; }
+.timeline-event[style*="--lane:4"] { --event-color: #54714b; }
 .timeline-event.event-preparation { --event-color: #707477; }
 .timeline-event::after { content: ''; position: absolute; top: 100%; left: 0; width: 100%; height: 10px; background: var(--event-color); clip-path: polygon(0 0,100% 0,50% 100%); }
 .timeline-event small { font-size: 10px; line-height: 1.5; }
