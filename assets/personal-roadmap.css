@@ -109,3 +109,5 @@
  .timeline-year-column-label { font-size: 9px; }
  .timeline-columns { font-size: 10px; }
 }
+
+.user-research-note p { grid-column: 2; color: #356eaa; border-color: #356eaa; }
