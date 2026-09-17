@@ -4,14 +4,14 @@
 .roadmap-heading h2 { font-size: clamp(24px, 3vw, 34px); color: var(--color-heading); }
 .roadmap-intro { font-size: 14px; margin-top: 14px; }
 .roadmap-assumption { font-size: 12px; margin-top: 8px; color: #686152; }
-/* Three parallel tracks, with calendar months flowing downwards. */
+/* Four parallel tracks, with calendar months flowing downwards. */
 .month-help { font-size: 12px; color: #686152; margin-top: 16px; }
 .vertical-roadmap { margin-top: 28px; }
 .timeline-year { margin-bottom: 28px; --row-height: 76px; --month-width: 48px; }
 .timeline-year-heading { display: flex; align-items: baseline; gap: 14px; border-bottom: 1px solid var(--color-divider); padding-bottom: 12px; }
 .timeline-year-heading p { font-size: 12px; color: #686152; }
 .timeline-year-heading h3 { font-size: 21px; color: var(--color-heading); scroll-margin-top: 100px; }
-.timeline-columns, .timeline-grid, .year-flexible { display: grid; grid-template-columns: var(--month-width) repeat(3,minmax(0,1fr)); }
+.timeline-columns, .timeline-grid, .year-flexible { display: grid; grid-template-columns: var(--month-width) repeat(4,minmax(0,1fr)); }
 .timeline-columns { padding: 14px 0; text-align: center; font-weight: 600; font-size: 14px; }
 .timeline-columns span:nth-child(2) { color: #356eaa; }
 .timeline-columns span:nth-child(3) { color: #b85c18; }
@@ -108,4 +108,15 @@
  .timeline-year-heading p { font-size: 9px; }
  .timeline-year-column-label { font-size: 9px; }
  .timeline-columns { font-size: 10px; }
+}
+
+.timeline-columns span:nth-child(5) { color: #755782; }
+.timeline-event.jaist-event { --event-color: #755782; font-size: 12px; }
+.timeline-event.jaist-event::after { display: none; }
+.timeline-event.jaist-event { margin-bottom: 5px; }
+.timeline-scroll { overflow-x: auto; }
+.timeline-scroll:focus-visible { outline: 2px solid #755782; outline-offset: 3px; }
+@media(max-width:800px) {
+ .timeline-scroll .vertical-roadmap { min-width: 740px; --year-width: 70px; --month-width: 35px; }
+ .timeline-scroll .timeline-year { --month-width: 35px; }
 }
