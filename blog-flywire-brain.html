@@ -49,7 +49,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap">
   <link rel="stylesheet" href="classical.css?v=20260914-direct-blog">
   <link rel="stylesheet" href="classical-sub.css?v=20260905-seo">
-  <link rel="stylesheet" href="assets/flywire-article.css?v=20260917">
+  <link rel="stylesheet" href="assets/flywire-article.css?v=20260917-datasets">
 </head>
 <body>
   <header class="site-header">
@@ -71,7 +71,7 @@
       <a class="fly-back" href="blog.html">← ブログ</a>
       <p class="fly-kicker">論文を読む · 神経科学</p>
       <h1 id="article-title">ハエの脳の「配線図」は、<br class="desktop-break">何を変えたのか</h1>
-      <p class="blog-article-meta"><time datetime="2026-09-17">2026年9月17日</time> · 約3分で読めます · <a href="profile.html" rel="author">櫻本晃弘</a></p>
+      <p class="blog-article-meta"><time datetime="2026-09-17">2026年9月17日</time> · 約5分で読めます · <a href="profile.html" rel="author">櫻本晃弘</a></p>
 
       <div class="blog-body">
         <p class="blog-lede">ハエの脳をコンピューターで動かす。そんな話題の背景にあるのが、脳の「配線図」です。2024年のこの論文は、成虫のショウジョウバエの脳全体で、<strong>どの神経細胞が、どの細胞につながるか</strong>を地図にしました。</p>
@@ -129,11 +129,34 @@
         <h2>実際のデータをのぞいてみる</h2>
         <p>公開サイト<a href="https://codex.flywire.ai/">FlyWire Codex</a>では、細胞の形や接続をブラウザで調べられます。論文と同じデータは<strong>FAFB v783</strong>です。閲覧にはGoogleアカウントでのログインが必要です。まずは「脳の配線図を見る」ところから触れてみると、この研究の大きさが実感できます。</p>
 
+        <section class="fly-datasets" aria-labelledby="datasets">
+          <h2 id="datasets">データが5種類あるけれど、どれを選ぶ？</h2>
+          <p>トップ画面のFAFB・BANC・MANC・MAOL・MCNSは、<strong>性別と、地図にした身体の範囲が違うデータ</strong>です。同じ脳の新旧バージョンが並んでいるわけではありません。今回の論文をたどるなら、まずは<strong>FAFB</strong>を選べば大丈夫です。</p>
+          <table class="fly-dataset-table">
+            <caption>5種類のデータと、調べる対象の目安</caption>
+            <thead><tr><th scope="col">データ</th><th scope="col">何が入っている？</th><th scope="col">選ぶ目安</th></tr></thead>
+            <tbody>
+              <tr class="dataset-recommended"><th scope="row">FAFB<small>v783</small></th><td>メスの脳<small>139,255個の神経細胞</small></td><td><strong>この論文のデータ。</strong>脳の配線を見てみたい。</td></tr>
+              <tr><th scope="row">BANC<small>v888</small></th><td>メスの脳＋腹側神経索<small>158,262個</small></td><td>脳から身体側へ続く回路を追いたい。</td></tr>
+              <tr><th scope="row">MANC<small>v1.2.1</small></th><td>オスの腹側神経索<small>23,665個</small></td><td>脚や翅の運動を支える、身体側の回路を調べたい。</td></tr>
+              <tr><th scope="row">MAOL<small>v1.1</small></th><td>オスの右視葉<small>52,445個</small></td><td>見るための情報処理に注目したい。</td></tr>
+              <tr><th scope="row">MCNS<small>v1.0</small></th><td>オスの脳＋腹側神経索<small>166,700個</small></td><td>オスの中枢神経系を広く調べたい。</td></tr>
+            </tbody>
+          </table>
+          <p class="fly-small">名称・神経細胞数は<a href="https://codex.flywire.ai/">公式トップ画面</a>の2026年9月17日時点の表示。選ぶ目安は、各データの収録範囲から整理したものです。</p>
+          <p><strong>腹側神経索（VNC）</strong>は、身体側で感覚や運動を処理する神経の集まり。脳と合わせて<strong>中枢神経系（CNS）</strong>と呼びます。<strong>視葉（OL）</strong>は視覚を処理する脳の領域で、OL/RのRは右側。名前の後ろの「v」はデータの版番号で、大きい数字ほど高性能という意味ではありません。</p>
+          <div class="fly-takeaway"><p><strong>「ハエを動かしたい」なら、使うシミュレーターが対応するデータを選ぶ。</strong><br>配線の範囲が広くても、それだけで身体が動くわけではありません。FAFB向けのプログラムにMCNSをそのまま差し替えられるとは限りません。</p></div>
+          <h3>画面の「接続数」が、論文の数字と違う理由</h3>
+          <p>冒頭の約5,450万個は<strong>シナプスという接続点の数</strong>。画面の「connections」は、細胞間のつながりを数えたものです。同じ2細胞の間に複数の接続点があるため、別の数字になります。さらに、接続として数える最低シナプス数もデータごとに異なるので、表示数だけで「どちらが複雑な脳か」は比べられません。詳しくは<a href="https://codex.flywire.ai/faq">公式FAQ</a>を参照してください。</p>
+          <p class="fly-small">自分で分析するためのダウンロードは、FAFB・BANCならCodexの「Download Data」から。MANC・MAOL・MCNSは各プロジェクトの公式配布先を使います。入口は公式FAQにまとまっています。</p>
+        </section>
+
         <footer class="fly-sources" aria-label="参考文献">
           <h2>出典</h2>
           <p>Dorkenwald, S. et al. (2024). <a href="https://doi.org/10.1038/s41586-024-07558-y" lang="en">Neuronal wiring diagram of an adult brain.</a> <i lang="en">Nature</i> 634, 124–138. 2024年10月2日オンライン公開。</p>
           <p>細胞の分類についての姉妹論文：Schlegel, P. et al. (2024). <a href="https://doi.org/10.1038/s41586-024-07686-5" lang="en">Whole-brain annotation and multi-connectome cell typing of Drosophila.</a></p>
-          <p>図は本記事のために作成した模式図です。数値・研究内容は上記論文、公開サイトの利用方法は2026年9月17日の確認に基づきます。</p>
+          <p>データ選びの参考：<a href="https://codex.flywire.ai/faq">Codex公式FAQ</a>、<a href="https://www.janelia.org/project-team/flyem/manc-connectome">MANC</a>、<a href="https://www.janelia.org/project-team/flyem/optic-lobe">MAOL</a>、<a href="https://male-cns.janelia.org/">MCNS</a>。</p>
+          <p>図は本記事のために作成した模式図です。論文の数値・研究内容は上記論文、比較表と公開サイトの利用方法は2026年9月17日の公式情報に基づきます。</p>
         </footer>
       </div>
       <a class="button button-secondary" href="blog.html">ブログへ戻る</a>

@@ -39,7 +39,22 @@
 .fly-sources { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--color-divider); }
 .fly-article .fly-sources h2 { font-size: 16px; margin: 0 0 12px; }
 .fly-article .fly-sources p { font-size: 12px; line-height: 1.85; margin-bottom: 12px; }
+.fly-datasets { margin-top: 34px; }
+#datasets { scroll-margin-top: 110px; }
+.fly-dataset-table { width: 100%; border-collapse: collapse; margin: 24px 0 12px; font-size: 14px; line-height: 1.75; }
+.fly-dataset-table caption { text-align: left; font-weight: 600; margin-bottom: 12px; font-size: 15px; }
+.fly-dataset-table th, .fly-dataset-table td { padding: 14px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--color-divider); }
+.fly-dataset-table thead { background: var(--color-surface); color: var(--color-heading); }
+.fly-dataset-table tbody th { width: 17%; color: var(--color-heading); }
+.fly-dataset-table td:nth-child(2) { width: 39%; }
+.fly-dataset-table small { display: block; font-size: 12px; font-weight: 400; margin-top: 3px; }
+.dataset-recommended { background: color-mix(in srgb, var(--color-heading) 7%, var(--color-surface)); }
+.fly-article .fly-datasets h3 { font-size: 18px; line-height: 1.6; margin: 28px 0 14px; color: var(--color-heading); }
 @media (max-width: 600px) {
+  .fly-dataset-table { font-size: 12px; }
+  .fly-dataset-table th, .fly-dataset-table td { padding: 10px 6px; }
+  .fly-dataset-table small { font-size: 10px; }
+  .fly-dataset-table tbody th { width: 21%; }
   .fly-article { padding-top: 24px; }
   .fly-kicker { margin-top: 24px; }
   .desktop-break { display: none; }
