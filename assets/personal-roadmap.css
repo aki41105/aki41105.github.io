@@ -52,7 +52,7 @@
 
 /* Expand the research notes across the year while keeping the roadmap compact by default. */
 .quarter-intern:has(.intern-research[open]) { grid-column: 1 / -1; }
-.intern-research summary { cursor: pointer; color: var(--year-color); text-decoration: underline; text-underline-offset: 3px; }
+.intern-research summary { cursor: pointer; color: var(--year-color); text-decoration: none; text-underline-offset: 3px; }
 .intern-research summary:focus-visible { outline: 2px solid var(--year-color); outline-offset: 3px; }
 .intern-research-body { padding: 14px 0 8px; }
 .intern-intro { font-size: 13px; }
@@ -74,7 +74,7 @@
 
 .quarter a#study-abroad-continuation {
   color: var(--year-color);
-  text-decoration: underline;
+  text-decoration: none;
   text-underline-offset: 3px;
   cursor: pointer;
 }
