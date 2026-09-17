@@ -21,7 +21,8 @@
 .timeline-cell { border: 0; border-top: 1px solid var(--color-divider); background: none; }
 .timeline-event { --event-color: #356eaa; grid-column: var(--lane); grid-row: var(--start) / span var(--span); margin: 5px 12px 14px; padding: 12px; position: relative; background: var(--event-color); color: #fff; font-size: 13px; line-height: 1.65; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 5px; min-width: 0; overflow-wrap: anywhere; z-index: 1; text-decoration: none; }
 .timeline-event[style*="--lane:3"] { --event-color: #b85c18; }
-.timeline-event[style*="--lane:4"] { --event-color: #54714b; }
+.timeline-event[style*="--lane:4"] { --event-color: #54714b; margin-bottom: 5px; }
+.timeline-event[style*="--lane:4"]::after { display: none; }
 .timeline-event.event-preparation { --event-color: #707477; }
 .timeline-event::after { content: ''; position: absolute; top: 100%; left: 0; width: 100%; height: 10px; background: var(--event-color); clip-path: polygon(0 0,100% 0,50% 100%); }
 .timeline-event small { font-size: 10px; line-height: 1.5; }
