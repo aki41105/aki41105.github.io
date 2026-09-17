@@ -101,3 +101,8 @@
 
 /* Preparation is visually distinct from participation. */
 .month-event.event-preparation { --year-color: #707477; }
+
+.plan-icon { width: 18px; height: 18px; flex-shrink: 0; }
+.month-event:has(.plan-icon) { padding-left: 34px; }
+.month-event > .plan-icon { position: absolute; left: 9px; top: 14px; }
+.year-unscheduled { display: flex; align-items: center; gap: 7px; }
