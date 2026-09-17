@@ -63,3 +63,27 @@
   .conference-table td:nth-child(3)::before { content: '投稿締切・タイムゾーン'; }
   .conference-table td:nth-child(4)::before { content: '公式URL・確認状況'; }
 }
+
+/* Materials index and conference identities. */
+.conference-back { margin: 18px 0; font-size: 14px; }
+.materials-index { max-width: 1000px; }
+.materials-feature { padding: clamp(24px, 5vw, 44px); background: var(--color-surface); border: 1px solid var(--color-divider); border-top: 3px solid var(--color-heading); border-radius: 4px; }
+.materials-feature h2 { font-size: 30px; margin: 24px 0 16px; }
+.materials-feature p { max-width: 650px; font-size: 16px; }
+.materials-button { display: inline-flex; justify-content: space-between; align-items: center; gap: 50px; min-height: 52px; margin-top: 28px; padding: 12px 26px; border-radius: 4px; background: var(--color-heading); color: #fff; font-weight: 600; text-decoration: none; }
+.materials-button:hover { background: #104950; color: #fff; text-decoration: none; }
+.materials-logo-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; padding: 18px; background: #fff; border-radius: 4px; }
+.materials-logo-strip img { width: 120px; height: 60px; object-fit: contain; }
+.conference-logo { display: flex; align-items: center; justify-content: center; height: 126px; padding: 14px; margin-bottom: 22px; background: #fff; border-radius: 3px; }
+.conference-logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.conference-table-icon { display: block; width: 48px; height: 48px; object-fit: contain; padding: 5px; background: white; border-radius: 4px; margin-bottom: 12px; }
+@media (max-width: 700px) {
+  .materials-logo-strip { gap: 14px; }
+  .materials-logo-strip img { width: 72px; height: 44px; }
+  .materials-button { width: 100%; }
+}
+.conference-icon-dark { background: #193f50; }
+.conference-icon-label { font-size: 11px; font-weight: 400; }
+.conference-foundation-logo { gap: 18px; color: #244967; font-size: 15px; }
+.conference-foundation-logo img { width: 48px; height: 48px; }
+.conference-table-icon { width: 112px; height: 56px; }
