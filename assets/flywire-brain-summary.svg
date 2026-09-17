@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">ハエの脳の配線図</title>
+  <desc id="desc">13万9,255個の神経細胞と約5,450万個の化学シナプス。FlyWireの2024年の論文を解説。点と線は実測データではなく模式図。</desc>
+  <rect width="1200" height="760" fill="#f3eadd"/>
+  <rect x="30" y="30" width="1140" height="700" rx="8" fill="#faf5ea" stroke="#c7b9a0"/>
+  <g font-family="Noto Sans JP,Hiragino Kaku Gothic ProN,sans-serif">
+    <text x="80" y="105" font-size="21" fill="#76531e" letter-spacing="3">AKI NOTES / 論文を読む</text>
+    <text x="80" y="200" font-size="58" font-weight="600" fill="#155c63">ハエの脳の「配線図」</text>
+    <text x="80" y="272" font-size="44" font-weight="500" fill="#252b31">何をつくり、何がわかった？</text>
+    <g transform="translate(90 342)" fill="none" stroke="#155c63" stroke-width="3">
+      <path d="m20 123 74-86 84 92 88-106 83 86 97-66 M20 123l75 88 83-82 93 96 78-116 101 99 M94 37l1 174 M178 129l88-106 M178 129l171-20 M266 23l5 202 M349 109l97-66 M446 43l4 165" opacity=".48"/>
+      <g fill="#faf5ea" stroke-width="5"><circle cx="20" cy="123" r="13"/><circle cx="94" cy="37" r="13"/><circle cx="95" cy="211" r="13"/><circle cx="178" cy="129" r="16"/><circle cx="266" cy="23" r="13"/><circle cx="271" cy="225" r="13"/><circle cx="349" cy="109" r="16"/><circle cx="446" cy="43" r="13"/><circle cx="450" cy="208" r="13"/></g>
+      <g fill="#b7862f" stroke="none"><circle cx="178" cy="129" r="8"/><circle cx="349" cy="109" r="8"/></g>
+    </g>
+    <path d="M625 348V600" stroke="#c7b9a0"/>
+    <text x="680" y="412" font-size="51" font-weight="600" fill="#155c63">139,255<tspan font-size="24"> 個</tspan></text>
+    <text x="683" y="453" font-size="22" fill="#252b31">神経細胞</text>
+    <text x="680" y="532" font-size="48" font-weight="600" fill="#155c63">約5,450<tspan font-size="24"> 万個</tspan></text>
+    <text x="683" y="574" font-size="22" fill="#252b31">細胞間の化学シナプス</text>
+    <text x="80" y="681" font-size="18" fill="#76531e">FlyWire v783 · Dorkenwald et al., Nature (2024)</text>
+    <text x="960" y="681" font-size="16" fill="#76531e">点と線は模式図</text>
+  </g>
+</svg>
