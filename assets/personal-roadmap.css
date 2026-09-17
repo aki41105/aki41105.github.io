@@ -4,12 +4,11 @@
 .roadmap-heading h2 { font-size: clamp(24px, 3vw, 34px); color: var(--color-heading); }
 .roadmap-intro { font-size: 14px; margin-top: 14px; }
 .roadmap-assumption { font-size: 12px; margin-top: 8px; color: #686152; }
-.roadmap-phases { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); padding: 0; margin: 32px 0 24px; list-style: none; }
-.roadmap-phase { --phase-color: #356e81; display: grid; grid-template-rows: 128px 116px 128px; min-width: 0; }
+.roadmap-phases { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 0; margin: 32px 0 24px; list-style: none; }
+.roadmap-phase { --phase-color: #356e81; display: grid; grid-template-rows: 128px 96px 128px; min-width: 0; }
 .phase-2 { --phase-color: #655987; }
 .phase-3 { --phase-color: #945a78; }
 .phase-4 { --phase-color: #a85b4f; }
-.phase-5 { --phase-color: #97601f; }
 .phase-note { grid-row: 1; position: relative; padding: 4px 10px 28px; align-self: end; font-size: 12px; }
 .phase-note time { font-size: 12px; font-weight: 700; letter-spacing: .01em; }
 .phase-note ul { padding-left: 1.1em; margin: 6px 0 0; line-height: 1.8; }
@@ -18,11 +17,9 @@
 .roadmap-phase:nth-child(even) .phase-note { grid-row: 3; align-self: start; padding: 28px 10px 4px; }
 .roadmap-phase:nth-child(even) .phase-note::after { top: 0; bottom: auto; }
 .roadmap-phase:nth-child(even) .phase-note::before { top: 20px; bottom: auto; }
-.phase-arrow { grid-row: 2; background: var(--phase-color); color: #fff; padding: 18px 17px 14px 27px; clip-path: polygon(0 0, calc(100% - 23px) 0, 100% 50%, calc(100% - 23px) 100%, 0 100%, 23px 50%); margin-left: -13px; }
+.phase-arrow { display: flex; align-items: center; justify-content: center; grid-row: 2; background: var(--phase-color); color: #fff; padding: 18px 17px 14px 27px; clip-path: polygon(0 0, calc(100% - 23px) 0, 100% 50%, calc(100% - 23px) 100%, 0 100%, 23px 50%); margin-left: -13px; }
 .roadmap-phase:first-child .phase-arrow { margin-left: 0; padding-left: 17px; clip-path: polygon(0 0, calc(100% - 23px) 0, 100% 50%, calc(100% - 23px) 100%, 0 100%); }
-.phase-year { font-size: 11px; letter-spacing: .05em; }
-.phase-arrow h3 { font-size: 20px; margin: 5px 0 9px; color: #fff; }
-.phase-arrow p { font-size: 11px; }
+.phase-arrow h3 { font-size: 20px; margin: 0; color: #fff; }
 .roadmap-tracks { display: grid; gap: 12px; }
 .roadmap-track { display: grid; grid-template-columns: 85px 1fr; align-items: center; }
 .roadmap-track h3 { font-size: 12px; color: var(--color-heading); }
