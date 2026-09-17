@@ -94,3 +94,7 @@
   outline: 2px solid var(--year-color);
   outline-offset: 3px;
 }
+
+.roadmap-back { color: var(--year-color); text-decoration: none; font-size: 13px; }
+.roadmap-detail .resource-library-heading { margin-top: 24px; }
+.roadmap-detail { overflow-wrap: anywhere; }
