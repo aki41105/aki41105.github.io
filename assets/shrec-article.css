@@ -1,0 +1,16 @@
+.shrec-dialogue {margin:22px 0;padding:4px 18px;border-left:3px solid var(--color-heading)}
+.shrec-dialogue b {display:block;font-size:12px;color:var(--color-heading)}
+.shrec-steps {display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0}
+.shrec-steps > div {padding:14px;background:var(--color-background,var(--color-surface));border:1px solid var(--color-divider);border-radius:5px}
+.shrec-steps b {font-size:15px;color:var(--color-heading)}
+.shrec-article .shrec-steps p {font-size:14px;margin:8px 0 0}
+.shrec-table-wrap {max-width:100%;overflow-x:auto;margin:24px 0 12px}
+.shrec-table {width:100%;border-collapse:collapse;font-size:14px;line-height:1.8}
+.shrec-table caption {text-align:left;font-weight:600;margin-bottom:12px;color:var(--color-heading)}
+.shrec-table th,.shrec-table td {padding:13px 10px;text-align:left;border-bottom:1px solid var(--color-divider);vertical-align:top}
+.shrec-table thead {background:var(--color-surface)}
+.shrec-table th {color:var(--color-heading)}
+.shrec-table th:first-child {min-width:5em}
+.shrec-results td {white-space:nowrap;font-variant-numeric:tabular-nums}
+.shrec-article [id] {scroll-margin-top:100px}
+@media(max-width:600px){.shrec-steps{grid-template-columns:1fr;gap:9px}.shrec-table{font-size:12px}.shrec-table th,.shrec-table td{padding:10px 6px}.shrec-article h1{font-size:29px}}
