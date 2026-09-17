@@ -64,3 +64,7 @@
 .intern-candidate p { font-size: 12px; line-height: 1.8; }
 .intern-candidate .intern-duration { font-weight: 600; margin-bottom: 6px; }
 @media (max-width: 600px) { .intern-candidates { grid-template-columns: 1fr; } }
+
+.intern-source { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--color-divider); }
+.intern-source span { display: block; color: #686152; margin-bottom: 4px; }
+.intern-source a { display: block; overflow-wrap: anywhere; font-size: 11px; line-height: 1.6; }
