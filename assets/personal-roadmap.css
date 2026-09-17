@@ -4,22 +4,23 @@
 .roadmap-heading h2 { font-size: clamp(24px, 3vw, 34px); color: var(--color-heading); }
 .roadmap-intro { font-size: 14px; margin-top: 14px; }
 .roadmap-assumption { font-size: 12px; margin-top: 8px; color: #686152; }
-.roadmap-phases { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 0; margin: 32px 0 24px; list-style: none; }
-.roadmap-phase { --phase-color: #356e81; display: grid; grid-template-rows: 128px 96px 128px; min-width: 0; }
-.phase-2 { --phase-color: #655987; }
-.phase-3 { --phase-color: #945a78; }
-.phase-4 { --phase-color: #a85b4f; }
-.phase-note { grid-row: 1; position: relative; padding: 4px 10px 28px; align-self: end; font-size: 12px; }
-.phase-note time { font-size: 12px; font-weight: 700; letter-spacing: .01em; }
-.phase-note ul { padding-left: 1.1em; margin: 6px 0 0; line-height: 1.8; }
-.phase-note::after { content: ''; position: absolute; width: 1px; height: 21px; background: var(--color-divider); left: 30px; bottom: 0; }
-.phase-note::before { content: ''; position: absolute; width: 9px; height: 9px; border-radius: 50%; background: var(--color-accent); left: 26px; bottom: 20px; }
-.roadmap-phase:nth-child(even) .phase-note { grid-row: 3; align-self: start; padding: 28px 10px 4px; }
-.roadmap-phase:nth-child(even) .phase-note::after { top: 0; bottom: auto; }
-.roadmap-phase:nth-child(even) .phase-note::before { top: 20px; bottom: auto; }
-.phase-arrow { display: flex; align-items: center; justify-content: center; grid-row: 2; background: var(--phase-color); color: #fff; padding: 18px 17px 14px 27px; clip-path: polygon(0 0, calc(100% - 23px) 0, 100% 50%, calc(100% - 23px) 100%, 0 100%, 23px 50%); margin-left: -13px; }
-.roadmap-phase:first-child .phase-arrow { margin-left: 0; padding-left: 17px; clip-path: polygon(0 0, calc(100% - 23px) 0, 100% 50%, calc(100% - 23px) 100%, 0 100%); }
-.phase-arrow h3 { font-size: 20px; margin: 0; color: #fff; }
+/* Each academic year contains four calendar quarters. */
+.quarter-roadmap { margin: 32px 0 16px; display: grid; gap: 22px; }
+.roadmap-year { --year-color: #356e81; display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 18px; align-items: stretch; }
+.year-2 { --year-color: #655987; }
+.year-3 { --year-color: #945a78; }
+.year-4 { --year-color: #a85b4f; }
+.year-label { background: var(--year-color); color: #fff; clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%); display: flex; flex-direction: column; justify-content: center; padding: 20px 22px 20px 16px; }
+.year-label p { font-size: 11px; margin-bottom: 6px; }
+.year-label h3 { font-size: 21px; color: #fff; }
+.quarter-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); list-style: none; padding: 0; margin: 0; gap: 10px; }
+.quarter { border-top: 4px solid var(--year-color); padding: 13px 10px 16px; background: color-mix(in srgb, var(--year-color) 6%, var(--color-surface)); min-width: 0; }
+.quarter h4 { font-size: 15px; color: var(--year-color); margin-bottom: 12px; }
+.quarter ul { padding-left: 1.1em; margin: 0; font-size: 12px; line-height: 1.9; }
+.quarter-before { background: transparent; border-top-color: var(--color-divider); color: #686152; }
+.quarter-before h4 { color: #686152; }
+.quarter-before p { font-size: 12px; }
+.quarter-note { font-size: 12px; color: #686152; margin-bottom: 26px; }
 .roadmap-tracks { display: grid; gap: 12px; }
 .roadmap-track { display: grid; grid-template-columns: 85px 1fr; align-items: center; }
 .roadmap-track h3 { font-size: 12px; color: var(--color-heading); }
@@ -34,22 +35,17 @@
 .personal-page .resource-reference-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (max-width: 900px) {
   .doctoral-roadmap { padding: 24px 18px; }
-  .roadmap-phases { display: block; margin-top: 28px; }
-  .roadmap-phase { display: grid; grid-template-columns: minmax(140px, .9fr) minmax(0, 1.3fr); grid-template-rows: auto; gap: 16px; margin-bottom: 16px; align-items: center; }
-  .phase-arrow, .roadmap-phase:first-child .phase-arrow { grid-row: 1; grid-column: 1; margin: 0; padding: 17px 20px 27px; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), 50% 100%, 0 calc(100% - 12px)); }
-  .phase-note, .roadmap-phase:nth-child(even) .phase-note { grid-row: 1; grid-column: 2; padding: 0; align-self: center; }
-  .phase-note::before, .phase-note::after { display: none; }
-  .phase-arrow h3 { font-size: 19px; }
-  .phase-note time { font-size: 11px; }
+  .roadmap-year { grid-template-columns: 1fr; gap: 12px; }
+  .year-label { padding: 12px 20px; flex-direction: row; justify-content: flex-start; align-items: center; gap: 16px; }
+  .year-label p { margin: 0; }
+  .year-label h3 { font-size: 20px; }
   .roadmap-track { grid-template-columns: 1fr; gap: 8px; }
   .track-segments p { padding: 10px 18px 10px 10px; }
 }
-@media (max-width: 520px) {
+@media (max-width: 600px) {
   .personal-page .resource-reference-list { grid-template-columns: 1fr; }
   .doctoral-roadmap { padding: 22px 14px; }
-  .roadmap-phase { grid-template-columns: minmax(115px, .9fr) minmax(0, 1.2fr); gap: 12px; }
-  .phase-arrow, .roadmap-phase:first-child .phase-arrow { padding: 14px 9px 24px; }
-  .phase-arrow h3 { font-size: 17px; }
-  .phase-note { font-size: 11px; }
+  .quarter-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .quarter { padding: 12px 8px; }
   .track-segments { grid-template-columns: 1fr; }
 }
