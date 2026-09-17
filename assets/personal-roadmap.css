@@ -88,3 +88,24 @@
 /* Preparation is visually distinct from participation. */
 
 .plan-icon { width: 18px; height: 18px; flex-shrink: 0; }
+
+/* Shared column headings and an academic-year column on the left. */
+.vertical-roadmap { --year-width: 110px; --month-width: 48px; }
+.timeline-top, .timeline-year { display: grid; grid-template-columns: var(--year-width) minmax(0,1fr); column-gap: 14px; }
+.timeline-top { align-items: center; }
+.timeline-year-column-label { font-size: 11px; color: #686152; }
+.timeline-year-heading { grid-column: 1; grid-row: 1 / span 2; display: block; border: 0; padding: 12px 0; }
+.timeline-year-heading h3 { font-size: 19px; margin-top: 6px; }
+.timeline-year-heading p { font-size: 11px; }
+.timeline-grid { grid-column: 2; min-width: 0; }
+.year-flexible { grid-column: 2; }
+.timeline-columns { min-width: 0; }
+@media(max-width:600px) {
+ .vertical-roadmap { --year-width: 48px; --month-width: 25px; }
+ .timeline-top, .timeline-year { column-gap: 5px; }
+ .timeline-year { --month-width: 25px; }
+ .timeline-year-heading h3 { font-size: 12px; }
+ .timeline-year-heading p { font-size: 9px; }
+ .timeline-year-column-label { font-size: 9px; }
+ .timeline-columns { font-size: 10px; }
+}
