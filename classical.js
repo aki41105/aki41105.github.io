@@ -292,7 +292,7 @@
     '#contact a[href^="https://arxiv.org/abs/"] .link-value': 'Read Paper',
     '#contact a[href="https://www.jaist.ac.jp/~okada-s/index.html"] .contact-label-text': 'Okada Laboratory',
     '#contact a[href="https://www.jaist.ac.jp/~okada-s/index.html"] .link-value': 'Lab Website',
-    '.footer-links a[href="personal.html"]': 'Personal',
+    '.footer-links a[href="https://aki-private.sakuramoto-may.workers.dev/personal.html"]': 'Personal',
     '.colophon-line': 'Scriptum in Ishikawa, MMXXVI',
     '.colophon-note': 'Proofread by one calico cat.',
     '.colophon-footnote': '* Cats have walked across manuscripts since a pawprinted codex of Dubrovnik, 1445.',
