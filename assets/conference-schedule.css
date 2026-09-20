@@ -99,3 +99,6 @@
   .anthropic-feature { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .anthropic-portrait { width: min(220px, 100%); }
 }
+
+.materials-index a:not(.materials-button) { color: var(--color-heading); text-decoration: underline; text-underline-offset: .2em; }
+.materials-index a:not(.materials-button):hover { color: var(--color-accent-700); }
