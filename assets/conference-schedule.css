@@ -103,7 +103,7 @@
 .materials-index a:not(.materials-button) { color: var(--color-heading); text-decoration: underline; text-underline-offset: .2em; }
 .materials-index a:not(.materials-button):hover { color: var(--color-accent-700); }
 
-.anthropic-resources { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 32px; border-top: 1px solid var(--color-divider); padding-top: 28px; }
+.anthropic-resources { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; margin-top: 28px; }
 .anthropic-resources h3 { margin: 0 0 10px; font-size: 19px; line-height: 1.6; overflow-wrap: anywhere; }
 .anthropic-resources p { margin: 0; }
 @media (max-width: 700px) { .anthropic-resources { grid-template-columns: minmax(0, 1fr); } }
