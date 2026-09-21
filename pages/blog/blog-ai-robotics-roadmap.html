@@ -1,0 +1,148 @@
+---
+layout: null
+permalink: /blog-ai-robotics-roadmap.html
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AIとロボティクスの到達点、短中期の課題、長期の展望を、論文の構成に沿って整理します。">
+  <meta name="author" content="櫻本晃弘">
+  <meta property="og:title" content="「A roadmap for AI in robotics」を読む | 櫻本晃弘">
+  <meta property="og:description" content="AIとロボティクスの到達点、短中期の課題、長期の展望を、論文の構成に沿って整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aki41105.github.io/blog-ai-robotics-roadmap.html">
+  <meta property="og:image" content="https://aki41105.github.io/assets/header-library.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="「A roadmap for AI in robotics」を読む | 櫻本晃弘">
+  <meta name="twitter:description" content="AIとロボティクスの到達点、短中期の課題、長期の展望を、論文の構成に沿って整理します。">
+  <meta name="twitter:image" content="https://aki41105.github.io/assets/header-library.jpg">
+  <meta name="theme-color" content="#155c63">
+  <link rel="canonical" href="https://aki41105.github.io/blog-ai-robotics-roadmap.html">
+  <link rel="icon" href="assets/favicon-192.png?v=20260914-fox-large" type="image/png">
+  <link rel="icon" href="assets/favicon-32x32.png?v=20260914-fox-large" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=20260914-fox">
+  <title>「A roadmap for AI in robotics」を読む | 櫻本晃弘</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://aki41105.github.io/blog-ai-robotics-roadmap.html#article",
+    "url": "https://aki41105.github.io/blog-ai-robotics-roadmap.html",
+    "mainEntityOfPage": "https://aki41105.github.io/blog-ai-robotics-roadmap.html",
+    "headline": "「A roadmap for AI in robotics」を読む",
+    "description": "AIとロボティクスの到達点、短中期の課題、長期の展望を、論文の構成に沿って整理します。",
+    "datePublished": "2026-09-17",
+    "dateModified": "2026-09-17",
+    "inLanguage": "ja",
+    "author": {
+      "@type": "Person",
+      "@id": "https://aki41105.github.io/#person",
+      "name": "櫻本晃弘",
+      "url": "https://aki41105.github.io/"
+    },
+    "isPartOf": { "@id": "https://aki41105.github.io/blog.html#blog" }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="classical.css?v=20260918-materials">
+  <link rel="stylesheet" href="classical-sub.css?v=20260905-seo">
+<link rel="stylesheet" href="assets/roadmap-article.css?v=20260917-detail">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="Home">
+      <span class="brand-mark" aria-hidden="true"><img src="assets/site-icon.png?v=20260914-fox" alt="" width="64" height="64"></span>
+      <span>AKI NOTES</span>
+    </a>
+
+    <nav class="site-nav garden-nav" aria-label="Main navigation">
+      <a class="nav-home" href="index.html#home">Home</a>
+      <a class="nav-profile" href="profile.html">自己紹介</a>
+      <a class="nav-blog" href="blog.html">ブログ</a>
+      <a class="nav-materials" href="materials.html">資料</a>
+    </nav>
+      <button class="theme-toggle" type="button" id="themeToggle" aria-label="ダークモードを切り替え">◐</button>
+    <button class="language-toggle" type="button" id="languageToggle" aria-label="Switch to English">English</button>
+  </header>
+
+  <main>
+<article class="section blog-article roadmap-article" aria-labelledby="article-title">
+<a href="blog.html">← ブログ</a>
+<p class="roadmap-kicker">PAPER NOTES · ROBOTICS</p>
+<h1 id="article-title">「A roadmap for AI in robotics」を読む</h1>
+<p class="blog-article-meta"><time datetime="2026-09-17">2026年9月17日</time> · 論文解説 · <a href="profile.html" rel="author">櫻本晃弘</a></p>
+<div class="blog-body">
+<div class="paper-info"><strong>対象論文</strong><p>Aude Billardほか（2025）<br><cite>A roadmap for AI in robotics</cite><br>Nature Machine Intelligence 7, 818–824.<br><a href="https://doi.org/10.1038/s42256-025-01050-6">正式版・2025年6月19日公開</a> ／ <a href="https://arxiv.org/abs/2507.19975">著者公開版</a></p></div>
+<p>本稿は、著者公開版の節順に議論の流れをたどり、手法と課題の意味を補足した解説です。新しい手法を実験で検証する論文ではなく、研究課題を提示する<strong>Perspective（展望論文）</strong>です。各節の冒頭に論文の要点を置き、その後の「読解の補足」で仕組みを説明します。補足内の例は説明用であり、原論文の実験結果ではありません。2026年の技術動向や独自の未来予測は加えていません。</p>
+<nav class="roadmap-toc" aria-label="目次"><strong>論文を読む順番</strong><ol><li><a href="#background">背景</a></li><li><a href="#history">学習手法の歴史</a></li><li><a href="#applications">応用と商用展開</a></li><li><a href="#near">短期・中期の課題</a></li><li><a href="#long">長期の課題</a></li><li><a href="#outlook">今後の展望</a></li></ol></nav>
+<h2 id="background">1. 背景：物理世界にAIを適用する</h2>
+<p>著者らは、情報処理でのAIの成功を、実世界で動くロボットへそのまま移せないと指摘します。データの確保や安全性を踏まえ、用途に適した技術を選ぶことが出発点です。</p>
+<div class="reading-note"><p class="note-label">読解の補足：認識と行動は、どう違うか</p>
+<p>画像から物体名を答える問題では、入力された画像に対して出力を評価できます。ロボットでは、出した動作が次の観測を変えます。手を伸ばせばカメラから物体が隠れるかもしれず、触れれば物体の位置が変わります。この<strong>観測→判断→動作→次の観測</strong>の循環を、閉ループと呼びます。</p>
+<p>たとえば「コップを持つ」動作を考えると、コップを認識するだけでなく、届く位置か、指をどこに置くか、どの程度の力で持つかを決める必要があります。動作中に滑れば、観測を更新して修正します。言葉として正しい説明を生成する能力と、この循環を安定して続ける能力は、評価する対象が違います。</p>
+<p>論文の「どのAIをロボティクスに使うか」という問いを読む際には、知覚・計画・制御のどこを学習に任せ、どこを別の仕組みで支えるのかを意識すると、議論を追いやすくなります。</p></div>
+<h2 id="history">2. 学習手法の歴史</h2>
+<p>実演から学ぶ方法と、試行錯誤による強化学習を振り返り、それぞれの制約を補う組合せを紹介しています。</p>
+<aside class="term-note"><strong>用語の補足</strong><dl><dt>実演学習（LfD）</dt><dd>お手本の動作データを使って、行動の仕方を学ぶ方法。</dd><dt>強化学習（RL）</dt><dd>行動の結果に対する報酬を手がかりに、行動の選び方を学ぶ方法。</dd><dt>方策（policy）</dt><dd>観測した状況に応じて、どの行動を選ぶかを決める規則やモデル。</dd></dl></aside>
+<div class="reading-note"><p class="note-label">読解の補足：お手本と試行錯誤</p>
+<h3>実演学習は、観測と動作の関係を学ぶ</h3>
+<p>実演学習の一つである行動クローニングでは、お手本の「この状況で、この動作をした」という組を学習します。人が遠隔操作したロボットの記録などから、画像や関節の状態を入力として、次の動作を予測するモデルを作ります。単に一本の軌道を録画再生することとは異なります。</p>
+<p>難しいのは、学習時に見なかった状況です。少し手元がずれると、その後の観測もお手本から離れます。ずれた状態からの戻り方を学んでいなければ、誤差が積み重なる可能性があります。お手本の量だけでなく、どの状態を含めるかが問題になります。</p>
+<h3>強化学習は、行動の結果を評価する</h3>
+<p>強化学習では、環境に行動を加え、その結果に応じた報酬を受け取り、将来も含めて報酬を得やすい方策へ更新します。まだ試していない行動を調べる「探索」と、既に良いと分かっている行動を使う「活用」の兼ね合いがあります。</p>
+<p>例えば物を所定の位置に置く課題でも、「到着する速さ」だけを報酬にするか、「落とさないこと」「過大な力をかけないこと」も考慮するかで、学習の目標は変わります。これは報酬設計を説明する例であり、原論文で行われた実験ではありません。</p>
+<h3>両者の組合せをどう理解するか</h3>
+<p>お手本から初期方策を作り、その後の試行錯誤で改善する設計を考えると、役割の違いが分かります。初期動作を得る段階と、結果に基づいて調整する段階を分担できます。ただし、お手本に含まれる偏りや報酬の設計が自動的に解決するわけではありません。</p></div>
+<h2 id="applications">3. 応用と商用展開</h2>
+<p>物流・製造・自動運転への応用に続き、柔らかく変形するロボットの知覚や制御を、AIの適用先として論じます。</p>
+<div class="reading-note"><p class="note-label">読解の補足：ソフトロボティクス</p>
+<p>硬いリンクと関節を持つ機械では、関節角度から手先の位置を計算するモデルを作れます。柔らかい部材は、同じ入力でも荷重や接触によって形が変わります。また、直前にどう変形していたかが現在の応答に影響することもあります。このような履歴への依存を<strong>ヒステリシス</strong>と呼びます。</p>
+<p>したがって、センサの値から形や接触状態を推定する問題と、狙った形・力を生み出す問題が密接になります。この節は、AIの適用先を考える際に、ロボットの材質や身体の性質も関わることを理解するために読めます。</p></div>
+<h2 id="near">4. 短期・中期の課題</h2>
+<ul class="roadmap-list"><li><strong>データ：</strong>多様な身体・作業・環境を反映し、人のデータを適切に扱う。</li><li><strong>シミュレーション：</strong>実環境とのずれを縮め、現実のデータも模擬環境へ戻す。</li><li><strong>生成モデル：</strong>言語・視覚を行動につなぎ、計画の実行可能性を検証する。</li><li><strong>既存知識と制御：</strong>学習を物理モデルや制御手法と組み合わせ、頑健性を高める。</li></ul>
+<aside class="term-note"><strong>用語の補足</strong><dl><dt>Sim-to-Real</dt><dd>シミュレーションで獲得した方策などを実機・実環境へ移すこと。両者の違いによる性能低下が「ギャップ」です。</dd><dt>制御</dt><dd>観測を使って、位置や速度などを目標に近づける操作を決めること。</dd></dl></aside>
+<div class="reading-note"><p class="note-label">読解の補足：四つの課題を具体化する</p>
+<h3>4.1 データの「量」と「代表性」</h3>
+<p>ロボットの学習データには、画像だけでなく、関節の状態、与えた指令、接触、動作の結果などが関わります。これらの時刻がずれていると、どの行動がどの結果を生んだのかを正しく対応付けられません。</p>
+<p>また、同じ机・同じ照明・同じ物体で大量に記録しても、別の環境に対応するとは限りません。「代表性」は、使う予定の条件の違いがデータに含まれているかという問題です。データの件数と、扱える条件の広さを分けて考える必要があります。</p>
+<p class="reference-note"><strong>関連原著を読む：</strong><a href="https://arxiv.org/abs/2310.08864">Open X-Embodiment</a>は、21機関が22種類のロボットのデータを集め、共通形式とRT-Xモデルを提示した研究です。他機体の経験が役立つ転移を報告しています。身体ごとにデータを閉じずに学ぶことの具体例ですが、すべての機体・作業への転移が保証されたわけではありません。</p>
+<h3>4.2 Sim-to-RealとReal-to-Sim</h3>
+<p>シミュレーターでは、摩擦、質量、センサ雑音、動作の遅延などを設定します。実機での値や変化が設定から外れると、仮想環境では成功していた方策が失敗することがあります。映像が写実的かどうかと、動作の結果が現実に近いかどうかは別の問題です。</p>
+<p>理解のために、滑りやすい物体を持つ例を考えます。模擬環境で摩擦を大きく見積もると、弱い力でも持てると学ぶかもしれません。現実で滑った記録を使って摩擦や接触のモデルを見直し、再び試す。この向きがReal-to-Simです。</p>
+<div class="learning-loop" aria-label="シミュレーションと現実の往復を説明する概念図"><span>模擬環境で学習</span><span aria-hidden="true">→</span><span>実機で検証</span><span aria-hidden="true">→</span><span>ずれを調べる</span><span aria-hidden="true">→</span><span>模擬環境を更新</span></div>
+<p class="diagram-caption">理解のための概念図。原論文の図の転載ではなく、特定手法の処理手順を表すものでもありません。</p>
+<h3>4.3 言語・視覚・行動のつながり</h3>
+<p>LLMは言語を扱い、VLMは視覚と言語を結び付け、VLAは行動も出力の対象にします。「何が見えているか」「何を求められたか」から、動作へつなぐ仕組みを考えるための区別です。</p>
+<p class="reference-note"><strong>関連原著を読む：</strong><a href="https://arxiv.org/abs/2307.15818">RT-2</a>は、ロボットの行動をトークンで表し、視覚言語の課題とロボットの軌道データを使って学習するVLAの例です。言語モデルが文章を出力する仕組みを、動作の表現にも広げています。</p>
+<p>ただし、「棚に置く」という妥当そうな計画でも、棚が高すぎれば実行できません。対象を言語的に特定すること、動作の順序を決めること、実際に到達できる軌道を作ることを区別すると、計画の検証が必要な理由が分かります。</p>
+<h3>4.4 学習と制御を組み合わせる</h3>
+<p>制御モデルでは運動の関係を明示し、学習モデルではデータから関係を獲得します。例えば、運動の基本部分はモデルで計算し、計算と実測の差を学習で補う構成が考えられます。「すべてを手作業で記述する」「すべてを学習に任せる」の間には、さまざまな組合せがあります。</p>
+<p class="reference-note"><strong>関連文献を読む：</strong><a href="https://arxiv.org/abs/2108.06266">Safe Learning in Robotics</a>は、学習に基づく制御と安全な強化学習を整理しています。「保証」がある手法でも、何を安全と定義し、どのモデル誤差や環境を仮定した保証かを確かめることが重要です。</p></div>
+<h2 id="long">5. 長期の課題</h2>
+<p>運用中の継続学習、身体・環境・作業をまたぐ知識の転移、安全な探索が課題です。新しい技能の獲得と、既存の能力・信頼性の維持を両立する必要があります。</p>
+<div class="reading-note"><p class="note-label">読解の補足：学習し続けるシステムを評価する</p>
+<h3>5.1 継続学習と忘却</h3>
+<p>学習済みモデルを新しいデータで更新すると、以前は解けた問題の性能が下がることがあります。特に大きく低下する現象は「破局的忘却」と呼ばれます。新しい課題の得点だけを見ても、モデル全体が良くなったとは判断できません。</p>
+<p class="reference-note"><strong>概念の参考文献：</strong><a href="https://arxiv.org/abs/1612.00796">Overcoming catastrophic forgetting in neural networks</a>は、過去の課題に重要なパラメータの変化を抑える方法を示した研究です。ここでは忘却という概念の補足として紹介しており、対象ロードマップがこの方法を推奨しているという意味ではありません。</p>
+<h3>5.2 転移は、同じ指令をコピーすることではない</h3>
+<p>長さの異なる腕に、同じ関節角度をそのまま与えても、手先は同じ場所に届きません。一方、「対象を持って目的地へ運ぶ」という作業の構造は共有できるかもしれません。転移を考えるときは、共有したい知識と、身体に合わせて変える必要のある表現を区別します。</p>
+<p>この違いは評価にも影響します。同じ機体で物体を替えた実験、別の部屋へ移した実験、機体そのものを替えた実験は、異なる一般化を調べています。「転移できた」という結果を読む際には、何を固定して何を変えたかの確認が必要です。</p>
+<h3>5.3 安全な探索</h3>
+<p>まだ知らないことを学ぶには試行が必要ですが、実世界では失敗にも費用があります。探索の途中に守る条件と、最終的に達成したい目的を分けると、この問題を捉えやすくなります。</p>
+<p>例えば、接触の性質を調べるために力を少し変える場合でも、許される力の範囲を超えない必要があります。これは概念の説明例です。安全な範囲内で十分な情報を得られるかは、探索の効率と安全性の両方に関わります。</p></div>
+<h2 id="outlook">6. 今後の展望</h2>
+<p>結びでは、少ない教示による適応、計算とデータの効率化、説明可能性・プライバシー、持続可能な設計を重視しています。課題は並行して研究されるもので、解決時期の確約ではありません。</p>
+<div class="reading-note"><p class="note-label">読解の補足：展望をどう受け取るか</p>
+<p>研究ロードマップは、重要な問題と取り組む方向を示します。それぞれの解決確率や期限が測定された予測とは異なります。例えば「計算を効率化する」という方向には、モデルを小さくする、処理する情報を選ぶ、実行する場所を変えるなど、異なる設計上の選択があります。どれが適切かは装置と用途で変わります。</p>
+<p>また、説明可能性は単に説明文を出せるかではなく、その説明が実際の判断過程や失敗原因に対応しているかという評価につながります。プライバシー、計算の費用、機体の資源消費も、それぞれ異なる尺度で確かめる必要があります。</p>
+<p>本文を読み終えたら、提案されている方向について「既に示された成果は何か」「残る条件は何か」「今後検証するべき問いは何か」を区別すると、期待と実証の範囲を混同せずに理解できます。</p></div>
+<section class="roadmap-source" aria-labelledby="source-title"><h2 id="source-title">原文を読む</h2><p>本文の確認には<a href="https://arxiv.org/pdf/2507.19975">arXivの著者公開版PDF</a>を使用しました。正式版の書誌情報は<a href="https://www.nature.com/articles/s42256-025-01050-6">出版社ページ</a>で確認できます。公開版と正式版では表題・組版が異なります。</p><p>各節冒頭は著者の議論の要約です。「読解の補足」「用語の補足」は一般的な技術解説で、原文の引用や著者自身の追加主張ではありません。関連原著と概念の参考文献は、それぞれの補足内にリンクしています。詳しい根拠・事例・参考文献は原論文を参照してください。</p></section>
+</div><a class="button button-secondary" href="blog.html">ブログへ戻る</a>
+</article></main>
+  <script src="classical.js?v=20260918-materials" defer></script>
+</body>
+</html>

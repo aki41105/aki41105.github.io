@@ -1,0 +1,402 @@
+---
+layout: null
+permalink: /blog-hri2026-analysis.html
+---
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="HRI 2026 Full Research Papers 127件のタイトルと概要をもとに，ヒューマンロボットインタラクション研究のトピック分布を整理した分析メモ。"
+    />
+    <meta name="author" content="櫻本晃弘" />
+    <meta property="og:title" content="HRI 2026の論文127本を眺める | 櫻本晃弘" />
+    <meta
+      property="og:description"
+      content="HRI 2026 Full Research Papers 127件を，タイトル・概要ベースでクラスタリングし，研究トピックの傾向を整理しました。"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://aki41105.github.io/blog-hri2026-analysis.html" />
+    <meta
+      property="og:image"
+      content="https://aki41105.github.io/assets/hri2026-blog-summary.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HRI 2026の論文127本を眺める | 櫻本晃弘" />
+    <meta
+      name="twitter:description"
+      content="HRI 2026 Full Research Papers 127件を，タイトル・概要ベースでクラスタリングし，研究トピックの傾向を整理しました。"
+    />
+    <meta
+      name="twitter:image"
+      content="https://aki41105.github.io/assets/hri2026-blog-summary.png"
+    />
+    <meta name="theme-color" content="#155c63" />
+    <link rel="canonical" href="https://aki41105.github.io/blog-hri2026-analysis.html" />
+    <link rel="icon" href="assets/favicon-192.png?v=20260914-fox-large" type="image/png" />
+    <link
+      rel="icon"
+      href="assets/favicon-32x32.png?v=20260914-fox-large"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=20260914-fox" />
+    <title>HRI 2026の論文127本を眺める | 櫻本晃弘</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://aki41105.github.io/blog-hri2026-analysis.html#article",
+        "url": "https://aki41105.github.io/blog-hri2026-analysis.html",
+        "mainEntityOfPage": "https://aki41105.github.io/blog-hri2026-analysis.html",
+        "headline": "HRI 2026の論文127本を眺める",
+        "description": "HRI 2026 Full Research Papers 127件のタイトルと概要をもとに，ヒューマンロボットインタラクション研究のトピック分布を整理した分析メモ。",
+        "image": "https://aki41105.github.io/assets/hri2026-blog-summary.png",
+        "datePublished": "2026-07-01",
+        "inLanguage": "ja",
+        "author": {
+          "@type": "Person",
+          "@id": "https://aki41105.github.io/#person",
+          "name": "櫻本晃弘",
+          "url": "https://aki41105.github.io/"
+        },
+        "isPartOf": { "@id": "https://aki41105.github.io/blog.html#blog" }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap"
+    />
+    <link rel="stylesheet" href="classical.css?v=20260918-materials" />
+    <link rel="stylesheet" href="classical-sub.css?v=20260905-seo" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html#home" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true"
+          ><img src="assets/site-icon.png?v=20260914-fox" alt="" width="64" height="64"
+        /></span>
+        <span>AKI NOTES</span>
+      </a>
+
+      <nav class="site-nav garden-nav" aria-label="Main navigation">
+        <a class="nav-home" href="index.html#home">Home</a>
+        <a class="nav-profile" href="profile.html">自己紹介</a>
+        <a class="nav-blog" href="blog.html">ブログ</a>
+        <a class="nav-materials" href="materials.html">資料</a>
+      </nav>
+      <button
+        class="theme-toggle"
+        type="button"
+        id="themeToggle"
+        aria-label="ダークモードを切り替え"
+      >
+        ◐
+      </button>
+      <button
+        class="language-toggle"
+        type="button"
+        id="languageToggle"
+        aria-label="Switch to English"
+      >
+        English
+      </button>
+    </header>
+
+    <main>
+      <article class="section blog-article blog-article-wide">
+        <div>
+          <h1>HRI 2026の論文127本を眺める</h1>
+        </div>
+        <p class="blog-article-meta">
+          <time datetime="2026-07-01">2026年7月1日</time> / HRI / Paper Analysis / 著者：<a
+            href="index.html#home"
+            rel="author"
+            >櫻本晃弘</a
+          >
+        </p>
+
+        <div class="blog-body">
+          <p class="blog-lede">
+            ヒューマンロボットインタラクション分野の主要国際会議「HRI 2026（ACM/IEEE International
+            Conference on Human-Robot
+            Interaction）」が2026年3月16～19日，英国スコットランドのエディンバラで開催された。
+          </p>
+
+          <p>
+            HRIは，人とロボットの相互作用を扱う国際会議である。ロボットの認識・制御・学習といった技術だけでなく，人間の行動，信頼，ユーザー体験，デザイン，社会実装，倫理などを含めて議論する点に特徴がある。ロボティクス，人工知能，ヒューマンコンピュータインタラクション，ヒューマンファクター，心理学，社会・行動科学など，複数の分野の研究者が集まる学際的な会議である。
+          </p>
+
+          <p>
+            Google Scholar Metricsでは，HRIは「Human Computer Interaction」分野でh5-index
+            52を記録し，同分野の上位20件中13位に入っている。さらに「Robotics」分野でもh5-index
+            52で19位に入り，人とロボットの相互作用を扱う代表的な発表の場となっている。
+          </p>
+
+          <p>
+            今回のHRI 2026では，Full
+            Paperに537件の投稿があり，128件が採択された。採択率は約24％だった。本記事では，Conference
+            PublishingのHRI 2026 abstractsページから取得したFull Research Papers
+            127件のタイトルと概要をもとに，採択論文から見える研究トピックの分布を眺める。
+          </p>
+
+          <figure class="analysis-figure analysis-html-figure">
+            <div
+              class="hri-summary"
+              aria-label="HRI 2026 Full Research Papers 127件のクラスタ分布と横断テーマ出現数のHTML要約"
+            >
+              <header class="hri-summary-header">
+                <p class="hri-summary-kicker">HRI 2026 Full Research Papers</p>
+                <h2>127本の採択論文から見る<br />HRI 2026の研究トピック</h2>
+                <p>
+                  クラスタは大きく分散し，横断テーマでは「協働」「倫理・安全」「信頼」が強く現れる。HRI
+                  2026は単一技術の集中より，人とロボットが関わる場面の広がりとして読める。
+                </p>
+              </header>
+
+              <div class="hri-summary-stats" aria-label="analysis summary numbers">
+                <div>
+                  <strong>127本</strong>
+                  <span>分析対象のFull Research Papers</span>
+                </div>
+                <div>
+                  <strong>8群</strong>
+                  <span>タイトル・概要から得た主要クラスタ</span>
+                </div>
+                <div>
+                  <strong>16.5%</strong>
+                  <span>最大クラスタの比率。一強ではない</span>
+                </div>
+                <div>
+                  <strong>49本</strong>
+                  <span>最多の横断テーマ「協働・意図・タスク」</span>
+                </div>
+              </div>
+
+              <div class="hri-summary-panels">
+                <section class="hri-summary-panel" aria-labelledby="cluster-distribution-title">
+                  <h3 id="cluster-distribution-title">主要クラスタの分布</h3>
+                  <div class="hri-bars">
+                    <div class="hri-bar-row" style="--bar: 100%">
+                      <span>言語AI・安全・技術基盤</span><i></i><strong>21本 <em>16.5%</em></strong>
+                    </div>
+                    <div class="hri-bar-row" style="--bar: 86%">
+                      <span>ロボット学習・デモ・フィードバック</span><i></i
+                      ><strong>18本 <em>14.2%</em></strong>
+                    </div>
+                    <div class="hri-bar-row" style="--bar: 86%">
+                      <span>形態・デザイン・公共空間</span><i></i
+                      ><strong>18本 <em>14.2%</em></strong>
+                    </div>
+                    <div class="hri-bar-row" style="--bar: 81%">
+                      <span>信頼・社会的判断・チーミング</span><i></i
+                      ><strong>17本 <em>13.4%</em></strong>
+                    </div>
+                    <div class="hri-bar-row" style="--bar: 67%">
+                      <span>子ども・教育・感情学習</span><i></i><strong>14本 <em>11.0%</em></strong>
+                    </div>
+                    <div class="hri-bar-row" style="--bar: 67%">
+                      <span>ナビゲーション・アクセシビリティ</span><i></i
+                      ><strong>14本 <em>11.0%</em></strong>
+                    </div>
+                    <div class="hri-bar-row" style="--bar: 62%">
+                      <span>ケア・サービス・医療現場</span><i></i
+                      ><strong>13本 <em>10.2%</em></strong>
+                    </div>
+                    <div class="hri-bar-row" style="--bar: 57%">
+                      <span>方法論・倫理・実環境実践</span><i></i
+                      ><strong>12本 <em>9.4%</em></strong>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="hri-summary-panel" aria-labelledby="cross-theme-title">
+                  <h3 id="cross-theme-title">横断テーマの出現数</h3>
+                  <div class="hri-bars hri-bars-warm">
+                    <div class="hri-bar-row" style="--bar: 100%">
+                      <span>協働・意図・タスク</span><i></i><strong>49本 <em>38.6%</em></strong>
+                    </div>
+                    <div class="hri-bar-row" style="--bar: 88%">
+                      <span>倫理・安全・ポリシー</span><i></i><strong>43本 <em>33.9%</em></strong>
+                    </div>
+                    <div class="hri-bar-row" style="--bar: 82%">
+                      <span>信頼・社会的知覚</span><i></i><strong>40本 <em>31.5%</em></strong>
+                    </div>
+                    <div class="hri-bar-row" style="--bar: 71%">
+                      <span>LLM・言語・会話</span><i></i><strong>35本 <em>27.6%</em></strong>
+                    </div>
+                    <div class="hri-bar-row" style="--bar: 71%">
+                      <span>公共空間・ナビゲーション</span><i></i
+                      ><strong>35本 <em>27.6%</em></strong>
+                    </div>
+                    <div class="hri-bar-row" style="--bar: 51%">
+                      <span>子ども・教育</span><i></i><strong>25本 <em>19.7%</em></strong>
+                    </div>
+                    <div class="hri-bar-row" style="--bar: 49%">
+                      <span>支援・ケア・健康</span><i></i><strong>24本 <em>18.9%</em></strong>
+                    </div>
+                    <div class="hri-bar-row" style="--bar: 33%">
+                      <span>遠隔操作・操作者</span><i></i><strong>16本 <em>12.6%</em></strong>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <div class="hri-summary-notes">
+                <p>一強トピックなし。最大クラスタでも21本で，全体の2割に届かない。</p>
+                <p>横断テーマが重要。協働，倫理，信頼，言語，公共空間が重なり合う。</p>
+                <p>HRIらしい分散。技術・評価・デザイン・社会実装が同じ地図上に現れる。</p>
+              </div>
+
+              <p class="hri-summary-source">
+                Source: HRI 2026 Conference Publishing abstracts. Analysis: title + abstract, TF-IDF
+                / SVD / KMeans.
+              </p>
+            </div>
+            <figcaption>
+              HRI 2026 Full Research Papers
+              127件の概要。最大クラスタでも21本であり，横断テーマでは協働，倫理・安全，信頼が強く出ている。
+            </figcaption>
+          </figure>
+
+          <figure class="analysis-figure">
+            <img
+              src="assets/hri2026-topic-map.png?v=20260701-1"
+              alt="HRI 2026 Full Research Papers 127件のタイトルと概要をもとにしたトピックマップ"
+              width="1620"
+              height="1260"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>
+              TF-IDF n-gram，TruncatedSVD，KMeans，t-SNEによる軽量なトピックマップ。各点がFull
+              Research Paperを表す。
+            </figcaption>
+          </figure>
+
+          <h2>単一の流行語より，実環境への広がりが目立つ</h2>
+          <p>
+            HRI
+            2026では，単一の支配的キーワードだけで全体像を説明するのは難しい。ケア，教育，公共空間，アクセシビリティ，遠隔操作，信頼，倫理，LLM，ロボット学習が互いに混ざりながら広がっている。
+          </p>
+
+          <p>
+            LLMや自然言語処理は確かに目立つ。ただし，HRI
+            2026では「LLMそのもの」が主役というより，会話設計，発話方略，チューターロボット，指示理解，意図推定，公共HRIの中に入り込む道具として現れている。技術単体というより，ロボットが人間の生活空間に入ったとき，どう振る舞うべきかを問う論文が多い。
+          </p>
+
+          <h2>主要なクラスタ</h2>
+          <p>クラスタリング結果は，大きく次の8群として読める。</p>
+
+          <ul class="article-list">
+            <li>
+              <strong>language agents / safety / technical systems</strong>:
+              VLM/LLM，言語，ベンチマーク，安全，ハンドオーバーなどが混ざる技術寄りの群。
+            </li>
+            <li>
+              <strong>robot learning / demonstrations / feedback</strong>:
+              デモンストレーション，制約，フィードバック，ポリシー学習が中心。
+            </li>
+            <li>
+              <strong>trust / social judgment / teaming</strong>:
+              信頼，協働，社会的評価，チーム行動に関する研究。
+            </li>
+            <li>
+              <strong>care / service / health deployments</strong>:
+              ケア現場，サービス現場，医療・高齢者施設での導入に関する研究。
+            </li>
+            <li>
+              <strong>navigation / accessibility / user preferences</strong>:
+              移動支援，視覚障害者支援，ユーザ嗜好，環境内行動に関する研究。
+            </li>
+            <li>
+              <strong>robot form / design artifacts / public space</strong>:
+              ロボットの形態，デザイン素材，公共空間での存在感に関する研究。
+            </li>
+            <li>
+              <strong>children / education / emotion learning</strong>:
+              子ども，教育，感情学習，チューター/ピアとしてのロボット。
+            </li>
+            <li>
+              <strong>methods / reporting / ethics / in-the-wild practice</strong>:
+              研究方法，報告標準，バイアス，実環境での設計実践。
+            </li>
+          </ul>
+
+          <figure class="analysis-figure">
+            <img
+              src="assets/hri2026-topic-region-map.png?v=20260702-1"
+              alt="HRI 2026 Full Research Papers 127件のトピック領域マップ"
+              width="2106"
+              height="1560"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>
+              t-SNE平面上で近い論文同士をもとに，クラスタごとのおおよその領域を色分けしたもの。境界は可視化上の目安であり，厳密な分野境界ではない。
+            </figcaption>
+          </figure>
+
+          <h2>横断テーマで見る</h2>
+          <p>キーワードベースで粗く数えると，次のテーマが目立った。</p>
+
+          <div class="metric-list" aria-label="HRI 2026 cross-cutting topic counts">
+            <p><strong>49件</strong><span>collaboration / intent / task</span></p>
+            <p><strong>43件</strong><span>ethics / safety / policy</span></p>
+            <p><strong>40件</strong><span>trust / social perception</span></p>
+            <p><strong>35件</strong><span>LLM / language / conversation</span></p>
+            <p><strong>35件</strong><span>public / navigation / in-the-wild</span></p>
+            <p><strong>25件</strong><span>children / education</span></p>
+            <p><strong>24件</strong><span>assistive / care / health</span></p>
+            <p><strong>16件</strong><span>teleoperation / operator</span></p>
+          </div>
+
+          <p>
+            この数え方はキーワードベースなので厳密な分類ではない。それでも，HRI
+            2026が「ロボットをどう動かすか」だけでなく，「人間の判断，信頼，権力関係，ケア，教育，公共空間の中でロボットをどう成立させるか」に広がっていることは見えてくる。
+          </p>
+
+          <div class="blog-note">
+            <p>
+              この分析は，タイトルと概要だけを使った軽量な探索である。本文精読や引用関係の分析まではしていないので，結論は「研究動向の初期地図」として読むのがよい。
+            </p>
+          </div>
+
+          <h2>まとめ</h2>
+          <p>
+            HRI
+            2026は，LLMやロボット学習のような技術トピックを含みつつも，中心にあるのは実環境で人とロボットがどう関わるかという問いだった。ケア，教育，公共空間，アクセシビリティ，倫理，信頼が同じ地図上に現れるのが，HRIらしい。
+          </p>
+
+          <p>
+            採択論文を俯瞰すると，HRI
+            2026は特定の技術名だけで語るよりも，人とロボットが出会う場面の広がりとして読む方が自然に見える。技術，評価，デザイン，社会実装が同じ地図上に並んでいること自体が，HRIという会議の性格をよく表している。
+          </p>
+
+          <p class="source-note">
+            Sources: <a href="https://humanrobotinteraction.org/2026/">HRI 2026 official site</a>,
+            <a href="https://humanrobotinteraction.org/2026/full-papers/">HRI 2026 Full Papers</a>,
+            <a href="https://www.conference-publishing.com/toc/HRI26/abs"
+              >Conference Publishing HRI 2026 abstracts</a
+            >,
+            <a
+              href="https://scholar.google.com/citations?hl=en&amp;view_op=top_venues&amp;vq=eng_humancomputerinteraction"
+              >Google Scholar Metrics: Human Computer Interaction</a
+            >,
+            <a
+              href="https://scholar.google.com/citations?hl=en&amp;view_op=top_venues&amp;vq=eng_robotics"
+              >Google Scholar Metrics: Robotics</a
+            >.
+          </p>
+        </div>
+
+        <a class="button button-secondary" href="blog.html">ブログへ戻る</a>
+      </article>
+    </main>
+    <script src="classical.js?v=20260918-materials" defer></script>
+  </body>
+</html>

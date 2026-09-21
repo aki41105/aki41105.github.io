@@ -1,0 +1,423 @@
+---
+layout: null
+permalink: /blog-shrec-social-reasoning.html
+---
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="実際の人とロボットの会話を使い、失敗の検出から理由・修正案までを測るSHREC。8つの評価課題、基盤モデルと人間の差、結果の読み方を解説します。"
+    />
+    <meta name="author" content="櫻本晃弘" />
+    <meta
+      property="og:title"
+      content="ロボットは「何がまずかったか」を理解できるか — SHRECを読む | 櫻本晃弘"
+    />
+    <meta
+      property="og:description"
+      content="実際の人とロボットの会話を使い、失敗の検出から理由・修正案までを測るSHREC。8つの評価課題、基盤モデルと人間の差、結果の読み方を解説します。"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://aki41105.github.io/blog-shrec-social-reasoning.html" />
+    <meta property="og:image" content="https://aki41105.github.io/assets/shrec-summary.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="ロボットは「何がまずかったか」を理解できるか — SHRECを読む | 櫻本晃弘"
+    />
+    <meta
+      name="twitter:description"
+      content="実際の人とロボットの会話を使い、失敗の検出から理由・修正案までを測るSHREC。8つの評価課題、基盤モデルと人間の差、結果の読み方を解説します。"
+    />
+    <meta name="twitter:image" content="https://aki41105.github.io/assets/shrec-summary.png" />
+    <meta name="theme-color" content="#155c63" />
+    <link rel="canonical" href="https://aki41105.github.io/blog-shrec-social-reasoning.html" />
+    <link rel="icon" href="assets/favicon-192.png?v=20260914-fox-large" type="image/png" />
+    <link
+      rel="icon"
+      href="assets/favicon-32x32.png?v=20260914-fox-large"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=20260914-fox" />
+    <title>ロボットは「何がまずかったか」を理解できるか — SHRECを読む | 櫻本晃弘</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://aki41105.github.io/blog-shrec-social-reasoning.html#article",
+        "url": "https://aki41105.github.io/blog-shrec-social-reasoning.html",
+        "mainEntityOfPage": "https://aki41105.github.io/blog-shrec-social-reasoning.html",
+        "headline": "ロボットは「何がまずかったか」を理解できるか — SHRECを読む",
+        "description": "実際の人とロボットの会話を使い、失敗の検出から理由・修正案までを測るSHREC。8つの評価課題、基盤モデルと人間の差、結果の読み方を解説します。",
+        "image": "https://aki41105.github.io/assets/shrec-summary.png",
+        "datePublished": "2026-09-17",
+        "dateModified": "2026-09-17",
+        "inLanguage": "ja",
+        "author": {
+          "@type": "Person",
+          "@id": "https://aki41105.github.io/#person",
+          "name": "櫻本晃弘",
+          "url": "https://aki41105.github.io/"
+        },
+        "isPartOf": {
+          "@id": "https://aki41105.github.io/blog.html#blog"
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap"
+    />
+    <link rel="stylesheet" href="classical.css?v=20260918-materials" />
+    <link rel="stylesheet" href="classical-sub.css?v=20260905-seo" />
+    <link rel="stylesheet" href="assets/flywire-article.css?v=20260917-datasets" />
+    <link rel="stylesheet" href="assets/shrec-article.css?v=20260917" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html#home" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true"
+          ><img src="assets/site-icon.png?v=20260914-fox" alt="" width="64" height="64"
+        /></span>
+        <span>AKI NOTES</span>
+      </a>
+
+      <nav class="site-nav garden-nav" aria-label="Main navigation">
+        <a class="nav-home" href="index.html#home">Home</a>
+        <a class="nav-profile" href="profile.html">自己紹介</a>
+        <a class="nav-blog" href="blog.html">ブログ</a>
+        <a class="nav-materials" href="materials.html">資料</a>
+      </nav>
+      <button
+        class="theme-toggle"
+        type="button"
+        id="themeToggle"
+        aria-label="ダークモードを切り替え"
+      >
+        ◐
+      </button>
+    </header>
+
+    <main>
+      <article
+        class="section blog-article fly-article shrec-article"
+        aria-labelledby="article-title"
+      >
+        <a class="fly-back" href="blog.html">← ブログ</a>
+        <p class="fly-kicker">論文を読む · HRI / RSS 2026</p>
+        <h1 id="article-title">ロボットは「何がまずかったか」を理解できるか</h1>
+        <p class="blog-article-meta">
+          <time datetime="2026-09-17">2026年9月17日</time> · 約8分で読めます ·
+          <a href="profile.html" rel="author">櫻本晃弘</a>
+        </p>
+        <div class="blog-body">
+          <p class="blog-lede">
+            相手が断ったのに説明を続ける。人が席を離れたのに会話を進める。ロボットの失敗には、発言の内容だけを読んでも捉えにくいものがあります。SHRECは、こうした<strong>会話の場に応じた振る舞いを、AIがどこまで読み取れるか</strong>を測る研究です。
+          </p>
+          <p>
+            MIT、Purdue University、Carnegie Mellon Universityの研究者らによる論文で、RSS
+            2026に掲載されています。人とロボットの相互作用を研究する分野を、HRI（Human–Robot
+            Interaction）と呼びます。SHRECはその実際の映像を使った評価用データセットです。<a
+              href="#ref-rss"
+              >[1]</a
+            >
+          </p>
+          <div class="fly-stats" aria-label="SHRECの規模">
+            <div>
+              <strong>約400<span>本</span></strong
+              ><span>実際のHRI動画</span>
+            </div>
+            <div>
+              <strong>1<span>万件超</span></strong
+              ><span>人による注釈</span>
+            </div>
+            <div>
+              <strong>8<span>課題</span></strong
+              ><span>社会的推論を評価</span>
+            </div>
+          </div>
+          <p class="fly-small">
+            本文のデータ概要（§III）では403動画・10,353注釈。本文・付録・配布先で集計範囲の異なる数値があるため、全体像には著者らの要約と同じ概数を使っています。以下の実験説明は著者版v3に基づきます。<a
+              href="#ref-paper"
+              >[2]</a
+            >
+          </p>
+
+          <h2>1. 何を「社会的な失敗」とするのか</h2>
+          <p>
+            ここでいう失敗は、故障や事実の間違いだけではありません。相手の気持ち、意図、会話の順番などを踏まえたときに、期待される振る舞いから外れることです。逆に、そうした手がかりに沿って応じた場面には、<strong>適切に振る舞えたことを示す「competence」</strong>の注釈を付けます。失敗だけを集めたデータではない点が大切です。
+          </p>
+          <figure class="fly-figure">
+            <div class="figure-heading">
+              <span>論文の例</span><strong>断った相手に、さらに例を話してしまう</strong>
+            </div>
+            <div class="shrec-dialogue">
+              <p><b>ロボット</b>「もっと例を聞きたいですか？」</p>
+              <p><b>人</b>「いいえ、もう大丈夫……」</p>
+              <p><b>ロボット</b>それでも別の例を話し始める。</p>
+            </div>
+            <div class="shrec-steps">
+              <div>
+                <b>何がまずい？</b>
+                <p>断りを受け止めずに続けた。</p>
+              </div>
+              <div>
+                <b>なぜ？</b>
+                <p>相手の意図と会話の流れを取り違えた。</p>
+              </div>
+              <div>
+                <b>どう直す？</b>
+                <p>追加の例を出さず、次へ進む。</p>
+              </div>
+            </div>
+            <figcaption>
+              著者版Fig.
+              1の場面と注釈を日本語で要約・模式化。逐語訳ではありません。実験参加者の映像は転載していません。<a
+                href="#ref-paper"
+                >[2]</a
+              >
+            </figcaption>
+          </figure>
+          <p>
+            「何を言ったか」と「その場で言うべきだったか」は別の問いです。この例なら、追加の説明が正しくても、相手が求めていなければ会話としては失敗します。論文には、相手の離席に気づかず処理を進める非言語的な失敗例もあります。
+          </p>
+
+          <h2>2. 実際の暮らしの中から集めた会話</h2>
+          <p>
+            材料となったのは、家庭や大学の寮で行われた3つの先行研究です。ウェルビーイングを支援する対話と、個人的な経験を語り合う対話を含みます。使われたのはいずれも卓上ロボット<strong>Jibo</strong>。話す、向きを変える、画面で表情を表すといったやり取りが中心で、移動や物の操作をするロボットではありません。<a
+              href="#ref-code"
+              >[3]</a
+            >
+            <a href="#ref-paper">[2, §III]</a>
+          </p>
+          <p>
+            訓練を受けた3人の学部生の研究補助者が、映像から適切／不適切な場面を見つけ、理由や修正案を記録しました。問題の種類は、<strong>感情、関与度、会話の仕組み、知識状態、ユーザーの意図、社会的文脈と関係、社会規範と慣習</strong>という7つの観点で整理されています。たとえば、話に関心があるかは「関与度」、話を遮っていないかは「会話の仕組み」、相手が何を知っているかは「知識状態」に当たります。
+          </p>
+          <p>
+            一つの失敗が複数の観点にまたがることもあります。断りを無視する場面なら、意図の理解と会話の進め方の両方が関係します。この重なりを残したまま評価するため、単純な感情分類より難しい課題になります。重複して注釈された部分の一致率は91.3%でしたが、曖昧で判断が分かれる場面も残っています。<a
+              href="#ref-paper"
+              >[2, §III-A–B]</a
+            >
+          </p>
+
+          <h2>3. 「気づく」から「直し方を選ぶ」までの8課題</h2>
+          <p>
+            評価するのは、大規模言語モデル（LLM）と、画像も入力できる視覚言語モデル（VLM）です。モデルには切り出した会話と課題を与え、人が付けた答えに合うかを測ります。長い映像から問題の瞬間を自力で探すことと、切り出された場面を判断することは区別して読む必要があります。
+          </p>
+          <div class="shrec-table-wrap">
+            <table class="shrec-table">
+              <caption>
+                4つの問いを、8つの課題に分ける
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">問い</th>
+                  <th scope="col">課題</th>
+                  <th scope="col">答える内容</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" rowspan="2">気づけるか</th>
+                  <td>① 3分類</td>
+                  <td>失敗／適切／どちらの注釈もない</td>
+                </tr>
+                <tr>
+                  <td>② エラー検出</td>
+                  <td>失敗か、そうでないか</td>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="2">どの側面か</th>
+                  <td>③ 属性の特定</td>
+                  <td>関係する社会的属性の組み合わせ</td>
+                </tr>
+                <tr>
+                  <td>④ 複数属性の有無</td>
+                  <td>複数の属性が関係するか</td>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="2">流れを読めるか</th>
+                  <td>⑤ 前の状況</td>
+                  <td>ロボットの応答に先立つ人の振る舞い</td>
+                </tr>
+                <tr>
+                  <td>⑥ 後の状況</td>
+                  <td>人の発言に続くロボットの応答</td>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="2">理由と修正</th>
+                  <td>⑦ 理由</td>
+                  <td>何が問題だったかの説明</td>
+                </tr>
+                <tr>
+                  <td>⑧ 修正</td>
+                  <td>代わりに取るべき行動</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="fly-small">
+            著者版§IVより整理。⑤⑥は適切なやり取りを対象とし、⑤〜⑧はいずれも5択。⑦⑧では、失敗の場面であることを与えたうえで答えを選びます。③④にも失敗／適切のラベルが入力されます。<a
+              href="#ref-paper"
+              >[2]</a
+            >
+          </p>
+          <div class="fly-takeaway">
+            <p>
+              <strong>この評価の「修正」は、正しい修正案を選ぶこと。</strong
+              ><br />ロボットをその場で制御して修復できるか、利用者がその応答に満足するかを測った実験ではありません。
+            </p>
+          </div>
+          <p>
+            画像を使う設定では、対象区間から均等に抽出した15フレームを与えます。前後関係の課題では、答え側を見せないよう対象区間を制限します。公開ベンチマークの基本的な時間解像度は1
+            Hz、つまり1秒に1フレームです。映像を使っていても、人間と同じ細かさで間や視線を見ているわけではありません。<a
+              href="#ref-paper"
+              >[2, §III–IV]</a
+            >
+          </p>
+
+          <h2>4. 強いモデルにも、どんな不足が残ったか</h2>
+          <p>
+            著者らは、入力やプロンプトの違いを含む18設定を比較しています。以下は課題ごとの<strong>モデル側で最も高い平均正答率</strong>と、人間の比較実験の値です。同じモデルがすべての課題で最良だったわけではありません。
+          </p>
+          <div class="shrec-table-wrap">
+            <table class="shrec-table shrec-results">
+              <caption>
+                代表的な4課題の正答率
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">課題</th>
+                  <th scope="col">モデル最高</th>
+                  <th scope="col">人間</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">失敗／適切／その他</th>
+                  <td>32 ± 1%</td>
+                  <td>57%</td>
+                </tr>
+                <tr>
+                  <th scope="row">失敗の検出</th>
+                  <td>55 ± 2%</td>
+                  <td>77%</td>
+                </tr>
+                <tr>
+                  <th scope="row">理由を選ぶ（5択）</th>
+                  <td>55 ± 6%</td>
+                  <td>63%</td>
+                </tr>
+                <tr>
+                  <th scope="row">修正案を選ぶ（5択）</th>
+                  <td>48 ± 7%</td>
+                  <td>54%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="fly-small">
+            著者版Table I・IIより。上2行はGemini 1.5
+            Flash、下2行はGPT-4o＋few-shotで、いずれも言語＋視覚入力。±は別々に抽出した3つの評価サブセット間の標準偏差を百分率表示したもの。信頼区間ではありません。人間は切り出されたデータと同じ課題指示で元の注釈に答えを照合しています。<a
+              href="#ref-paper"
+              >[2, §IV・付録B]</a
+            >
+          </p>
+          <p>
+            目立つのは、失敗を見つける段階の差です。一方で、理由や修正案の選択では差が比較的小さく、<strong>すべての課題で一様に大差がある</strong>とまとめるのは正確ではありません。理由・修正では、回答例を先に与えるfew-shot設定が最良でした。単にモデルを大きくすればよい、という結果でもありません。
+          </p>
+          <p>
+            属性の特定では、採点方法によって印象が大きく変わります。GPT-4o＋few-shotは、正しい属性を少なくとも一つ含む「部分一致」では82%ですが、組み合わせを丸ごと当てる正答率は4%。人間もそれぞれ76%と24%です。<strong>一つの側面を言い当てることと、その場面に必要な側面を過不足なく捉えることには距離がある</strong>とわかります。<a
+              href="#ref-paper"
+              >[2, Table I]</a
+            >
+          </p>
+          <p>
+            なお、ここでの数値は論文が評価したモデル・条件に対するものです。2026年9月時点の最新モデル全体の順位や、すべてのAIの能力を示す数字ではありません。
+          </p>
+
+          <h2>5. この結果を読むときの注意点</h2>
+          <p>
+            <strong>人間の答えも、唯一の絶対的な正解ではありません。</strong
+            >比較実験で人間の正答率が100%にならないのは、社会的判断や選択肢の判別に難しさがあることを示しています。「自然な応答」の期待は文化、相手との関係、個々人のコミュニケーションの仕方で変わります。モデルが注釈と一致することを、普遍的な社会性の獲得と同一視できません。
+          </p>
+          <p>
+            <strong>対象となる場面にも範囲があります。</strong
+            >家庭・寮でのJiboとの会話で得た評価を、接客、工場での協働、移動ロボットのすれ違いなどに、そのまま広げられるかは未検証です。また1秒刻みのフレームでは、短い沈黙、発話の重なり、一瞬の視線移動を十分に捉えられない可能性があります。これらは著者らも限界として挙げています。<a
+              href="#ref-paper"
+              >[2, §V-E]</a
+            >
+          </p>
+          <p>
+            <strong>5択の正答率と、自由な会話の質は別の評価です。</strong
+            >理由・修正課題の誤答選択肢は、異なる社会的属性を持つ別の事例から作られます。候補から選べても、自分で適切な応答を作り、良いタイミングで実行できるとは限りません。逆に、人の注釈と異なる修正案でも、実際の場面では有効な可能性があります。
+          </p>
+
+          <h2>6. HRI研究に何をもたらすか</h2>
+          <p>
+            SHRECの貢献は、「ロボットの会話が何となく不自然だ」という印象を、検出、属性、前後関係、理由、修正案という<strong>調べられる問いに分けたこと</strong>にあります。どこでつまずいたかを区別できれば、改善後に何を評価すべきかも明確になります。
+          </p>
+          <p>
+            ここからは研究設計への読み取りです。たとえば、相手が話し終わるまで待つ仕組みを改善したなら、「待つべき場面の検出」「待つ理由の説明」「実際の待ち方」を別々に確かめるとよさそうです。SHRECは前二者に近い問いを扱う材料になりますが、最後の効果は実機で人とやり取りして確かめる必要があります。
+          </p>
+          <p>
+            データや評価コードを試す入口は<a href="https://github.com/mitmedialab/SHREC"
+              >公式GitHub</a
+            >です。動画データはHugging
+            Faceでアクセス申請が必要です。配布ページは所属機関のメールアドレスでの申請を案内しています。実際の人の会話を扱うため、利用にあたっては各配布先の条件を確認してください。<a
+              href="#ref-data"
+              >[4]</a
+            >
+          </p>
+
+          <footer class="fly-sources" aria-label="参考文献">
+            <h2>出典と読み方</h2>
+            <p id="ref-rss">
+              [1] Lee, D. W. et al.
+              <a href="https://www.roboticsproceedings.org/rss22/p113.html" lang="en"
+                >Social Human Robot Embodied Conversation (SHREC) Dataset: Benchmarking Foundational
+                Models’ Social Reasoning.</a
+              >
+              RSS 2026. DOI: 10.15607/RSS.2026.XXII.113.
+            </p>
+            <p id="ref-paper">
+              [2]
+              <a href="https://arxiv.org/html/2504.13898v3"
+                >著者版全文（arXiv:2504.13898v3、2026年5月12日）</a
+              >。データ・課題は§III–IV、数値はTable
+              I–II、限界は§V-E、評価の反復方法は付録Bを参照。本記事の詳細な数値はこの版に固定しています。<a
+                href="https://www.roboticsproceedings.org/rss22/p113.pdf"
+                >RSS掲載PDF</a
+              >も参照できます。
+            </p>
+            <p id="ref-code">
+              [3]
+              <a href="https://github.com/mitmedialab/SHREC"
+                >MIT Media Lab / SHREC：公式コードとデータの案内</a
+              >。
+            </p>
+            <p id="ref-data">
+              [4] 公式データカード：<a
+                href="https://huggingface.co/datasets/MIT-personal-robots/shrec_wellness_home"
+                >Wellness Home</a
+              >、<a href="https://huggingface.co/datasets/MIT-personal-robots/shrec_wellness_dorm"
+                >Wellness Dorm</a
+              >、<a href="https://huggingface.co/datasets/MIT-personal-robots/shrec_empathic"
+                >Empathic</a
+              >。配布条件の確認日：2026年9月17日。
+            </p>
+            <p>会話図は論文の事例を要約して作成。第6節の研究設計の例は、本記事による考察です。</p>
+          </footer>
+        </div>
+        <a class="button button-secondary" href="blog.html">ブログへ戻る</a>
+      </article>
+    </main>
+    <script src="classical.js?v=20260918-materials" defer></script>
+  </body>
+</html>

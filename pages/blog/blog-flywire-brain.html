@@ -1,0 +1,362 @@
+---
+layout: null
+permalink: /blog-flywire-brain.html
+---
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="13万9,255個の神経細胞をつないだFlyWireの研究。脳の配線図の作り方、わかったこと、シミュレーションとの違いを図でやさしく解説します。"
+    />
+    <meta name="author" content="櫻本晃弘" />
+    <meta property="og:title" content="ハエの脳の「配線図」は、何を変えたのか | 櫻本晃弘" />
+    <meta
+      property="og:description"
+      content="13万9,255個の神経細胞をつないだFlyWireの研究。脳の配線図の作り方、わかったこと、シミュレーションとの違いを図でやさしく解説します。"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://aki41105.github.io/blog-flywire-brain.html" />
+    <meta
+      property="og:image"
+      content="https://aki41105.github.io/assets/flywire-brain-summary.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ハエの脳の「配線図」は、何を変えたのか | 櫻本晃弘" />
+    <meta
+      name="twitter:description"
+      content="13万9,255個の神経細胞をつないだFlyWireの研究。脳の配線図の作り方、わかったこと、シミュレーションとの違いを図でやさしく解説します。"
+    />
+    <meta
+      name="twitter:image"
+      content="https://aki41105.github.io/assets/flywire-brain-summary.png"
+    />
+    <meta name="theme-color" content="#155c63" />
+    <link rel="canonical" href="https://aki41105.github.io/blog-flywire-brain.html" />
+    <link rel="icon" href="assets/favicon-192.png?v=20260914-fox-large" type="image/png" />
+    <link
+      rel="icon"
+      href="assets/favicon-32x32.png?v=20260914-fox-large"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=20260914-fox" />
+    <title>ハエの脳の「配線図」は、何を変えたのか | 櫻本晃弘</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://aki41105.github.io/blog-flywire-brain.html#article",
+        "url": "https://aki41105.github.io/blog-flywire-brain.html",
+        "mainEntityOfPage": "https://aki41105.github.io/blog-flywire-brain.html",
+        "headline": "ハエの脳の「配線図」は、何を変えたのか",
+        "description": "13万9,255個の神経細胞をつないだFlyWireの研究。脳の配線図の作り方、わかったこと、シミュレーションとの違いを図でやさしく解説します。",
+        "image": "https://aki41105.github.io/assets/flywire-brain-summary.png",
+        "datePublished": "2026-09-17",
+        "dateModified": "2026-09-17",
+        "inLanguage": "ja",
+        "author": {
+          "@type": "Person",
+          "@id": "https://aki41105.github.io/#person",
+          "name": "櫻本晃弘",
+          "url": "https://aki41105.github.io/"
+        },
+        "isPartOf": {
+          "@id": "https://aki41105.github.io/blog.html#blog"
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap"
+    />
+    <link rel="stylesheet" href="classical.css?v=20260918-materials" />
+    <link rel="stylesheet" href="classical-sub.css?v=20260905-seo" />
+    <link rel="stylesheet" href="assets/flywire-article.css?v=20260917-datasets" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html#home" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true"
+          ><img src="assets/site-icon.png?v=20260914-fox" alt="" width="64" height="64"
+        /></span>
+        <span>AKI NOTES</span>
+      </a>
+
+      <nav class="site-nav garden-nav" aria-label="Main navigation">
+        <a class="nav-home" href="index.html#home">Home</a>
+        <a class="nav-profile" href="profile.html">自己紹介</a>
+        <a class="nav-blog" href="blog.html">ブログ</a>
+        <a class="nav-materials" href="materials.html">資料</a>
+      </nav>
+      <button
+        class="theme-toggle"
+        type="button"
+        id="themeToggle"
+        aria-label="ダークモードを切り替え"
+      >
+        ◐
+      </button>
+    </header>
+
+    <main>
+      <article class="section blog-article fly-article" aria-labelledby="article-title">
+        <a class="fly-back" href="blog.html">← ブログ</a>
+        <p class="fly-kicker">論文を読む · 神経科学</p>
+        <h1 id="article-title">
+          ハエの脳の「配線図」は、<br class="desktop-break" />何を変えたのか
+        </h1>
+        <p class="blog-article-meta">
+          <time datetime="2026-09-17">2026年9月17日</time> · 約5分で読めます ·
+          <a href="profile.html" rel="author">櫻本晃弘</a>
+        </p>
+
+        <div class="blog-body">
+          <p class="blog-lede">
+            ハエの脳をコンピューターで動かす。そんな話題の背景にあるのが、脳の「配線図」です。2024年のこの論文は、成虫のショウジョウバエの脳全体で、<strong>どの神経細胞が、どの細胞につながるか</strong>を地図にしました。
+          </p>
+          <div class="fly-stats" aria-label="論文のデータ規模">
+            <div>
+              <strong>139,255<span>個</span></strong
+              ><span>再構築した神経細胞</span>
+            </div>
+            <div>
+              <strong>約5,450<span>万個</span></strong
+              ><span>それらの間の化学シナプス</span>
+            </div>
+            <div>
+              <strong>1<span>匹</span></strong
+              ><span>成虫のメスが対象</span>
+            </div>
+          </div>
+          <p class="fly-small">
+            数値は論文のFlyWire
+            v783。シナプスは細胞間で信号を受け渡す接続点で、同じ2細胞の間にも複数あります。
+          </p>
+
+          <h2>1. 脳を「つながりの地図」にする</h2>
+          <p>
+            この地図を<strong>コネクトーム</strong>と呼びます。道路地図が道のつながりを示すように、コネクトームは神経細胞と接続点を示します。今回の特徴は、脳の一部分だけでなく、左右の視覚を処理する領域も含めて、脳全体をたどれることです。
+          </p>
+          <figure class="fly-figure">
+            <div class="figure-heading">
+              <span>図 1</span><strong>顕微鏡の画像から、脳の配線図へ</strong>
+            </div>
+            <div class="fly-process">
+              <div class="process-step">
+                <svg viewBox="0 0 180 100" aria-hidden="true">
+                  <g fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M35 35 90 12 145 35 90 58Z M35 48 90 71 145 48 M35 61 90 84 145 61" />
+                    <path d="m69 31 14 9 16-12 16 8" stroke-width="4" />
+                  </g>
+                </svg>
+                <b>01　撮る</b>
+                <p>薄い切片を電子顕微鏡で撮影した画像を使う。</p>
+              </div>
+              <span class="flow-arrow" aria-hidden="true">→</span>
+              <div class="process-step">
+                <svg viewBox="0 0 180 100" aria-hidden="true">
+                  <g fill="none" stroke="currentColor" stroke-width="3">
+                    <path d="M30 78 61 49 44 20 M61 49 98 26 144 39 M61 49 105 75 147 63" />
+                    <circle cx="61" cy="49" r="8" fill="currentColor" />
+                    <circle cx="133" cy="28" r="20" fill="var(--color-surface)" />
+                    <path d="m123 28 7 7 13-14" />
+                  </g>
+                </svg>
+                <b>02　つなぎ直す</b>
+                <p>AIが細胞を分け、人が分断や誤った結合を修正。</p>
+              </div>
+              <span class="flow-arrow" aria-hidden="true">→</span>
+              <div class="process-step">
+                <svg viewBox="0 0 180 100" aria-hidden="true">
+                  <g stroke="currentColor" stroke-width="2">
+                    <path
+                      d="m31 51 39-28 35 26 40-26 M31 51l39 27 35-29 40 26 M70 23v55 M105 49h-74 M145 23v52"
+                      fill="none"
+                    />
+                    <g fill="var(--color-surface)" stroke-width="3">
+                      <circle cx="31" cy="51" r="7" />
+                      <circle cx="70" cy="23" r="7" />
+                      <circle cx="70" cy="78" r="7" />
+                      <circle cx="105" cy="49" r="7" />
+                      <circle cx="145" cy="23" r="7" />
+                      <circle cx="145" cy="75" r="7" />
+                    </g>
+                  </g>
+                </svg>
+                <b>03　地図として公開</b>
+                <p>細胞の形、接続先、種類などを検索・分析できる。</p>
+              </div>
+            </div>
+            <figcaption>
+              論文のFig.
+              1と再構築手法をもとに作成した模式図。実際の細胞形状や接続を描いたものではありません。
+            </figcaption>
+          </figure>
+          <p>
+            AIだけで完成したわけではありません。研究者や市民科学者が修正に参加し、人手の確認には<strong>合計で約33人年</strong>が費やされました。1人が33年間取り組むのに相当する作業量です。
+          </p>
+
+          <h2>2. 「光を感じて姿勢を直す」道筋を探れる</h2>
+          <p>
+            地図があると、感覚の入口から、運動の指令を送る出口までを追えます。論文では、頭の上にある小さな目「単眼」に注目しました。単眼からの明るさの情報と、大きな複眼からの動きの情報が、下行ニューロンという身体へ信号を送る細胞に集まっていました。
+          </p>
+          <figure class="fly-figure">
+            <div class="figure-heading">
+              <span>図 2</span><strong>配線をたどると、行動の仮説が生まれる</strong>
+            </div>
+            <div class="circuit-flow">
+              <div class="circuit-inputs">
+                <div class="circuit-box"><b>単眼</b><span>明るさの情報</span></div>
+                <div class="circuit-box"><b>複眼</b><span>動きの情報</span></div>
+              </div>
+              <span class="flow-arrow" aria-hidden="true">→</span>
+              <div class="circuit-box circuit-center">
+                <b>下行ニューロン</b><span>身体へ信号を送る<br />脳の出口</span>
+              </div>
+              <span class="flow-arrow hypothesis-arrow" aria-hidden="true">⇢</span>
+              <div class="circuit-box circuit-hypothesis">
+                <span class="hypothesis-label">機能の仮説</span><b>頭や身体の<br />姿勢を調整</b>
+              </div>
+            </div>
+            <figcaption>
+              論文Fig.
+              7の要点を簡略化。矢印は複数の細胞を経る経路を含みます。姿勢調整のしくみは、配線から提案された仮説です。
+            </figcaption>
+          </figure>
+          <p>
+            左右からの信号を促す・抑える接続の組み合わせから、著者らは<strong>左右の明るさの差を使って姿勢を調整するしくみ</strong>を提案しました。配線図は「どの細胞を調べればよいか」を絞り、実験で確かめられる仮説を生み出します。
+          </p>
+
+          <h2>3. 配線図があれば、脳は動く？</h2>
+          <p>
+            シミュレーションには、地図に加えて「どの刺激で細胞が反応するか」「信号がどれほど強く伝わるか」といった動作のルールが必要です。道路地図だけでは、その瞬間の交通の流れまでわからないのと似ています。
+          </p>
+          <div class="fly-takeaway">
+            <p>
+              <strong>この論文の成果は、脳を調べ、モデルを作るための配線図。</strong
+              ><br />仮想のハエを動かす研究やアプリは、その配線に神経活動や身体のモデルを組み合わせたものです。
+            </p>
+          </div>
+          <p>
+            また、細い枝にある接続には取りこぼしがあり、電気シナプスは対象外です。1匹のメスの脳なので、個体差や性差もあります。全身の神経系や、その個体の記憶・意識まで丸ごとコピーしたと示す研究ではありません。
+          </p>
+
+          <h2>実際のデータをのぞいてみる</h2>
+          <p>
+            公開サイト<a href="https://codex.flywire.ai/">FlyWire Codex</a
+            >では、細胞の形や接続をブラウザで調べられます。論文と同じデータは<strong
+              >FAFB v783</strong
+            >です。閲覧にはGoogleアカウントでのログインが必要です。まずは「脳の配線図を見る」ところから触れてみると、この研究の大きさが実感できます。
+          </p>
+
+          <section class="fly-datasets" aria-labelledby="datasets">
+            <h2 id="datasets">データが5種類あるけれど、どれを選ぶ？</h2>
+            <p>
+              トップ画面のFAFB・BANC・MANC・MAOL・MCNSは、<strong>性別と、地図にした身体の範囲が違うデータ</strong>です。同じ脳の新旧バージョンが並んでいるわけではありません。今回の論文をたどるなら、まずは<strong>FAFB</strong>を選べば大丈夫です。
+            </p>
+            <table class="fly-dataset-table">
+              <caption>
+                5種類のデータと、調べる対象の目安
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">データ</th>
+                  <th scope="col">何が入っている？</th>
+                  <th scope="col">選ぶ目安</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="dataset-recommended">
+                  <th scope="row">FAFB<small>v783</small></th>
+                  <td>メスの脳<small>139,255個の神経細胞</small></td>
+                  <td><strong>この論文のデータ。</strong>脳の配線を見てみたい。</td>
+                </tr>
+                <tr>
+                  <th scope="row">BANC<small>v888</small></th>
+                  <td>メスの脳＋腹側神経索<small>158,262個</small></td>
+                  <td>脳から身体側へ続く回路を追いたい。</td>
+                </tr>
+                <tr>
+                  <th scope="row">MANC<small>v1.2.1</small></th>
+                  <td>オスの腹側神経索<small>23,665個</small></td>
+                  <td>脚や翅の運動を支える、身体側の回路を調べたい。</td>
+                </tr>
+                <tr>
+                  <th scope="row">MAOL<small>v1.1</small></th>
+                  <td>オスの右視葉<small>52,445個</small></td>
+                  <td>見るための情報処理に注目したい。</td>
+                </tr>
+                <tr>
+                  <th scope="row">MCNS<small>v1.0</small></th>
+                  <td>オスの脳＋腹側神経索<small>166,700個</small></td>
+                  <td>オスの中枢神経系を広く調べたい。</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="fly-small">
+              名称・神経細胞数は<a href="https://codex.flywire.ai/">公式トップ画面</a
+              >の2026年9月17日時点の表示。選ぶ目安は、各データの収録範囲から整理したものです。
+            </p>
+            <p>
+              <strong>腹側神経索（VNC）</strong
+              >は、身体側で感覚や運動を処理する神経の集まり。脳と合わせて<strong>中枢神経系（CNS）</strong>と呼びます。<strong>視葉（OL）</strong>は視覚を処理する脳の領域で、OL/RのRは右側。名前の後ろの「v」はデータの版番号で、大きい数字ほど高性能という意味ではありません。
+            </p>
+            <div class="fly-takeaway">
+              <p>
+                <strong>「ハエを動かしたい」なら、使うシミュレーターが対応するデータを選ぶ。</strong
+                ><br />配線の範囲が広くても、それだけで身体が動くわけではありません。FAFB向けのプログラムにMCNSをそのまま差し替えられるとは限りません。
+              </p>
+            </div>
+            <h3>画面の「接続数」が、論文の数字と違う理由</h3>
+            <p>
+              冒頭の約5,450万個は<strong>シナプスという接続点の数</strong>。画面の「connections」は、細胞間のつながりを数えたものです。同じ2細胞の間に複数の接続点があるため、別の数字になります。さらに、接続として数える最低シナプス数もデータごとに異なるので、表示数だけで「どちらが複雑な脳か」は比べられません。詳しくは<a
+                href="https://codex.flywire.ai/faq"
+                >公式FAQ</a
+              >を参照してください。
+            </p>
+            <p class="fly-small">
+              自分で分析するためのダウンロードは、FAFB・BANCならCodexの「Download
+              Data」から。MANC・MAOL・MCNSは各プロジェクトの公式配布先を使います。入口は公式FAQにまとまっています。
+            </p>
+          </section>
+
+          <footer class="fly-sources" aria-label="参考文献">
+            <h2>出典</h2>
+            <p>
+              Dorkenwald, S. et al. (2024).
+              <a href="https://doi.org/10.1038/s41586-024-07558-y" lang="en"
+                >Neuronal wiring diagram of an adult brain.</a
+              >
+              <i lang="en">Nature</i> 634, 124–138. 2024年10月2日オンライン公開。
+            </p>
+            <p>
+              細胞の分類についての姉妹論文：Schlegel, P. et al. (2024).
+              <a href="https://doi.org/10.1038/s41586-024-07686-5" lang="en"
+                >Whole-brain annotation and multi-connectome cell typing of Drosophila.</a
+              >
+            </p>
+            <p>
+              データ選びの参考：<a href="https://codex.flywire.ai/faq">Codex公式FAQ</a>、<a
+                href="https://www.janelia.org/project-team/flyem/manc-connectome"
+                >MANC</a
+              >、<a href="https://www.janelia.org/project-team/flyem/optic-lobe">MAOL</a>、<a
+                href="https://male-cns.janelia.org/"
+                >MCNS</a
+              >。
+            </p>
+            <p>
+              図は本記事のために作成した模式図です。論文の数値・研究内容は上記論文、比較表と公開サイトの利用方法は2026年9月17日の公式情報に基づきます。
+            </p>
+          </footer>
+        </div>
+        <a class="button button-secondary" href="blog.html">ブログへ戻る</a>
+      </article>
+    </main>
+    <script src="classical.js?v=20260918-materials" defer></script>
+  </body>
+</html>
