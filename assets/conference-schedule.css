@@ -1,109 +1,477 @@
 /* Uses the site's paper, teal and gold palette. No script is needed for content. */
-.conference-page { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: 60px 0 72px; }
-.conference-heading { max-width: 780px; }
-.conference-kicker { color: var(--color-heading); font-size: 12px; letter-spacing: .15em; }
-.conference-heading h1 { margin: 12px 0 20px; font-size: clamp(36px, 6vw, 58px); }
-.conference-lead { font-size: clamp(24px, 4vw, 34px); font-weight: 600; color: var(--color-heading); margin-bottom: 16px; }
-.conference-lead span { display: inline-block; margin-left: 12px; }
-.conference-updated, .conference-checked { font-size: 13px; margin-top: 14px; }
-.conference-jump { display: flex; flex-wrap: wrap; gap: 10px; margin: 26px 0; }
-.conference-jump a { padding: 9px 16px; border: 1px solid var(--color-divider); border-radius: 24px; color: var(--color-text); font-size: 14px; }
-.conference-jump a:hover { background: var(--color-surface); border-color: var(--color-heading); }
-.conference-note { padding: 24px 28px; background: var(--color-surface); border-left: 3px solid var(--color-heading); font-size: 15px; }
-.conference-note h2 { font-size: 19px; margin-bottom: 12px; }
-.conference-note p + p { margin-top: 10px; }
-.conference-page section { margin-top: 52px; scroll-margin-top: 160px; }
-.conference-section-heading { margin-bottom: 24px; }
-.conference-section-heading h2 { font-size: clamp(25px, 4vw, 32px); margin-bottom: 14px; }
-.conference-section-heading p { font-size: 15px; max-width: 900px; margin-top: 8px; }
-.conference-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: start; }
-.conference-card { padding: 28px; border: 1px solid var(--color-divider); border-top: 3px solid var(--color-heading); background: var(--color-surface); border-radius: 4px; scroll-margin-top: 160px; overflow-wrap: anywhere; }
-.conference-card h3 { font-size: 28px; margin: 12px 0 8px; }
-.conference-badge { color: var(--color-heading); font-size: 12px; font-weight: 600; }
-.conference-full-name { font-size: 13px; line-height: 1.65; }
-.conference-facts { display: grid; grid-template-columns: 105px minmax(0, 1fr); gap: 10px; margin: 24px 0; font-size: 14px; }
-.conference-facts dt { font-weight: 600; }
-.conference-facts dd { margin: 0; }
-.conference-facts .conference-date { font-size: 18px; font-weight: 600; color: var(--color-heading); font-variant-numeric: tabular-nums; }
-.conference-deadlines { border-top: 1px solid var(--color-divider); padding-top: 18px; font-size: 14px; }
-.conference-deadlines h4 { font-size: 16px; }
-.conference-deadlines ul { padding-left: 1.3em; margin: 12px 0; }
-.conference-deadlines li + li { margin-top: 7px; }
-.conference-detail-note { font-size: 13px; line-height: 1.8; }
-.conference-sources { font-size: 14px; margin-top: 18px; line-height: 2; }
-.conference-page a { text-underline-offset: 4px; }
-.conference-page :focus-visible { outline: 2px solid var(--color-heading); outline-offset: 4px; }
-.conference-table-wrap { overflow-x: auto; border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-surface); }
-.conference-table { width: 100%; border-collapse: collapse; min-width: 820px; font-size: 14px; }
-.conference-table caption { text-align: left; padding: 16px; font-size: 13px; }
-.conference-table th, .conference-table td { padding: 18px 16px; border-top: 1px solid var(--color-divider); text-align: left; vertical-align: top; line-height: 1.8; }
-.conference-table thead { background: var(--color-bg); }
-.conference-table th:first-child { width: 17%; }
-.conference-table td:nth-child(2) { width: 27%; }
-.conference-table td:nth-child(3) { width: 37%; }
-.conference-table small { display: block; font-size: 12px; margin-top: 6px; }
-.conference-related { display: flex; gap: 18px; flex-wrap: wrap; font-size: 16px; }
+.conference-page {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 60px 0 72px;
+}
+.conference-heading {
+  max-width: 780px;
+}
+.conference-kicker {
+  color: var(--color-heading);
+  font-size: 12px;
+  letter-spacing: 0.15em;
+}
+.conference-heading h1 {
+  margin: 12px 0 20px;
+  font-size: clamp(36px, 6vw, 58px);
+}
+.conference-lead {
+  font-size: clamp(24px, 4vw, 34px);
+  font-weight: 600;
+  color: var(--color-heading);
+  margin-bottom: 16px;
+}
+.conference-lead span {
+  display: inline-block;
+  margin-left: 12px;
+}
+.conference-updated,
+.conference-checked {
+  font-size: 13px;
+  margin-top: 14px;
+}
+.conference-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 26px 0;
+}
+.conference-jump a {
+  padding: 9px 16px;
+  border: 1px solid var(--color-divider);
+  border-radius: 24px;
+  color: var(--color-text);
+  font-size: 14px;
+}
+.conference-jump a:hover {
+  background: var(--color-surface);
+  border-color: var(--color-heading);
+}
+.conference-note {
+  padding: 24px 28px;
+  background: var(--color-surface);
+  border-left: 3px solid var(--color-heading);
+  font-size: 15px;
+}
+.conference-note h2 {
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+.conference-note p + p {
+  margin-top: 10px;
+}
+.conference-page section {
+  margin-top: 52px;
+  scroll-margin-top: 160px;
+}
+.conference-section-heading {
+  margin-bottom: 24px;
+}
+.conference-section-heading h2 {
+  font-size: clamp(25px, 4vw, 32px);
+  margin-bottom: 14px;
+}
+.conference-section-heading p {
+  font-size: 15px;
+  max-width: 900px;
+  margin-top: 8px;
+}
+.conference-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+.conference-card {
+  padding: 28px;
+  border: 1px solid var(--color-divider);
+  border-top: 3px solid var(--color-heading);
+  background: var(--color-surface);
+  border-radius: 4px;
+  scroll-margin-top: 160px;
+  overflow-wrap: anywhere;
+}
+.conference-card h3 {
+  font-size: 28px;
+  margin: 12px 0 8px;
+}
+.conference-badge {
+  color: var(--color-heading);
+  font-size: 12px;
+  font-weight: 600;
+}
+.conference-full-name {
+  font-size: 13px;
+  line-height: 1.65;
+}
+.conference-facts {
+  display: grid;
+  grid-template-columns: 105px minmax(0, 1fr);
+  gap: 10px;
+  margin: 24px 0;
+  font-size: 14px;
+}
+.conference-facts dt {
+  font-weight: 600;
+}
+.conference-facts dd {
+  margin: 0;
+}
+.conference-facts .conference-date {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-heading);
+  font-variant-numeric: tabular-nums;
+}
+.conference-deadlines {
+  border-top: 1px solid var(--color-divider);
+  padding-top: 18px;
+  font-size: 14px;
+}
+.conference-deadlines h4 {
+  font-size: 16px;
+}
+.conference-deadlines ul {
+  padding-left: 1.3em;
+  margin: 12px 0;
+}
+.conference-deadlines li + li {
+  margin-top: 7px;
+}
+.conference-detail-note {
+  font-size: 13px;
+  line-height: 1.8;
+}
+.conference-sources {
+  font-size: 14px;
+  margin-top: 18px;
+  line-height: 2;
+}
+.conference-page a {
+  text-underline-offset: 4px;
+}
+.conference-page :focus-visible {
+  outline: 2px solid var(--color-heading);
+  outline-offset: 4px;
+}
+.conference-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-divider);
+  border-radius: 4px;
+  background: var(--color-surface);
+}
+.conference-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 820px;
+  font-size: 14px;
+}
+.conference-table caption {
+  text-align: left;
+  padding: 16px;
+  font-size: 13px;
+}
+.conference-table th,
+.conference-table td {
+  padding: 18px 16px;
+  border-top: 1px solid var(--color-divider);
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.8;
+}
+.conference-table thead {
+  background: var(--color-bg);
+}
+.conference-table th:first-child {
+  width: 17%;
+}
+.conference-table td:nth-child(2) {
+  width: 27%;
+}
+.conference-table td:nth-child(3) {
+  width: 37%;
+}
+.conference-table small {
+  display: block;
+  font-size: 12px;
+  margin-top: 6px;
+}
+.conference-related {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-size: 16px;
+}
 @media (max-width: 700px) {
-  .conference-page { width: min(100% - 28px, 540px); padding-top: 32px; }
-  .conference-grid { grid-template-columns: 1fr; gap: 20px; }
-  .conference-card { padding: 22px 18px; }
-  .conference-note { padding: 20px 18px; }
-  .conference-facts { grid-template-columns: 90px minmax(0, 1fr); gap: 8px; }
-  .conference-facts .conference-date { font-size: 16px; }
-  .conference-table-wrap { overflow: visible; border: 0; background: none; }
-  .conference-table { min-width: 0; display: block; }
-  .conference-table caption { display: block; padding: 0 0 16px; }
-  .conference-table thead { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); }
-  .conference-table tbody { display: grid; gap: 16px; }
-  .conference-table tr { display: block; background: var(--color-surface); border: 1px solid var(--color-divider); border-radius: 4px; padding: 18px; }
-  .conference-table th, .conference-table td { display: block; width: auto !important; padding: 10px 0; border: 0; overflow-wrap: anywhere; }
-  .conference-table th { color: var(--color-heading); font-size: 18px; }
-  .conference-table td::before { display: block; font-size: 12px; font-weight: 600; margin-bottom: 4px; }
-  .conference-table td:nth-child(2)::before { content: '開催日・開催地'; }
-  .conference-table td:nth-child(3)::before { content: '投稿締切・タイムゾーン'; }
-  .conference-table td:nth-child(4)::before { content: '公式URL・確認状況'; }
+  .conference-page {
+    width: min(100% - 28px, 540px);
+    padding-top: 32px;
+  }
+  .conference-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .conference-card {
+    padding: 22px 18px;
+  }
+  .conference-note {
+    padding: 20px 18px;
+  }
+  .conference-facts {
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 8px;
+  }
+  .conference-facts .conference-date {
+    font-size: 16px;
+  }
+  .conference-table-wrap {
+    overflow: visible;
+    border: 0;
+    background: none;
+  }
+  .conference-table {
+    min-width: 0;
+    display: block;
+  }
+  .conference-table caption {
+    display: block;
+    padding: 0 0 16px;
+  }
+  .conference-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .conference-table tbody {
+    display: grid;
+    gap: 16px;
+  }
+  .conference-table tr {
+    display: block;
+    background: var(--color-surface);
+    border: 1px solid var(--color-divider);
+    border-radius: 4px;
+    padding: 18px;
+  }
+  .conference-table th,
+  .conference-table td {
+    display: block;
+    width: auto !important;
+    padding: 10px 0;
+    border: 0;
+    overflow-wrap: anywhere;
+  }
+  .conference-table th {
+    color: var(--color-heading);
+    font-size: 18px;
+  }
+  .conference-table td::before {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .conference-table td:nth-child(2)::before {
+    content: "開催日・開催地";
+  }
+  .conference-table td:nth-child(3)::before {
+    content: "投稿締切・タイムゾーン";
+  }
+  .conference-table td:nth-child(4)::before {
+    content: "公式URL・確認状況";
+  }
 }
 
 /* Materials index and conference identities. */
-.conference-back { margin: 18px 0; font-size: 14px; }
-.materials-index { max-width: 1000px; }
-.materials-feature { padding: clamp(24px, 5vw, 44px); background: var(--color-surface); border: 1px solid var(--color-divider); border-top: 3px solid var(--color-heading); border-radius: 4px; }
-.materials-feature h2 { font-size: 30px; margin: 24px 0 16px; }
-.materials-feature p { max-width: 650px; font-size: 16px; }
-.materials-button { display: inline-flex; justify-content: space-between; align-items: center; gap: 50px; min-height: 52px; margin-top: 28px; padding: 12px 26px; border-radius: 4px; background: var(--color-heading); color: #fff; font-weight: 600; text-decoration: none; }
-.materials-button:hover { background: #104950; color: #fff; text-decoration: none; }
-.materials-logo-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; padding: 18px; background: #fff; border-radius: 4px; }
-.materials-logo-strip img { width: 120px; height: 60px; object-fit: contain; }
-.conference-logo { display: flex; align-items: center; justify-content: center; height: 126px; padding: 14px; margin-bottom: 22px; background: #fff; border-radius: 3px; }
-.conference-logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
-.conference-table-icon { display: block; width: 48px; height: 48px; object-fit: contain; padding: 5px; background: white; border-radius: 4px; margin-bottom: 12px; }
-@media (max-width: 700px) {
-  .materials-logo-strip { gap: 14px; }
-  .materials-logo-strip img { width: 72px; height: 44px; }
-  .materials-button { width: 100%; }
+.conference-back {
+  margin: 18px 0;
+  font-size: 14px;
 }
-.conference-icon-dark { background: #193f50; }
-.conference-icon-label { font-size: 11px; font-weight: 400; }
-.conference-foundation-logo { gap: 18px; color: #244967; font-size: 15px; }
-.conference-foundation-logo img { width: 48px; height: 48px; }
-.conference-table-icon { width: 112px; height: 56px; }
+.materials-index {
+  max-width: 1000px;
+}
+.materials-feature {
+  padding: clamp(24px, 5vw, 44px);
+  background: var(--color-surface);
+  border: 1px solid var(--color-divider);
+  border-top: 3px solid var(--color-heading);
+  border-radius: 4px;
+}
+.materials-feature h2 {
+  font-size: 30px;
+  margin: 24px 0 16px;
+}
+.materials-feature p {
+  max-width: 650px;
+  font-size: 16px;
+}
+.materials-button {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  min-height: 52px;
+  margin-top: 28px;
+  padding: 12px 26px;
+  border-radius: 4px;
+  background: var(--color-heading);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.materials-button:hover {
+  background: #104950;
+  color: #fff;
+  text-decoration: none;
+}
+.materials-logo-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  padding: 18px;
+  background: #fff;
+  border-radius: 4px;
+}
+.materials-logo-strip img {
+  width: 120px;
+  height: 60px;
+  object-fit: contain;
+}
+.conference-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 126px;
+  padding: 14px;
+  margin-bottom: 22px;
+  background: #fff;
+  border-radius: 3px;
+}
+.conference-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.conference-table-icon {
+  display: block;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  padding: 5px;
+  background: white;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+@media (max-width: 700px) {
+  .materials-logo-strip {
+    gap: 14px;
+  }
+  .materials-logo-strip img {
+    width: 72px;
+    height: 44px;
+  }
+  .materials-button {
+    width: 100%;
+  }
+}
+.conference-icon-dark {
+  background: #193f50;
+}
+.conference-icon-label {
+  font-size: 11px;
+  font-weight: 400;
+}
+.conference-foundation-logo {
+  gap: 18px;
+  color: #244967;
+  font-size: 15px;
+}
+.conference-foundation-logo img {
+  width: 48px;
+  height: 48px;
+}
+.conference-table-icon {
+  width: 112px;
+  height: 56px;
+}
 
 /* Anthropic resource card. */
-.anthropic-feature { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 32px; align-items: start; margin-top: 28px; }
-.anthropic-wordmark { display: block; width: 230px; max-width: 100%; height: auto; padding: 14px; background: #faf9f5; border-radius: 4px; box-sizing: border-box; }
-.anthropic-portrait { margin: 0; }
-.anthropic-portrait img { display: block; width: 100%; height: auto; border-radius: 4px; }
-.anthropic-portrait figcaption { margin-top: 10px; font-size: 12px; line-height: 1.7; }
-.anthropic-feature .materials-button { gap: 16px; }
+.anthropic-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 32px;
+  align-items: start;
+  margin-top: 28px;
+}
+.anthropic-wordmark {
+  display: block;
+  width: 230px;
+  max-width: 100%;
+  height: auto;
+  padding: 14px;
+  background: #faf9f5;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.anthropic-portrait {
+  margin: 0;
+}
+.anthropic-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.anthropic-portrait figcaption {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.anthropic-feature .materials-button {
+  gap: 16px;
+}
 @media (max-width: 700px) {
-  .anthropic-feature { grid-template-columns: minmax(0, 1fr); gap: 24px; }
-  .anthropic-portrait { width: min(220px, 100%); }
+  .anthropic-feature {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  .anthropic-portrait {
+    width: min(220px, 100%);
+  }
 }
 
-.materials-index a:not(.materials-button) { color: var(--color-heading); text-decoration: underline; text-underline-offset: .2em; }
-.materials-index a:not(.materials-button):hover { color: var(--color-accent-700); }
+.materials-index a:not(.materials-button) {
+  color: var(--color-heading);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.materials-index a:not(.materials-button):hover {
+  color: var(--color-accent-700);
+}
 
-.anthropic-resources { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; margin-top: 28px; }
-.anthropic-resources h3 { margin: 0 0 10px; font-size: 19px; line-height: 1.6; overflow-wrap: anywhere; }
-.anthropic-resources p { margin: 0; }
-@media (max-width: 700px) { .anthropic-resources { grid-template-columns: minmax(0, 1fr); } }
+.anthropic-resources {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 28px;
+  margin-top: 28px;
+}
+.anthropic-resources h3 {
+  margin: 0 0 10px;
+  font-size: 19px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.anthropic-resources p {
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .anthropic-resources {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

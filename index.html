@@ -1,303 +1,808 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="櫻本晃弘（Akihiro Sakuramoto）の個人サイト。北陸先端科学技術大学院大学（JAIST）でヒューマン・ロボット・インタラクション（HRI）とマルチモーダルなラポール推定を研究。研究概要・論文・経歴、技術や企業分析のブログを掲載しています。">
-  <meta name="author" content="櫻本晃弘 / Sakuramoto Akihiro">
-  <meta name="robots" content="index, follow">
-  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <meta property="og:title" content="AKI NOTES | 櫻本晃弘の研究と探究">
-  <meta property="og:description" content="JAISTで人とロボットの対話・ラポール推定を研究する櫻本晃弘の個人サイト。研究概要・論文・経歴、技術や企業分析のブログを掲載しています。">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://aki41105.github.io/">
-  <meta property="og:image" content="https://aki41105.github.io/assets/header-library.jpg">
-  <meta property="og:image:width" content="2200">
-  <meta property="og:image:height" content="1237">
-  <meta property="og:image:alt" content="Curved bookshelves inside a warm library atrium">
-  <meta property="og:site_name" content="AKI NOTES">
-  <meta property="og:locale" content="ja_JP">
-  <meta property="profile:first_name" content="Akihiro">
-  <meta property="profile:last_name" content="Sakuramoto">
-  <meta property="profile:username" content="aki41105">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AKI NOTES | 櫻本晃弘の研究と探究">
-  <meta name="twitter:description" content="JAISTで人とロボットの対話・ラポール推定を研究する櫻本晃弘の個人サイト。研究概要・論文・経歴、技術や企業分析のブログを掲載しています。">
-  <meta name="twitter:image" content="https://aki41105.github.io/assets/header-library.jpg">
-  <meta name="theme-color" content="#155c63">
-  <link rel="canonical" href="https://aki41105.github.io/">
-  <link rel="preload" as="image" href="assets/header-library.jpg">
-  <link rel="icon" href="assets/favicon-192.png?v=20260914-fox-large" type="image/png">
-  <link rel="icon" href="assets/favicon-32x32.png?v=20260914-fox-large" sizes="32x32" type="image/png">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=20260914-fox">
-  <title>AKI NOTES | 櫻本晃弘の研究と探究</title>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="櫻本晃弘（Akihiro Sakuramoto）の個人サイト。北陸先端科学技術大学院大学（JAIST）でヒューマン・ロボット・インタラクション（HRI）とマルチモーダルなラポール推定を研究。研究概要・論文・経歴、技術や企業分析のブログを掲載しています。"
+    />
+    <meta name="author" content="櫻本晃弘 / Sakuramoto Akihiro" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="googlebot"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <meta property="og:title" content="AKI NOTES | 櫻本晃弘の研究と探究" />
+    <meta
+      property="og:description"
+      content="JAISTで人とロボットの対話・ラポール推定を研究する櫻本晃弘の個人サイト。研究概要・論文・経歴、技術や企業分析のブログを掲載しています。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aki41105.github.io/" />
+    <meta property="og:image" content="https://aki41105.github.io/assets/header-library.jpg" />
+    <meta property="og:image:width" content="2200" />
+    <meta property="og:image:height" content="1237" />
+    <meta property="og:image:alt" content="Curved bookshelves inside a warm library atrium" />
+    <meta property="og:site_name" content="AKI NOTES" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="profile:first_name" content="Akihiro" />
+    <meta property="profile:last_name" content="Sakuramoto" />
+    <meta property="profile:username" content="aki41105" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AKI NOTES | 櫻本晃弘の研究と探究" />
+    <meta
+      name="twitter:description"
+      content="JAISTで人とロボットの対話・ラポール推定を研究する櫻本晃弘の個人サイト。研究概要・論文・経歴、技術や企業分析のブログを掲載しています。"
+    />
+    <meta name="twitter:image" content="https://aki41105.github.io/assets/header-library.jpg" />
+    <meta name="theme-color" content="#155c63" />
+    <link rel="canonical" href="https://aki41105.github.io/" />
+    <link rel="preload" as="image" href="assets/header-library.jpg" />
+    <link rel="icon" href="assets/favicon-192.png?v=20260914-fox-large" type="image/png" />
+    <link
+      rel="icon"
+      href="assets/favicon-32x32.png?v=20260914-fox-large"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=20260914-fox" />
+    <title>AKI NOTES | 櫻本晃弘の研究と探究</title>
+    <script type="application/ld+json">
       {
-        "@type": "WebSite",
-        "@id": "https://aki41105.github.io/#website",
-        "url": "https://aki41105.github.io/",
-        "name": "AKI NOTES",
-        "alternateName": "AKI NOTES",
-        "inLanguage": ["ja", "en"],
-        "publisher": { "@id": "https://aki41105.github.io/#person" }
-      },
-      {
-        "@type": "ProfilePage",
-        "@id": "https://aki41105.github.io/profile.html#profile-page",
-        "url": "https://aki41105.github.io/profile.html",
-        "name": "櫻本晃弘 / Sakuramoto Akihiro",
-        "description": "Official academic profile of 櫻本晃弘 / Sakuramoto Akihiro / Akihiro Sakuramoto, a master's student at JAIST studying Human-Robot Interaction, Social Signal Processing, Multimodal Interaction, and Rapport Estimation.",
-        "inLanguage": ["ja", "en"],
-        "dateModified": "2026-09-05",
-        "isPartOf": { "@id": "https://aki41105.github.io/#website" },
-        "mainEntity": { "@id": "https://aki41105.github.io/#person" }
-      },
-      {
-        "@type": "Person",
-        "@id": "https://aki41105.github.io/#person",
-        "name": "Akihiro Sakuramoto",
-        "alternateName": ["櫻本晃弘", "櫻本 晃弘", "Sakuramoto Akihiro"],
-        "givenName": "Akihiro",
-        "familyName": "Sakuramoto",
-        "additionalName": "櫻本 晃弘",
-        "url": "https://aki41105.github.io/",
-        "mainEntityOfPage": { "@id": "https://aki41105.github.io/profile.html#profile-page" },
-        "jobTitle": "Master's Student",
-        "description": "Akihiro Sakuramoto studies real-world Human-Robot Interaction, Social Signal Processing, Multimodal Interaction, and Rapport Estimation.",
-        "identifier": {
-          "@type": "PropertyValue",
-          "propertyID": "ORCID",
-          "value": "0009-0006-7932-0219",
-          "url": "https://orcid.org/0009-0006-7932-0219"
-        },
-        "affiliation": {
-          "@type": "CollegeOrUniversity",
-          "name": "Japan Advanced Institute of Science and Technology",
-          "alternateName": "JAIST",
-          "url": "https://www.jaist.ac.jp/"
-        },
-        "memberOf": [
+        "@context": "https://schema.org",
+        "@graph": [
           {
-            "@type": "Organization",
-            "name": "Okada Laboratory",
-            "url": "https://www.jaist.ac.jp/~okada-s/index.html"
+            "@type": "WebSite",
+            "@id": "https://aki41105.github.io/#website",
+            "url": "https://aki41105.github.io/",
+            "name": "AKI NOTES",
+            "alternateName": "AKI NOTES",
+            "inLanguage": ["ja", "en"],
+            "publisher": { "@id": "https://aki41105.github.io/#person" }
           },
           {
-            "@type": "Organization",
-            "name": "Association for Computing Machinery",
-            "alternateName": "ACM",
-            "url": "https://www.acm.org/"
-          }
-        ],
-        "award": "JAIST Student Grant Scholarship, 2025-2026",
-        "sameAs": [
-          "https://scholar.google.com/citations?user=QK0fPP0AAAAJ&hl=ja",
-          "https://github.com/aki41105",
-          "https://orcid.org/0009-0006-7932-0219",
-          "https://www.linkedin.com/in/akihiro-sakuramoto-37024b328/",
-          "https://note.com/akihiro_1",
-          "https://qiita.com/sakuramoto-A",
-          "https://www.kaggle.com/sakuramotoakihiro"
-        ],
-        "knowsAbout": [
-          "Human-Robot Interaction",
-          "Human-AI Interaction",
-          "Social Signal Processing",
-          "Multimodal Interaction",
-          "Rapport Estimation",
-          "Interaction Quality Evaluation"
-        ],
-        "knowsLanguage": ["ja", "en"],
-        "subjectOf": [
-          {
-            "@type": "ScholarlyArticle",
-            "name": "Examining the Relationship between User Closing Behavior and Rapport in Real-World Human-Robot Interaction",
-            "author": [
-              { "@type": "Person", "name": "Akihiro Sakuramoto", "alternateName": ["櫻本晃弘", "Sakuramoto Akihiro"] },
-              { "@type": "Person", "name": "Takato Hayashi", "alternateName": "林貴斗" },
-              { "@type": "Person", "name": "Ryo Miyoshi", "alternateName": "三好遼" },
-              { "@type": "Person", "name": "Yuki Okafuji", "alternateName": "岡藤勇希" },
-              { "@type": "Person", "name": "Shogo Okada", "alternateName": "岡田将吾" }
-            ],
-            "isPartOf": {
-              "@type": "Event",
-              "name": "14th International Conference on Human-Agent Interaction",
-              "alternateName": "HAI 2026",
-              "startDate": "2026-11-16",
-              "endDate": "2026-11-19",
-              "location": "Osaka, Japan"
-            }
+            "@type": "ProfilePage",
+            "@id": "https://aki41105.github.io/profile.html#profile-page",
+            "url": "https://aki41105.github.io/profile.html",
+            "name": "櫻本晃弘 / Sakuramoto Akihiro",
+            "description": "Official academic profile of 櫻本晃弘 / Sakuramoto Akihiro / Akihiro Sakuramoto, a master's student at JAIST studying Human-Robot Interaction, Social Signal Processing, Multimodal Interaction, and Rapport Estimation.",
+            "inLanguage": ["ja", "en"],
+            "dateModified": "2026-09-05",
+            "isPartOf": { "@id": "https://aki41105.github.io/#website" },
+            "mainEntity": { "@id": "https://aki41105.github.io/#person" }
           },
           {
-            "@type": "ScholarlyArticle",
-            "@id": "https://arxiv.org/abs/2608.18401",
-            "url": "https://arxiv.org/abs/2608.18401",
-            "identifier": "arXiv:2608.18401",
-            "name": "Multimodal Rapport Estimation in Real-World HRI",
-            "author": [
-              { "@type": "Person", "name": "Akihiro Sakuramoto", "alternateName": ["櫻本晃弘", "Sakuramoto Akihiro"] },
-              { "@type": "Person", "name": "Takato Hayashi", "alternateName": "林貴斗" },
-              { "@type": "Person", "name": "Ryo Miyoshi", "alternateName": "三好遼" },
-              { "@type": "Person", "name": "Yuki Okafuji", "alternateName": "岡藤勇希" },
-              { "@type": "Person", "name": "Shogo Okada", "alternateName": "岡田将吾" }
+            "@type": "Person",
+            "@id": "https://aki41105.github.io/#person",
+            "name": "Akihiro Sakuramoto",
+            "alternateName": ["櫻本晃弘", "櫻本 晃弘", "Sakuramoto Akihiro"],
+            "givenName": "Akihiro",
+            "familyName": "Sakuramoto",
+            "additionalName": "櫻本 晃弘",
+            "url": "https://aki41105.github.io/",
+            "mainEntityOfPage": { "@id": "https://aki41105.github.io/profile.html#profile-page" },
+            "jobTitle": "Master's Student",
+            "description": "Akihiro Sakuramoto studies real-world Human-Robot Interaction, Social Signal Processing, Multimodal Interaction, and Rapport Estimation.",
+            "identifier": {
+              "@type": "PropertyValue",
+              "propertyID": "ORCID",
+              "value": "0009-0006-7932-0219",
+              "url": "https://orcid.org/0009-0006-7932-0219"
+            },
+            "affiliation": {
+              "@type": "CollegeOrUniversity",
+              "name": "Japan Advanced Institute of Science and Technology",
+              "alternateName": "JAIST",
+              "url": "https://www.jaist.ac.jp/"
+            },
+            "memberOf": [
+              {
+                "@type": "Organization",
+                "name": "Okada Laboratory",
+                "url": "https://www.jaist.ac.jp/~okada-s/index.html"
+              },
+              {
+                "@type": "Organization",
+                "name": "Association for Computing Machinery",
+                "alternateName": "ACM",
+                "url": "https://www.acm.org/"
+              }
             ],
-            "datePublished": "2026-08-19",
-            "isPartOf": {
-              "@type": "Event",
-              "name": "28th ACM International Conference on Multimodal Interaction",
-              "alternateName": "ICMI 2026"
-            }
-          },
-          {
-            "@type": "ScholarlyArticle",
-            "name": "実環境 HRI における対話の質評価に向けたマルチモーダル ラポール推定モデルの検討",
-            "alternateName": "A Multimodal Rapport Estimation Model for Evaluating Interaction Quality in Real-World HRI",
-            "author": [
-              { "@type": "Person", "name": "Akihiro Sakuramoto", "alternateName": ["櫻本晃弘", "Sakuramoto Akihiro"] },
-              { "@type": "Person", "name": "Takato Hayashi", "alternateName": "林貴斗" },
-              { "@type": "Person", "name": "Ryo Miyoshi", "alternateName": "三好遼" },
-              { "@type": "Person", "name": "Yuki Okafuji", "alternateName": "岡藤勇希" },
-              { "@type": "Person", "name": "Shogo Okada", "alternateName": "岡田将吾" }
+            "award": "JAIST Student Grant Scholarship, 2025-2026",
+            "sameAs": [
+              "https://scholar.google.com/citations?user=QK0fPP0AAAAJ&hl=ja",
+              "https://github.com/aki41105",
+              "https://orcid.org/0009-0006-7932-0219",
+              "https://www.linkedin.com/in/akihiro-sakuramoto-37024b328/",
+              "https://note.com/akihiro_1",
+              "https://qiita.com/sakuramoto-A",
+              "https://www.kaggle.com/sakuramotoakihiro"
             ],
-            "isPartOf": {
-              "@type": "Event",
-              "name": "画像の認識・理解シンポジウム（MIRU）"
-            }
+            "knowsAbout": [
+              "Human-Robot Interaction",
+              "Human-AI Interaction",
+              "Social Signal Processing",
+              "Multimodal Interaction",
+              "Rapport Estimation",
+              "Interaction Quality Evaluation"
+            ],
+            "knowsLanguage": ["ja", "en"],
+            "subjectOf": [
+              {
+                "@type": "ScholarlyArticle",
+                "name": "Examining the Relationship between User Closing Behavior and Rapport in Real-World Human-Robot Interaction",
+                "author": [
+                  { "@type": "Person", "name": "Akihiro Sakuramoto", "alternateName": ["櫻本晃弘", "Sakuramoto Akihiro"] },
+                  { "@type": "Person", "name": "Takato Hayashi", "alternateName": "林貴斗" },
+                  { "@type": "Person", "name": "Ryo Miyoshi", "alternateName": "三好遼" },
+                  { "@type": "Person", "name": "Yuki Okafuji", "alternateName": "岡藤勇希" },
+                  { "@type": "Person", "name": "Shogo Okada", "alternateName": "岡田将吾" }
+                ],
+                "isPartOf": {
+                  "@type": "Event",
+                  "name": "14th International Conference on Human-Agent Interaction",
+                  "alternateName": "HAI 2026",
+                  "startDate": "2026-11-16",
+                  "endDate": "2026-11-19",
+                  "location": "Osaka, Japan"
+                }
+              },
+              {
+                "@type": "ScholarlyArticle",
+                "@id": "https://arxiv.org/abs/2608.18401",
+                "url": "https://arxiv.org/abs/2608.18401",
+                "identifier": "arXiv:2608.18401",
+                "name": "Multimodal Rapport Estimation in Real-World HRI",
+                "author": [
+                  { "@type": "Person", "name": "Akihiro Sakuramoto", "alternateName": ["櫻本晃弘", "Sakuramoto Akihiro"] },
+                  { "@type": "Person", "name": "Takato Hayashi", "alternateName": "林貴斗" },
+                  { "@type": "Person", "name": "Ryo Miyoshi", "alternateName": "三好遼" },
+                  { "@type": "Person", "name": "Yuki Okafuji", "alternateName": "岡藤勇希" },
+                  { "@type": "Person", "name": "Shogo Okada", "alternateName": "岡田将吾" }
+                ],
+                "datePublished": "2026-08-19",
+                "isPartOf": {
+                  "@type": "Event",
+                  "name": "28th ACM International Conference on Multimodal Interaction",
+                  "alternateName": "ICMI 2026"
+                }
+              },
+              {
+                "@type": "ScholarlyArticle",
+                "name": "実環境 HRI における対話の質評価に向けたマルチモーダル ラポール推定モデルの検討",
+                "alternateName": "A Multimodal Rapport Estimation Model for Evaluating Interaction Quality in Real-World HRI",
+                "author": [
+                  { "@type": "Person", "name": "Akihiro Sakuramoto", "alternateName": ["櫻本晃弘", "Sakuramoto Akihiro"] },
+                  { "@type": "Person", "name": "Takato Hayashi", "alternateName": "林貴斗" },
+                  { "@type": "Person", "name": "Ryo Miyoshi", "alternateName": "三好遼" },
+                  { "@type": "Person", "name": "Yuki Okafuji", "alternateName": "岡藤勇希" },
+                  { "@type": "Person", "name": "Shogo Okada", "alternateName": "岡田将吾" }
+                ],
+                "isPartOf": {
+                  "@type": "Event",
+                  "name": "画像の認識・理解シンポジウム（MIRU）"
+                }
+              }
+            ]
           }
         ]
       }
-    ]
-  }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap">
-  <link rel="preload" as="image" href="assets/hero/hero-01-garden-night.webp">
-  <link rel="stylesheet" href="classical.css?v=20260918-materials">
-</head>
-<body class="home-page">
-  <svg class="icon-defs" aria-hidden="true" focusable="false">
-    <symbol id="icon-mail" viewBox="0 0 24 24">
-      <path d="M4.8 5.6h14.4c1.1 0 2 .9 2 2v8.8c0 1.1-.9 2-2 2H4.8c-1.1 0-2-.9-2-2V7.6c0-1.1.9-2 2-2Zm7.2 7.2 7.2-5.2H4.8l7.2 5.2Zm0 2.1L4.4 9.4v7c0 .22.18.4.4.4h14.4c.22 0 .4-.18.4-.4v-7L12 14.9Z"></path>
-    </symbol>
-    <symbol id="icon-github" viewBox="0 0 24 24">
-      <path d="M12 2C6.48 2 2 6.58 2 12.22c0 4.52 2.86 8.34 6.84 9.69.5.09.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.22-3.37-1.22-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.56 2.35 1.11 2.92.85.09-.67.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.71 0 0 .84-.28 2.75 1.05A9.34 9.34 0 0 1 12 6.93c.85 0 1.7.12 2.5.34 1.9-1.33 2.74-1.05 2.74-1.05.55 1.4.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.59.69.49A10.08 10.08 0 0 0 22 12.22C22 6.58 17.52 2 12 2Z"></path>
-    </symbol>
-    <symbol id="icon-scholar" viewBox="0 0 24 24">
-      <path d="M12 3 1.9 8.6 12 14.2l8.1-4.5V15h2V8.6L12 3Zm-5.7 9.6v3.2c0 1.8 2.55 3.2 5.7 3.2s5.7-1.4 5.7-3.2v-3.2L12 15.8l-5.7-3.2Z"></path>
-    </symbol>
-    <symbol id="icon-orcid" viewBox="0 0 24 24">
-      <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20ZM8.7 7.2a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1Zm.9 3.4v6.2H7.8v-6.2h1.8Zm3.2 0h2.4c1.9 0 3.2 1.2 3.2 3.1s-1.3 3.1-3.2 3.1h-2.4v-6.2Zm1.8 1.5v3.2h.5c.9 0 1.5-.55 1.5-1.6s-.6-1.6-1.5-1.6h-.5Z"></path>
-    </symbol>
-    <symbol id="icon-linkedin" viewBox="0 0 24 24">
-      <path d="M5.2 3.2h13.6c1.1 0 2 .9 2 2v13.6c0 1.1-.9 2-2 2H5.2c-1.1 0-2-.9-2-2V5.2c0-1.1.9-2 2-2Zm3.2 15v-7.7H6.1v7.7h2.3ZM7.25 9.45c.75 0 1.35-.6 1.35-1.34 0-.75-.6-1.35-1.35-1.35-.74 0-1.34.6-1.34 1.35 0 .74.6 1.34 1.34 1.34Zm10.65 8.75v-4.15c0-2.22-1.18-3.25-2.75-3.25-1.27 0-1.84.7-2.16 1.19v-1.49h-2.3v7.7h2.3v-4.3c0-1.13.21-2.22 1.61-2.22 1.38 0 1.4 1.29 1.4 2.29v4.23h1.9Z"></path>
-    </symbol>
-  </svg>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="Home">
-      <span class="brand-mark" aria-hidden="true"><img src="assets/site-icon.png?v=20260914-fox" alt="" width="64" height="64"></span>
-      <span>AKI NOTES</span>
-    </a>
-    <nav class="site-nav garden-nav" aria-label="Main navigation">
-      <a class="nav-home" href="index.html#home">Home</a>
-      <a class="nav-profile" href="profile.html">自己紹介</a>
-      <a class="nav-blog" href="blog.html">ブログ</a>
-      <a class="nav-materials" href="materials.html">資料</a>
-    </nav>
-    <button class="theme-toggle" type="button" id="themeToggle" aria-label="ダークモードを切り替え">◐</button>
-    <button class="language-toggle" type="button" id="languageToggle" aria-label="Switch to English">English</button>
-  </header>
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap"
+    />
+    <link rel="preload" as="image" href="assets/hero/hero-01-garden-night.webp" />
+    <link rel="stylesheet" href="classical.css?v=20260918-materials" />
+  </head>
+  <body class="home-page">
+    <svg class="icon-defs" aria-hidden="true" focusable="false">
+      <symbol id="icon-mail" viewBox="0 0 24 24">
+        <path
+          d="M4.8 5.6h14.4c1.1 0 2 .9 2 2v8.8c0 1.1-.9 2-2 2H4.8c-1.1 0-2-.9-2-2V7.6c0-1.1.9-2 2-2Zm7.2 7.2 7.2-5.2H4.8l7.2 5.2Zm0 2.1L4.4 9.4v7c0 .22.18.4.4.4h14.4c.22 0 .4-.18.4-.4v-7L12 14.9Z"
+        ></path>
+      </symbol>
+      <symbol id="icon-github" viewBox="0 0 24 24">
+        <path
+          d="M12 2C6.48 2 2 6.58 2 12.22c0 4.52 2.86 8.34 6.84 9.69.5.09.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.22-3.37-1.22-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.56 2.35 1.11 2.92.85.09-.67.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.71 0 0 .84-.28 2.75 1.05A9.34 9.34 0 0 1 12 6.93c.85 0 1.7.12 2.5.34 1.9-1.33 2.74-1.05 2.74-1.05.55 1.4.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.59.69.49A10.08 10.08 0 0 0 22 12.22C22 6.58 17.52 2 12 2Z"
+        ></path>
+      </symbol>
+      <symbol id="icon-scholar" viewBox="0 0 24 24">
+        <path
+          d="M12 3 1.9 8.6 12 14.2l8.1-4.5V15h2V8.6L12 3Zm-5.7 9.6v3.2c0 1.8 2.55 3.2 5.7 3.2s5.7-1.4 5.7-3.2v-3.2L12 15.8l-5.7-3.2Z"
+        ></path>
+      </symbol>
+      <symbol id="icon-orcid" viewBox="0 0 24 24">
+        <path
+          d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20ZM8.7 7.2a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1Zm.9 3.4v6.2H7.8v-6.2h1.8Zm3.2 0h2.4c1.9 0 3.2 1.2 3.2 3.1s-1.3 3.1-3.2 3.1h-2.4v-6.2Zm1.8 1.5v3.2h.5c.9 0 1.5-.55 1.5-1.6s-.6-1.6-1.5-1.6h-.5Z"
+        ></path>
+      </symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 24 24">
+        <path
+          d="M5.2 3.2h13.6c1.1 0 2 .9 2 2v13.6c0 1.1-.9 2-2 2H5.2c-1.1 0-2-.9-2-2V5.2c0-1.1.9-2 2-2Zm3.2 15v-7.7H6.1v7.7h2.3ZM7.25 9.45c.75 0 1.35-.6 1.35-1.34 0-.75-.6-1.35-1.35-1.35-.74 0-1.34.6-1.34 1.35 0 .74.6 1.34 1.34 1.34Zm10.65 8.75v-4.15c0-2.22-1.18-3.25-2.75-3.25-1.27 0-1.84.7-2.16 1.19v-1.49h-2.3v7.7h2.3v-4.3c0-1.13.21-2.22 1.61-2.22 1.38 0 1.4 1.29 1.4 2.29v4.23h1.9Z"
+        ></path>
+      </symbol>
+    </svg>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true"
+          ><img src="assets/site-icon.png?v=20260914-fox" alt="" width="64" height="64"
+        /></span>
+        <span>AKI NOTES</span>
+      </a>
+      <nav class="site-nav garden-nav" aria-label="Main navigation">
+        <a class="nav-home" href="index.html#home">Home</a>
+        <a class="nav-profile" href="profile.html">自己紹介</a>
+        <a class="nav-blog" href="blog.html">ブログ</a>
+        <a class="nav-materials" href="materials.html">資料</a>
+      </nav>
+      <button
+        class="theme-toggle"
+        type="button"
+        id="themeToggle"
+        aria-label="ダークモードを切り替え"
+      >
+        ◐
+      </button>
+      <button
+        class="language-toggle"
+        type="button"
+        id="languageToggle"
+        aria-label="Switch to English"
+      >
+        English
+      </button>
+    </header>
 
-  <section class="scene-hero" id="home" aria-label="ペルシャを旅する風景">
-    <div class="scene-images" id="hero-scenes">
-      <img class="scene-image is-active" data-scene="garden" src="assets/hero/hero-01-garden-night.webp" alt="星空の下、宮殿へ続く水路と花々に囲まれた庭園" width="1672" height="941" fetchpriority="high">
-      <img class="scene-image" data-scene="study" src="assets/hero/hero-02-study-globe.webp" alt="庭園を望むアーチ窓と、本、天球儀、ランプのある書斎" width="1672" height="941" decoding="async" aria-hidden="true">
-      <img class="scene-image" data-scene="bazaar-day" data-heading-tone="dark" src="assets/hero/hero-03-bazaar-day.webp" alt="日除け布の下で人々が行き交う昼の市場、香辛料と果物の店" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="caravan-dawn" data-heading-tone="dark" src="assets/hero/hero-04-caravan-dawn-v3.webp" alt="淡い朝日に照らされた山並みと広い高原を進む隊商" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="citadel-sunset" data-heading-tone="light" src="assets/hero/hero-05-citadel-sunset.webp" alt="赤銅色の夕日に染まる城塞都市と川に架かる橋" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="garden-spring" data-heading-tone="light" src="assets/hero/hero-06-garden-spring.webp" alt="木漏れ日の春の庭園、小川と花々、水辺で本を読む人々" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="palace-hall" data-heading-tone="light" src="assets/hero/hero-07-palace-hall.webp" alt="格子窓から陽光が差す宮殿の大広間と赤い絨毯" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="fountain-stars" src="assets/hero/hero-08-fountain-stars.webp" alt="横に広がる天の川と星々を見上げる、灯りに包まれた噴水の中庭" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="harbor-morning" data-heading-tone="dark" src="assets/hero/hero-09-harbor-morning.webp" alt="朝の港" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="pottery-workshop" data-heading-tone="dark" src="assets/hero/hero-10-pottery-workshop.webp" alt="陶器工房" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="snowy-caravanserai" data-heading-tone="dark" src="assets/hero/hero-11-snowy-caravanserai.webp" alt="雪の隊商宿" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="rainy-bazaar" data-heading-tone="dark" src="assets/hero/hero-12-rainy-bazaar.webp" alt="雨の街路" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="autumn-orchard" data-heading-tone="dark" src="assets/hero/hero-13-autumn-orchard.webp" alt="秋の果樹園" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="riverside-teahouse" data-heading-tone="dark" src="assets/hero/hero-14-riverside-teahouse.webp" alt="川辺の茶屋" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="windcatcher-town" data-heading-tone="dark" src="assets/hero/hero-15-windcatcher-town.webp" alt="風の塔の街" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="mountain-pass" data-heading-tone="dark" src="assets/hero/hero-16-mountain-pass.webp" alt="山道と石橋" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="music-courtyard" data-heading-tone="light" src="assets/hero/hero-17-music-courtyard.webp" alt="音楽の夕べ" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="manuscript-atelier" data-heading-tone="dark" src="assets/hero/hero-18-manuscript-atelier.webp" alt="写本の工房" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="silk-weaving" data-heading-tone="dark" src="assets/hero/hero-19-silk-weaving.webp" alt="色糸を織る女性たちと木製の織機。窓から午後の光が差す工房。" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="reed-wetland" data-heading-tone="dark" src="assets/hero/hero-20-reed-wetland.webp" alt="水牛、サギ、葦がいる広い湿地。春の朝の空と水面。" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="hilltop-sanctuary" data-heading-tone="light" src="assets/hero/hero-21-hilltop-sanctuary.webp" alt="青い夕空と山並みを背景に、灯りがともる石造りの祠。" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="highland-camp" data-heading-tone="dark" src="assets/hero/hero-22-highland-camp.webp" alt="春の高原でパンを焼く家族、羊と犬、雪を頂いた遠山。" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="rooftop-celebration" data-heading-tone="dark" src="assets/hero/hero-23-rooftop-celebration.webp" alt="夕陽の街で、いくつもの屋上に人々が集まる祝祭の風景。" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="spring-festival" data-heading-tone="dark" src="assets/hero/hero-24-spring-festival.webp" alt="春の広場で踊りや太鼓、花と食べ物を楽しむ人々。" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="night-festival" src="assets/hero/hero-25-night-festival.webp" alt="夜の街路で踊りや音楽を楽しむ人々と、馬車が進む祭りの行列。" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-      <img class="scene-image" data-scene="capital-from-citadel" src="assets/hero/hero-26-capital-from-citadel.webp" alt="山を背にした青いドームの本城と、さまざまな家々の灯りが広がる夜の王都。" width="1672" height="941" decoding="async" fetchpriority="low" aria-hidden="true">
-    </div>
-    <div class="scene-heading">
-      <p class="scene-eyebrow">RESEARCH &amp; EXPLORATION</p>
-      <p class="scene-title">Human–Robot<br>Interaction</p>
-    </div>
-    <div class="scene-controls" role="group" aria-label="風景の切り替え" hidden>
-      <button type="button" data-scene-choice="garden" aria-pressed="true" aria-controls="hero-scenes" aria-label="庭園を表示"></button>
-      <button type="button" data-scene-choice="study" aria-pressed="false" aria-controls="hero-scenes" aria-label="書斎を表示"></button>
-      <button type="button" data-scene-choice="bazaar-day" aria-pressed="false" aria-controls="hero-scenes" aria-label="市場を表示"></button>
-      <button type="button" data-scene-choice="caravan-dawn" aria-pressed="false" aria-controls="hero-scenes" aria-label="隊商路を表示"></button>
-      <button type="button" data-scene-choice="citadel-sunset" aria-pressed="false" aria-controls="hero-scenes" aria-label="城塞都市を表示"></button>
-      <button type="button" data-scene-choice="garden-spring" aria-pressed="false" aria-controls="hero-scenes" aria-label="春の庭園を表示"></button>
-      <button type="button" data-scene-choice="palace-hall" aria-pressed="false" aria-controls="hero-scenes" aria-label="大広間を表示"></button>
-      <button type="button" data-scene-choice="fountain-stars" aria-pressed="false" aria-controls="hero-scenes" aria-label="噴水の中庭を表示"></button>
-      <button type="button" data-scene-choice="harbor-morning" aria-pressed="false" aria-controls="hero-scenes" aria-label="朝の港を表示"></button>
-      <button type="button" data-scene-choice="pottery-workshop" aria-pressed="false" aria-controls="hero-scenes" aria-label="陶器工房を表示"></button>
-      <button type="button" data-scene-choice="snowy-caravanserai" aria-pressed="false" aria-controls="hero-scenes" aria-label="雪の隊商宿を表示"></button>
-      <button type="button" data-scene-choice="rainy-bazaar" aria-pressed="false" aria-controls="hero-scenes" aria-label="雨の街路を表示"></button>
-      <button type="button" data-scene-choice="autumn-orchard" aria-pressed="false" aria-controls="hero-scenes" aria-label="秋の果樹園を表示"></button>
-      <button type="button" data-scene-choice="riverside-teahouse" aria-pressed="false" aria-controls="hero-scenes" aria-label="川辺の茶屋を表示"></button>
-      <button type="button" data-scene-choice="windcatcher-town" aria-pressed="false" aria-controls="hero-scenes" aria-label="風の塔の街を表示"></button>
-      <button type="button" data-scene-choice="mountain-pass" aria-pressed="false" aria-controls="hero-scenes" aria-label="山道と石橋を表示"></button>
-      <button type="button" data-scene-choice="music-courtyard" aria-pressed="false" aria-controls="hero-scenes" aria-label="音楽の夕べを表示"></button>
-      <button type="button" data-scene-choice="manuscript-atelier" aria-pressed="false" aria-controls="hero-scenes" aria-label="写本の工房を表示"></button>
-      <button type="button" data-scene-choice="silk-weaving" aria-pressed="false" aria-controls="hero-scenes" aria-label="絹織りの工房を表示"></button>
-      <button type="button" data-scene-choice="reed-wetland" aria-pressed="false" aria-controls="hero-scenes" aria-label="水鳥のいる湿地を表示"></button>
-      <button type="button" data-scene-choice="hilltop-sanctuary" aria-pressed="false" aria-controls="hero-scenes" aria-label="丘の上の祠を表示"></button>
-      <button type="button" data-scene-choice="highland-camp" aria-pressed="false" aria-controls="hero-scenes" aria-label="高原の暮らしを表示"></button>
-      <button type="button" data-scene-choice="rooftop-celebration" aria-pressed="false" aria-controls="hero-scenes" aria-label="屋上の夕べを表示"></button>
-      <button type="button" data-scene-choice="spring-festival" aria-pressed="false" aria-controls="hero-scenes" aria-label="春の広場の祭りを表示"></button>
-      <button type="button" data-scene-choice="night-festival" aria-pressed="false" aria-controls="hero-scenes" aria-label="夜の祭りを表示"></button>
-      <button type="button" data-scene-choice="capital-from-citadel" aria-pressed="false" aria-controls="hero-scenes" aria-label="夜の王都を表示"></button>
-    </div>
-    <a class="scene-scroll" href="#explore" aria-label="AKI NOTESの案内へ">SCROLL <span aria-hidden="true">↓</span></a>
-    <p class="scene-credit" lang="en">Illustrations generated with OpenAI</p>
-  </section>
-
-  <main id="explore">
-    <section class="section garden-intro">
-      <p class="garden-kicker">RESEARCH · LEARNING · IDEAS</p>
-      <h1>AKI NOTES</h1>
-      <p class="summary">研究を読み、数式をたどり、技術と社会を考える。<br>学びの途中で見つけたことを、このノートに残していきます。</p>
-      <div class="garden-entry-grid">
-        <a class="garden-entry" href="profile.html"><span>01 / ABOUT</span><h2>自己紹介</h2><p>研究の関心、これまでの経験、論文と活動。</p></a>
-        <a class="garden-entry" href="blog.html"><span>02 / JOURNAL</span><h2>ブログ</h2><p>研究・数学／統計・技術／AI・社会分析の記録。</p></a>
-        <a class="garden-entry" href="illustrations.html"><span>03 / GALLERY</span><h2>イラスト</h2><p>AKI NOTESを彩る、さまざまな場所と時間。</p></a>
+    <section class="scene-hero" id="home" aria-label="ペルシャを旅する風景">
+      <div class="scene-images" id="hero-scenes">
+        <img
+          class="scene-image is-active"
+          data-scene="garden"
+          src="assets/hero/hero-01-garden-night.webp"
+          alt="星空の下、宮殿へ続く水路と花々に囲まれた庭園"
+          width="1672"
+          height="941"
+          fetchpriority="high"
+        />
+        <img
+          class="scene-image"
+          data-scene="study"
+          src="assets/hero/hero-02-study-globe.webp"
+          alt="庭園を望むアーチ窓と、本、天球儀、ランプのある書斎"
+          width="1672"
+          height="941"
+          decoding="async"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="bazaar-day"
+          data-heading-tone="dark"
+          src="assets/hero/hero-03-bazaar-day.webp"
+          alt="日除け布の下で人々が行き交う昼の市場、香辛料と果物の店"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="caravan-dawn"
+          data-heading-tone="dark"
+          src="assets/hero/hero-04-caravan-dawn-v3.webp"
+          alt="淡い朝日に照らされた山並みと広い高原を進む隊商"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="citadel-sunset"
+          data-heading-tone="light"
+          src="assets/hero/hero-05-citadel-sunset.webp"
+          alt="赤銅色の夕日に染まる城塞都市と川に架かる橋"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="garden-spring"
+          data-heading-tone="light"
+          src="assets/hero/hero-06-garden-spring.webp"
+          alt="木漏れ日の春の庭園、小川と花々、水辺で本を読む人々"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="palace-hall"
+          data-heading-tone="light"
+          src="assets/hero/hero-07-palace-hall.webp"
+          alt="格子窓から陽光が差す宮殿の大広間と赤い絨毯"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="fountain-stars"
+          src="assets/hero/hero-08-fountain-stars.webp"
+          alt="横に広がる天の川と星々を見上げる、灯りに包まれた噴水の中庭"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="harbor-morning"
+          data-heading-tone="dark"
+          src="assets/hero/hero-09-harbor-morning.webp"
+          alt="朝の港"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="pottery-workshop"
+          data-heading-tone="dark"
+          src="assets/hero/hero-10-pottery-workshop.webp"
+          alt="陶器工房"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="snowy-caravanserai"
+          data-heading-tone="dark"
+          src="assets/hero/hero-11-snowy-caravanserai.webp"
+          alt="雪の隊商宿"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="rainy-bazaar"
+          data-heading-tone="dark"
+          src="assets/hero/hero-12-rainy-bazaar.webp"
+          alt="雨の街路"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="autumn-orchard"
+          data-heading-tone="dark"
+          src="assets/hero/hero-13-autumn-orchard.webp"
+          alt="秋の果樹園"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="riverside-teahouse"
+          data-heading-tone="dark"
+          src="assets/hero/hero-14-riverside-teahouse.webp"
+          alt="川辺の茶屋"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="windcatcher-town"
+          data-heading-tone="dark"
+          src="assets/hero/hero-15-windcatcher-town.webp"
+          alt="風の塔の街"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="mountain-pass"
+          data-heading-tone="dark"
+          src="assets/hero/hero-16-mountain-pass.webp"
+          alt="山道と石橋"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="music-courtyard"
+          data-heading-tone="light"
+          src="assets/hero/hero-17-music-courtyard.webp"
+          alt="音楽の夕べ"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="manuscript-atelier"
+          data-heading-tone="dark"
+          src="assets/hero/hero-18-manuscript-atelier.webp"
+          alt="写本の工房"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="silk-weaving"
+          data-heading-tone="dark"
+          src="assets/hero/hero-19-silk-weaving.webp"
+          alt="色糸を織る女性たちと木製の織機。窓から午後の光が差す工房。"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="reed-wetland"
+          data-heading-tone="dark"
+          src="assets/hero/hero-20-reed-wetland.webp"
+          alt="水牛、サギ、葦がいる広い湿地。春の朝の空と水面。"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="hilltop-sanctuary"
+          data-heading-tone="light"
+          src="assets/hero/hero-21-hilltop-sanctuary.webp"
+          alt="青い夕空と山並みを背景に、灯りがともる石造りの祠。"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="highland-camp"
+          data-heading-tone="dark"
+          src="assets/hero/hero-22-highland-camp.webp"
+          alt="春の高原でパンを焼く家族、羊と犬、雪を頂いた遠山。"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="rooftop-celebration"
+          data-heading-tone="dark"
+          src="assets/hero/hero-23-rooftop-celebration.webp"
+          alt="夕陽の街で、いくつもの屋上に人々が集まる祝祭の風景。"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="spring-festival"
+          data-heading-tone="dark"
+          src="assets/hero/hero-24-spring-festival.webp"
+          alt="春の広場で踊りや太鼓、花と食べ物を楽しむ人々。"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="night-festival"
+          src="assets/hero/hero-25-night-festival.webp"
+          alt="夜の街路で踊りや音楽を楽しむ人々と、馬車が進む祭りの行列。"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
+        <img
+          class="scene-image"
+          data-scene="capital-from-citadel"
+          src="assets/hero/hero-26-capital-from-citadel.webp"
+          alt="山を背にした青いドームの本城と、さまざまな家々の灯りが広がる夜の王都。"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="low"
+          aria-hidden="true"
+        />
       </div>
+      <div class="scene-heading">
+        <p class="scene-eyebrow">RESEARCH &amp; EXPLORATION</p>
+        <p class="scene-title">Human–Robot<br />Interaction</p>
+      </div>
+      <div class="scene-controls" role="group" aria-label="風景の切り替え" hidden>
+        <button
+          type="button"
+          data-scene-choice="garden"
+          aria-pressed="true"
+          aria-controls="hero-scenes"
+          aria-label="庭園を表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="study"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="書斎を表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="bazaar-day"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="市場を表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="caravan-dawn"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="隊商路を表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="citadel-sunset"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="城塞都市を表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="garden-spring"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="春の庭園を表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="palace-hall"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="大広間を表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="fountain-stars"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="噴水の中庭を表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="harbor-morning"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="朝の港を表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="pottery-workshop"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="陶器工房を表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="snowy-caravanserai"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="雪の隊商宿を表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="rainy-bazaar"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="雨の街路を表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="autumn-orchard"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="秋の果樹園を表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="riverside-teahouse"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="川辺の茶屋を表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="windcatcher-town"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="風の塔の街を表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="mountain-pass"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="山道と石橋を表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="music-courtyard"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="音楽の夕べを表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="manuscript-atelier"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="写本の工房を表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="silk-weaving"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="絹織りの工房を表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="reed-wetland"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="水鳥のいる湿地を表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="hilltop-sanctuary"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="丘の上の祠を表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="highland-camp"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="高原の暮らしを表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="rooftop-celebration"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="屋上の夕べを表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="spring-festival"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="春の広場の祭りを表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="night-festival"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="夜の祭りを表示"
+        ></button>
+        <button
+          type="button"
+          data-scene-choice="capital-from-citadel"
+          aria-pressed="false"
+          aria-controls="hero-scenes"
+          aria-label="夜の王都を表示"
+        ></button>
+      </div>
+      <a class="scene-scroll" href="#explore" aria-label="AKI NOTESの案内へ"
+        >SCROLL <span aria-hidden="true">↓</span></a
+      >
+      <p class="scene-credit" lang="en">Illustrations generated with OpenAI</p>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <img class="footer-cat-img cat-breathe-slow" src="assets/cats/cat-sleep.svg" alt="" aria-hidden="true">
-    <p class="colophon-line">石川にて記す、2026年</p>
-    <p class="colophon-note">誤植の検品は三毛猫一匹が担当しました。</p>
-    <p class="colophon-footnote">* 猫が写本の上を歩くのは、1445年ドゥブロヴニクの写本に残る足跡以来の伝統です。</p>
-    <p class="footer-links" id="personal-links"><a href="https://aki-private.sakuramoto-may.workers.dev/personal.html">個人用</a></p>
-    <p class="copyright">© 2026 櫻本晃弘</p>
-  </footer>
+    <main id="explore">
+      <section class="section garden-intro">
+        <p class="garden-kicker">RESEARCH · LEARNING · IDEAS</p>
+        <h1>AKI NOTES</h1>
+        <p class="summary">
+          研究を読み、数式をたどり、技術と社会を考える。<br />学びの途中で見つけたことを、このノートに残していきます。
+        </p>
+        <div class="garden-entry-grid">
+          <a class="garden-entry" href="profile.html"
+            ><span>01 / ABOUT</span>
+            <h2>自己紹介</h2>
+            <p>研究の関心、これまでの経験、論文と活動。</p></a
+          >
+          <a class="garden-entry" href="blog.html"
+            ><span>02 / JOURNAL</span>
+            <h2>ブログ</h2>
+            <p>研究・数学／統計・技術／AI・社会分析の記録。</p></a
+          >
+          <a class="garden-entry" href="illustrations.html"
+            ><span>03 / GALLERY</span>
+            <h2>イラスト</h2>
+            <p>AKI NOTESを彩る、さまざまな場所と時間。</p></a
+          >
+        </div>
+      </section>
+    </main>
 
-  <script src="classical.js?v=20260918-materials"></script>
-</body>
+    <footer class="site-footer">
+      <img
+        class="footer-cat-img cat-breathe-slow"
+        src="assets/cats/cat-sleep.svg"
+        alt=""
+        aria-hidden="true"
+      />
+      <p class="colophon-line">石川にて記す、2026年</p>
+      <p class="colophon-note">誤植の検品は三毛猫一匹が担当しました。</p>
+      <p class="colophon-footnote">
+        * 猫が写本の上を歩くのは、1445年ドゥブロヴニクの写本に残る足跡以来の伝統です。
+      </p>
+      <p class="footer-links" id="personal-links">
+        <a href="https://aki-private.sakuramoto-may.workers.dev/personal.html">個人用</a>
+      </p>
+      <p class="copyright">© 2026 櫻本晃弘</p>
+    </footer>
+
+    <script src="classical.js?v=20260918-materials"></script>
+  </body>
 </html>

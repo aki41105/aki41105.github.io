@@ -24,8 +24,7 @@ body {
   margin: 0;
   color: var(--ivory);
   background:
-    radial-gradient(circle at 22% 12%, rgba(36, 87, 198, 0.16), transparent 30rem),
-    #03080d;
+    radial-gradient(circle at 22% 12%, rgba(36, 87, 198, 0.16), transparent 30rem), #03080d;
   font-family: Inter, "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif;
 }
 
@@ -85,7 +84,9 @@ button {
   opacity: 0.92;
   transform: scale(1.08);
   animation: camera-drift 20s var(--ease) infinite alternate;
-  transition: filter 1.3s var(--ease), object-position 1.8s var(--ease);
+  transition:
+    filter 1.3s var(--ease),
+    object-position 1.8s var(--ease);
 }
 
 .visual__signals {
@@ -95,9 +96,19 @@ button {
 
 .visual__veil {
   background:
-    linear-gradient(90deg, rgba(3, 10, 16, 0.92) 0%, rgba(3, 10, 16, 0.48) 37%, rgba(3, 10, 16, 0.06) 69%),
+    linear-gradient(
+      90deg,
+      rgba(3, 10, 16, 0.92) 0%,
+      rgba(3, 10, 16, 0.48) 37%,
+      rgba(3, 10, 16, 0.06) 69%
+    ),
     linear-gradient(180deg, rgba(3, 8, 13, 0.6) 0%, transparent 30%, rgba(3, 8, 13, 0.42) 100%),
-    radial-gradient(circle at 76% 52%, transparent 0 20%, rgba(3, 8, 13, 0.18) 56%, rgba(3, 8, 13, 0.46) 100%);
+    radial-gradient(
+      circle at 76% 52%,
+      transparent 0 20%,
+      rgba(3, 8, 13, 0.18) 56%,
+      rgba(3, 8, 13, 0.46) 100%
+    );
 }
 
 .visual__grain {
@@ -268,7 +279,9 @@ button {
   background: rgba(6, 22, 34, 0.64);
   box-shadow: 0 22px 70px rgba(0, 0, 0, 0.28);
   backdrop-filter: blur(20px) saturate(120%);
-  transition: transform 700ms var(--ease), opacity 400ms ease;
+  transition:
+    transform 700ms var(--ease),
+    opacity 400ms ease;
 }
 
 .field-note::before {
@@ -334,7 +347,9 @@ button {
   color: rgba(244, 240, 232, 0.62);
   background: transparent;
   cursor: pointer;
-  transition: color 300ms ease, background 300ms ease;
+  transition:
+    color 300ms ease,
+    background 300ms ease;
 }
 
 .scene-nav__item span {

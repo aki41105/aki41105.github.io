@@ -35,7 +35,7 @@
         if (panel) panel.classList.toggle("is-in-view", visible);
         onChange(visible);
       },
-      { rootMargin: "100px 0px", threshold: [0, 0.05, 0.25] }
+      { rootMargin: "100px 0px", threshold: [0, 0.05, 0.25] },
     );
     observer.observe(element);
     return observer;
@@ -80,7 +80,7 @@
       body.dispatchEvent(
         new CustomEvent("animationlab:motionchange", {
           detail: { running, userEnabled, reason },
-        })
+        }),
       );
     };
 
@@ -210,7 +210,9 @@
     };
 
     const createLeaves = () => {
-      leafLayer.querySelectorAll('.wind-leaf[data-generated="true"]').forEach((leaf) => leaf.remove());
+      leafLayer
+        .querySelectorAll('.wind-leaf[data-generated="true"]')
+        .forEach((leaf) => leaf.remove());
       leaves.length = 0;
       const fragment = document.createDocumentFragment();
       for (let index = 0; index < 24; index += 1) {
@@ -254,7 +256,10 @@
       leaves.forEach((leaf, index) => {
         const threshold = (index + 1) / leaves.length;
         leaf.classList.toggle("is-resting", threshold > 0.24 + intensity * 0.76);
-        leaf.style.animationPlayState = motion.isRunning() && inView && !leaf.classList.contains("is-resting") ? "running" : "paused";
+        leaf.style.animationPlayState =
+          motion.isRunning() && inView && !leaf.classList.contains("is-resting")
+            ? "running"
+            : "paused";
       });
     };
 
@@ -263,7 +268,8 @@
       stage.classList.toggle("is-motion-paused", !running);
       stage.style.setProperty("--wind-play-state", running ? "running" : "paused");
       stage.querySelectorAll(".wind-light, .wind-branch, .wind-leaf").forEach((element) => {
-        const restingLeaf = element.classList.contains("wind-leaf") && element.classList.contains("is-resting");
+        const restingLeaf =
+          element.classList.contains("wind-leaf") && element.classList.contains("is-resting");
         element.style.animationPlayState = running && !restingLeaf ? "running" : "paused";
       });
     };
@@ -275,7 +281,9 @@
       void stage.offsetWidth;
       stage.classList.add("is-gusting");
       if (motion.isRunning() && inView) {
-        leaves.forEach((leaf) => { leaf.style.animationPlayState = "running"; });
+        leaves.forEach((leaf) => {
+          leaf.style.animationPlayState = "running";
+        });
       }
       gustTimer = window.setTimeout(() => {
         stage.classList.remove("is-gusting");
@@ -317,7 +325,10 @@
     const buttons = Array.from(document.querySelectorAll("button[data-bird-route]"));
     if (!paths.length) return;
 
-    const initialButton = buttons.find((button) => button.classList.contains("is-active") || button.getAttribute("aria-pressed") === "true");
+    const initialButton = buttons.find(
+      (button) =>
+        button.classList.contains("is-active") || button.getAttribute("aria-pressed") === "true",
+    );
     const initialRoute = initialButton ? initialButton.dataset.birdRoute : paths[0].dataset.route;
     let route = paths.find((path) => path.dataset.route === initialRoute) || paths[0];
     let progress = 0;
@@ -347,7 +358,10 @@
       let angle = (Math.atan2(sample.y - point.y, sample.x - point.x) * 180) / Math.PI;
       if (sampleDistance < distance) angle += 180;
       angle += Number.parseFloat(bird.dataset.heading || "0") || 0;
-      bird.setAttribute("transform", `translate(${point.x.toFixed(2)} ${point.y.toFixed(2)}) rotate(${angle.toFixed(2)})`);
+      bird.setAttribute(
+        "transform",
+        `translate(${point.x.toFixed(2)} ${point.y.toFixed(2)}) rotate(${angle.toFixed(2)})`,
+      );
     };
 
     const stop = () => {
@@ -363,7 +377,9 @@
         return;
       }
       if (lastTime !== null) {
-        const configured = Number.parseFloat(route.dataset.duration || svg.dataset.duration || "9000");
+        const configured = Number.parseFloat(
+          route.dataset.duration || svg.dataset.duration || "9000",
+        );
         const duration = Number.isFinite(configured) && configured > 500 ? configured : 9000;
         progress = (progress + Math.min(time - lastTime, 64) / duration) % 1;
       }
@@ -501,7 +517,12 @@
       context.beginPath();
       context.moveTo(first.x, first.y);
       const curve = (second.y - first.y) * 0.2 - 18;
-      context.quadraticCurveTo((first.x + second.x) / 2, (first.y + second.y) / 2 + curve, second.x, second.y);
+      context.quadraticCurveTo(
+        (first.x + second.x) / 2,
+        (first.y + second.y) / 2 + curve,
+        second.x,
+        second.y,
+      );
       context.stroke();
       context.restore();
 
@@ -575,7 +596,9 @@
 
     listen(canvas, "pointerdown", (event) => {
       const point = pointerPosition(event);
-      const distances = centers.map((center) => Math.hypot(point.x - center.x * width, point.y - center.y * height));
+      const distances = centers.map((center) =>
+        Math.hypot(point.x - center.x * width, point.y - center.y * height),
+      );
       activeCenter = distances[0] <= distances[1] ? 0 : 1;
       if (distances[activeCenter] > Math.min(92, width * 0.22)) {
         activeCenter = -1;
@@ -680,7 +703,8 @@
       const targetCatY = deltaY * 0.07;
       catState.x += (targetCatX - catState.x) * 0.13;
       catState.y += (targetCatY - catState.y) * 0.13;
-      catState.tilt += (clamp(deltaX / Math.max(bounds.width, 1), -0.2, 0.2) * 20 - catState.tilt) * 0.1;
+      catState.tilt +=
+        (clamp(deltaX / Math.max(bounds.width, 1), -0.2, 0.2) * 20 - catState.tilt) * 0.1;
 
       ball.style.left = `${ballState.x.toFixed(2)}px`;
       ball.style.top = `${ballState.y.toFixed(2)}px`;
@@ -732,8 +756,11 @@
       }
 
       render();
-      const catMoving = Math.abs((ballState.x - home.x) * 0.2 - catState.x) > 0.15 || Math.abs((ballState.y - home.y) * 0.07 - catState.y) > 0.15;
-      if (dragging || ballState.vx || ballState.vy || catMoving) frame = requestAnimationFrame(tick);
+      const catMoving =
+        Math.abs((ballState.x - home.x) * 0.2 - catState.x) > 0.15 ||
+        Math.abs((ballState.y - home.y) * 0.07 - catState.y) > 0.15;
+      if (dragging || ballState.vx || ballState.vy || catMoving)
+        frame = requestAnimationFrame(tick);
     };
 
     const ensureTicking = () => {
@@ -890,7 +917,10 @@
         drop.setAttribute("aria-hidden", "true");
         drop.style.setProperty("--rain-x", `${(-5 + random(1) * 110).toFixed(2)}%`);
         drop.style.setProperty("--rain-delay", `${(-random(2) * 3.8).toFixed(2)}s`);
-        drop.style.setProperty("--rain-duration", `${(0.7 + random(3) * 1.15 - intensity * 0.25).toFixed(2)}s`);
+        drop.style.setProperty(
+          "--rain-duration",
+          `${(0.7 + random(3) * 1.15 - intensity * 0.25).toFixed(2)}s`,
+        );
         drop.style.setProperty("--rain-length", `${(12 + random(4) * 25).toFixed(1)}px`);
         drop.style.setProperty("--rain-drift", `${(-8 - random(5) * 20).toFixed(1)}px`);
         drop.style.setProperty("--rain-opacity", `${(0.25 + random(6) * 0.55).toFixed(2)}`);
@@ -952,7 +982,11 @@
 
     const readColor = () => {
       const styles = getComputedStyle(body);
-      return styles.getPropertyValue("--ripple-color").trim() || styles.getPropertyValue("--color-heading").trim() || "#3d8587";
+      return (
+        styles.getPropertyValue("--ripple-color").trim() ||
+        styles.getPropertyValue("--color-heading").trim() ||
+        "#3d8587"
+      );
     };
     let rippleColor = readColor();
 
@@ -1126,7 +1160,10 @@
     canvas.tabIndex = canvas.hasAttribute("tabindex") ? canvas.tabIndex : 0;
     canvas.style.touchAction = "none";
     if (!canvas.hasAttribute("aria-label")) {
-      canvas.setAttribute("aria-label", "触れると水紋が広がる水面。矢印キーで位置を選び、Enterキーでも水紋を作れます");
+      canvas.setAttribute(
+        "aria-label",
+        "触れると水紋が広がる水面。矢印キーで位置を選び、Enterキーでも水紋を作れます",
+      );
     }
     if ("ResizeObserver" in window) {
       new ResizeObserver(resize).observe(canvas);
@@ -1176,7 +1213,9 @@
     };
 
     const rebuild = () => {
-      stage.querySelectorAll('.type-letter[data-generated="true"]').forEach((letter) => letter.remove());
+      stage
+        .querySelectorAll('.type-letter[data-generated="true"]')
+        .forEach((letter) => letter.remove());
       Array.from(stage.childNodes).forEach((node) => {
         if (node.nodeType === Node.TEXT_NODE) node.remove();
       });
@@ -1271,7 +1310,8 @@
         target.setAttribute("aria-pressed", String(selected));
       });
       lines.forEach((line) => {
-        const connected = Number(line.dataset.a) === selectedIndex || Number(line.dataset.b) === selectedIndex;
+        const connected =
+          Number(line.dataset.a) === selectedIndex || Number(line.dataset.b) === selectedIndex;
         line.classList.toggle("is-selected", connected);
       });
       if (focus && hitTargets[selectedIndex]) hitTargets[selectedIndex].focus();
@@ -1279,7 +1319,9 @@
 
     const build = (nextSeed) => {
       seed = nextSeed;
-      svg.querySelectorAll('[data-constellation-generated="true"]').forEach((element) => element.remove());
+      svg
+        .querySelectorAll('[data-constellation-generated="true"]')
+        .forEach((element) => element.remove());
       points = [];
       stars = [];
       hitTargets = [];
@@ -1303,7 +1345,10 @@
       const edges = new Map();
       points.forEach((point, index) => {
         const nearest = points
-          .map((other, otherIndex) => ({ otherIndex, distance: Math.hypot(other.x - point.x, other.y - point.y) }))
+          .map((other, otherIndex) => ({
+            otherIndex,
+            distance: Math.hypot(other.x - point.x, other.y - point.y),
+          }))
           .filter((candidate) => candidate.otherIndex !== index)
           .sort((a, b) => a.distance - b.distance)
           .slice(0, 2);
@@ -1326,7 +1371,10 @@
         line.setAttribute("y1", points[a].y.toFixed(2));
         line.setAttribute("x2", points[b].x.toFixed(2));
         line.setAttribute("y2", points[b].y.toFixed(2));
-        line.style.setProperty("--line-opacity", `${clamp(1 - distance / (box.width * 0.32), 0.14, 0.72).toFixed(2)}`);
+        line.style.setProperty(
+          "--line-opacity",
+          `${clamp(1 - distance / (box.width * 0.32), 0.14, 0.72).toFixed(2)}`,
+        );
         lineFragment.appendChild(line);
         lines.push(line);
       });
@@ -1441,10 +1489,16 @@
     const readPalette = () => {
       const styles = getComputedStyle(body);
       return {
-        grain: styles.getPropertyValue("--magnet-grain").trim() || styles.getPropertyValue("--color-text").trim() || "#283735",
+        grain:
+          styles.getPropertyValue("--magnet-grain").trim() ||
+          styles.getPropertyValue("--color-text").trim() ||
+          "#283735",
         north: styles.getPropertyValue("--magnet-north").trim() || "#b7684f",
         south: styles.getPropertyValue("--magnet-south").trim() || "#3c7d82",
-        halo: styles.getPropertyValue("--magnet-halo").trim() || styles.getPropertyValue("--color-accent").trim() || "#c19751",
+        halo:
+          styles.getPropertyValue("--magnet-halo").trim() ||
+          styles.getPropertyValue("--color-accent").trim() ||
+          "#c19751",
       };
     };
 
@@ -1633,7 +1687,10 @@
     canvas.tabIndex = canvas.hasAttribute("tabindex") ? canvas.tabIndex : 0;
     canvas.style.touchAction = "none";
     if (!canvas.hasAttribute("aria-label")) {
-      canvas.setAttribute("aria-label", "磁石を動かすと砂鉄の向きが変わる図。矢印キーでも磁石を動かせます");
+      canvas.setAttribute(
+        "aria-label",
+        "磁石を動かすと砂鉄の向きが変わる図。矢印キーでも磁石を動かせます",
+      );
     }
     if ("ResizeObserver" in window) {
       new ResizeObserver(resize).observe(canvas);
@@ -1711,7 +1768,9 @@
     };
 
     const rebuild = () => {
-      stage.querySelectorAll('.pendulum[data-generated="true"]').forEach((pendulum) => pendulum.remove());
+      stage
+        .querySelectorAll('.pendulum[data-generated="true"]')
+        .forEach((pendulum) => pendulum.remove());
       const count = desiredCount();
       const fragment = document.createDocumentFragment();
       pendulums = Array.from({ length: count }, (_, index) => {
@@ -1804,7 +1863,9 @@
     };
 
     const rebuild = () => {
-      stage.querySelectorAll('.season-particle[data-generated="true"]').forEach((particle) => particle.remove());
+      stage
+        .querySelectorAll('.season-particle[data-generated="true"]')
+        .forEach((particle) => particle.remove());
       const index = currentIndex();
       const season = seasons[index];
       const compact = window.matchMedia("(max-width: 600px)").matches;
@@ -1868,7 +1929,8 @@
     listen(button, "click", () => {
       clearHighlight();
       let nextIndex = Math.floor(Math.random() * panels.length);
-      if (panels.length > 1 && nextIndex === previousIndex) nextIndex = (nextIndex + 1) % panels.length;
+      if (panels.length > 1 && nextIndex === previousIndex)
+        nextIndex = (nextIndex + 1) % panels.length;
       previousIndex = nextIndex;
       const panel = panels[nextIndex];
       panel.classList.add("is-random-highlight");

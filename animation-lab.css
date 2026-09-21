@@ -79,12 +79,16 @@
   border-radius: var(--radius-lg);
   background: color-mix(in srgb, var(--color-surface) 56%, transparent);
   box-shadow: var(--shadow-sm);
-  transition: border-color .3s ease, box-shadow .3s ease;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .animation-panel.is-random-highlight {
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 18%, transparent), var(--shadow-md);
+  box-shadow:
+    0 0 0 3px color-mix(in srgb, var(--color-accent) 18%, transparent),
+    var(--shadow-md);
 }
 
 .animation-panel-wide {
@@ -122,8 +126,16 @@
   overflow: hidden;
   border-block: 1px solid var(--color-divider);
   background:
-    radial-gradient(circle at 24% 20%, color-mix(in srgb, var(--color-heading) 12%, transparent), transparent 38%),
-    radial-gradient(circle at 82% 76%, color-mix(in srgb, var(--color-accent) 10%, transparent), transparent 34%),
+    radial-gradient(
+      circle at 24% 20%,
+      color-mix(in srgb, var(--color-heading) 12%, transparent),
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at 82% 76%,
+      color-mix(in srgb, var(--color-accent) 10%, transparent),
+      transparent 34%
+    ),
     color-mix(in srgb, var(--color-bg) 64%, var(--color-surface));
   isolation: isolate;
 }
@@ -207,7 +219,9 @@
   overflow: visible;
   transform: scale(0.88);
   filter: drop-shadow(0 14px 24px color-mix(in srgb, var(--color-heading) 16%, transparent));
-  transition: transform 0.8s cubic-bezier(.2,.76,.25,1), filter 0.8s ease;
+  transition:
+    transform 0.8s cubic-bezier(0.2, 0.76, 0.25, 1),
+    filter 0.8s ease;
 }
 
 .tile-stage.is-bloomed .tile-mandala {
@@ -284,7 +298,11 @@
   --wind-shift: 14px;
   touch-action: none;
   background:
-    linear-gradient(180deg, color-mix(in srgb, var(--color-heading) 12%, transparent), transparent 58%),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--color-heading) 12%, transparent),
+      transparent 58%
+    ),
     color-mix(in srgb, var(--color-bg) 70%, var(--color-surface));
 }
 
@@ -298,8 +316,15 @@
   animation: lightDrift 8s ease-in-out infinite alternate;
 }
 
-.wind-light-one { top: -54px; left: 9%; }
-.wind-light-two { right: 6%; bottom: -74px; animation-delay: -3s; }
+.wind-light-one {
+  top: -54px;
+  left: 9%;
+}
+.wind-light-two {
+  right: 6%;
+  bottom: -74px;
+  animation-delay: -3s;
+}
 
 .wind-branch {
   position: absolute;
@@ -324,9 +349,19 @@
   transform-origin: left center;
 }
 
-.wind-branch::before { left: 30%; transform: rotate(-28deg); }
-.wind-branch::after { left: 55%; transform: rotate(-42deg); }
-.wind-branch-back { opacity: 0.42; transform: translateY(-38px) scale(.92) rotate(var(--wind-angle)); animation-delay: -1.8s; }
+.wind-branch::before {
+  left: 30%;
+  transform: rotate(-28deg);
+}
+.wind-branch::after {
+  left: 55%;
+  transform: rotate(-42deg);
+}
+.wind-branch-back {
+  opacity: 0.42;
+  transform: translateY(-38px) scale(0.92) rotate(var(--wind-angle));
+  animation-delay: -1.8s;
+}
 
 .wind-leaves {
   position: absolute;
@@ -345,7 +380,8 @@
   background: color-mix(in srgb, var(--color-heading) 32%, var(--color-surface));
   transform-origin: left center;
   opacity: 0.88;
-  animation: leafFloat var(--leaf-duration, var(--wind-duration)) ease-in-out var(--leaf-delay, 0s) infinite alternate;
+  animation: leafFloat var(--leaf-duration, var(--wind-duration)) ease-in-out var(--leaf-delay, 0s)
+    infinite alternate;
   transition: opacity 0.35s ease;
 }
 
@@ -380,7 +416,9 @@
   stroke: color-mix(in srgb, var(--color-text) 20%, transparent);
   stroke-width: 1.2;
   stroke-dasharray: 4 8;
-  transition: stroke 0.25s ease, stroke-width 0.25s ease;
+  transition:
+    stroke 0.25s ease,
+    stroke-width 0.25s ease;
 }
 
 .route-path.is-selected {
@@ -402,12 +440,35 @@
 }
 
 .motion-bird-body,
-.motion-bird-head { fill: #667a4d; stroke: #263126; stroke-width: 1.5; }
-.motion-bird-tail { fill: #40563c; stroke: #263126; stroke-width: 1.3; }
-.motion-bird-wing { fill: #4c5a3c; stroke: #263126; stroke-width: 1.3; transform-box: fill-box; transform-origin: 80% 50%; animation: labWingBeat .2s ease-in-out infinite alternate; }
-.motion-bird-beak { fill: var(--color-accent); stroke: #332d25; stroke-width: 1; }
-.motion-bird-eye { fill: #201f1d; }
-.motion-bird.is-resting .motion-bird-wing { animation-play-state: paused; }
+.motion-bird-head {
+  fill: #667a4d;
+  stroke: #263126;
+  stroke-width: 1.5;
+}
+.motion-bird-tail {
+  fill: #40563c;
+  stroke: #263126;
+  stroke-width: 1.3;
+}
+.motion-bird-wing {
+  fill: #4c5a3c;
+  stroke: #263126;
+  stroke-width: 1.3;
+  transform-box: fill-box;
+  transform-origin: 80% 50%;
+  animation: labWingBeat 0.2s ease-in-out infinite alternate;
+}
+.motion-bird-beak {
+  fill: var(--color-accent);
+  stroke: #332d25;
+  stroke-width: 1;
+}
+.motion-bird-eye {
+  fill: #201f1d;
+}
+.motion-bird.is-resting .motion-bird-wing {
+  animation-play-state: paused;
+}
 
 .route-controls {
   justify-content: center;
@@ -423,7 +484,10 @@
   font: inherit;
   font-size: 14px;
   cursor: pointer;
-  transition: color .2s ease, border-color .2s ease, background .2s ease;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
 }
 
 .route-button:hover,
@@ -446,7 +510,9 @@
   cursor: grab;
 }
 
-.canvas-stage canvas:active { cursor: grabbing; }
+.canvas-stage canvas:active {
+  cursor: grabbing;
+}
 
 .stage-hint {
   position: absolute;
@@ -455,7 +521,7 @@
   z-index: 3;
   color: color-mix(in srgb, var(--color-text) 54%, transparent);
   font-size: 12px;
-  letter-spacing: .04em;
+  letter-spacing: 0.04em;
   pointer-events: none;
 }
 
@@ -474,7 +540,7 @@
   pointer-events: none;
   transform: translate(var(--cat-shift-x, 0), var(--cat-shift-y, 0)) rotate(var(--cat-tilt, 0deg));
   transform-origin: 72% 82%;
-  transition: transform .18s ease-out;
+  transition: transform 0.18s ease-out;
   filter: drop-shadow(0 8px 10px color-mix(in srgb, var(--color-text) 13%, transparent));
 }
 
@@ -487,7 +553,11 @@
   border: 2px solid var(--color-accent);
   border-radius: 50%;
   background:
-    repeating-radial-gradient(ellipse at 35% 36%, transparent 0 4px, color-mix(in srgb, var(--color-accent) 52%, transparent) 5px 6px),
+    repeating-radial-gradient(
+      ellipse at 35% 36%,
+      transparent 0 4px,
+      color-mix(in srgb, var(--color-accent) 52%, transparent) 5px 6px
+    ),
     color-mix(in srgb, var(--color-accent) 18%, var(--color-surface));
   box-shadow: 0 9px 16px color-mix(in srgb, var(--color-text) 18%, transparent);
   cursor: grab;
@@ -495,8 +565,13 @@
   z-index: 4;
 }
 
-.lab-yarn-ball:active { cursor: grabbing; }
-.lab-yarn-ball:focus-visible { outline: 2px solid var(--color-heading); outline-offset: 4px; }
+.lab-yarn-ball:active {
+  cursor: grabbing;
+}
+.lab-yarn-ball:focus-visible {
+  outline: 2px solid var(--color-heading);
+  outline-offset: 4px;
+}
 
 .yarn-thread {
   position: absolute;
@@ -515,7 +590,11 @@
 .rain-stage {
   min-height: 382px;
   background:
-    linear-gradient(180deg, color-mix(in srgb, var(--color-heading) 24%, transparent), transparent 72%),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--color-heading) 24%, transparent),
+      transparent 72%
+    ),
     color-mix(in srgb, var(--color-bg) 68%, var(--color-surface));
 }
 
@@ -527,15 +606,15 @@
   height: 46%;
   border-radius: 50% 50% 0 0;
   background: color-mix(in srgb, var(--color-heading) 16%, var(--color-surface));
-  opacity: .64;
+  opacity: 0.64;
   filter: blur(5px);
 }
 
 .rain-haze-back {
   bottom: 19%;
   height: 31%;
-  transform: translateX(-12%) scaleX(.9);
-  opacity: .38;
+  transform: translateX(-12%) scaleX(0.9);
+  opacity: 0.38;
 }
 
 .rain-haze-front {
@@ -551,8 +630,17 @@
   border: 7px solid color-mix(in srgb, var(--color-heading) 68%, var(--color-text));
   border-radius: 48% 48% 8px 8px / 34% 34% 4% 4%;
   background:
-    linear-gradient(90deg, transparent 49.25%, color-mix(in srgb, var(--color-heading) 62%, transparent) 49.5% 50.5%, transparent 50.75%),
-    linear-gradient(180deg, color-mix(in srgb, var(--color-heading) 22%, var(--color-surface)), color-mix(in srgb, var(--color-bg) 72%, var(--color-surface)));
+    linear-gradient(
+      90deg,
+      transparent 49.25%,
+      color-mix(in srgb, var(--color-heading) 62%, transparent) 49.5% 50.5%,
+      transparent 50.75%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--color-heading) 22%, var(--color-surface)),
+      color-mix(in srgb, var(--color-bg) 72%, var(--color-surface))
+    );
   box-shadow:
     inset 0 0 0 1px color-mix(in srgb, var(--color-accent) 38%, transparent),
     0 18px 38px color-mix(in srgb, var(--color-text) 18%, transparent);
@@ -576,13 +664,22 @@
 
 .rain-window::after {
   inset: 0;
-  background: linear-gradient(118deg, color-mix(in srgb, var(--color-surface) 16%, transparent), transparent 31% 72%, color-mix(in srgb, var(--color-accent) 7%, transparent));
+  background: linear-gradient(
+    118deg,
+    color-mix(in srgb, var(--color-surface) 16%, transparent),
+    transparent 31% 72%,
+    color-mix(in srgb, var(--color-accent) 7%, transparent)
+  );
 }
 
 .rain-window-glow {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 68% 22%, color-mix(in srgb, var(--color-accent) 16%, transparent), transparent 38%);
+  background: radial-gradient(
+    circle at 68% 22%,
+    color-mix(in srgb, var(--color-accent) 16%, transparent),
+    transparent 38%
+  );
   pointer-events: none;
 }
 
@@ -601,8 +698,12 @@
   width: 1px;
   height: var(--rain-length, 34px);
   border-radius: 999px;
-  background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--color-surface) 76%, var(--color-heading)));
-  opacity: var(--rain-opacity, .58);
+  background: linear-gradient(
+    180deg,
+    transparent,
+    color-mix(in srgb, var(--color-surface) 76%, var(--color-heading))
+  );
+  opacity: var(--rain-opacity, 0.58);
   transform: translate3d(0, -30px, 0) rotate(8deg);
   animation: rainFall var(--rain-duration, 1.4s) linear var(--rain-delay, 0s) infinite;
 }
@@ -652,15 +753,23 @@
 }
 
 .rain-stage.is-wiping .rain-wiper {
-  animation: rainWiperSweep 1.25s cubic-bezier(.35,.02,.24,1) both;
+  animation: rainWiperSweep 1.25s cubic-bezier(0.35, 0.02, 0.24, 1) both;
 }
 
 /* 07 — Pond ripples */
 .ripple-stage {
   min-height: 382px;
   background:
-    radial-gradient(circle at 50% 44%, color-mix(in srgb, var(--color-heading) 20%, transparent), transparent 42%),
-    linear-gradient(150deg, color-mix(in srgb, var(--color-heading) 68%, var(--color-surface)), color-mix(in srgb, var(--color-text) 42%, var(--color-bg)));
+    radial-gradient(
+      circle at 50% 44%,
+      color-mix(in srgb, var(--color-heading) 20%, transparent),
+      transparent 42%
+    ),
+    linear-gradient(
+      150deg,
+      color-mix(in srgb, var(--color-heading) 68%, var(--color-surface)),
+      color-mix(in srgb, var(--color-text) 42%, var(--color-bg))
+    );
 }
 
 .ripple-stage::before {
@@ -668,8 +777,17 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(107deg, transparent 20%, color-mix(in srgb, var(--color-surface) 7%, transparent) 39%, transparent 58%),
-    repeating-linear-gradient(174deg, transparent 0 24px, color-mix(in srgb, var(--color-heading) 8%, transparent) 25px 26px);
+    linear-gradient(
+      107deg,
+      transparent 20%,
+      color-mix(in srgb, var(--color-surface) 7%, transparent) 39%,
+      transparent 58%
+    ),
+    repeating-linear-gradient(
+      174deg,
+      transparent 0 24px,
+      color-mix(in srgb, var(--color-heading) 8%, transparent) 25px 26px
+    );
   pointer-events: none;
 }
 
@@ -696,12 +814,16 @@
   font-family: var(--font-heading);
   font-size: clamp(28px, 4vw, 42px);
   font-weight: 600;
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
   line-height: 1.7;
   text-align: center;
   text-wrap: balance;
   background:
-    radial-gradient(ellipse at center, color-mix(in srgb, var(--color-accent) 9%, transparent), transparent 58%),
+    radial-gradient(
+      ellipse at center,
+      color-mix(in srgb, var(--color-accent) 9%, transparent),
+      transparent 58%
+    ),
     color-mix(in srgb, var(--color-surface) 56%, var(--color-bg));
 }
 
@@ -721,8 +843,16 @@
 .constellation-stage {
   min-height: 382px;
   background:
-    radial-gradient(circle at 18% 24%, color-mix(in srgb, var(--color-heading) 14%, transparent), transparent 34%),
-    radial-gradient(circle at 76% 78%, color-mix(in srgb, var(--color-accent) 8%, transparent), transparent 26%),
+    radial-gradient(
+      circle at 18% 24%,
+      color-mix(in srgb, var(--color-heading) 14%, transparent),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 76% 78%,
+      color-mix(in srgb, var(--color-accent) 8%, transparent),
+      transparent 26%
+    ),
     color-mix(in srgb, var(--color-heading) 42%, var(--color-bg));
 }
 
@@ -731,11 +861,23 @@
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle, color-mix(in srgb, var(--color-surface) 62%, transparent) 0 1px, transparent 1.5px),
-    radial-gradient(circle, color-mix(in srgb, var(--color-accent) 42%, transparent) 0 1px, transparent 1.5px);
-  background-position: 0 0, 31px 47px;
-  background-size: 71px 83px, 97px 109px;
-  opacity: .42;
+    radial-gradient(
+      circle,
+      color-mix(in srgb, var(--color-surface) 62%, transparent) 0 1px,
+      transparent 1.5px
+    ),
+    radial-gradient(
+      circle,
+      color-mix(in srgb, var(--color-accent) 42%, transparent) 0 1px,
+      transparent 1.5px
+    );
+  background-position:
+    0 0,
+    31px 47px;
+  background-size:
+    71px 83px,
+    97px 109px;
+  opacity: 0.42;
   pointer-events: none;
 }
 
@@ -753,9 +895,9 @@
   stroke: var(--color-heading);
   stroke-width: 1.7;
   stroke-linecap: round;
-  opacity: var(--line-opacity, .74);
+  opacity: var(--line-opacity, 0.74);
   vector-effect: non-scaling-stroke;
-  animation: constellationLineIn .55s ease both;
+  animation: constellationLineIn 0.55s ease both;
 }
 
 .constellation-line.is-selected {
@@ -768,7 +910,7 @@
 .constellation-svg.is-motion-paused .constellation-line {
   animation: none;
   stroke-dasharray: none;
-  opacity: .74;
+  opacity: 0.74;
 }
 
 .animation-lab-page.motion-paused .constellation-line.is-selected,
@@ -782,7 +924,11 @@
   stroke-width: 3;
   vector-effect: non-scaling-stroke;
   cursor: pointer;
-  transition: fill .2s ease, stroke .2s ease, filter .2s ease, r .2s ease;
+  transition:
+    fill 0.2s ease,
+    stroke 0.2s ease,
+    filter 0.2s ease,
+    r 0.2s ease;
 }
 
 .constellation-star:hover,
@@ -810,9 +956,21 @@
 .magnet-stage {
   min-height: 382px;
   background:
-    radial-gradient(circle at center, color-mix(in srgb, var(--color-accent) 10%, transparent), transparent 34%),
-    repeating-linear-gradient(0deg, transparent 0 31px, color-mix(in srgb, var(--color-divider) 28%, transparent) 32px),
-    repeating-linear-gradient(90deg, transparent 0 31px, color-mix(in srgb, var(--color-divider) 24%, transparent) 32px),
+    radial-gradient(
+      circle at center,
+      color-mix(in srgb, var(--color-accent) 10%, transparent),
+      transparent 34%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 31px,
+      color-mix(in srgb, var(--color-divider) 28%, transparent) 32px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 31px,
+      color-mix(in srgb, var(--color-divider) 24%, transparent) 32px
+    ),
     color-mix(in srgb, var(--color-bg) 72%, var(--color-surface));
 }
 
@@ -833,7 +991,11 @@
   gap: clamp(10px, 4vw, 34px);
   padding: 60px clamp(14px, 5vw, 42px) 34px;
   background:
-    linear-gradient(180deg, color-mix(in srgb, var(--color-heading) 9%, transparent), transparent 54%),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--color-heading) 9%, transparent),
+      transparent 54%
+    ),
     color-mix(in srgb, var(--color-surface) 56%, var(--color-bg));
 }
 
@@ -856,7 +1018,8 @@
   width: clamp(42px, 12%, 70px);
   height: 228px;
   transform-origin: 50% 0;
-  animation: pendulumSwing var(--pendulum-duration, 2.2s) ease-in-out var(--pendulum-delay, 0s) infinite alternate;
+  animation: pendulumSwing var(--pendulum-duration, 2.2s) ease-in-out var(--pendulum-delay, 0s)
+    infinite alternate;
   will-change: transform;
 }
 
@@ -900,9 +1063,13 @@
   --season-hill-front: color-mix(in srgb, var(--color-heading) 78%, var(--color-bg));
   --season-tree: color-mix(in srgb, var(--color-heading) 72%, var(--color-surface));
   background:
-    radial-gradient(circle at 50% 18%, color-mix(in srgb, var(--season-sky) 52%, transparent), transparent 52%),
+    radial-gradient(
+      circle at 50% 18%,
+      color-mix(in srgb, var(--season-sky) 52%, transparent),
+      transparent 52%
+    ),
     color-mix(in srgb, var(--color-bg) 70%, var(--color-surface));
-  transition: background-color .7s ease;
+  transition: background-color 0.7s ease;
 }
 
 .season-stage.is-summer {
@@ -933,9 +1100,17 @@
   overflow: hidden;
   border: 8px solid color-mix(in srgb, var(--color-heading) 66%, var(--color-text));
   border-radius: 50% 50% 8px 8px / 38% 38% 4% 4%;
-  background: linear-gradient(180deg, var(--season-sky), color-mix(in srgb, var(--season-sky) 56%, var(--color-surface)));
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-accent) 40%, transparent), 0 18px 38px color-mix(in srgb, var(--color-text) 17%, transparent);
-  transition: background .7s ease, border-color .7s ease;
+  background: linear-gradient(
+    180deg,
+    var(--season-sky),
+    color-mix(in srgb, var(--season-sky) 56%, var(--color-surface))
+  );
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--color-accent) 40%, transparent),
+    0 18px 38px color-mix(in srgb, var(--color-text) 17%, transparent);
+  transition:
+    background 0.7s ease,
+    border-color 0.7s ease;
 }
 
 .season-sun {
@@ -947,11 +1122,13 @@
   border-radius: 50%;
   background: color-mix(in srgb, var(--color-accent) 72%, var(--color-surface));
   box-shadow: 0 0 28px color-mix(in srgb, var(--color-accent) 35%, transparent);
-  transition: opacity .7s ease, transform .7s ease;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
 }
 
 .season-stage.is-winter .season-sun {
-  opacity: .42;
+  opacity: 0.42;
   transform: translateY(12px);
 }
 
@@ -963,7 +1140,7 @@
   height: 58%;
   border-radius: 52% 48% 0 0;
   background: var(--season-hill-front);
-  transition: background .7s ease;
+  transition: background 0.7s ease;
 }
 
 .season-hill-back {
@@ -972,7 +1149,7 @@
   bottom: 11%;
   height: 34%;
   background: var(--season-hill-back);
-  opacity: .82;
+  opacity: 0.82;
 }
 
 .season-tree {
@@ -994,13 +1171,31 @@
   border-radius: 50%;
   background: var(--season-tree);
   transform: translateX(-50%);
-  transition: background .7s ease, opacity .7s ease, transform .7s ease;
+  transition:
+    background 0.7s ease,
+    opacity 0.7s ease,
+    transform 0.7s ease;
 }
 
-.season-tree i:nth-child(1) { top: -24px; }
-.season-tree i:nth-child(2) { top: 17px; left: 2px; width: 88px; height: 74px; }
-.season-tree i:nth-child(3) { top: 14px; left: 13px; width: 82px; height: 68px; }
-.season-stage.is-winter .season-tree i { opacity: .22; transform: translateX(-50%) scale(.7); }
+.season-tree i:nth-child(1) {
+  top: -24px;
+}
+.season-tree i:nth-child(2) {
+  top: 17px;
+  left: 2px;
+  width: 88px;
+  height: 74px;
+}
+.season-tree i:nth-child(3) {
+  top: 14px;
+  left: 13px;
+  width: 82px;
+  height: 68px;
+}
+.season-stage.is-winter .season-tree i {
+  opacity: 0.22;
+  transform: translateX(-50%) scale(0.7);
+}
 
 .season-particle {
   position: absolute;
@@ -1010,8 +1205,9 @@
   width: var(--particle-size, 10px);
   height: var(--particle-size, 10px);
   pointer-events: none;
-  opacity: .82;
-  animation: seasonParticleFall var(--particle-duration, 7s) linear var(--particle-delay, 0s) infinite;
+  opacity: 0.82;
+  animation: seasonParticleFall var(--particle-duration, 7s) linear var(--particle-delay, 0s)
+    infinite;
 }
 
 .season-petal {
@@ -1073,90 +1269,252 @@
   animation-play-state: paused !important;
 }
 
-@keyframes tileSpin { to { transform: rotate(360deg); } }
-@keyframes tileSpinReverse { to { transform: rotate(-360deg); } }
-@keyframes tilePulse { 50% { transform: scale(1.25); opacity: .46; } }
-@keyframes lightDrift { to { transform: translate(42px, 18px) scale(1.12); } }
-@keyframes branchSway { from { rotate: -1.5deg; } to { rotate: 2.2deg; } }
+@keyframes tileSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes tileSpinReverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes tilePulse {
+  50% {
+    transform: scale(1.25);
+    opacity: 0.46;
+  }
+}
+@keyframes lightDrift {
+  to {
+    transform: translate(42px, 18px) scale(1.12);
+  }
+}
+@keyframes branchSway {
+  from {
+    rotate: -1.5deg;
+  }
+  to {
+    rotate: 2.2deg;
+  }
+}
 @keyframes leafFloat {
-  from { transform: translate3d(0, 0, 0) rotate(-8deg); }
-  to { transform: translate3d(calc(var(--leaf-drift, 28px) + var(--wind-shift)), var(--leaf-rise, -8px), 0) rotate(var(--leaf-spin, 22deg)); }
+  from {
+    transform: translate3d(0, 0, 0) rotate(-8deg);
+  }
+  to {
+    transform: translate3d(
+        calc(var(--leaf-drift, 28px) + var(--wind-shift)),
+        var(--leaf-rise, -8px),
+        0
+      )
+      rotate(var(--leaf-spin, 22deg));
+  }
 }
 @keyframes leafGust {
-  0% { transform: translate3d(0, 0, 0) rotate(0); }
-  50% { transform: translate3d(calc(var(--leaf-drift, 28px) + var(--wind-shift) + var(--wind-shift)), calc(var(--leaf-rise, -8px) - 24px), 0) rotate(var(--leaf-spin, 120deg)); }
-  100% { transform: translate3d(calc(var(--leaf-drift, 28px) + var(--wind-shift)), var(--leaf-rise, -8px), 0) rotate(var(--leaf-spin, 22deg)); }
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  50% {
+    transform: translate3d(
+        calc(var(--leaf-drift, 28px) + var(--wind-shift) + var(--wind-shift)),
+        calc(var(--leaf-rise, -8px) - 24px),
+        0
+      )
+      rotate(var(--leaf-spin, 120deg));
+  }
+  100% {
+    transform: translate3d(
+        calc(var(--leaf-drift, 28px) + var(--wind-shift)),
+        var(--leaf-rise, -8px),
+        0
+      )
+      rotate(var(--leaf-spin, 22deg));
+  }
 }
-@keyframes labWingBeat { from { transform: rotate(-18deg) scaleY(.72); } to { transform: rotate(15deg) scaleY(1.12); } }
+@keyframes labWingBeat {
+  from {
+    transform: rotate(-18deg) scaleY(0.72);
+  }
+  to {
+    transform: rotate(15deg) scaleY(1.12);
+  }
+}
 @keyframes rainFall {
-  from { transform: translate3d(0, -34px, 0) rotate(8deg); }
-  to { transform: translate3d(var(--rain-drift, 18px), 390px, 0) rotate(8deg); }
+  from {
+    transform: translate3d(0, -34px, 0) rotate(8deg);
+  }
+  to {
+    transform: translate3d(var(--rain-drift, 18px), 390px, 0) rotate(8deg);
+  }
 }
 @keyframes rainWiperSweep {
-  0%, 100% { transform: rotate(-12deg); }
-  46%, 58% { transform: rotate(-112deg); }
+  0%,
+  100% {
+    transform: rotate(-12deg);
+  }
+  46%,
+  58% {
+    transform: rotate(-112deg);
+  }
 }
 @keyframes typeBreath {
-  0%, 100% { transform: translateY(0) scale(1); opacity: .72; }
-  50% { transform: translateY(var(--wave-distance, -6px)) scale(1.035); opacity: 1; }
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.72;
+  }
+  50% {
+    transform: translateY(var(--wave-distance, -6px)) scale(1.035);
+    opacity: 1;
+  }
 }
 @keyframes constellationLineIn {
-  from { stroke-dasharray: 1 160; opacity: .18; }
-  to { stroke-dasharray: 180 1; opacity: .74; }
+  from {
+    stroke-dasharray: 1 160;
+    opacity: 0.18;
+  }
+  to {
+    stroke-dasharray: 180 1;
+    opacity: 0.74;
+  }
 }
 @keyframes pendulumSwing {
-  from { transform: rotate(var(--pendulum-angle-negative, -14deg)); }
-  to { transform: rotate(var(--pendulum-angle, 14deg)); }
+  from {
+    transform: rotate(var(--pendulum-angle-negative, -14deg));
+  }
+  to {
+    transform: rotate(var(--pendulum-angle, 14deg));
+  }
 }
 @keyframes seasonParticleFall {
-  from { transform: translate3d(0, -24px, 0) rotate(0deg); }
-  to { transform: translate3d(var(--particle-drift, 42px), 470px, 0) rotate(var(--particle-spin, 300deg)); }
+  from {
+    transform: translate3d(0, -24px, 0) rotate(0deg);
+  }
+  to {
+    transform: translate3d(var(--particle-drift, 42px), 470px, 0)
+      rotate(var(--particle-spin, 300deg));
+  }
 }
 
 @media (max-width: 900px) {
-  .animation-grid { grid-template-columns: 1fr; }
-  .animation-panel-wide { grid-column: auto; }
+  .animation-grid {
+    grid-template-columns: 1fr;
+  }
+  .animation-panel-wide {
+    grid-column: auto;
+  }
   .animation-panel-header,
-  .animation-panel-wide .animation-panel-header { min-height: 0; }
+  .animation-panel-wide .animation-panel-header {
+    min-height: 0;
+  }
 }
 
 @media (max-width: 560px) {
-  .animation-lab { padding-top: var(--space-8); }
-  .animation-lab-header h1 { font-size: 37px; }
-  .animation-panel-header { padding: var(--space-4); }
-  .animation-panel-header h2 { font-size: 25px; }
-  .motion-stage { min-height: 270px; }
-  .tile-stage { min-height: 330px; }
+  .animation-lab {
+    padding-top: var(--space-8);
+  }
+  .animation-lab-header h1 {
+    font-size: 37px;
+  }
+  .animation-panel-header {
+    padding: var(--space-4);
+  }
+  .animation-panel-header h2 {
+    font-size: 25px;
+  }
+  .motion-stage {
+    min-height: 270px;
+  }
+  .tile-stage {
+    min-height: 330px;
+  }
   .canvas-stage,
   .yarn-lab-stage,
   .rain-stage,
   .ripple-stage,
   .constellation-stage,
   .magnet-stage,
-  .pendulum-stage { min-height: 310px; }
+  .pendulum-stage {
+    min-height: 310px;
+  }
   .canvas-stage canvas,
   .ripple-stage canvas,
   .magnet-stage canvas,
-  .constellation-svg { height: 310px; }
-  .rain-window { width: min(270px, 78%); height: 236px; }
-  .type-stage { min-height: 280px; padding: 32px 18px; font-size: 29px; letter-spacing: .05em; }
-  .pendulum-stage { padding: 54px 8px 26px; gap: 4px; }
-  .pendulum-stage::before { top: 40px; left: 7%; right: 7%; }
-  .pendulum { width: 52px; height: 185px; }
-  .pendulum-bob { width: 32px; height: 32px; }
-  .season-stage { min-height: 340px; }
-  .season-window { width: 86%; height: 270px; }
-  .season-tree { left: 28%; height: 120px; }
-  .season-tree i { width: 82px; height: 64px; }
-  .animation-panel-controls { align-items: stretch; }
-  .range-control { grid-template-columns: 1fr 3.1em; width: 100%; }
-  .range-control > span { grid-column: 1 / -1; }
-  .text-control { grid-template-columns: 1fr; }
-  .animation-panel-controls .button { flex: 1 1 100%; }
-  .route-controls .route-button { flex: 1; min-width: 0; }
-  .play-cat { width: 142px; }
-  .animation-lab-footer-actions { justify-content: stretch; }
-  .animation-lab-footer-actions .button { flex: 1 1 100%; }
+  .constellation-svg {
+    height: 310px;
+  }
+  .rain-window {
+    width: min(270px, 78%);
+    height: 236px;
+  }
+  .type-stage {
+    min-height: 280px;
+    padding: 32px 18px;
+    font-size: 29px;
+    letter-spacing: 0.05em;
+  }
+  .pendulum-stage {
+    padding: 54px 8px 26px;
+    gap: 4px;
+  }
+  .pendulum-stage::before {
+    top: 40px;
+    left: 7%;
+    right: 7%;
+  }
+  .pendulum {
+    width: 52px;
+    height: 185px;
+  }
+  .pendulum-bob {
+    width: 32px;
+    height: 32px;
+  }
+  .season-stage {
+    min-height: 340px;
+  }
+  .season-window {
+    width: 86%;
+    height: 270px;
+  }
+  .season-tree {
+    left: 28%;
+    height: 120px;
+  }
+  .season-tree i {
+    width: 82px;
+    height: 64px;
+  }
+  .animation-panel-controls {
+    align-items: stretch;
+  }
+  .range-control {
+    grid-template-columns: 1fr 3.1em;
+    width: 100%;
+  }
+  .range-control > span {
+    grid-column: 1 / -1;
+  }
+  .text-control {
+    grid-template-columns: 1fr;
+  }
+  .animation-panel-controls .button {
+    flex: 1 1 100%;
+  }
+  .route-controls .route-button {
+    flex: 1;
+    min-width: 0;
+  }
+  .play-cat {
+    width: 142px;
+  }
+  .animation-lab-footer-actions {
+    justify-content: stretch;
+  }
+  .animation-lab-footer-actions .button {
+    flex: 1 1 100%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1169,7 +1527,6 @@
   .animation-lab-page .season-tree i {
     transition: none;
   }
-
 }
 
 [data-theme="dark"] .animation-lab-page {

@@ -10,21 +10,23 @@ const content = {
       projects: "プロジェクト",
       gallery: "ギャラリー",
       resources: "資料",
-      contact: "連絡先"
+      contact: "連絡先",
     },
     hero: {
       name: "櫻本 晃弘",
       nameReading: "Sakuramoto Akihiro / Akihiro Sakuramoto",
       affiliation: "北陸先端科学技術大学院大学 AI知性領域 博士前期課程",
-      tagline: "ヒューマンロボットインタラクション / 社会的信号処理 / マルチモーダルインタラクション",
-      summary: "櫻本晃弘は北陸先端科学技術大学院大学（JAIST）の博士前期課程に所属し，ヒューマンロボットインタラクションの研究をしています。",
+      tagline:
+        "ヒューマンロボットインタラクション / 社会的信号処理 / マルチモーダルインタラクション",
+      summary:
+        "櫻本晃弘は北陸先端科学技術大学院大学（JAIST）の博士前期課程に所属し，ヒューマンロボットインタラクションの研究をしています。",
       updatedLabel: "最終更新",
       updatedDate: "2026年7月12日",
-      updatedText: "noteとQiitaを始めました。連絡先からどうぞ。"
+      updatedText: "noteとQiitaを始めました。連絡先からどうぞ。",
     },
     buttons: {
       contact: "Contact",
-      cv: "CV"
+      cv: "CV",
     },
     sections: {
       research: { kicker: "01", title: "研究紹介", alt: "Research" },
@@ -36,81 +38,88 @@ const content = {
       projects: { kicker: "04", title: "プロジェクト", alt: "Projects" },
       gallery: { kicker: "05", title: "ギャラリー / ブログ", alt: "Gallery & Blog" },
       resources: { kicker: "06", title: "資料リンク", alt: "Resources" },
-      contact: { kicker: "07", title: "連絡先・リンク", alt: "Contact" }
+      contact: { kicker: "07", title: "連絡先・リンク", alt: "Contact" },
     },
-    researchOverview: "実環境 HRI を対象に，社会的信号処理とマルチモーダルインタラクションの観点から，人とロボットの相互行為を分析しています。",
+    researchOverview:
+      "実環境 HRI を対象に，社会的信号処理とマルチモーダルインタラクションの観点から，人とロボットの相互行為を分析しています。",
     researchActivitiesTimeline: [
       {
         year: "2025年10月-現在",
         title: "サイバーエージェント AI Lab との共同研究",
-        detail: "実店舗で収集された接客ロボット対話データを対象に，実環境HRIにおける対話品質評価の研究を推進。"
+        detail:
+          "実店舗で収集された接客ロボット対話データを対象に，実環境HRIにおける対話品質評価の研究を推進。",
       },
       {
         year: "2025年8月-2026年1月",
         title: "デジタルツイン技術による能登半島地震の教訓と伝承",
-        detail: "石川県七尾市の一本杉商店街でインタビュー調査を行い，地域の課題や能登半島地震から得られた教訓を整理。現地で得られた知見をもとに，デジタルツインを用いた記録・伝承の可能性を検討し，最終レポートを作成。",
-        titleHref: "gallery-nanao.html"
-      }
+        detail:
+          "石川県七尾市の一本杉商店街でインタビュー調査を行い，地域の課題や能登半島地震から得られた教訓を整理。現地で得られた知見をもとに，デジタルツインを用いた記録・伝承の可能性を検討し，最終レポートを作成。",
+        titleHref: "gallery-nanao.html",
+      },
     ],
     educationTimeline: [
       {
         year: "2025年4月-現在",
-        title: "北陸先端科学技術大学院大学 AI知性領域 博士前期課程"
+        title: "北陸先端科学技術大学院大学 AI知性領域 博士前期課程",
       },
       {
         year: "2021年4月-2025年3月",
         title: "富山大学 工学部 工学科 電気電子工学コース",
-        titleHref: "gallery-toyama-university.html"
-      }
+        titleHref: "gallery-toyama-university.html",
+      },
     ],
     experienceTimeline: [
       {
         year: "2025年9月",
         title: "日産自動車株式会社 技術系インターンシップ",
         detail: "車両性能領域「自動運転/先進運転支援性能実験（AD/ADAS）」に参加。（5日間）",
-        titleHref: "gallery-nissan.html"
+        titleHref: "gallery-nissan.html",
       },
       {
         year: "2025年8月-2025年9月",
         title: "株式会社FUJI 2025年度インターンシップ",
-        detail: "クリームはんだ印刷機内で発生する不良のAI画像判定に取り組み，データ収集とアルゴリズム開発を経験。（3週間）",
-        titleHref: "gallery-fuji.html"
+        detail:
+          "クリームはんだ印刷機内で発生する不良のAI画像判定に取り組み，データ収集とアルゴリズム開発を経験。（3週間）",
+        titleHref: "gallery-fuji.html",
       },
       {
         year: "2024年2月-2024年3月",
         title: "奈良先端科学技術大学院大学（NAIST）ロボットラーニング研究室 インターンシップ",
         detail: "強化学習を用いたロボット操作課題に取り組む。（約4週間）",
-        titleHref: "gallery-naist.html"
+        titleHref: "gallery-naist.html",
       },
       {
         year: "2023年",
         title: "NHK学生ロボコン2023 本選出場",
-        detail: "富山大学ロボコンプロジェクトに所属し，ROS，C言語，Pythonを用いたロボット制御を担当。",
-        titleHref: "gallery-robocon.html"
+        detail:
+          "富山大学ロボコンプロジェクトに所属し，ROS，C言語，Pythonを用いたロボット制御を担当。",
+        titleHref: "gallery-robocon.html",
       },
       {
         year: "2019年8月",
         title: "第24回世界スカウトジャンボリー（24WSJ）参加",
-        detail: "米国で開催された世界スカウトジャンボリーに参加し，多国籍の参加者との共同生活・国際交流を経験。",
-        titleHref: "gallery-wsj-2019.html"
-      }
+        detail:
+          "米国で開催された世界スカウトジャンボリーに参加し，多国籍の参加者との共同生活・国際交流を経験。",
+        titleHref: "gallery-wsj-2019.html",
+      },
     ],
     publications: {
       empty: "準備中。",
       groups: [
         {
           title: "国際会議",
-          entries: []
+          entries: [],
         },
         {
           title: "国内学会",
           entries: [
             {
-              title: "実環境 HRI における対話の質評価に向けたマルチモーダル ラポール推定モデルの検討",
+              title:
+                "実環境 HRI における対話の質評価に向けたマルチモーダル ラポール推定モデルの検討",
               authors: "櫻本晃弘 (Sakuramoto Akihiro), 林貴斗, 三好遼, 岡藤勇希, 岡田将吾",
-              venue: "画像の認識・理解シンポジウム（MIRU）, ポスター発表（査読なし）, 2026年8月"
-            }
-          ]
+              venue: "画像の認識・理解シンポジウム（MIRU）, ポスター発表（査読なし）, 2026年8月",
+            },
+          ],
         },
         {
           title: "受賞・採択",
@@ -118,15 +127,15 @@ const content = {
             {
               title: "北陸先端科学技術大学院大学学生給付奨学金 一般採用",
               authors: "櫻本晃弘",
-              venue: "成績優秀のため採用, 2025-2026"
-            }
-          ]
-        }
-      ]
+              venue: "成績優秀のため採用, 2025-2026",
+            },
+          ],
+        },
+      ],
     },
     projects: {
       empty: "公開準備中（2026年秋予定）。",
-      excuse: "……資料は猫が持って行きました。"
+      excuse: "……資料は猫が持って行きました。",
     },
     gallery: {
       empty: "準備中。",
@@ -140,7 +149,7 @@ const content = {
           image: "assets/hri2026-blog-summary.png?v=20260702-1",
           href: "blog-hri2026-analysis.html",
           alt: "HRI 2026 Full Research Papers 127件のクラスタ分布と横断テーマ出現数の要約図",
-          tags: ["Blog", "HRI", "Paper Analysis"]
+          tags: ["Blog", "HRI", "Paper Analysis"],
         },
         {
           id: "blog-start",
@@ -149,7 +158,7 @@ const content = {
           title: "ブログを始めます",
           text: "研究，制作，日々の気づきを短く残していくための場所を追加しました。",
           href: "blog-start.html",
-          tags: ["Blog", "Site Update"]
+          tags: ["Blog", "Site Update"],
         },
         {
           id: "gallery-library",
@@ -159,7 +168,7 @@ const content = {
           image: "assets/library-2026-atrium-1.jpg?v=20260629-1",
           href: "gallery-library.html",
           alt: "円形の書架が広がる図書館の吹き抜け空間",
-          tags: ["Photo", "Library", "Ishikawa"]
+          tags: ["Photo", "Library", "Ishikawa"],
         },
         {
           id: "gallery-expo-osaka",
@@ -169,7 +178,7 @@ const content = {
           image: "assets/expo-2025-osaka-02.jpg?v=20260629-1",
           href: "gallery-expo-osaka.html",
           alt: "大阪・関西万博の会場へ向かう人々と青空",
-          tags: ["Expo", "Osaka", "Photo"]
+          tags: ["Expo", "Osaka", "Photo"],
         },
         {
           id: "gallery-nissan",
@@ -179,7 +188,7 @@ const content = {
           image: "assets/nissan-atsugiya.jpg?v=20260628-2",
           href: "gallery-nissan.html",
           alt: "日産インターン期間中に食べた厚木家のラーメン",
-          tags: ["Internship", "Atsugi", "Photo"]
+          tags: ["Internship", "Atsugi", "Photo"],
         },
         {
           id: "gallery-fuji",
@@ -189,7 +198,7 @@ const content = {
           image: "assets/fuji-internship-building.jpg?v=20260629-1",
           href: "gallery-fuji.html",
           alt: "株式会社FUJIの建物",
-          tags: ["Internship", "FUJI", "AI"]
+          tags: ["Internship", "FUJI", "AI"],
         },
         {
           id: "gallery-owara-kazenobon-2024",
@@ -199,7 +208,7 @@ const content = {
           image: "assets/owara-kazenobon-2024-51.jpg?v=20260629-1",
           href: "gallery-owara-kazenobon-2024.html",
           alt: "おわら風の盆の舞台で踊りと演奏が行われている夜の風景",
-          tags: ["Owara Kaze no Bon", "Toyama", "Photo"]
+          tags: ["Owara Kaze no Bon", "Toyama", "Photo"],
         },
         {
           id: "gallery-naist",
@@ -209,7 +218,7 @@ const content = {
           image: "assets/naist-sign-gate.jpg?v=20260628-2",
           href: "gallery-naist.html",
           alt: "NAISTキャンパス入口の風景",
-          tags: ["Internship", "NAIST", "Research Life"]
+          tags: ["Internship", "NAIST", "Research Life"],
         },
         {
           id: "gallery-nanao",
@@ -219,7 +228,7 @@ const content = {
           image: "assets/nanao-station.jpg?v=20260629-1",
           href: "gallery-nanao.html",
           alt: "七尾駅の歓迎看板とのれん",
-          tags: ["Fieldwork", "Nanao", "Digital Twin"]
+          tags: ["Fieldwork", "Nanao", "Digital Twin"],
         },
         {
           id: "gallery-toyama-university",
@@ -229,7 +238,7 @@ const content = {
           image: "assets/toyama-university-04.jpg?v=20260629-1",
           href: "gallery-toyama-university.html",
           alt: "富山の川沿いに咲く桜並木",
-          tags: ["University of Toyama", "Toyama", "Student Life"]
+          tags: ["University of Toyama", "Toyama", "Student Life"],
         },
         {
           id: "gallery-robocon",
@@ -239,7 +248,7 @@ const content = {
           image: "assets/robocon-2023-field.jpg?v=20260629-1",
           href: "gallery-robocon.html",
           alt: "NHK学生ロボコン2023の競技フィールドとロボット",
-          tags: ["Robocon", "University of Toyama", "Robot Control"]
+          tags: ["Robocon", "University of Toyama", "Robot Control"],
         },
         {
           id: "gallery-wsj-2019",
@@ -249,36 +258,98 @@ const content = {
           image: "assets/wsj-2019-05.jpg?v=20260629-1",
           href: "gallery-wsj-2019.html",
           alt: "第24回世界スカウトジャンボリーの入口ゲート",
-          tags: ["24WSJ", "Scout", "USA"]
-        }
-      ]
+          tags: ["24WSJ", "Scout", "USA"],
+        },
+      ],
     },
     resources: {
       empty: "準備中。",
       entries: [
-        { label: "内部資料（本人専用）", value: "my-docs — 要ログイン", href: "https://github.com/aki41105/my-docs", icon: "github" },
-        { label: "らぼらとらい", value: "JAIST公認サークル 公式サイト", href: "https://www.jaist.ac.jp/misc/circles/raboratorai/", icon: "link" },
-        { label: "石原尚 note", value: "研究・執筆・発表の基礎", href: "https://note.com/hisashi_is", icon: "link" }
-      ]
+        {
+          label: "内部資料（本人専用）",
+          value: "my-docs — 要ログイン",
+          href: "https://github.com/aki41105/my-docs",
+          icon: "github",
+        },
+        {
+          label: "らぼらとらい",
+          value: "JAIST公認サークル 公式サイト",
+          href: "https://www.jaist.ac.jp/misc/circles/raboratorai/",
+          icon: "link",
+        },
+        {
+          label: "石原尚 note",
+          value: "研究・執筆・発表の基礎",
+          href: "https://note.com/hisashi_is",
+          icon: "link",
+        },
+      ],
     },
     contacts: [
       { label: "大学メール", value: "s2510069 [at] jaist.ac.jp", href: "", icon: "mail" },
       { label: "個人メール", value: "sakuramoto.may [at] gmail.com", href: "", icon: "mail" },
-      { label: "GitHub", value: "aki41105", href: "https://github.com/aki41105", icon: "github", rel: "me" },
-      { label: "note", value: "akihiro_1", href: "https://note.com/akihiro_1", icon: "link", rel: "me" },
-      { label: "Qiita", value: "sakuramoto-A", href: "https://qiita.com/sakuramoto-A", icon: "link", rel: "me" },
-      { label: "Kaggle", value: "sakuramotoakihiro", href: "https://www.kaggle.com/sakuramotoakihiro", icon: "link", rel: "me" },
-      { label: "researchmap", value: "研究者プロフィール", href: "https://researchmap.jp/akihiro-sakuramoto", icon: "link" },
-      { label: "ORCID", value: "0009-0006-7932-0219", href: "https://orcid.org/0009-0006-7932-0219", icon: "orcid", rel: "me" },
-      { label: "LinkedIn", value: "Profile", href: "https://www.linkedin.com/in/akihiro-sakuramoto-37024b328/", icon: "linkedin", rel: "me" },
-      { label: "岡田研究室", value: "Lab Website", href: "https://www.jaist.ac.jp/~okada-s/index.html", icon: "link" }
+      {
+        label: "GitHub",
+        value: "aki41105",
+        href: "https://github.com/aki41105",
+        icon: "github",
+        rel: "me",
+      },
+      {
+        label: "note",
+        value: "akihiro_1",
+        href: "https://note.com/akihiro_1",
+        icon: "link",
+        rel: "me",
+      },
+      {
+        label: "Qiita",
+        value: "sakuramoto-A",
+        href: "https://qiita.com/sakuramoto-A",
+        icon: "link",
+        rel: "me",
+      },
+      {
+        label: "Kaggle",
+        value: "sakuramotoakihiro",
+        href: "https://www.kaggle.com/sakuramotoakihiro",
+        icon: "link",
+        rel: "me",
+      },
+      {
+        label: "researchmap",
+        value: "研究者プロフィール",
+        href: "https://researchmap.jp/akihiro-sakuramoto",
+        icon: "link",
+      },
+      {
+        label: "ORCID",
+        value: "0009-0006-7932-0219",
+        href: "https://orcid.org/0009-0006-7932-0219",
+        icon: "orcid",
+        rel: "me",
+      },
+      {
+        label: "LinkedIn",
+        value: "Profile",
+        href: "https://www.linkedin.com/in/akihiro-sakuramoto-37024b328/",
+        icon: "linkedin",
+        rel: "me",
+      },
+      {
+        label: "岡田研究室",
+        value: "Lab Website",
+        href: "https://www.jaist.ac.jp/~okada-s/index.html",
+        icon: "link",
+      },
     ],
     footer: {
       colophonLatin: "Scriptum in Ishikawa, MMXXVI",
       colophonNote: "誤植の検品は三毛猫一匹が担当しました。",
-      colophonFootnote: "* 猫が写本の上を歩くのは、1445年ドゥブロヴニクの写本に残る足跡以来の伝統です。",
-      built: "© 2026 Akihiro Sakuramoto"
-    }
+      colophonFootnote:
+        "* 猫が写本の上を歩くのは、1445年ドゥブロヴニクの写本に残る足跡以来の伝統です。",
+      built: "© 2026 Akihiro Sakuramoto",
+    },
   },
   en: {
     metaTitle: "Akihiro Sakuramoto / Sakuramoto Akihiro",
@@ -291,21 +362,23 @@ const content = {
       projects: "Projects",
       gallery: "Gallery",
       resources: "Resources",
-      contact: "Contact"
+      contact: "Contact",
     },
     hero: {
       name: "Akihiro Sakuramoto",
       nameReading: "櫻本晃弘 / Sakuramoto Akihiro",
-      affiliation: "Master's Student in Human-AI Interaction, Japan Advanced Institute of Science and Technology (JAIST)",
+      affiliation:
+        "Master's Student in Human-AI Interaction, Japan Advanced Institute of Science and Technology (JAIST)",
       tagline: "Human-Robot Interaction / Social Signal Processing / Multimodal Interaction",
-      summary: "Akihiro Sakuramoto is a master's student at JAIST studying Human-Robot Interaction.",
+      summary:
+        "Akihiro Sakuramoto is a master's student at JAIST studying Human-Robot Interaction.",
       updatedLabel: "Last updated",
       updatedDate: "July 12, 2026",
-      updatedText: "Now writing on note and Qiita — see Contact."
+      updatedText: "Now writing on note and Qiita — see Contact.",
     },
     buttons: {
       contact: "Contact",
-      cv: "CV"
+      cv: "CV",
     },
     sections: {
       research: { kicker: "01", title: "Research Overview", alt: "研究紹介" },
@@ -317,81 +390,95 @@ const content = {
       projects: { kicker: "04", title: "Projects", alt: "プロジェクト" },
       gallery: { kicker: "05", title: "Gallery / Blog", alt: "ギャラリー・ブログ" },
       resources: { kicker: "06", title: "Resources", alt: "資料リンク" },
-      contact: { kicker: "07", title: "Contact / Links", alt: "連絡先" }
+      contact: { kicker: "07", title: "Contact / Links", alt: "連絡先" },
     },
-    researchOverview: "I study real-world HRI through social signal processing and multimodal interaction, focusing on how people and robots relate to one another in everyday settings.",
+    researchOverview:
+      "I study real-world HRI through social signal processing and multimodal interaction, focusing on how people and robots relate to one another in everyday settings.",
     researchActivitiesTimeline: [
       {
         year: "Oct. 2025-Present",
         title: "Joint Research with CyberAgent AI Lab",
-        detail: "Studying real-world HRI and interaction quality evaluation using in-store customer-service robot interaction data."
+        detail:
+          "Studying real-world HRI and interaction quality evaluation using in-store customer-service robot interaction data.",
       },
       {
         year: "Aug. 2025-Jan. 2026",
-        title: "Preserving Lessons from the Noto Peninsula Earthquake through Digital Twin Technology",
-        detail: "Conducted interviews in Ipponsugi Shopping Street in Nanao, Ishikawa, to identify local challenges and lessons from the Noto Peninsula earthquake. Based on the field insights, explored how digital twin technologies could support recording and preservation, and prepared the final report.",
-        titleHref: "gallery-nanao.html"
-      }
+        title:
+          "Preserving Lessons from the Noto Peninsula Earthquake through Digital Twin Technology",
+        detail:
+          "Conducted interviews in Ipponsugi Shopping Street in Nanao, Ishikawa, to identify local challenges and lessons from the Noto Peninsula earthquake. Based on the field insights, explored how digital twin technologies could support recording and preservation, and prepared the final report.",
+        titleHref: "gallery-nanao.html",
+      },
     ],
     educationTimeline: [
       {
         year: "Apr. 2025-Present",
-        title: "Master's Student, AI Science Area, Japan Advanced Institute of Science and Technology (JAIST)"
+        title:
+          "Master's Student, AI Science Area, Japan Advanced Institute of Science and Technology (JAIST)",
       },
       {
         year: "Apr. 2021-Mar. 2025",
-        title: "Electrical and Electronic Engineering Course, Department of Engineering, Faculty of Engineering, University of Toyama",
-        titleHref: "gallery-toyama-university.html"
-      }
+        title:
+          "Electrical and Electronic Engineering Course, Department of Engineering, Faculty of Engineering, University of Toyama",
+        titleHref: "gallery-toyama-university.html",
+      },
     ],
     experienceTimeline: [
       {
         year: "Sep. 2025",
         title: "Technical Internship, Nissan Motor Corporation",
-        detail: "Participated in an AD/ADAS and vehicle dynamics performance experimentation program in the vehicle performance area. (5 days)",
-        titleHref: "gallery-nissan.html"
+        detail:
+          "Participated in an AD/ADAS and vehicle dynamics performance experimentation program in the vehicle performance area. (5 days)",
+        titleHref: "gallery-nissan.html",
       },
       {
         year: "Aug. 2025-Sep. 2025",
         title: "Internship, FUJI Corporation",
-        detail: "Worked on AI-based image inspection for defects occurring inside solder paste printers, including data collection and algorithm development. (3 weeks)",
-        titleHref: "gallery-fuji.html"
+        detail:
+          "Worked on AI-based image inspection for defects occurring inside solder paste printers, including data collection and algorithm development. (3 weeks)",
+        titleHref: "gallery-fuji.html",
       },
       {
         year: "Feb. 2024-Mar. 2024",
-        title: "Internship, Robot Learning Laboratory, Nara Institute of Science and Technology (NAIST)",
+        title:
+          "Internship, Robot Learning Laboratory, Nara Institute of Science and Technology (NAIST)",
         detail: "Worked on robot manipulation tasks using reinforcement learning. (about 4 weeks)",
-        titleHref: "gallery-naist.html"
+        titleHref: "gallery-naist.html",
       },
       {
         year: "2023",
         title: "NHK Student Robocon 2023 Finalist",
-        detail: "Worked on robot control in the University of Toyama Robocon Project using ROS, C, and Python.",
-        titleHref: "gallery-robocon.html"
+        detail:
+          "Worked on robot control in the University of Toyama Robocon Project using ROS, C, and Python.",
+        titleHref: "gallery-robocon.html",
       },
       {
         year: "Aug. 2019",
         title: "Participant, 24th World Scout Jamboree (24WSJ)",
-        detail: "Participated in the World Scout Jamboree held in the United States and experienced international exchange through camp life with participants from many countries.",
-        titleHref: "gallery-wsj-2019.html"
-      }
+        detail:
+          "Participated in the World Scout Jamboree held in the United States and experienced international exchange through camp life with participants from many countries.",
+        titleHref: "gallery-wsj-2019.html",
+      },
     ],
     publications: {
       empty: "Coming soon.",
       groups: [
         {
           title: "International Conferences",
-          entries: []
+          entries: [],
         },
         {
           title: "Domestic Conferences",
           entries: [
             {
-              title: "A Multimodal Rapport Estimation Model for Evaluating Interaction Quality in Real-World HRI",
-              authors: "Akihiro Sakuramoto (Sakuramoto Akihiro), Takato Hayashi, Ryo Miyoshi, Yuki Okafuji, Shogo Okada",
-              venue: "Meeting on Image Recognition and Understanding (MIRU), Poster presentation (non-peer-reviewed), Aug. 2026"
-            }
-          ]
+              title:
+                "A Multimodal Rapport Estimation Model for Evaluating Interaction Quality in Real-World HRI",
+              authors:
+                "Akihiro Sakuramoto (Sakuramoto Akihiro), Takato Hayashi, Ryo Miyoshi, Yuki Okafuji, Shogo Okada",
+              venue:
+                "Meeting on Image Recognition and Understanding (MIRU), Poster presentation (non-peer-reviewed), Aug. 2026",
+            },
+          ],
         },
         {
           title: "Awards",
@@ -399,15 +486,15 @@ const content = {
             {
               title: "JAIST Student Grant Scholarship",
               authors: "Akihiro Sakuramoto",
-              venue: "Awarded for academic excellence, 2025-2026"
-            }
-          ]
-        }
-      ]
+              venue: "Awarded for academic excellence, 2025-2026",
+            },
+          ],
+        },
+      ],
     },
     projects: {
       empty: "In preparation — coming autumn 2026.",
-      excuse: "…a cat ran off with the materials."
+      excuse: "…a cat ran off with the materials.",
     },
     gallery: {
       empty: "Coming soon.",
@@ -421,7 +508,7 @@ const content = {
           image: "assets/hri2026-blog-summary.png?v=20260702-1",
           href: "blog-hri2026-analysis.html",
           alt: "Summary graphic of topic clusters and cross-cutting themes across 127 HRI 2026 Full Research Papers",
-          tags: ["Blog", "HRI", "Paper Analysis"]
+          tags: ["Blog", "HRI", "Paper Analysis"],
         },
         {
           id: "blog-start",
@@ -430,7 +517,7 @@ const content = {
           title: "Starting a Blog",
           text: "I added a place to keep short notes on research, making things, and everyday observations.",
           href: "blog-start.html",
-          tags: ["Blog", "Site Update"]
+          tags: ["Blog", "Site Update"],
         },
         {
           id: "gallery-library",
@@ -440,7 +527,7 @@ const content = {
           image: "assets/library-2026-atrium-1.jpg?v=20260629-1",
           href: "gallery-library.html",
           alt: "Atrium of a library with circular bookshelves",
-          tags: ["Photo", "Library", "Ishikawa"]
+          tags: ["Photo", "Library", "Ishikawa"],
         },
         {
           id: "gallery-expo-osaka",
@@ -450,7 +537,7 @@ const content = {
           image: "assets/expo-2025-osaka-02.jpg?v=20260629-1",
           href: "gallery-expo-osaka.html",
           alt: "People walking toward the Expo 2025 Osaka venue under a blue sky",
-          tags: ["Expo", "Osaka", "Photo"]
+          tags: ["Expo", "Osaka", "Photo"],
         },
         {
           id: "gallery-nissan",
@@ -460,7 +547,7 @@ const content = {
           image: "assets/nissan-atsugiya.jpg?v=20260628-2",
           href: "gallery-nissan.html",
           alt: "A bowl of ramen at Atsugiya during the Nissan internship",
-          tags: ["Internship", "Atsugi", "Photo"]
+          tags: ["Internship", "Atsugi", "Photo"],
         },
         {
           id: "gallery-fuji",
@@ -470,7 +557,7 @@ const content = {
           image: "assets/fuji-internship-building.jpg?v=20260629-1",
           href: "gallery-fuji.html",
           alt: "FUJI Corporation building",
-          tags: ["Internship", "FUJI", "AI"]
+          tags: ["Internship", "FUJI", "AI"],
         },
         {
           id: "gallery-owara-kazenobon-2024",
@@ -480,7 +567,7 @@ const content = {
           image: "assets/owara-kazenobon-2024-51.jpg?v=20260629-1",
           href: "gallery-owara-kazenobon-2024.html",
           alt: "Night stage scene with dancing and music at Owara Kaze no Bon",
-          tags: ["Owara Kaze no Bon", "Toyama", "Photo"]
+          tags: ["Owara Kaze no Bon", "Toyama", "Photo"],
         },
         {
           id: "gallery-naist",
@@ -490,7 +577,7 @@ const content = {
           image: "assets/naist-sign-gate.jpg?v=20260628-2",
           href: "gallery-naist.html",
           alt: "Entrance area of the NAIST campus",
-          tags: ["Internship", "NAIST", "Research Life"]
+          tags: ["Internship", "NAIST", "Research Life"],
         },
         {
           id: "gallery-nanao",
@@ -500,7 +587,7 @@ const content = {
           image: "assets/nanao-station.jpg?v=20260629-1",
           href: "gallery-nanao.html",
           alt: "Welcome sign and curtain at Nanao Station",
-          tags: ["Fieldwork", "Nanao", "Digital Twin"]
+          tags: ["Fieldwork", "Nanao", "Digital Twin"],
         },
         {
           id: "gallery-toyama-university",
@@ -510,7 +597,7 @@ const content = {
           image: "assets/toyama-university-04.jpg?v=20260629-1",
           href: "gallery-toyama-university.html",
           alt: "Cherry blossom trees along a river in Toyama",
-          tags: ["University of Toyama", "Toyama", "Student Life"]
+          tags: ["University of Toyama", "Toyama", "Student Life"],
         },
         {
           id: "gallery-robocon",
@@ -520,7 +607,7 @@ const content = {
           image: "assets/robocon-2023-field.jpg?v=20260629-1",
           href: "gallery-robocon.html",
           alt: "Competition field and robots at NHK Student Robocon 2023",
-          tags: ["Robocon", "University of Toyama", "Robot Control"]
+          tags: ["Robocon", "University of Toyama", "Robot Control"],
         },
         {
           id: "gallery-wsj-2019",
@@ -530,37 +617,99 @@ const content = {
           image: "assets/wsj-2019-05.jpg?v=20260629-1",
           href: "gallery-wsj-2019.html",
           alt: "Entrance gate at the 24th World Scout Jamboree",
-          tags: ["24WSJ", "Scout", "USA"]
-        }
-      ]
+          tags: ["24WSJ", "Scout", "USA"],
+        },
+      ],
     },
     resources: {
       empty: "Coming soon.",
       entries: [
-        { label: "Private Notes (owner only)", value: "my-docs — sign-in required", href: "https://github.com/aki41105/my-docs", icon: "github" },
-        { label: "Raboratorai", value: "JAIST official circle website", href: "https://www.jaist.ac.jp/misc/circles/raboratorai/", icon: "link" },
-        { label: "Hisashi Ishihara on note", value: "Research, writing, and presentation basics", href: "https://note.com/hisashi_is", icon: "link" }
-      ]
+        {
+          label: "Private Notes (owner only)",
+          value: "my-docs — sign-in required",
+          href: "https://github.com/aki41105/my-docs",
+          icon: "github",
+        },
+        {
+          label: "Raboratorai",
+          value: "JAIST official circle website",
+          href: "https://www.jaist.ac.jp/misc/circles/raboratorai/",
+          icon: "link",
+        },
+        {
+          label: "Hisashi Ishihara on note",
+          value: "Research, writing, and presentation basics",
+          href: "https://note.com/hisashi_is",
+          icon: "link",
+        },
+      ],
     },
     contacts: [
       { label: "University Email", value: "s2510069 [at] jaist.ac.jp", href: "", icon: "mail" },
       { label: "Personal Email", value: "sakuramoto.may [at] gmail.com", href: "", icon: "mail" },
-      { label: "GitHub", value: "aki41105", href: "https://github.com/aki41105", icon: "github", rel: "me" },
-      { label: "note", value: "akihiro_1", href: "https://note.com/akihiro_1", icon: "link", rel: "me" },
-      { label: "Qiita", value: "sakuramoto-A", href: "https://qiita.com/sakuramoto-A", icon: "link", rel: "me" },
-      { label: "Kaggle", value: "sakuramotoakihiro", href: "https://www.kaggle.com/sakuramotoakihiro", icon: "link", rel: "me" },
-      { label: "researchmap", value: "Researcher Profile", href: "https://researchmap.jp/akihiro-sakuramoto", icon: "link" },
-      { label: "ORCID", value: "0009-0006-7932-0219", href: "https://orcid.org/0009-0006-7932-0219", icon: "orcid", rel: "me" },
-      { label: "LinkedIn", value: "Profile", href: "https://www.linkedin.com/in/akihiro-sakuramoto-37024b328/", icon: "linkedin", rel: "me" },
-      { label: "Okada Laboratory", value: "Lab Website", href: "https://www.jaist.ac.jp/~okada-s/index.html", icon: "link" }
+      {
+        label: "GitHub",
+        value: "aki41105",
+        href: "https://github.com/aki41105",
+        icon: "github",
+        rel: "me",
+      },
+      {
+        label: "note",
+        value: "akihiro_1",
+        href: "https://note.com/akihiro_1",
+        icon: "link",
+        rel: "me",
+      },
+      {
+        label: "Qiita",
+        value: "sakuramoto-A",
+        href: "https://qiita.com/sakuramoto-A",
+        icon: "link",
+        rel: "me",
+      },
+      {
+        label: "Kaggle",
+        value: "sakuramotoakihiro",
+        href: "https://www.kaggle.com/sakuramotoakihiro",
+        icon: "link",
+        rel: "me",
+      },
+      {
+        label: "researchmap",
+        value: "Researcher Profile",
+        href: "https://researchmap.jp/akihiro-sakuramoto",
+        icon: "link",
+      },
+      {
+        label: "ORCID",
+        value: "0009-0006-7932-0219",
+        href: "https://orcid.org/0009-0006-7932-0219",
+        icon: "orcid",
+        rel: "me",
+      },
+      {
+        label: "LinkedIn",
+        value: "Profile",
+        href: "https://www.linkedin.com/in/akihiro-sakuramoto-37024b328/",
+        icon: "linkedin",
+        rel: "me",
+      },
+      {
+        label: "Okada Laboratory",
+        value: "Lab Website",
+        href: "https://www.jaist.ac.jp/~okada-s/index.html",
+        icon: "link",
+      },
     ],
     footer: {
       colophonLatin: "Scriptum in Ishikawa, MMXXVI",
       colophonNote: "Proofread by one calico cat.",
-      colophonFootnote: "* Cats have walked across manuscripts since a pawprinted codex of Dubrovnik, 1445.",
-      built: "© 2026 Akihiro Sakuramoto"
-    }
-  }
+      colophonFootnote:
+        "* Cats have walked across manuscripts since a pawprinted codex of Dubrovnik, 1445.",
+      built: "© 2026 Akihiro Sakuramoto",
+    },
+  },
 };
 
 let currentLanguage = "ja";
@@ -595,7 +744,7 @@ const icons = {
     <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
       <path d="M10.2 13.8a1 1 0 0 1 0-1.42l3.5-3.5a2.8 2.8 0 1 1 3.96 3.96l-1.25 1.25a1 1 0 1 1-1.42-1.41l1.25-1.25a.8.8 0 1 0-1.13-1.14l-3.5 3.5a1 1 0 0 1-1.41 0Zm3.6-3.6a1 1 0 0 1 0 1.42l-3.5 3.5a2.8 2.8 0 0 1-3.96-3.96L7.59 9.9A1 1 0 0 1 9 11.32l-1.25 1.25a.8.8 0 0 0 1.13 1.14l3.5-3.5a1 1 0 0 1 1.41 0Z"></path>
     </svg>
-  `
+  `,
 };
 
 function getNestedValue(source, path) {
@@ -853,7 +1002,7 @@ function setupScrollSpy() {
     .map((link) => ({
       id: link.dataset.nav,
       link,
-      section: document.querySelector(`#${link.dataset.nav}`)
+      section: document.querySelector(`#${link.dataset.nav}`),
     }))
     .filter((entry) => entry.section);
 
@@ -891,7 +1040,8 @@ function setupScrollSpy() {
   const getCurrentSectionId = () => {
     const headerHeight = header?.getBoundingClientRect().height ?? 0;
     const threshold = headerHeight + Math.min(240, window.innerHeight * 0.35);
-    const isAtPageEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+    const isAtPageEnd =
+      window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
 
     if (isAtPageEnd) {
       return sectionEntries[sectionEntries.length - 1].id;
@@ -939,7 +1089,7 @@ function setupReveal() {
   }
 
   const targets = document.querySelectorAll(
-    ".section-heading, .section .link-grid, .section .timeline, .publication-list, .gallery-grid, .career-group, #researchOverview"
+    ".section-heading, .section .link-grid, .section .timeline, .publication-list, .gallery-grid, .career-group, #researchOverview",
   );
 
   const observer = new IntersectionObserver(
@@ -951,7 +1101,7 @@ function setupReveal() {
         }
       });
     },
-    { threshold: 0, rootMargin: "0px 0px -60px 0px" }
+    { threshold: 0, rootMargin: "0px 0px -60px 0px" },
   );
 
   targets.forEach((el, index) => {
@@ -1009,7 +1159,15 @@ function startCatParade() {
   overlay.className = reduce ? "cat-parade cat-parade-static" : "cat-parade";
   overlay.setAttribute("aria-hidden", "true");
 
-  const lineup = ["cat-walk", "cat-walk", "cat-sit", "cat-loaf", "cat-walk", "cat-peek", "cat-walk"];
+  const lineup = [
+    "cat-walk",
+    "cat-walk",
+    "cat-sit",
+    "cat-loaf",
+    "cat-walk",
+    "cat-peek",
+    "cat-walk",
+  ];
   lineup.forEach((name, i) => {
     const img = document.createElement("img");
     img.src = `assets/cats/${name}.svg`;
@@ -1052,7 +1210,10 @@ function setupNekoCommand() {
     const el = document.activeElement;
     if (
       el &&
-      (el.tagName === "INPUT" || el.tagName === "TEXTAREA" || el.tagName === "SELECT" || el.isContentEditable)
+      (el.tagName === "INPUT" ||
+        el.tagName === "TEXTAREA" ||
+        el.tagName === "SELECT" ||
+        el.isContentEditable)
     ) {
       return;
     }
@@ -1197,7 +1358,7 @@ function setupPawProgress() {
         window.requestAnimationFrame(update);
       }
     },
-    { passive: true }
+    { passive: true },
   );
   update();
 }
@@ -1303,7 +1464,7 @@ function setupPawTrail() {
           window.requestAnimationFrame(update);
         }
       },
-      { passive: true }
+      { passive: true },
     );
     let resizeTimer = null;
     window.addEventListener("resize", () => {
@@ -1330,6 +1491,6 @@ setupCatPin();
 try {
   console.log(
     "%c /\\_/\\ \n( o.o )\n > ^ < \n\nこのサイトには三毛猫が9匹すんでいます。\nぜんぶ見つけられますか？\nヒント: neko と打ってみてください。 — Codex Felis",
-    "color:#5f8d73; font-family:monospace; line-height:1.5"
+    "color:#5f8d73; font-family:monospace; line-height:1.5",
   );
 } catch (error) {}
