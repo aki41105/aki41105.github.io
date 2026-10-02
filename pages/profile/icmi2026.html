@@ -1,0 +1,102 @@
+---
+layout: null
+permalink: /icmi2026.html
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multimodal Rapport Estimation in Real-World HRI | ICMI 2026</title>
+  <meta name="description" content="ICMI 2026 research by Akihiro Sakuramoto and colleagues: estimating rapport in real-world human–robot interaction. Paper, research overview, and related links.">
+  <link rel="canonical" href="https://aki41105.github.io/icmi2026.html">
+  <meta property="og:title" content="Multimodal Rapport Estimation in Real-World HRI">
+  <meta property="og:description" content="ICMI 2026 · Paper, research overview, and related links.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aki41105.github.io/icmi2026.html">
+  <meta name="theme-color" content="#155c63">
+  <link rel="icon" href="/assets/favicon-32x32.png" type="image/png">
+  <link rel="stylesheet" href="/classical.css">
+  <style>
+    .research-page { max-width: 920px; margin: auto; padding: 24px clamp(20px, 5vw, 56px) 48px; }
+    .research-nav { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 14px; padding-bottom: 24px; border-bottom: 1px solid var(--color-divider); }
+    .research-page a { color: var(--color-heading); text-decoration: underline; text-underline-offset: 4px; }
+    .research-hero { padding: 44px 0 32px; }
+    .research-eyebrow { font-size: 14px; letter-spacing: .13em; color: var(--color-accent-700); font-weight: 700; margin-bottom: 18px; }
+    .research-page h1 { font-size: clamp(32px, 5.8vw, 52px); line-height: 1.15; margin-bottom: 24px; text-wrap: balance; }
+    .research-authors { font-size: 17px; line-height: 1.9; }
+    .research-affiliations { font-size: 13px; margin-top: 12px; }
+    .research-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .research-actions a { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 10px 18px; border: 1px solid var(--color-heading); border-radius: 4px; font-weight: 600; font-size: 16px; }
+    .research-actions .primary { color: var(--color-surface); background: var(--color-heading); text-decoration: none; }
+    .research-page section { padding: 28px 0; border-top: 1px solid var(--color-divider); }
+    .research-page h2 { font-size: 24px; margin-bottom: 18px; }
+    .research-page section p + p { margin-top: 16px; }
+    .research-page p { line-height: 1.8; }
+    .research-page ul { padding-left: 23px; margin: 0; }
+    .research-page li + li { margin-top: 12px; }
+    .research-page details { margin-top: 22px; }
+    .research-page summary { cursor: pointer; color: var(--color-heading); font-weight: 600; }
+    .research-page details p { margin-top: 12px; font-size: 16px; }
+    .research-page footer { font-size: 14px; padding-top: 24px; border-top: 1px solid var(--color-divider); }
+    .research-page sup { font-size: .7em; }
+    @media (max-width: 480px) { .research-hero { padding-top: 30px; } .research-actions a { flex: 1 1 120px; } }
+  </style>
+</head>
+<body>
+<div class="research-page">
+  <nav class="research-nav" aria-label="Page navigation">
+    <a href="/">AKI NOTES</a>
+    <a href="/profile.html#publication-icmi-2026">Author profile</a>
+  </nav>
+  <main>
+    <header class="research-hero">
+      <p class="research-eyebrow">ICMI 2026 · RESEARCH PAPER</p>
+      <h1>Multimodal Rapport Estimation in Real-World HRI</h1>
+      <p class="research-authors">Akihiro Sakuramoto<sup>1</sup>, Takato Hayashi<sup>1</sup>,
+        Ryo Miyoshi<sup>2,3</sup>, Yuki Okafuji<sup>2,3</sup>, Shogo Okada<sup>1</sup></p>
+      <p class="research-affiliations"><sup>1</sup> Japan Advanced Institute of Science and Technology (JAIST)<br>
+        <sup>2</sup> CyberAgent &nbsp; <sup>3</sup> The University of Osaka</p>
+      <div class="research-actions" aria-label="Read the paper">
+        <a class="primary" href="https://arxiv.org/pdf/2608.18401">Read paper (PDF)</a>
+        <a href="https://arxiv.org/abs/2608.18401">arXiv / citation</a>
+      </div>
+    </header>
+    <section aria-labelledby="overview">
+      <h2 id="overview">Understanding interaction quality in the real world</h2>
+      <p>How can we estimate the quality of a conversation between people and a robot outside the laboratory?
+        We study third-party-rated rapport in 62 robot–customer interaction sessions recorded in a Japanese drugstore.</p>
+      <p>We compare zero-shot language models, pretrained text, audio and visual models, and prediction-level fusion.
+        Combining Gemini 2.5 Flash text predictions with HuBERT audio and V-JEPA visual predictions performs best overall.
+        Performance also varies with interaction duration and group size.</p>
+      <details lang="ja">
+        <summary>日本語で概要を読む</summary>
+        <p>実店舗での人とロボットの対話を対象に、第三者が評定したラポール（関係の質）を推定する研究です。
+          日本のドラッグストアで収録した62セッションを用い、テキスト・音声・映像のモデルを比較しました。</p>
+        <p>Gemini 2.5 Flashのテキスト予測と、HuBERTの音声予測・V-JEPAの映像予測を組み合わせた手法が、全体として最も良い性能を示しました。
+          対話時間や参加人数によって性能が変わることも確認しています。</p>
+      </details>
+    </section>
+    <section aria-labelledby="materials">
+      <h2 id="materials">Research materials</h2>
+      <ul>
+        <li><a href="https://arxiv.org/abs/2608.18401">Paper and citation on arXiv</a> — the publicly available preprint.</li>
+        <li><a href="https://research.cyberagent.ai/escort-ai-dataset/">EscortAI Dataset</a> — dataset overview from CyberAgent AI Lab.</li>
+        <li>Source code — being prepared for release.</li>
+        <li>Poster — being prepared.</li>
+      </ul>
+    </section>
+    <section aria-labelledby="related">
+      <h2 id="related">Research groups &amp; related links</h2>
+      <ul>
+        <li><a href="https://www.jaist.ac.jp/~okada-s/">Okada Laboratory · JAIST</a><br>
+          <span lang="ja">岡田研究室（社会的信号処理・マルチモーダルインタラクション研究室）</span></li>
+        <li><a href="https://research.cyberagent.ai/">CyberAgent AI Lab</a><br>
+          <span lang="ja">サイバーエージェント AI Lab</span></li>
+      </ul>
+    </section>
+  </main>
+  <footer><a href="/profile.html#contact">Contact Akihiro Sakuramoto</a> · Updated 2 October 2026</footer>
+</div>
+</body>
+</html>
