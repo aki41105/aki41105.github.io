@@ -131,7 +131,7 @@ const content = {
             {
               title: "北陸先端科学技術大学院大学学生給付奨学金 一般採用",
               authors: "櫻本晃弘",
-              venue: "成績優秀のため採用, 2025-2026",
+              venue: "2025-2026",
             },
           ],
         },
@@ -490,7 +490,7 @@ const content = {
             {
               title: "JAIST Student Grant Scholarship",
               authors: "Akihiro Sakuramoto",
-              venue: "Awarded for academic excellence, 2025-2026",
+              venue: "2025-2026",
             },
           ],
         },

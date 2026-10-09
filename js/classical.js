@@ -348,8 +348,6 @@ permalink: /classical.js
     "#publication-jaist-scholarship .publication-title":
       "JAIST Student Grant Scholarship, General Selection",
     "#publication-jaist-scholarship .publication-meta": "Akihiro Sakuramoto",
-    "#publication-jaist-scholarship .publication-venue":
-      "Awarded for academic excellence, 2025–2026",
     "#resources h2": "Reading & Reference Archive",
     '#resources a[href="design.html"] .card-kicker': "Design",
     '#resources a[href="design.html"] .link-value': "Explore motion and read the code",
