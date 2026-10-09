@@ -329,11 +329,12 @@ permalink: /classical.js
       "Sakuramoto A., Hayashi T., Miyoshi R., Okafuji Y., Okada S.",
     "#publication-hai-2026 .publication-venue":
       "14th International Conference on Human-Agent Interaction (HAI 2026), Peer-reviewed poster paper, Accepted",
+    "#publication-hai-2026 .publication-link a:first-child span": "Research overview",
     "#publication-icmi-2026 .publication-meta":
       "Sakuramoto A., Hayashi T., Miyoshi R., Okafuji Y., Okada S.",
     "#publication-icmi-2026 .publication-venue":
       "28th ACM International Conference on Multimodal Interaction (ICMI 2026), Peer-reviewed, Accepted",
-    "#publication-icmi-2026 .publication-link a": "Research overview →",
+    "#publication-icmi-2026 .publication-link a:first-child span": "Research overview",
     "#publications .publication-list > div:nth-child(2) .publication-group-title":
       "Domestic Conference",
     "#publication-miru-2026 .publication-title":

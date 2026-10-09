@@ -602,17 +602,30 @@ main {
   font-feature-settings: "tnum";
 }
 .publication-link {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
   margin-top: 6px;
   font-size: 14.5px;
 }
 .publication-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   color: var(--color-heading);
+}
+.publication-link span {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 .publication-link a:hover {
   color: var(--color-accent-700);
-  text-decoration: underline;
+}
+.publication-link-icon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  fill: currentColor;
 }
 
 /* — projects — */
