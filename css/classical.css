@@ -581,18 +581,8 @@ main {
   gap: var(--space-6);
 }
 .publication-card {
-  display: grid;
-  grid-template-columns: 64px 1fr;
-  gap: var(--space-4);
   padding: var(--space-3) 0;
   border-top: 1px solid var(--color-divider);
-}
-.publication-no {
-  font-family: var(--font-heading);
-  font-size: 40px;
-  line-height: 1;
-  color: color-mix(in srgb, var(--color-accent) 45%, transparent);
-  font-feature-settings: "tnum";
 }
 .publication-title {
   font-size: 21px;
@@ -610,6 +600,19 @@ main {
   font-style: italic;
   color: color-mix(in srgb, var(--color-text) 60%, transparent);
   font-feature-settings: "tnum";
+}
+.publication-link {
+  margin-top: 6px;
+  font-size: 14.5px;
+}
+.publication-link a {
+  color: var(--color-heading);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.publication-link a:hover {
+  color: var(--color-accent-700);
+  text-decoration: underline;
 }
 
 /* — projects — */
@@ -1037,12 +1040,6 @@ a.card .card-kicker {
   }
   .section-heading h2 {
     font-size: 34px;
-  }
-  .publication-card {
-    grid-template-columns: 44px 1fr;
-  }
-  .publication-no {
-    font-size: 30px;
   }
   .membership-card {
     grid-template-columns: 120px 1fr;
