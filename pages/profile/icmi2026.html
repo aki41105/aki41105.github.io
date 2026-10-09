@@ -14,6 +14,11 @@ permalink: /icmi2026.html
   <meta property="og:description" content="ICMI 2026 · Paper, research overview, and related links.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aki41105.github.io/icmi2026.html">
+  <meta property="og:image" content="https://aki41105.github.io/assets/og/icmi2026.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ICMI 2026 paper: Multimodal Rapport Estimation in Real-World HRI">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#155c63">
   <link rel="icon" href="/assets/favicon-32x32.png" type="image/png">
   <link rel="stylesheet" href="/classical.css">
@@ -40,6 +45,11 @@ permalink: /icmi2026.html
     .research-page details p { margin-top: 12px; font-size: 16px; }
     .research-page footer { font-size: 14px; padding-top: 24px; border-top: 1px solid var(--color-divider); }
     .research-page sup { font-size: .7em; }
+    .research-page figure { margin: 26px 0 0; }
+    .research-page figure img { display: block; width: 100%; height: auto; box-sizing: border-box; padding: 12px; background: #fff; border: 1px solid var(--color-divider); border-radius: 4px; }
+    .research-page figcaption { margin-top: 10px; font-size: 14px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 75%, transparent); }
+    .research-page pre { margin: 0; overflow-x: auto; padding: 16px 18px; font-size: 13px; line-height: 1.6; background: var(--color-surface); border: 1px solid var(--color-divider); border-radius: 4px; }
+    .copy-button { margin-top: 12px; min-height: 40px; padding: 6px 16px; font: inherit; font-size: 14px; font-weight: 600; color: var(--color-heading); background: transparent; border: 1px solid var(--color-heading); border-radius: 4px; cursor: pointer; }
     @media (max-width: 480px) { .research-hero { padding-top: 30px; } .research-actions a { flex: 1 1 120px; } }
   </style>
 </head>
@@ -58,8 +68,9 @@ permalink: /icmi2026.html
       <p class="research-affiliations"><sup>1</sup> Japan Advanced Institute of Science and Technology (JAIST)<br>
         <sup>2</sup> CyberAgent &nbsp; <sup>3</sup> The University of Osaka</p>
       <div class="research-actions" aria-label="Read the paper">
-        <a class="primary" href="https://arxiv.org/pdf/2608.18401">Read paper (PDF)</a>
-        <a href="https://arxiv.org/abs/2608.18401">arXiv / citation</a>
+        <a class="primary" href="https://doi.org/10.1145/3776574.3831184">ACM Digital Library</a>
+        <a href="https://arxiv.org/pdf/2608.18401">arXiv (PDF)</a>
+        <a href="https://github.com/aki41105/research-ICMI_2026_Multimodal-Rapport-Estimation-in-Real-World-HRI" target="_blank" rel="noopener noreferrer">Source code (GitHub)</a>
       </div>
     </header>
     <section aria-labelledby="overview">
@@ -76,15 +87,35 @@ permalink: /icmi2026.html
         <p>Gemini 2.5 Flashのテキスト予測と、HuBERTの音声予測・V-JEPAの映像予測を組み合わせた手法が、全体として最も良い性能を示しました。
           対話時間や参加人数によって性能が変わることも確認しています。</p>
       </details>
+      <figure>
+        <img src="/assets/research/icmi2026-ccc-by-group-size.webp" width="1400" height="845" loading="lazy"
+          alt="Line plot of CCC for each prediction model across one-, two-, and three-person interactions. Gemini 2.5 Flash (T) stays relatively high across group sizes, while V-JEPA (V) declines as the number of participants increases.">
+        <figcaption>From the paper. Estimation performance (CCC) of each model across one-, two-, and three-participant interactions.</figcaption>
+      </figure>
     </section>
     <section aria-labelledby="materials">
       <h2 id="materials">Research materials</h2>
       <ul>
-        <li><a href="https://arxiv.org/abs/2608.18401">Paper and citation on arXiv</a> — the publicly available preprint.</li>
+        <li><a href="https://doi.org/10.1145/3776574.3831184">Paper on the ACM Digital Library</a> — ICMI '26, Napoli, Italy, October 5–9, 2026.</li>
+        <li><a href="https://arxiv.org/abs/2608.18401">Preprint on arXiv</a> — the publicly available version.</li>
         <li><a href="https://research.cyberagent.ai/escort-ai-dataset/">EscortAI Dataset</a> — dataset overview from CyberAgent AI Lab.</li>
-        <li>Source code — being prepared for release.</li>
+        <li><a href="https://github.com/aki41105/research-ICMI_2026_Multimodal-Rapport-Estimation-in-Real-World-HRI" target="_blank" rel="noopener noreferrer">Source code on GitHub</a> — code for the paper.</li>
         <li>Poster — being prepared.</li>
       </ul>
+    </section>
+    <section aria-labelledby="cite">
+      <h2 id="cite">Cite this paper</h2>
+<pre id="bibtex-icmi2026">@inproceedings{sakuramoto2026rapport,
+  author    = {Sakuramoto, Akihiro and Hayashi, Takato and Miyoshi, Ryo and Okafuji, Yuki and Okada, Shogo},
+  title     = {Multimodal Rapport Estimation in Real-World HRI},
+  booktitle = {Proceedings of the 28th International Conference on Multimodal Interaction},
+  series    = {ICMI '26},
+  year      = {2026},
+  address   = {Napoli, Italy},
+  publisher = {ACM},
+  doi       = {10.1145/3776574.3831184}
+}</pre>
+      <button class="copy-button" type="button" data-copy="bibtex-icmi2026">Copy BibTeX</button>
     </section>
     <section aria-labelledby="related">
       <h2 id="related">Research groups &amp; related links</h2>
@@ -96,7 +127,18 @@ permalink: /icmi2026.html
       </ul>
     </section>
   </main>
-  <footer><a href="/profile.html#contact">Contact Akihiro Sakuramoto</a> · Updated 2 October 2026</footer>
+  <footer><a href="/profile.html#contact">Contact Akihiro Sakuramoto</a> · Updated 9 October 2026</footer>
 </div>
+<script>
+  document.querySelectorAll("[data-copy]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var text = document.getElementById(button.getAttribute("data-copy")).textContent;
+      navigator.clipboard.writeText(text).then(function () {
+        button.textContent = "Copied";
+        setTimeout(function () { button.textContent = "Copy BibTeX"; }, 2000);
+      });
+    });
+  });
+</script>
 </body>
 </html>

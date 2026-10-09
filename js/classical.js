@@ -23,21 +23,44 @@ permalink: /classical.js
     var sceneImages = document.querySelectorAll(".scene-image");
     var sceneIndex = 0;
     var sceneTimer;
-    function selectScene(index) {
-      sceneIndex = index;
+    // Only the first scene loads with the page; each later scene loads one step ahead.
+    function loadScene(index) {
+      var source = sceneImages[index].getAttribute("data-src");
+      if (!source) return;
+      sceneImages[index].removeAttribute("data-src");
+      sceneImages[index].src = source;
+    }
+    function showScene(index) {
       document
         .querySelector(".scene-hero")
         .setAttribute(
           "data-heading-tone",
           sceneImages[index].getAttribute("data-heading-tone") || "light",
         );
-      Array.prototype.forEach.call(sceneButtons, function (choice, i) {
-        choice.setAttribute("aria-pressed", i === index ? "true" : "false");
-      });
       Array.prototype.forEach.call(sceneImages, function (image, i) {
         image.classList.toggle("is-active", i === index);
         image.setAttribute("aria-hidden", i === index ? "false" : "true");
       });
+    }
+    function selectScene(index) {
+      sceneIndex = index;
+      Array.prototype.forEach.call(sceneButtons, function (choice, i) {
+        choice.setAttribute("aria-pressed", i === index ? "true" : "false");
+      });
+      loadScene(index);
+      loadScene((index + 1) % sceneImages.length);
+      var image = sceneImages[index];
+      if (image.complete) {
+        showScene(index);
+      } else {
+        image.addEventListener(
+          "load",
+          function () {
+            if (sceneIndex === index) showScene(index);
+          },
+          { once: true },
+        );
+      }
     }
     function stopScenes() {
       window.clearInterval(sceneTimer);
@@ -60,6 +83,9 @@ permalink: /classical.js
       window.setTimeout(startScenes, 0);
     });
     document.addEventListener("visibilitychange", startScenes);
+    window.addEventListener("load", function () {
+      loadScene(1 % sceneImages.length);
+    });
     startScenes();
   }
 
@@ -232,6 +258,21 @@ permalink: /classical.js
       "Notes on research, mathematics and statistics, technology and AI, and society.",
     '.garden-entry[href="illustrations.html"] h2': "Gallery",
     '.garden-entry[href="illustrations.html"] p': "Places and moments that illustrate AKI NOTES.",
+    ".garden-author-line a": "Akihiro Sakuramoto",
+    ".garden-author-line span":
+      "Master's Student, AI Science Area, Japan Advanced Institute of Science and Technology (JAIST)",
+    ".garden-research":
+      "I study human-robot interaction, social signal processing, and multimodal interaction.",
+    "#news-title": "News",
+    ".news-list li:nth-child(1) time": "Nov. 2026",
+    ".news-list li:nth-child(1) a": "Upcoming poster presentation at HAI 2026 in Osaka",
+    ".news-list li:nth-child(2) time": "Oct. 2026",
+    ".news-list li:nth-child(2) a": "Research overview pages for the HAI 2026 and ICMI 2026 papers are online",
+    ".news-list li:nth-child(3) time": "Aug. 2026",
+    ".news-list li:nth-child(3) a": "Our accepted ICMI 2026 paper is available on arXiv",
+    ".news-list li:nth-child(4) time": "Aug. 2026",
+    ".news-list li:nth-child(4) a":
+      "Poster presentation at the Meeting on Image Recognition and Understanding (MIRU)",
 
     '.site-nav a[href="#research"]': "Research",
     '.site-nav a[href="#career"]': "Career",
@@ -259,8 +300,9 @@ permalink: /classical.js
       "Analyzing industries and markets in light of technological innovation",
     ".work-interests-list li:nth-child(6)": "Analyzing corporate strategies",
     ".update-note-label": "Last updated",
-    ".update-note-date": "September 5, 2026",
-    ".update-note-text": "Added the accepted HAI 2026 poster paper to Publications.",
+    ".update-note-date": "October 9, 2026",
+    ".update-note-text":
+      "Added research overview pages and code links for the HAI 2026 and ICMI 2026 papers to Publications.",
     ".hero-figure figcaption span:first-child": "Portrait — Ishikawa, MMXXVI",
     ".hero-figure figcaption span:last-child": "fig. 1",
     ".hero ~ #research h2": "Research Overview",

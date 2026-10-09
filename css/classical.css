@@ -1739,6 +1739,70 @@ a.card .card-kicker {
   font-size: 15px;
   line-height: 1.8;
 }
+.garden-author {
+  margin-top: 28px;
+  padding-left: 16px;
+  border-left: 2px solid var(--color-accent);
+}
+.garden-author-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 14px;
+}
+.garden-author-line a {
+  font-family: var(--font-heading);
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--color-heading);
+}
+.garden-author-line span {
+  font-size: 14.5px;
+  color: color-mix(in srgb, var(--color-text) 75%, transparent);
+}
+.garden-research {
+  margin-top: 6px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+.garden-news {
+  padding-top: 0;
+}
+.garden-news h2 {
+  font-size: 27px;
+  margin-bottom: 18px;
+}
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--color-divider);
+}
+.news-list li {
+  display: grid;
+  grid-template-columns: 8.5em 1fr;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-divider);
+  font-size: 15.5px;
+  line-height: 1.7;
+}
+.news-list time {
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--color-accent-700);
+  font-feature-settings: "tnum";
+}
+.news-list a {
+  color: var(--color-text);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--color-heading) 40%, transparent);
+  text-underline-offset: 5px;
+}
+.news-list a:hover {
+  color: var(--color-heading);
+  text-decoration: underline;
+}
 .category-index {
   display: flex;
   flex-wrap: wrap;
@@ -1787,6 +1851,10 @@ a.card .card-kicker {
   }
   .garden-intro {
     padding-block: 40px;
+  }
+  .news-list li {
+    grid-template-columns: 1fr;
+    gap: 2px;
   }
   .scene-hero,
   #about,

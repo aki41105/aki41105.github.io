@@ -14,6 +14,11 @@ permalink: /hai2026.html
   <meta property="og:description" content="HAI 2026 · Research overview, code, and related links.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aki41105.github.io/hai2026.html">
+  <meta property="og:image" content="https://aki41105.github.io/assets/og/hai2026.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="HAI 2026 poster paper: Examining the Relationship between User Closing Behavior and Rapport in Real-World Human-Robot Interaction">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#155c63">
   <link rel="icon" href="/assets/favicon-32x32.png" type="image/png">
   <link rel="stylesheet" href="/classical.css">
@@ -40,6 +45,11 @@ permalink: /hai2026.html
     .research-page details p { margin-top: 12px; font-size: 16px; }
     .research-page footer { font-size: 14px; padding-top: 24px; border-top: 1px solid var(--color-divider); }
     .research-page sup { font-size: .7em; }
+    .research-page figure { margin: 26px 0 0; }
+    .research-page figure img { display: block; width: 100%; height: auto; box-sizing: border-box; padding: 12px; background: #fff; border: 1px solid var(--color-divider); border-radius: 4px; }
+    .research-page figcaption { margin-top: 10px; font-size: 14px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 75%, transparent); }
+    .research-page pre { margin: 0; overflow-x: auto; padding: 16px 18px; font-size: 13px; line-height: 1.6; background: var(--color-surface); border: 1px solid var(--color-divider); border-radius: 4px; }
+    .copy-button { margin-top: 12px; min-height: 40px; padding: 6px 16px; font: inherit; font-size: 14px; font-weight: 600; color: var(--color-heading); background: transparent; border: 1px solid var(--color-heading); border-radius: 4px; cursor: pointer; }
     @media (max-width: 480px) { .research-hero { padding-top: 30px; } .research-actions a { flex: 1 1 120px; } }
   </style>
 </head>
@@ -78,6 +88,19 @@ permalink: /hai2026.html
           対話量で調整すると差は有意ではなくなりましたが、終わり方が対話の質を示す手がかりになりうることが示唆されました。</p>
       </details>
     </section>
+    <section aria-labelledby="figures">
+      <h2 id="figures">Figures</h2>
+      <figure>
+        <img src="/assets/research/hai2026-closing-types.webp" width="1400" height="635" loading="lazy"
+          alt="Three panels: departure without leave-taking (38 users), unilateral closing (21 users), and coordinated closing (42 users), each showing a user leaving a tabletop robot.">
+        <figcaption>Figure 1 in the paper. The three closing types observed in this study, informed by Licoppe and Rollet.</figcaption>
+      </figure>
+      <figure>
+        <img src="/assets/research/hai2026-rapport-by-closing.webp" width="1131" height="701" loading="lazy"
+          alt="Raincloud plots of total rapport, connection, and coordination scores for the three closing types. Coordinated closing scores higher than departure without leave-taking on all three measures.">
+        <figcaption>Figure 2 in the paper. Third-party rapport scores by closing type, with Dunn's tests (Holm-adjusted).</figcaption>
+      </figure>
+    </section>
     <section aria-labelledby="materials">
       <h2 id="materials">Research materials</h2>
       <ul>
@@ -85,7 +108,22 @@ permalink: /hai2026.html
         <li><a href="https://github.com/aki41105/research-HAI_2026_User-Closing-Behavior-and-Rapport-in-Real-World-Human-Robot-Interaction" target="_blank" rel="noopener noreferrer">Source code on GitHub</a> — analysis scripts for the paper.</li>
         <li><a href="https://research.cyberagent.ai/escort-ai-dataset/">EscortAI Dataset</a> — dataset overview from CyberAgent AI Lab.</li>
         <li><a href="/icmi2026.html">Multimodal Rapport Estimation in Real-World HRI</a> — our related ICMI 2026 paper.</li>
+        <li>Poster — being prepared for the conference.</li>
       </ul>
+    </section>
+    <section aria-labelledby="cite">
+      <h2 id="cite">Cite this paper</h2>
+<pre id="bibtex-hai2026">@inproceedings{sakuramoto2026closing,
+  author    = {Sakuramoto, Akihiro and Hayashi, Takato and Miyoshi, Ryo and Okafuji, Yuki and Okada, Shogo},
+  title     = {Examining the Relationship between User Closing Behavior and Rapport in Real-World Human-Robot Interaction},
+  booktitle = {Proceedings of the 14th International Conference on Human-Agent Interaction},
+  series    = {HAI '26},
+  year      = {2026},
+  address   = {Osaka, Japan},
+  publisher = {ACM},
+  doi       = {10.1145/3841580.3845665}
+}</pre>
+      <button class="copy-button" type="button" data-copy="bibtex-hai2026">Copy BibTeX</button>
     </section>
     <section aria-labelledby="related">
       <h2 id="related">Research groups &amp; related links</h2>
@@ -99,5 +137,16 @@ permalink: /hai2026.html
   </main>
   <footer><a href="/profile.html#contact">Contact Akihiro Sakuramoto</a> · Updated 9 October 2026</footer>
 </div>
+<script>
+  document.querySelectorAll("[data-copy]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var text = document.getElementById(button.getAttribute("data-copy")).textContent;
+      navigator.clipboard.writeText(text).then(function () {
+        button.textContent = "Copied";
+        setTimeout(function () { button.textContent = "Copy BibTeX"; }, 2000);
+      });
+    });
+  });
+</script>
 </body>
 </html>

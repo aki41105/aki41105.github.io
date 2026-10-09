@@ -38,7 +38,6 @@
     <meta name="twitter:image" content="https://aki41105.github.io/assets/header-library.jpg" />
     <meta name="theme-color" content="#155c63" />
     <link rel="canonical" href="https://aki41105.github.io/" />
-    <link rel="preload" as="image" href="assets/header-library.jpg" />
     <link rel="icon" href="assets/favicon-192.png?v=20260914-fox-large" type="image/png" />
     <link
       rel="icon"
@@ -153,6 +152,7 @@
                 "@id": "https://arxiv.org/abs/2608.18401",
                 "url": "https://arxiv.org/abs/2608.18401",
                 "identifier": "arXiv:2608.18401",
+                "sameAs": "https://doi.org/10.1145/3776574.3831184",
                 "name": "Multimodal Rapport Estimation in Real-World HRI",
                 "author": [
                   { "@type": "Person", "name": "Akihiro Sakuramoto", "alternateName": ["櫻本晃弘", "Sakuramoto Akihiro"] },
@@ -196,7 +196,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap"
     />
     <link rel="preload" as="image" href="assets/hero/hero-01-garden-night.webp" />
-    <link rel="stylesheet" href="classical.css?v=20260918-materials" />
+    <link rel="stylesheet" href="classical.css?v=20261009-improve" />
   </head>
   <body class="home-page">
     <svg class="icon-defs" aria-hidden="true" focusable="false">
@@ -271,7 +271,7 @@
         <img
           class="scene-image"
           data-scene="study"
-          src="assets/hero/hero-02-study-globe.webp"
+          data-src="assets/hero/hero-02-study-globe.webp"
           alt="庭園を望むアーチ窓と、本、天球儀、ランプのある書斎"
           width="1672"
           height="941"
@@ -282,7 +282,7 @@
           class="scene-image"
           data-scene="bazaar-day"
           data-heading-tone="dark"
-          src="assets/hero/hero-03-bazaar-day.webp"
+          data-src="assets/hero/hero-03-bazaar-day.webp"
           alt="日除け布の下で人々が行き交う昼の市場、香辛料と果物の店"
           width="1672"
           height="941"
@@ -294,7 +294,7 @@
           class="scene-image"
           data-scene="caravan-dawn"
           data-heading-tone="dark"
-          src="assets/hero/hero-04-caravan-dawn-v3.webp"
+          data-src="assets/hero/hero-04-caravan-dawn-v3.webp"
           alt="淡い朝日に照らされた山並みと広い高原を進む隊商"
           width="1672"
           height="941"
@@ -306,7 +306,7 @@
           class="scene-image"
           data-scene="citadel-sunset"
           data-heading-tone="light"
-          src="assets/hero/hero-05-citadel-sunset.webp"
+          data-src="assets/hero/hero-05-citadel-sunset.webp"
           alt="赤銅色の夕日に染まる城塞都市と川に架かる橋"
           width="1672"
           height="941"
@@ -318,7 +318,7 @@
           class="scene-image"
           data-scene="garden-spring"
           data-heading-tone="light"
-          src="assets/hero/hero-06-garden-spring.webp"
+          data-src="assets/hero/hero-06-garden-spring.webp"
           alt="木漏れ日の春の庭園、小川と花々、水辺で本を読む人々"
           width="1672"
           height="941"
@@ -330,7 +330,7 @@
           class="scene-image"
           data-scene="palace-hall"
           data-heading-tone="light"
-          src="assets/hero/hero-07-palace-hall.webp"
+          data-src="assets/hero/hero-07-palace-hall.webp"
           alt="格子窓から陽光が差す宮殿の大広間と赤い絨毯"
           width="1672"
           height="941"
@@ -341,7 +341,7 @@
         <img
           class="scene-image"
           data-scene="fountain-stars"
-          src="assets/hero/hero-08-fountain-stars.webp"
+          data-src="assets/hero/hero-08-fountain-stars.webp"
           alt="横に広がる天の川と星々を見上げる、灯りに包まれた噴水の中庭"
           width="1672"
           height="941"
@@ -353,7 +353,7 @@
           class="scene-image"
           data-scene="harbor-morning"
           data-heading-tone="dark"
-          src="assets/hero/hero-09-harbor-morning.webp"
+          data-src="assets/hero/hero-09-harbor-morning.webp"
           alt="朝の港"
           width="1672"
           height="941"
@@ -365,7 +365,7 @@
           class="scene-image"
           data-scene="pottery-workshop"
           data-heading-tone="dark"
-          src="assets/hero/hero-10-pottery-workshop.webp"
+          data-src="assets/hero/hero-10-pottery-workshop.webp"
           alt="陶器工房"
           width="1672"
           height="941"
@@ -377,7 +377,7 @@
           class="scene-image"
           data-scene="snowy-caravanserai"
           data-heading-tone="dark"
-          src="assets/hero/hero-11-snowy-caravanserai.webp"
+          data-src="assets/hero/hero-11-snowy-caravanserai.webp"
           alt="雪の隊商宿"
           width="1672"
           height="941"
@@ -389,7 +389,7 @@
           class="scene-image"
           data-scene="rainy-bazaar"
           data-heading-tone="dark"
-          src="assets/hero/hero-12-rainy-bazaar.webp"
+          data-src="assets/hero/hero-12-rainy-bazaar.webp"
           alt="雨の街路"
           width="1672"
           height="941"
@@ -401,7 +401,7 @@
           class="scene-image"
           data-scene="autumn-orchard"
           data-heading-tone="dark"
-          src="assets/hero/hero-13-autumn-orchard.webp"
+          data-src="assets/hero/hero-13-autumn-orchard.webp"
           alt="秋の果樹園"
           width="1672"
           height="941"
@@ -413,7 +413,7 @@
           class="scene-image"
           data-scene="riverside-teahouse"
           data-heading-tone="dark"
-          src="assets/hero/hero-14-riverside-teahouse.webp"
+          data-src="assets/hero/hero-14-riverside-teahouse.webp"
           alt="川辺の茶屋"
           width="1672"
           height="941"
@@ -425,7 +425,7 @@
           class="scene-image"
           data-scene="windcatcher-town"
           data-heading-tone="dark"
-          src="assets/hero/hero-15-windcatcher-town.webp"
+          data-src="assets/hero/hero-15-windcatcher-town.webp"
           alt="風の塔の街"
           width="1672"
           height="941"
@@ -437,7 +437,7 @@
           class="scene-image"
           data-scene="mountain-pass"
           data-heading-tone="dark"
-          src="assets/hero/hero-16-mountain-pass.webp"
+          data-src="assets/hero/hero-16-mountain-pass.webp"
           alt="山道と石橋"
           width="1672"
           height="941"
@@ -449,7 +449,7 @@
           class="scene-image"
           data-scene="music-courtyard"
           data-heading-tone="light"
-          src="assets/hero/hero-17-music-courtyard.webp"
+          data-src="assets/hero/hero-17-music-courtyard.webp"
           alt="音楽の夕べ"
           width="1672"
           height="941"
@@ -461,7 +461,7 @@
           class="scene-image"
           data-scene="manuscript-atelier"
           data-heading-tone="dark"
-          src="assets/hero/hero-18-manuscript-atelier.webp"
+          data-src="assets/hero/hero-18-manuscript-atelier.webp"
           alt="写本の工房"
           width="1672"
           height="941"
@@ -473,7 +473,7 @@
           class="scene-image"
           data-scene="silk-weaving"
           data-heading-tone="dark"
-          src="assets/hero/hero-19-silk-weaving.webp"
+          data-src="assets/hero/hero-19-silk-weaving.webp"
           alt="色糸を織る女性たちと木製の織機。窓から午後の光が差す工房。"
           width="1672"
           height="941"
@@ -485,7 +485,7 @@
           class="scene-image"
           data-scene="reed-wetland"
           data-heading-tone="dark"
-          src="assets/hero/hero-20-reed-wetland.webp"
+          data-src="assets/hero/hero-20-reed-wetland.webp"
           alt="水牛、サギ、葦がいる広い湿地。春の朝の空と水面。"
           width="1672"
           height="941"
@@ -497,7 +497,7 @@
           class="scene-image"
           data-scene="hilltop-sanctuary"
           data-heading-tone="light"
-          src="assets/hero/hero-21-hilltop-sanctuary.webp"
+          data-src="assets/hero/hero-21-hilltop-sanctuary.webp"
           alt="青い夕空と山並みを背景に、灯りがともる石造りの祠。"
           width="1672"
           height="941"
@@ -509,7 +509,7 @@
           class="scene-image"
           data-scene="highland-camp"
           data-heading-tone="dark"
-          src="assets/hero/hero-22-highland-camp.webp"
+          data-src="assets/hero/hero-22-highland-camp.webp"
           alt="春の高原でパンを焼く家族、羊と犬、雪を頂いた遠山。"
           width="1672"
           height="941"
@@ -521,7 +521,7 @@
           class="scene-image"
           data-scene="rooftop-celebration"
           data-heading-tone="dark"
-          src="assets/hero/hero-23-rooftop-celebration.webp"
+          data-src="assets/hero/hero-23-rooftop-celebration.webp"
           alt="夕陽の街で、いくつもの屋上に人々が集まる祝祭の風景。"
           width="1672"
           height="941"
@@ -533,7 +533,7 @@
           class="scene-image"
           data-scene="spring-festival"
           data-heading-tone="dark"
-          src="assets/hero/hero-24-spring-festival.webp"
+          data-src="assets/hero/hero-24-spring-festival.webp"
           alt="春の広場で踊りや太鼓、花と食べ物を楽しむ人々。"
           width="1672"
           height="941"
@@ -544,7 +544,7 @@
         <img
           class="scene-image"
           data-scene="night-festival"
-          src="assets/hero/hero-25-night-festival.webp"
+          data-src="assets/hero/hero-25-night-festival.webp"
           alt="夜の街路で踊りや音楽を楽しむ人々と、馬車が進む祭りの行列。"
           width="1672"
           height="941"
@@ -555,7 +555,7 @@
         <img
           class="scene-image"
           data-scene="capital-from-citadel"
-          src="assets/hero/hero-26-capital-from-citadel.webp"
+          data-src="assets/hero/hero-26-capital-from-citadel.webp"
           alt="山を背にした青いドームの本城と、さまざまな家々の灯りが広がる夜の王都。"
           width="1672"
           height="941"
@@ -765,6 +765,15 @@
         <p class="summary">
           研究を読み、数式をたどり、技術と社会を考える。<br />学びの途中で見つけたことを、このノートに残していきます。
         </p>
+        <div class="garden-author">
+          <p class="garden-author-line">
+            <a href="profile.html">櫻本 晃弘</a
+            ><span>北陸先端科学技術大学院大学 AI知性領域 博士前期課程</span>
+          </p>
+          <p class="garden-research">
+            ヒューマンロボットインタラクション，社会的信号処理，マルチモーダルインタラクションを研究しています。
+          </p>
+        </div>
         <div class="garden-entry-grid">
           <a class="garden-entry" href="profile.html"
             ><span>01 / ABOUT</span>
@@ -782,6 +791,29 @@
             <p>AKI NOTESを彩る、さまざまな場所と時間。</p></a
           >
         </div>
+      </section>
+      <section class="section garden-news" aria-labelledby="news-title">
+        <h2 id="news-title">最新情報</h2>
+        <ul class="news-list">
+          <li>
+            <time datetime="2026-11">2026年11月</time
+            ><a href="hai2026.html">HAI 2026（大阪）でポスター論文を発表する予定です</a>
+          </li>
+          <li>
+            <time datetime="2026-10">2026年10月</time
+            ><a href="profile.html#publications">HAI 2026・ICMI 2026 の研究解説ページを公開しました</a>
+          </li>
+          <li>
+            <time datetime="2026-08">2026年8月</time
+            ><a href="icmi2026.html">ICMI 2026 の採択論文を arXiv で公開しました</a>
+          </li>
+          <li>
+            <time datetime="2026-08">2026年8月</time
+            ><a href="profile.html#publication-miru-2026"
+              >画像の認識・理解シンポジウム（MIRU）でポスター発表を行いました</a
+            >
+          </li>
+        </ul>
       </section>
     </main>
 
@@ -803,6 +835,6 @@
       <p class="copyright">© 2026 櫻本晃弘</p>
     </footer>
 
-    <script src="classical.js?v=20260918-materials"></script>
+    <script src="classical.js?v=20261009-improve"></script>
   </body>
 </html>
